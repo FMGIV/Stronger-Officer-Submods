@@ -1,0 +1,56 @@
+{
+"achievements": [
+    { 
+        "id": "ending.umiri_defiance",
+        "iconLocked": "achievement.umiri_defiance", 
+        "iconUnlocked": "achievement.umiri_defiance", 
+        "label": "对立抗争",
+        "descriptionLocked": "你与你的对立双刃此后不断角力，抗争，直到战争结束。",
+        "descriptionUnlocked": "你与你的对立双刃此后不断角力，抗争，直到战争结束。",
+        "unlockMessage": "<i>你与你的对立双刃此后不断角力，抗争，直到战争结束。<i>\n\n[在斯大林格勒，你将你的大敌杀至绝境，而与其成为了一对对立双刃。]",
+        "isHidden": false, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.umiri_defiance_bad",
+        "iconLocked": "achievement.defiancemarks", 
+        "iconUnlocked": "achievement.defiancemarks",
+        "label": "抗争对立",
+        "descriptionLocked": "你与你的对立双刃此后不断角力，抗争，直到战争结束。[反面胜利]",
+        "unlockMessage": "<i>你与你的对立双刃此后不断角力，抗争，直到战争结束。<i>\n\n[在斯大林格勒，你被你的大敌杀至绝境，而与其成为了一对对立双刃。]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.sergei_umiri",
+        "iconLocked": "achievement.sergei_umiri", 
+        "iconUnlocked": "achievement.sergei_umiri", 
+        "label": "食铁者之殇",
+        "descriptionLocked": "你的大敌已将刃长生击落马下。",
+        "unlockMessage": "<i>你的大敌已将刃长生击落马下。<i>\n\n[在对战中<i>冯海铃</i>战胜了食铁者。]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.camilla_umiri",
+        "iconLocked": "achievement.camilla_umiri", 
+        "iconUnlocked": "achievement.camilla_umiri", 
+        "label": "狮鼠之斗",
+        "descriptionLocked": "你的大敌已通过了一场狮鼠之斗。",
+        "unlockMessage": "<i>你的大敌已通过了一场狮鼠之斗。<i>\n\n[与大陆之敌一起袭击<i>冯海铃</i>。]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.umiri.dead",
+        "iconLocked": "foe.umiri.dead", 
+        "iconUnlocked": "foe.umiri.dead", 
+        "label": "大敌已逝",
+        "descriptionLocked": "你在与你大敌的角力中将其战胜。",
+        "descriptionUnlocked": "你在与你大敌的角力中将其战胜。",
+        "unlockMessage": "<i>你在与你大敌的角力中将其战胜。<i>\n\n[你已击败<i>冯海铃</i>。]",
+        "isHidden": false, 
+        "category": "CATEGORY_OBDURANT"
+    },
+]
+}

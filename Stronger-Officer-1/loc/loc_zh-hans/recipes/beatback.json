@@ -1,0 +1,2858 @@
+{
+    "recipes": [
+        {
+            "id": "producecasualty.hand",
+            "label": "被击穿！",
+            "startdescription": "护民官的每一道伤疤都是武器，她也不例外。",
+            "description": "护民官的每一道伤疤都是武器，她也不例外。",
+            "warmup": 10,
+            "actionid": "handtokilltanks",
+            "extantreqs": {
+                "foe.wound.hand": 1,
+                "foe.umiri.mark": 1
+            },
+            "requirements": {
+                "friend.tanks": 1
+            },
+            "effects": {},
+            "aspects": {
+                "killfriend": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+    {
+	"id": "attackenemy.edge",
+	"actionid": "operate",
+	"label": "筹划一次采用暴力战术的袭击",
+	"startdescription": "谈话到此为止。现在是时候让力量决定胜负了。",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.officer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.overwhelm",
+	"actionid": "operate",
+	"label": "筹划一次采用暴力战术的压倒性袭击",
+	"startdescription": "两虎相争必有一伤，而我们更加强大。看他们该如何抵挡。",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"grandreqs": { "[edge]-[needsedge]": 5 },
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.officer.overwhelm",
+	"actionid": "operate",
+	"label": "筹划一次采用暴力战术的压倒性袭击",
+	"startdescription": "两虎相争必有一伤，而我们更加强大。看他们该如何抵挡。",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": 1,
+        "foe.umiri.mark": -1
+	},
+	"extantreqs": {
+	    "foe.officerdetail": -1
+	},
+	"grandreqs": { "[edge]-[needsedge]": 5 },
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge",
+	"actionid": "operate",
+	"label": "筹划一次采用暴力战术的袭击",
+	"startdescription": "谈话到此为止。现在是时候让力量决定胜负了。",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.officer",
+	"actionid": "operate",
+	"label": "筹划一次采用暴力战术的袭击",
+	"startdescription": "谈话到此为止。现在是时候让力量决定胜负了。",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": 1,
+        "foe.umiri.mark": -1
+	},
+	"extantreqs": {
+	    "foe.officerdetail": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+        {
+            "id": "makecamillakillumiri.pre.s",
+            "label": "与大陆之敌一同进攻你的大敌？",
+            "previewdescription": "寒风呼啸，灯火摇曳，一股可怖的力量与你的部队携手现身于敌军的天际。",
+            "startdescription": "寒风呼啸，灯火摇曳，一股可怖的力量与你的部队携手现身于敌军的天际。",
+            "warmup": 0,
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "provisions": 2,
+                "friend": 1,
+                "friend.camilla": 1,
+            },
+            "extantreqs": {
+                "side.marker": -3
+            },
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "makecamillakillumiri.pre"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.s",
+            "label": "尝试突击敌军指挥营",
+            "previewdescription": "我们的密探送来了一份宝贵的情报，内容是德军指挥部的布防情况。如果我们能抓住这个机会，或许能够直接摧毁德军的大脑。",
+            "startdescription": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "description": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "warmup": 0,
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "provisions": 2,
+                "friend": 1,
+            },
+            "extantreqs": {
+                "side.marker": -3
+            },
+            "tablereqs": {
+                "foe.officerdetail": -3
+            },
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side"
+                }
+            ],
+        },
+        {
+            "id": "makecamillakillumiri.pre",
+            "label": "与大陆之敌一同进攻你的大敌？",
+            "previewdescription": "寒风呼啸，灯火摇曳，一股可怖的力量与你的部队携手现身于敌军的天际。",
+            "startdescription": "寒风呼啸，灯火摇曳，一股可怖的力量与你的部队携手现身于敌军的天际。",
+            "warmup": 10,
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": -1,
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "敌军军官",
+                "required": {
+                    "foe.umiri.mark": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "makecamillakillumiri.pre"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "foeumiriofficer.side000",
+                    "expulsion": {
+                        "filter": {
+                            "foe.umiri.mark": 1,
+                            "umiri.mark": 1,
+                            "moth": 1,
+                            "lantern": 1,
+                            "forge": 1,
+                            "edge": 1,
+                            "winter": 1,
+                            "heart": 1,
+                            "grail": 1,
+                            "knock": 1
+                        },
+                        "limit": 99
+                    }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side",
+            "label": "尝试突击敌军指挥营",
+            "previewdescription": "我们的密探送来了一份宝贵的情报，内容是德军指挥部的布防情况。如果我们能抓住这个机会，或许能够直接摧毁德军的大脑。",
+            "startdescription": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "description": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "warmup": 10,
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": -1,
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "敌军军官",
+                "required": {
+                    "foe.umiri.mark": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "foeumiriofficer.side.objective1.end0",
+                    "expulsion": {
+                        "filter": {
+                            "foe.umiri.mark": 1,
+                            "umiri.mark": 1,
+                            "moth": 1,
+                            "lantern": 1,
+                            "forge": 1,
+                            "edge": 1,
+                            "winter": 1,
+                            "heart": 1,
+                            "grail": 1,
+                            "knock": 1
+                        },
+                        "limit": 99
+                    }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side000",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "指挥部戒备森严。混凝土，铁丝网，探照灯，我们需要拆解这些防御，或寻得一条能够安全通过的道路。",
+            "description": "指挥部戒备森严。混凝土，铁丝网，探照灯，我们需要拆解这些防御，或寻得一条能够安全通过的道路。",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+                "umiri_camilla": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.end0"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.end0",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "指挥部戒备森严。混凝土，铁丝网，探照灯，我们需要拆解这些防御，或寻得一条能够安全通过的道路。",
+            "description": "指挥部戒备森严。混凝土，铁丝网，探照灯，我们需要拆解这些防御，或寻得一条能够安全通过的道路。",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+                "hindrance.fortifications": 1,
+                "umiri.attacked": 1,
+	            "side.marker": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsfoe",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "月黑风高，一切都在按计划进行......\n\n [请确保行动中存在<b>友军</b>]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective2.needslantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.needsknock"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.needsforge"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsforge",
+            "label": "突破敌军防御工事",
+            "startdescription": "我们拥有使之改变的的力量。撕裂铁网，跨越碉堡，我们稳步前进。",
+            "description": "我们拥有使之改变的的力量。撕裂铁网，跨越碉堡，我们稳步前进。",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needslantern",
+            "label": "突破敌军防御工事",
+            "startdescription": "守夜人的力量为我们指明了前路，我们将穿过这片区域",
+            "description": "守夜人的力量为我们指明了前路，我们将穿过这片区域",
+            "warmup": 0,
+            "requirements": {
+                "needslantern": 1,
+                "lantern": "needslantern",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsknock",
+            "label": "突破敌军防御工事",
+            "startdescription": "一切防线都在我们的力量面前洞开。我们将打开一条道路",
+            "description": "一切防线都在我们的力量面前洞开。我们将打开一条道路",
+            "warmup": 0,
+            "requirements": {
+                "needsknock": 1,
+                "knock": "needsknock",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 70,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 70,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.pre0",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "我们已经潜入了他们的指挥部，我们必须速战速决。",
+            "description": "我们已经潜入了他们的指挥部，我们必须速战速决。",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                }
+            ],
+            "alt": [],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.pre",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "description": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.officerdetail": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.rankofficer": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe1"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe2"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe3"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe4"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.end"
+                }
+            ],
+            "alt": [],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe1",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "description": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.sniper": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe2",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "description": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.manhunters": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe3",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "description": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.tanks": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "[foe.umiri.wound]",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe4",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "description": "敌军陷入了混乱，只有她的特遣队正在坚定的执行命令，他们正在赶来。",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.officerdetail": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "她的特遣队正将我们包围，我们能做些什么？\n\n [请确保行动中存在<b>友军</b>]",
+            "description": "她的特遣队正将我们包围，我们能做些什么？\n\n [请确保行动中存在<b>友军</b>]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.officerdetail": 1
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needswinter"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsmoth"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgelantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgeforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgewinter"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsap"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedge",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+            "description": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+            "warmup": 10,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needswinter",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
+            "description": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
+            "warmup": 10,
+            "requirements": {
+                "needswinter": 1,
+                "winter": "needswinter",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 60,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsmoth",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
+            "description": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
+            "warmup": 10,
+            "requirements": {
+                "needsmoth": 1,
+                "moth": "needsmoth",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsforge",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
+            "description": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
+            "warmup": 10,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsap",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+            "description": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+            "warmup": 10,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgeforge",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+            "description": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+            "warmup": 10,
+            "requirements": {
+                "needsedgeforge": 1,
+                "edge": "needsedgeforge",
+                "forge": "needsedgeforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgelantern",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+            "description": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+            "warmup": 10,
+            "requirements": {
+                "needsedgelantern": 1,
+                "edge": "needsedgelantern",
+                "lantern": "needsedgelantern",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgewinter",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
+            "description": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
+            "warmup": 10,
+            "requirements": {
+                "needsedgewinter": 1,
+                "edge": "needsedgewinter",
+                "winter": "needsedgewinter",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail_bad",
+            "label": "仓皇撤离",
+            "startdescription": "敌人发现了我们！警报鸣响，我们被迫撤离。敌人的搜捕部队让我们付出了惨重的代价。",
+            "description": "敌人发现了我们！警报鸣响，我们被迫撤离。敌人的搜捕部队让我们付出了惨重的代价。",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "makecasualty": 1,
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail_end",
+            "label": "仓皇撤离",
+            "startdescription": "我们不慎落入了敌人的陷阱！铁丝网缠住了我们，警报四起，我们被迫返回，行动终止。",
+            "description": "我们不慎落入了敌人的陷阱！铁丝网缠住了我们，警报四起，我们被迫返回，行动终止。",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "makecasualty": 1,
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_bad",
+                    "chance": 50
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail",
+            "label": "仓皇撤离",
+            "startdescription": "落败",
+            "description": "落败",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "hindrance": -1,
+                "foe.tanks": -1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_end"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                },
+                {
+                    "id": "produce.trauma",
+                    "chance": 50
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.fail",
+            "label": "仓皇撤离",
+            "startdescription": "落败",
+            "description": "落败",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "hindrance": -1,
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "- [foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_end"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                },
+                {
+                    "id": "produce.trauma",
+                    "chance": 50
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.end",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "特遣队已被肃清，我们为他们带来终结。",
+            "description": "特遣队已被肃清，我们为他们带来终结。",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "progression": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": -1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "- [foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "成功",
+            "description": "成功",
+            "warmup": 0,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 10,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -10,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "[foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 12,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 8,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.officerdetail",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_eye"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_eye",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "成功",
+            "description": "成功",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.wound.eye": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": -99,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -99,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgelantern",
+                    "level": 16,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 0,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_hand"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_hand",
+            "label": "清除指挥部外的残余部队",
+            "startdescription": "成功",
+            "description": "成功",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.wound.hand": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgelantern",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_aspect",
+            "label": "接近了",
+            "startdescription": "我们已经突破了重重阻碍，指挥营近在咫尺",
+            "description": "我们已经突破了重重阻碍，指挥营近在咫尺",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsfoe",
+            "label": "尝试突击敌军指挥营",
+            "startdescription": "在一团混乱中，我们见到了我们的目标，看起来她将抵抗到底......\n\n [请确保行动中存在<b>友军</b>]",
+            "description": "在一团混乱中，我们见到了我们的目标，看起来她将抵抗到底......\n\n [请确保行动中存在<b>友军</b>]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgelantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgeforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgemoth"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsap"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedge",
+            "label": "直入虎穴",
+            "startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+            "description": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+            "warmup": 10,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgelantern",
+            "label": "直入虎穴",
+            "startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+            "description": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+            "warmup": 10,
+            "requirements": {
+                "needsedgelantern": 1,
+                "edge": "needsedgelantern",
+                "lantern": "needsedgelantern",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgemoth",
+            "label": "直入虎穴",
+            "startdescription": "以身为饵，诱敌深入，再一举攻之！",
+            "description": "以身为饵，诱敌深入，再一举攻之！",
+            "warmup": 10,
+            "requirements": {
+                "needsedgemoth": 1,
+                "edge": "needsedgemoth",
+                "moth": "needsedgemoth",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgeforge",
+            "label": "直入虎穴",
+            "startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+            "description": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+            "warmup": 10,
+            "requirements": {
+                "needsedgeforge": 1,
+                "edge": "needsedgeforge",
+                "forge": "needsedgeforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsap",
+            "label": "直入虎穴",
+            "startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+            "description": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+            "warmup": 10,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.end",
+            "label": "直入虎穴",
+            "startdescription": "尽管面对装甲我们并无胜算，但我们最终将其击退。<i>伊尔莎</i>弃车逃窜。她已经尝到了失败的滋味。",
+            "description": "尽管面对装甲我们并无胜算，但我们最终将其击退。<i>伊尔莎</i>弃车逃窜。她已经尝到了失败的滋味。",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "progression": 1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.stalingrad"
+                },
+                {
+                    "id": "foeumiriofficer.side.end"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.stalingrad",
+            "label": "直入虎穴",
+            "startdescription": "德军的攻势被粉碎了，德军四散奔逃，而她肯定咽不下这口气。她不会逃离这个命定之地，她复仇的火焰正燃的更盛——她将再战，直至死亡或胜利。",
+            "description": "德军的攻势被粉碎了，德军四散奔逃，而她肯定咽不下这口气。她不会逃离这个命定之地，她复仇的火焰正燃的更盛——她将再战，直至死亡或胜利。",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "progression": 3
+            },
+            "extantreqs": {
+                "stalingrad.here": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killumiri": 1
+            },
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.defiance"
+                },
+                {
+                    "id": "foeumiriofficer.side.finish"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.end",
+            "label": "直入虎穴",
+            "startdescription": "我们的军队正向德军的战线发动猛攻。他们群龙无首，仓皇撤离。她只得自己吞下这枚失败的苦果。她还会回来，带着更强大的军队与复仇的欲望。至少现在，她不会来找我们的麻烦了。",
+            "description": "我们的军队正向德军的战线发动猛攻。他们群龙无首，仓皇撤离。她只得自己吞下这枚失败的苦果。她还会回来，带着更强大的军队与复仇的欲望。至少现在，她不会来找我们的麻烦了。",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "progression": 3
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killgerman": 1
+            },
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+            "alt": [
+                {
+                "id": "weakenenemies.detect",
+                "additional": true
+                },
+                {
+                    "id": "makecamillakillumiri.dead"
+                },
+                {
+                    "id": "makecamillakillumiri"
+                },
+                {
+                    "id": "foeumiriofficer.side.finish"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.finish",
+            "label": "最终一击",
+            "startdescription": "她们的指挥官再也不会打扰你了",
+            "description": "她们的指挥官再也不会打扰你了",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "extantreqs": {
+                "foe.wound.eye": 1,
+                "foe.wound.hand": 1,
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killgerman": 1
+            },
+            "purge": {
+                "foe.wound.eye": 99,
+                "foe.wound.hand": 99,
+            },
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+            "achievements": [
+                "ending.umiri.dead"
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.defiance",
+            "label": "对立双刃",
+            "startdescription": "再一次冲锋，再一次相见，并再一次投身战争。你们别无二样，你们的斗争永无止息。",
+            "warmup": 30,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "foe.wound.eye": 1,
+                "foe.wound.hand": 1,
+            },
+            "achievements": [
+                "ending.umiri_defiance"
+            ],
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+	        "ending": "umiri_defiance",
+            "signalEndingFlavour": "Grand",
+            "signalMusic": "bgm.umiri_defiance.mp3",
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "pre.death_defiance",
+            "label": "对立双刃？",
+            "startdescription": "再一次冲锋，再一次相见，并再一次投身战争。你们别无二样，你们的斗争永无止息。",
+            "warmup": 60,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "damage.body": 5
+            },
+            "signalMusic": "bgm.umiri_defiance.mp3",
+            "signalEndingFlavour": "Melancholy",
+            "linked": [
+                {
+                    "id": "death_defiance"
+                },
+                {
+                    "id": "time.cycle"
+                },
+            ],
+        },
+        {
+            "id": "death_defiance",
+            "label": "对立双刃？",
+            "startdescription": "再一次冲锋，再一次相见，并再一次投身战争。你们别无二样，你们的斗争永无止息。",
+            "warmup": 30,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "damage.body": 5
+            },
+            "achievements": [
+                "ending.umiri_defiance_bad"
+            ],
+	        "ending": "umiri_defiance_bad",
+            "signalEndingFlavour": "Vile",
+            "linked": [
+            ],
+        },
+
+        {
+        "id": "makecamillakillumiri",
+        "actionid": "edgelongumiri1",
+        "label": "与大陆之敌一同进攻你的大敌：胜利！",
+        "startdescription": "硝烟散尽，尸横遍野。你遭受重创的大敌裹挟着残余的部队狼狈的逃走了。想必这次攻击已让其吃尽苦头。",
+        "description": "硝烟散尽，尸横遍野。你遭受重创的大敌裹挟着残余的部队狼狈的逃走了。想必这次攻击已让其吃尽苦头。",
+        "warmup": 30,
+        "requirements": {
+            "friend.camilla": 1
+        },
+        "effects": {
+            "friend.camilla": -1,
+            "umiri.blocker.pre": 1,
+            "foe.officerdetail": -1,
+            "progression": -3
+        },
+        "aspects": {
+            "killgerman": 1
+        },
+        "haltverb": {
+            "foecoming": 99,
+            "foeactionumiri": 99,
+        },
+        "achievements": [
+            "ending.camilla_umiri"
+        ],
+        "linked": [
+            {
+                "id": "makecamillakillumiri.dead"
+            },
+        ],
+        "mutations": [
+        ]
+        },
+        {
+        "id": "makecamillakillumiri.dead",
+        "actionid": "edgelongumiri1",
+        "label": "与大陆之敌一同进攻你的大敌：胜利！",
+        "startdescription": "硝烟散尽，尸横遍野。在血色的残阳中，你见证了一场血腥的终结：大陆之敌为你的大敌的部队刻下寂静的伤疤，然后是她的武器，她的心脏，最后是她的灵魂。",
+        "description": "硝烟散尽，尸横遍野。在血色的残阳中，你见证了一场血腥的终结：大陆之敌为你的大敌的部队刻下寂静的伤疤，然后是她的武器，她的心脏，最后是她的灵魂。",
+        "warmup": 30,
+        "requirements": {
+            "friend.camilla": 1
+        },
+        "extantreqs": {
+            "foe.wound.eye": 1,
+            "foe.wound.hand": 1,
+        },
+        "aspects": {
+            "killgerman": 1
+        },
+        "haltverb": {
+            "foecoming": 99,
+            "foeactionumiri": 99,
+        },
+        "effects": {
+            "umiri.blocker.pre": -1,
+            "foe.officerdetail": -1,
+            "progression": -3
+        },
+        "achievements": [
+            "ending.camilla_umiri",
+            "ending.umiri.dead"
+        ],
+        "mutations": [
+        ]
+        },
+        {
+            "id": "foeumiriofficer.side.expose.eye",
+            "label": "使用不可视之眼辅助斥候探查敌军指挥营",
+            "previewdescription": "敌军军官正在离战场遥远的营地中，我们将派一支斥候部队前去打探情报，他们将获得不可视之眼的庇佑。\n[敌军特遣队的数量越多，你的部队被发现的概率越大，受伤的概率也越大]",
+            "startdescription": "“我们知道他们的位置，快速行动......”",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "debilitation.eye.colonel": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1,
+                "dissolution": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.flares",
+            "label": "使用照明弹辅助斥候探查敌军指挥营",
+            "previewdescription": "敌军军官正在离战场遥远的营地中，敌军将被照明弹吸引，一支斥候部队则将趁虚而入，他们大抵能够成功。\n[敌军特遣队的数量越多，你的部队被发现的概率越大，受伤的概率也越大]",
+            "startdescription": "“敌人已被吸引，我们抓紧行动......”",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "supplies.flares": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1,
+                "dissolution": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts",
+            "label": "探查敌军指挥营",
+            "previewdescription": "敌军军官正在离战场遥远的营地中，我们将派一支斥候部队趁着夜色前去打探情报。他们大概能够成功。\n[敌军特遣队的数量越多，你的部队被发现的概率越大，受伤的概率也越大]",
+            "startdescription": "“趁着夜色摸进去，天亮前消失......”",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts7",
+            "label": "受挫！",
+            "startdescription": "尖锐的哨声响起，慌乱的脚步声正向我们聚集，我们必须撤退。",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 7
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 70
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts5",
+            "label": "受挫！",
+            "startdescription": "尖锐的哨声响起，慌乱的脚步声正向我们聚集，我们必须撤退。",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 5
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 50
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts3",
+            "label": "受挫！",
+            "startdescription": "尖锐的哨声响起，慌乱的脚步声正向我们聚集，我们必须撤退。",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 3
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 30
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts1",
+            "label": "受挫！",
+            "startdescription": "尖锐的哨声响起，慌乱的脚步声正向我们聚集，我们必须撤退。",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 1
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 10
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts0",
+            "label": "成功潜入敌军指挥营",
+            "startdescription": "敌人未被惊动，我们已经拿到了足够的情报。",
+            "actionid": "operate",
+            "requirements": {
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "exposedumiri": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.fail",
+            "label": "败北！",
+            "startdescription": "探照灯突然照向我们，枪声四起......",
+            "actionid": "operate",
+            "requirements": {
+            },
+            "warmup": 10,
+            "effects": {},
+            "aspects": {
+                "makecasualty": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose0",
+            "label": "尝试探查敌军指挥营？",
+            "previewdescription": "敌军军官正在离战场遥远的营地中，若我能发动一次针对指挥营的袭击，敌军必将遭受重创，不过在这之前我需要探查些我需要的信息\n[你需要<i>次要目标：突袭指挥营</i>才能袭击这名军官，使用特定兵种或道具获取信息来获得<i>次要目标：突袭指挥营</i>]",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.0",
+            "label": "尝试突击敌军指挥营？",
+            "previewdescription": "仍然有特遣队在指挥部附近巡逻，若贸然行动必遭敌军强烈反抗，但如果成功将大幅度削弱敌军实力。\n[这个任务目标需要敌军特遣队在<b>三个以下</b>才能触发，且需要卡槽内<b>一直都有友军</b>存在]",
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "makecamillakillumiri.hint",
+            "label": "与大陆之敌一同进攻你的大敌？",
+            "previewdescription": "这位长生者精通上校之道，若有其相助，敌军必将溃败于凛冬中。[这个任务需要敌军特遣队在三个以下才能触发，且需要卡槽内一直都有友军存在]",
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "friend.camilla": 1
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "main&side_exhausted.hint",
+            "label": "任务目标枯竭？",
+            "previewdescription": "德国人正向我们发动猛攻，或许我们现在无暇处理这些事情。", 
+            "actionid": "operate",
+            "requirements": {
+                "main&side_exhausted": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+        "id": "attackenemy.hint",
+        "actionid": "operate",
+        "label": "筹划一次对敌军的袭击？",
+        "startdescription": "敌军就在前方。我需要一种策略，以及执行策略的人力和资源。\n\n[投入的性相达到敌人的任一阈值即可对其进行袭击。投入的性相超越对应阈值至少5阶则能够保证这次袭击必定成功。]",
+        "requirements": {
+            "foe": 1,
+            "foe.hidden": -1,
+            "foe.umiri.mark": -1
+        },
+        "craftable": false,
+        "hintonly": true
+        },
+    {
+	"id": "start.objective.side.3",
+	"actionid": "operate",
+	"label": "尝试达成再一个次要目标",
+	"startdescription": "我已经派我的人去达成当前战区的两个次要目标。但若我还有多余人手，我可以命令他们将第三个次要目标也付诸行动。但第四个就会使我们的战线过于分散。",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=2": 1
+	},
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark.3",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side.2",
+	"actionid": "operate",
+	"label": "尝试达成另一个次要目标",
+	"startdescription": "我已经派我的人去达成当前战区的一个次要目标。但若我还有多余人手，我可以命令他们将第二个次要目标也付诸行动。",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=1": 1
+	},
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark.2",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side",
+	"actionid": "operate",
+	"label": "尝试达成一个次要目标",
+	"startdescription": "我已经做针对这一目标出了相应的准备与谋划。我们将在获得这一优势之后壮大。",
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"extantreqs": {
+	    "side.marker": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+        {
+            "id": "test.hint",
+            "label": "测试",
+            "previewdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了", 
+	        "startdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了",
+            "actionid": "operate",
+            "requirements": {
+                "friend": 1
+            },
+            "warmup": 5,
+			"playAudioTrack": "bgm.annocoming.mp3",
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "test2.hint",
+            "label": "测试",
+            "previewdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了", 
+	        "startdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了",
+            "actionid": "operate",
+            "requirements": {
+                "foe": 1
+            },
+            "warmup": 5,
+			"playAudioTrack": "bgm.umiri_defiance.mp3",
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+    ]
+}

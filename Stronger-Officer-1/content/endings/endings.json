@@ -1,0 +1,24 @@
+{
+"endings": [
+    {
+        "id": "umiri_defiance",
+        "label": "Opposing Blades",
+        "description": "You and your opposing blade will Strife and contend against each other until the war's end.\n\n[This is placeholder text.]",
+        "image": "umiri_defiance",
+        "flavour": "Grand",
+        "anim": "DramaticLight",
+        "achievements": "XXX",
+	    "BGmusic": "bgm.umiri_defiance.mp3"
+    },
+    {
+        "id": "umiri_defiance_bad",
+        "label": "Struggle and Opposition",
+        "description": "You and your opposing blade will Strife and contend against each other until the war's end.\n\n[Reverse Victory. This is placeholder text.]",
+        "image": "umiri_defiance_bad",
+        "flavour": "Vile",
+        "anim": "DramaticLight",
+        "achievements": "XXX",
+	    "BGmusic": "bgm.umiri_defiance.mp3"
+    },
+]
+}

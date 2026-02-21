@@ -1,0 +1,2504 @@
+{
+"elements": [
+    {
+	"id": "side.umiri",
+	"label": "Secondary Objective: Raid the Command Post",
+	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+    {
+	"id": "side.umiri2",
+	"label": "Secondary Objective: Raid the Command Post",
+	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+    {
+	"id": "side.umiri3",
+	"label": "Secondary Objective: Raid the Command Post",
+	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+        {
+            "id": "foe.umiri",
+            "label": "Captain <i>Von Heiling</i>",
+            "description": "A promising young officer, and a comrade with whom I share this Strife.",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 4,
+                "german": 1,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "Personnel",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "Equipment",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "xtriggers": {
+                "refresh": "foe.umiri",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.eye",
+                            "level": 1
+                        }
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.eye",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "foe.umiri.2",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.hidden",
+            "label": "Unknown Enemy",
+			"description": "The most dangerous enemy is one that goes unanticipated.",
+			"inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.hidden",
+                "revealidentity": "foe.umiri"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "foe.umiri.2",
+            "label": "Colonel <i>Von Heiling</i>",
+            "description": "War has left her scars, but it has also left her strength.",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 8,
+                "german": 1,
+                "foe.umiri.wound": 1,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "Personnel",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "Equipment",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "xtriggers": {
+                "refresh": "foe.umiri.2",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.hand",
+                            "level": 1
+                        }
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.hand",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "foe.umiri.3",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.2.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri2",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.2.hidden",
+            "label": "Unknown Enemy",
+			"description": "The most dangerous enemy is one that goes unanticipated.",
+			"inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.2.hidden",
+                "revealidentity": "foe.umiri.2"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "foe.umiri.3",
+            "label": "General <i>Von Heiling</i>",
+            "description": "Blind, deaf, covered in scars—she is my kindred spirit. Yet fate decrees that only one of us shall survive.",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 12,
+                "german": 1,
+                "foe.umiri.wound": 2,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "Personnel",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "Equipment",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "xtriggers": {
+                "refresh": "foe.umiri.3",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.umiri.dead",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "tool.monocle",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "weapon.sword_umiri",
+                            "level": 1
+                        },
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.umiri.dead",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "tool.monocle",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "weapon.sword_umiri",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.3.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri3",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.3.hidden",
+           	"label": "Unknown Enemy",
+			"description": "The most dangerous enemy is one that goes unanticipated.",
+			"inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.3.hidden",
+                "revealidentity": "foe.umiri.3"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "exposedumiri",
+            "label": "暴露",
+            "description": "让<i>冯海铃</i>爆出次要目标",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "killumiri",
+            "label": "血战",
+            "description": "在斯大林格勒杀死军官",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.blocker",
+            "label": "阻止<i>冯海铃</i>前来",
+            "description": "<i>冯海铃</i>不会前来",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.mark",
+            "label": "<i>冯海铃</i>次要目标",
+            "description": "证明这张牌是<i>冯海铃</i>次要目标",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.attacked",
+            "label": "<i>Von Heiling</i> is under attack",
+            "description": "<i>Von Heiling</i> is under attack",
+			"lifetime": 1,
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "draw.hintobdurant.defiance",
+            "label": "Struggle Intent",
+            "description": "Struggle Intent",
+			"lifetime": 1,
+			"aspects": {
+				"decision": 1,
+			},
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "draw.hintobdurant.dead",
+            "label": "Dying Intent",
+            "description": "Dying Intent",
+			"aspects": {
+				"decision": 1,
+			},
+			"lifetime": 1,
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "obdurant.story.umiri",
+            "label": "Eternal Struggle",
+            "description": "War demands sacrifice, and it demands your eternal struggle. You will meet your fated enemy. Remember, she is a follower of the Colonel—yet she is also mortal. The fire of struggle must burn hot. When all is prepared, the final moment will come. You and your fated enemy must reach that end—the point where you have no retreat. This ritual will ultimately conclude in death, and this may drive you to struggle against each other until the end of days.",
+			"aspects": {
+				"contemplation": 1
+			},
+			"lifetime": 0,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.defiance",
+            "label": "The Struggle",
+            "description": "[When <i>The Struggle</i> on your journey reaches seven, your arch-nemesis may become your opposing blade.]",
+            "isAspect": true,
+        },
+        {
+            "id": "strife.incur",
+            "label": "Strife Summons",
+            "description": "It seems the Germans have taken notice of our defenses. They're rallying their troops. [While this card is in play, it counts as one point of 'Strife.' <i>Von Heiling</i> will appear in the next city garrisoned by an officer. This card is then discarded.]",
+            "aspects": {
+                "strife.tracker": 1,
+            },
+			"decayTo": "strife"
+        },
+        {
+            "id": "umiri.blocker.pre",
+            "label": "The Arch-Nemesis's Defeat",
+            "description": "My arch-nemesis and I both learned from the Colonel's teachings—to draw strength from our scars. This bitter defeat may yet allow her to harness even greater power... but for now, she needs time to lick her wounds. [<i>Von Heiling</i> will not appear in the next three regions.]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 3
+			},
+			"decayTo": "umiri.blocker.0",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.0",
+            "label": "The Fall of the Arch-Nemesis",
+            "description": "My arch-nemesis and I both learned from the Colonel's teachings—to draw strength from our scars. This bitter defeat may yet allow her to harness even greater power... but for now, she needs time to lick her wounds. [<i>Von Heiling</i> will not appear in the next three regions.]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 3
+			},
+			"icon": "umiri.blocker.pre",
+			"decayTo": "umiri.blocker.1",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.1",
+            "label": "The Fall of the Arch-Nemesis",
+            "description": "My arch-nemesis and I both learned from the Colonel's teachings—to draw strength from our scars. This bitter defeat may yet allow her to harness even greater power... but for now, she needs time to lick her wounds. [<i>Von Heiling</i> will not appear in the next two regions.]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 2
+			},
+			"decayTo": "umiri.blocker.2",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.2",
+            "label": "The Fall of the Arch-Nemesis",
+            "description": "My arch-nemesis and I both learned from the Colonel's teachings—to draw strength from our scars. This bitter defeat may yet allow her to harness even greater power... but for now, she needs time to lick her wounds. [<i>Von Heiling</i> will not appear in the next region.]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 1
+			},
+			"decayTo": "wound.camilla.forumiri",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.camilla.forumiri",
+            "label": "Challenger's Mark [Arch-Nemesis]",
+            "description": "This marks what your arch-nemesis has become. Now war follows her, ceaselessly. [When <i>Von Heiling</i> is in play, this card counts as three points of 'Strife.' No Blade Eternal will come to attack you.]",
+            "lifetime": 0,
+			"aspects": {
+				"challenger.mark": 1,
+				"long.blocker": 1
+			},
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.sergei.forumiri",
+            "label": "The Iron Eater Bleeds!",
+            "description": "The wound my arch-nemesis inflicted upon that immortal will remind the Wolf-Splitter's Eternal that even he can die. [When <i>Von Heiling</i> is in play, this card counts as one point of 'Strife.']",
+            "lifetime": 40,
+            "aspects": {
+            },
+			"decayTo": "wound.sergei.forumiri_end",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.sergei.forumiri_end",
+            "label": "The Iron Eater's Crushing Defeat",
+            "description": "This decisive loss will long remind this Eternal that he will die—slowly, absolutely, miserably. His ignominious retreat stands as proof. [When <i>Von Heiling</i> is in play, this card counts as one point of 'Strife.']",
+            "lifetime": 0,
+            "aspects": {
+				"wound.sergei": 1
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.dead",
+            "label": "The Arch-Nemesis Vanquished",
+            "description": "Your arch-nemesis's spirit has returned to the void. No German remains your equal in battle. In this strand of history, her story has reached its end. [When in play, this card counts as two points of 'Strife.']",
+            "lifetime": 0,
+            "aspects": {
+                "strife.tracker": 2
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.pre",
+            "label": "Enemy Routed",
+            "description": "The German forces have fallen into disarray. At least for now. [When in play, this card counts as one point of 'Strife.'",
+            "lifetime": 0,
+            "aspects": {
+                "strife.tracker": 1,
+                "op": 1
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.defiance",
+            "label": "Mark of the Struggle",
+            "description": "Your arch-nemesis has left you an indelible memory.",
+            "aspects": {
+                "foe.defiance": 1
+            },
+            "lifetime": 0,
+            "unique": false,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.wound.eye",
+            "label": "Chilliarch's Eye",
+            "description": "She is blind, yet nothing escapes her gaze. Now, wherever she looks, she sees only the path to victory. [When in play, this card counts as one point of 'Strife.' When <i>Von Heiling</i> is in play, there is a chance to trigger a <i>weakened ally effect</i>.]",
+            "aspects": {
+                "foe.defiance": 1,
+                "strife.tracker": 1,
+            },
+            "lifetime": 0,
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.wound.hand",
+            "label": "Hand Amputation",
+            "description": "She bears scars, and each scar has been internalized. Now her hand is both weapon and forge. [When in play, this card counts as one point of 'Strife.' When you raid <i>Von Heiling's</i> command post, there is a high chance of <i>damaging a tank</i>.]",
+            "lifetime": 0,
+            "aspects": {
+                "foe.defiance": 1,
+                "strife.tracker": 1,
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "weapon.sword_umiri",
+            "label": "Officer's Side Sword",
+            "description": "An antique hilt, a razor-sharp blade. An ordinary weapon, made extraordinary by its wielder.",
+            "aspects": {
+				"weapon": 1,
+				"edge": 6,
+				"grail": 4
+            },
+            "lifetime": 0,
+			"xtriggers": {
+				"fatiguing": "weapon.sword_umiri.exhausted"
+			},
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "weapon.sword_umiri.exhausted",
+            "label": "Officer's Side Sword",
+            "description": "An antique hilt, a razor-sharp blade. An ordinary weapon, made extraordinary by its wielder.",
+            "aspects": {
+				"weapon": 1,
+	    		"exhausted": 1
+            },
+			"xtriggers": {
+				"fatiguing": "weapon.sword_umiri.exhausted",
+				"refresh": "weapon.sword_umiri"
+			},
+            "unique": true,
+			"lifetime": 90,
+			"decayTo": "weapon.sword_umiri",
+			"icon": "weapon.sword_umiri",
+			"resaturate": true,
+            "isAspect": false,
+        },
+        {
+            "id": "tool.monocle",
+            "label": "Monocle",
+            "description": "A favorite of enemy commanders. Perhaps she uses it to conceal the cold gaze of her Chilliarch's Eye.",
+            "aspects": {
+                "lantern": 4,
+				"tool": 1
+            },
+            "lifetime": 0,
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.wound",	
+			"label": "Wounded",
+			"description": "Enough of these will kill anyone. Mostly anyone.",
+			"isAspect": true,
+            "isHidden": false,
+			"icon": "follower_wound"
+        },
+        {
+            "id": "foe.umiri.mark",
+            "label": "证明这张牌是<i>冯海铃</i>",
+            "description": "伊尔莎·冯·<i>冯海铃</i>(Ilse von Helling)",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "foe.uneat",
+            "label": "The Eternal's Shame",
+            "description": "The army under her command defeated the Eternal—sent him fleeing in disgrace. Every soldier takes pride in this; every soldier sings of it. [Enemy forces bearing this aspect can no longer be absorbed by the Iron Eater.]",
+            "isAspect": true,
+        },
+        {
+            "id": "foe.progression",
+            "label": "Success",
+            "description": "Enemy defense successful.",
+            "lifetime": 1,
+            "isAspect": true,
+            "isHidden": false
+        },
+        {
+            "id": "friend.weakened",
+            "label": "Fear",
+            "description": "Screams freeze in the throat. Even the bravest warriors tremble with fear...",
+            "isAspect": true,
+            "isHidden": false
+        },
+        {
+            "id": "strategy.defense",
+            "label": "Strategy: Construct Defenses",
+            "description": "1",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.rally",
+            "label": "Strategy: Reorganize Formations",
+            "description": "2",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics",
+            "label": "Strategy: Tactical Offensive",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics1",
+            "label": "Tactic: Infantry-Tank Coordination",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics1.had",
+            "label": "战术：步坦协同——标记",
+            "description": "3",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2",
+            "label": "Tactic: Steel Tide",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.had1",
+            "label": "战术：钢铁洪流——标记1",
+            "description": "3",
+            "isAspect": true,
+            "isHidden": true,
+        },
+        {
+            "id": "strategy.tactics2.had2",
+            "label": "战术：钢铁洪流——标记2",
+            "description": "3",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "main&side_exhausted",
+            "label": "目标枯竭",
+            "description": "这个目标枯竭了",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.straight",
+            "label": "Tactic: Steel Tide—Direct Assault",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.main",
+            "label": "Tactic: Steel Tide—Obstruct Objective",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.up_edge",
+            "label": "Tactic: Steel Tide—Increase Threshold",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3",
+            "label": "Tactic: Firepower Coverage",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3.up_edgea",
+            "label": "Increase Threshold",
+            "description": "Tactic: Firepower Coverage—Increase Threshold",
+            "aspects": {
+                "needsforgemoth": 2
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3.up_edgeb",
+            "label": "Increase Threshold",
+            "description": "Tactic: Firepower Coverage—Increase Threshold",
+            "aspects": {
+                "foe.aerial": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "up_edge",
+            "label": "Increase Threshold",
+            "description": "Tactic: Infantry-Tank Coordination—Increase Threshold",
+            "aspects": {
+                "needsedge": 2
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "umiri_sergei",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri2",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "umiri_camilla",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri1",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "circle_sergei",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri0",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+    {
+	"id": "foe.officer",
+	"label": "Enemy Officer",
+	"description": "One of the Wehrmacht's preening luminaries. Killing them would throw the enemy's operations into chaos, but officers seldom travel without protection.",
+	"inherits": "foe.template",
+	"aspects": {
+	    "mortal": 1,
+	    "foe.rankofficer": 1,
+	    "needsedge": 4,
+	    "german": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.officer",
+		"killgerman": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killfoe": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killmortal": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+	    "concealidentity": "foe.officer.hidden"
+	}
+    },
+    {
+	"id": "foe.officer.hidden",
+	"label": "Unknown Enemy",
+	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+	    "german": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.officer.hidden",
+		"killgerman": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killfoe": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killmortal": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+	    "revealidentity": "foe.officer"
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.chasseur",
+	"label": "Enemy Chasseur",
+	"description": "Most soldiers give up the fight when they're killed. These ones don't.",
+	"inherits": "foe.template",
+	"aspects": {
+	    "otherworldly": 1,
+	    "foe.resilient": 1,
+	    "foe.elusive": 1,
+	    "needsedgewinter": 8,
+	    "needsedgelantern": 8
+	},
+	"xtriggers": {
+	    "refresh": "foe.chasseur",
+	    "killfoe": "foe.chasseur.reviving",
+	    "concealidentity": "foe.chasseur.hidden",
+	    "takeadditional": [
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		}
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": 2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": 2
+		}
+	    ],
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	}
+    },
+    {
+	"id": "foe.chasseur.hidden",
+	"label": "Unknown Enemy",
+	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.chasseur.hidden",
+	    "killfoe": "foe.chasseur.reviving",
+	    "revealidentity": "foe.chasseur",
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.chasseur.reviving",
+	"label": "Enemy Chasseur (Reviving)",
+	"description": "Those who worship the Colonel sometimes say, 'there is no defeat but annihilation.' I guess that just means they don't know when to quit.",
+	"aspects": {
+	    "op": 1,
+	    "needswinter": 6,
+	    "needsknock": 6,
+	    "needsedge": 6
+	},
+	"xtriggers": {
+	     "follower_scar_knock": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influenceknockc",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ],
+	     "follower_scar_edge": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influenceedgec",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ],
+	     "follower_scar_winter": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influencewinterc",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ]
+	},
+	"slots": [
+	    {
+		"id": "needssomething1",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		}
+	    },
+	    {
+		"id": "needssomething2",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		}
+	    },
+	],
+	"icon": "foe.chasseur",
+	"decayTo": "foe.chasseur",
+	"resaturate": true,
+	"lifetime": 120
+    },
+    {
+	"id": "skill.deflect",
+	"label": "Inviolate Defence",
+	"description": "Excruciatingly demanding movements that make a fortress of the body. The precision and conditioning necessary to perform them is usually found only in Long, but a mortal - an extremely careful, extremely well-trained mortal - may make limited use of these techniques to turn aside blows that would otherwise spell death. [You can use this to defend against an attack from any source.]",
+	"aspects": {
+	    "lore": 1,
+	    "heart": 8,
+	    "legacyplotitem": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "skill.deflect.exhausted",
+	    "fatiguing_double": "skill.deflect.exhausted_double"
+	},
+	"unique": true
+    },
+    {
+	"id": "skill.deflect.exhausted",
+	"label": "Inviolate Defence (Exhausted)",
+	"description": "Excruciatingly demanding movements that make a fortress of the body. The precision and conditioning necessary to perform them is usually found only in Long, but a mortal - an extremely careful, extremely well-trained mortal - may make limited use of these techniques to turn aside blows that would otherwise spell death. [You can use this to defend against an attack from any source.]",
+	"aspects": {
+	    "lore": 1,
+	    "exhausted": 1
+	},
+	"xtriggers": {
+	    "fatiguing_double": "skill.deflect.exhausted_double",
+	    "fatiguing": "skill.deflect.exhausted",
+	    "refresh": "skill.deflect"
+	},
+	"unique": true,
+	"icon": "skill.deflect",
+	"resaturate": true,
+	"lifetime": 160,
+	"decayTo": "skill.deflect"
+    },
+    {
+	"id": "skill.deflect.exhausted_double",
+	"label": "Inviolate Defence (Exhausted)",
+	"description": "Excruciatingly demanding movements that make a fortress of the body. The precision and conditioning necessary to perform them is usually found only in the Eternal, but a mortal—an extremely careful, extremely well-trained mortal—may make limited use of these techniques to turn aside blows that would otherwise spell death. [You can use this to defend against an attack from any source. If you use Inviolate Defence to defend against a tactical assault, recovery time is doubled.]",
+	"aspects": {
+	    "lore": 1,
+	    "exhausted": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "skill.deflect.exhausted_double",
+	    "refresh": "skill.deflect"
+	},
+	"unique": true,
+	"icon": "skill.deflect",
+	"resaturate": true,
+	"lifetime": 320,
+	"decayTo": "skill.deflect"
+    },
+    
+    {
+	"id": "fatiguing_double",
+	"label": "双倍恢复时间",
+	"description": "双倍恢复，因为防御战术或其他原因",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "fatiguing_damaged",
+	"label": "受伤",
+	"description": "双倍恢复，因为防御战术或其他原因",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "friend.cross",
+	"label": "Gyrvaengr, Spear-and-Shield",
+	"description": "Child of Stone, soldier of the Owl, and the last of the true, proud Glaeterfleoge still living on this side of History. She has no love for mankind, but she will wield her wings and scales and keen-pointed stingers in concert with me, for we both strive after the death of a common enemy.",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "edge": 20,
+	    "knock": 12,
+	    "moth": 12,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "friend.cross.exhausted",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	    "killmortal": "friend.cross.exhausted",
+	    "killfriend": "friend.cross.exhausted",
+	    "makecasualty": "friend.cross.exhausted",
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	},
+	"icon": "cross"
+    },
+    {
+	"id": "friend.cross.exhausted",
+	"label": "Gyrvaengr, Spear-and-Shield",
+	"description": "Child of Stone, soldier of the Owl, and the last of the true, proud Glaeterfleoge still living on this side of History. She has no love for mankind, but she will wield her wings and scales and keen-pointed stingers in concert with me, for we both strive after the death of a common enemy.",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	},
+	"icon": "cross",
+	"lifetime": 30,
+	"decayTo": "friend.cross",
+	"resaturate": true
+    },
+    {
+	"id": "friend.cross.exhausted_double",
+	"label": "Gyrvaengr, Spear-and-Shield",
+	"description": "Child of Stone, soldier of the Owl, and the last of the true, proud Glaeterfleoge still living on this side of History. She has no love for mankind, but she will wield her wings and scales and keen-pointed stingers in concert with me, for we both strive after the death of a common enemy.",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	},
+	"icon": "cross",
+	"lifetime": 60,
+	"decayTo": "friend.cross",
+	"resaturate": true
+    },
+    {
+	"id": "op.cross.postfight_double",
+	"label": "Gyrvaengr, Spear-and-Shield [In Recovery]",
+	"description": "Even after such bombardment, her hide is only slightly damaged. Now she needs time for her carapace to mend... [<i>Gyrvaengr, Spear-and-Shield</i> was wounded in a tactical assault.]",
+	"aspects": {
+	    "local": 1
+	},
+	"decayTo": "friend.cross",
+	"lifetime": 120,
+	"icon": "cross"
+    },
+    {
+	"id": "op.cross.postfight",
+	"label": "Gyrvaengr, Wounded-Wing",
+	"description": "With our common goal now achieved, we have no more use for one another. I know she would have my life, too, were it not for the depth of her injuries - and she, in turn, knows that I know this. Yet, I can almost hear something like a voice when I approach her...",
+	"aspects": {
+	    "local": 1
+	},
+	"icon": "cross"
+    },
+	
+    {
+	"id": "friend.sergei",
+	"label": "The Iron-Eater",
+	"description": "With his dyad-partner dead, I can only wonder what sustains him now: the war? Fear? A desire for worthy death? Perhaps the Wolf is merely drawing out his last whimper of life. But, even fading, this Long of the Wolf-Divided remains nearly as ferocious as he was at the height of his ascendancy.",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "edge": 20,
+	    "winter": 20,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "friend.sergei.exhausted",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "killmortal": "friend.sergei.exhausted",
+	    "killfriend": "friend.sergei.exhausted",
+	    "makecasualty": "friend.sergei.exhausted",
+	    "damagehealth": "op.sergei.postfight"
+	},
+	"icon": "sergei"
+    },
+    {
+	"id": "friend.sergei.exhausted",
+	"label": "The Iron-Eater",
+	"description": "With his dyad-partner dead, I can only wonder what sustains him now: the war? Fear? A desire for worthy death? Perhaps the Wolf is merely drawing out his last whimper of life. But, even fading, this Long of the Wolf-Divided remains nearly as ferocious as he was at the height of his ascendancy.",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.sergei.postfight",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	},
+	"icon": "sergei",
+	"lifetime": 30,
+	"decayTo": "friend.sergei",
+	"resaturate": true
+    },
+    {
+	"id": "friend.sergei.exhausted_double",
+	"label": "The Iron-Eater",
+	"description": "With his dyad-partner dead, I can only wonder what sustains him now: the war? Fear? A desire for worthy death? Perhaps the Wolf is merely drawing out his last whimper of life. But, even fading, this Long of the Wolf-Divided remains nearly as ferocious as he was at the height of his ascendancy.",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.sergei.postfight",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	},
+	"icon": "sergei",
+	"lifetime": 60,
+	"decayTo": "friend.sergei",
+	"resaturate": true
+    },
+    {
+	"id": "op.sergei.postfight_double",
+	"label": "The Iron-Eater [In Recovery]",
+	"description": "'I know this barrage well.' He returns, gasping for air. 'Three years ago, I witnessed such a sight. Boy, you had best—best never approach that officer. A dying beast is often the most dangerous of all.' [<i>The Iron-Eater</i> was wounded in a tactical assault.]",
+	"lifetime": 120,
+	"aspects": {
+	    "local": 1
+	},
+	"decayTo": "friend.sergei",
+	"icon": "defeated.sergei"
+    },
+    {
+	"id": "op.sergei.postfight",
+	"label": "The Iron-Eater",
+	"description": "<i>'Vse koncheno.'</i>",
+	"aspects": {
+	    "local": 1
+	},
+	"icon": "defeated.sergei"
+    },
+	
+
+    {
+	"id": "main.withdraw",
+	"label": "Main Objective: Withdraw",
+	"description": "This position is quickly becoming untenable. We must provide sufficient cover against the German attack so that our allies may evacuate.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.withdraw.exhausted"
+	}
+    },
+    {
+	"id": "main.eliminate",
+	"label": "Main Objective: Eliminate",
+	"description": "Local intelligence indicates a high profile target is present at our current position. If we can eliminate this target before moving on, that would bode well for the war effort.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.eliminate.exhausted"
+	}
+    },
+    {
+	"id": "main.repossess",
+	"label": "Main Objective: Repossess",
+	"description": "A valuable asset has gone missing somewhere amidst the rubble and flame. The Germans are on the hunt for it - we cannot allow it to fall into their hands.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.repossess.exhausted"
+	}
+    },
+    {
+	"id": "main.sabotage",
+	"label": "Main Objective: Sabotage",
+	"description": "The position here is rife with valuable infrastructure - the kind we cannot take with us. Before moving on, we should ensure that the Wehrmacht cannot enjoy what we leave behind.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.sabotage.exhausted"
+	}
+    },
+    {
+	"id": "main.stalingrad.north",
+	"label": "Main Objective: Stalingrad North",
+	"description": "The Germans assault the northern part of the city, even as the winter tightens and constricts the air about us. Blunt their advance through the streets.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.north.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.manhunters",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.west",
+	"label": "Main Objective: Stalingrad West",
+	"description": "Here the German vanguard gathers, a hammer racing towards the broad surface of an anvil. So we will make of the west a slaughtering ground.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.west.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.bombers",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.south",
+	"label": "Main Objective: Stalingrad South",
+	"description": "The south is afflicted with fighting, as is the rest of the city. But something that isn't an enemy soldier is fighting there, too - and fighting savagely. Clear the south and put it down.",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.south.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.splinter",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "side.cutoff",
+	"label": "Side Objective: A Supply Blockade",
+	"description": "Our supply convoys are harried and beset upon by the enemy. While this blockade stands, no provisions may reach us - breaking it must be an utmost priority if we are to sustain the war effort here. [While this card is on the table, you will not receive any Provisions from the Welcome Days event.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "husk"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.cutoff.exhausted"
+	},
+	"lifetime": 300,
+	"unique": true
+    },
+    {
+	"id": "side.adeptwinter",
+	"label": "Side Objective: Detain a Winter-Adept",
+	"description": "Adepts are a cagey sort, and the war's driven those unable to flee the country even deeper into hiding. One, however, is hiding here. They might disagree with being found, but they might disagree with being shot even more. [A chance to consult with a Winter-adept.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptwinter"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptwinter.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.adeptlantern",
+	"label": "Side Objective: Detain a Lantern-Adept",
+	"description": "Adepts are a cagey sort, and the war's driven those unable to flee the country even deeper into hiding. One, however, is hiding here. They might disagree with being found, but they might disagree with being shot even more. [A chance to consult with a Lantern-adept.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptlantern"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.apollonian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.greatseal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptlantern.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.adeptgrail",
+	"label": "Side Objective: Detain a Grail-Adept",
+	"description": "Adepts are a cagey sort, and the war's driven those unable to flee the country even deeper into hiding. One, however, is hiding here. They might disagree with being found, but they might disagree with being shot even more. [A chance to consult with a Grail-adept.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptgrail"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptgrail.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.weaponscache",
+	"label": "Side Objective: Arms Cache",
+	"description": "A weapons convoy has been stranded beyond our lines. If we act quickly, we can seize those weapons for ourselves. [A chance to obtain a variety of Supplies.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weaponscache.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.weaponscache.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.rescueallies",
+	"label": "Side Objective: Rescue Allies",
+	"description": "A contingent of our brothers-in-arms is pinned down by a hostile force! They'll be lost to us if we do not intervene - up, and to arms! [A chance to obtain new Allies.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "rescueallies.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.storms",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.rescueallies.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.yuri",
+	"label": "Side Objective: Yuri Serenko",
+	"description": "A German mole was discovered in the fold, but he slipped away before Yuri could administer the proper justice. For him, apprehending the spy before he is extracted is not only a matter of tactical importance, but one of integrity. [A chance to recruit a new Ally.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.yuri.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.yuri.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.iosef",
+	"label": "Side Objective: Iosef Volodin",
+	"description": "The penal battalion officer overseeing Iosef's contingent is an alleged collector of certain rare pleasures and artworks - the sort, Iosef suggests, the Party would not approve an officer of having. Iosef tells us that his retainer is searching for one such item here. If we get to it first, we might be able to strike a bargain for his freedom. [A chance to recruit a new Ally.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.iosef.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.serpent",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.iosef.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.konstantin",
+	"label": "Side Objective: Dr. Konstantin Ismailov",
+	"description": "The hospital where Dr. Ismailov and his comrades had previously been operating was taken by the Germans in their most recent offensive push, and it now lies within the bounds of Wehrmacht control. A particularly rare 'medical specimen' was among the things the doctor was forced to abandon when he fled. He'd like assistance in getting it back. [A chance to recruit a new Ally.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.konstantin.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.apollonian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.konstantin.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.nikolai",
+	"label": "Side Objective: Nikolai Belyaev",
+	"description": "Blackened handprints scorched on steel - a mischeivous lesser Name has been getting into the armoury, disfiguring machinery and rendering our arms unusable. Nikolai intends to find and extinguish this troublesome saboteur. [A chance to recruit a new Ally.]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.nikolai.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.earthquake",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.nikolai.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.ebrehel",
+	"label": "Path to the Sword-Keeper",
+	"description": "Ebrehel waits for me to claim it at the heart of the lake-grove. We'll have to cut through this labyrinthine forest to get to it, but our way will be harried by the creatures and forces of the Unseen Lake - and by the sword-keeper herself.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "nimiane"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.voice",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.ebrehel.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.monastery",
+	"label": "Pechersk Lavra",
+	"description": "In the 1920s, an understanding between the Soviet government and the monks of the cave-monastery was brokered, and the place was officially (and invisibly) acknowledged as a sanctioned repository for 'unnatural phenomenon.' Of course, it was a somewhat open secret within the OPRP that the monastery had been housing (or imprisoning) things not-of-this-world since the 11th century. Now, though - Kyiv is under fire, and the army has pushed the monks out. Dangerous things are rousing below Pechersk Lavra, unattended. We should put them to rest.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "promise.medusa"
+		},
+		{
+		    "id": "weapon.skull",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.earthquake",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.growth",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.monastery.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest1"
+    },
+    {
+	"id": "side.camilla",
+	"label": "A Skirmish in the Wilds?",
+	"description": "An unusually fierce battle rages on the outskirts of the city. Those who have come away from the fighting with their lives report that not all the combatants therein are human.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.camilla"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.fog",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.warrior",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.labhite.grounded",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.camilla.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.office",
+	"label": "OPRP Regional Office",
+	"description": "The OPRP is the Soviet government's instrument for 'regulation of the unnatural, unexpected, and unholy.' It was indelibly corrupt, but I had been a beneficiary of that corruption, so I didn't mind when I worked there. This office, if memory serves, contained a few potent but troublesome items in its high-security storage vaults. Hopefully the shelling hasn't disturbed anything too dangerous.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.wormnail"
+		},
+		{
+		    "id": "tool.winter",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.office.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.factory",
+	"label": "Harsk-Brumov Manufacturing",
+	"description": "After the Great War, Harsk-Brumov's firearm designs grew unorthodox and unusual, and their clientele grew smaller and stranger. This foundry on the city outskirts is one of the last places the company still builds weapons, and now the Germans have taken it over. We ought to take it back.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.revolver.5"
+		},
+		{
+		    "id": "tool.forge",
+		    "morpheffect": "spawn"
+		},
+		{
+		    "id": "supplies.explosives",
+		    "morpheffect": "spawn",
+		    "level": 3
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.factory.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcapital3"
+    },
+    {
+	"id": "side.gallery",
+	"label": "Kusnetsov Gallery",
+	"description": "Prince Kusnetsov became fascinated with spiritual modes of healing late into his life, and travelled the Mediterranean for several years to indulge his interests. This gallery now holds many of the artefacts he procured - bought, stolen, unearthed - before his death in 1859.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.heart"
+		},
+		{
+		    "id": "tool.grail",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.gallery.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.nest",
+	"label": "Labhite's Nest",
+	"description": "One of the Lionsmith's monsters has feathered a nest for itself in the woods beyond the city. It has been giving the Germans trouble, which is good, but a number of our own patrols have also been lost to the beast's predations. Rooting it out won't be easy - labhites are young, but they are terrors of the sky, and very strong.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.talon"
+		},
+		{
+		    "id": "tool.lantern",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.labhite.grounded",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.labhite.airborne",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.nest.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultrendingmountains1"
+    },
+    {
+	"id": "side.voronezh",
+	"label": "Mist-Shrouded Path",
+	"description": "In the 12th century, a Ryazan prince fled his defeat towards Voronezh. He never made it to town. Local legends attribute his disappearance to betrayal and to wild beasts, but the oldest accounts say that in those days, when forests of black oak stood, the prince encountered something in the mists. The defeated sometimes find solace in the mists of a certain Name - and even though the forests are long gone, the mists are still here.",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.moth"
+		},
+		{
+		    "id": "tool.knock",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.moonspace",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.voronezh.exhausted"
+	},
+	"unique": true
+    },
+    
+    {
+	"id": "main.exhausted",
+	"label": "主要目标枯竭模板",
+	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"aspects": {
+	    "main": 1,
+	    "exhausted": 1,
+		"main&side_exhausted": 1
+	},
+	},
+    {
+	"id": "side.exhausted",
+	"label": "次要目标枯竭模板",
+	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"aspects": {
+	    "side": 1,
+	    "exhausted": 1,
+		"main&side_exhausted": 1
+	},
+	},
+    {
+	"id": "main.withdraw.exhausted",
+	"label": "Main Objective: Withdraw",
+	"inherits": "main.exhausted",
+    "icon": "main.withdraw",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.withdraw.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.withdraw",
+    },
+    {
+	"id": "main.eliminate.exhausted",
+	"label": "Main Objective: Eliminate",
+	"inherits": "main.exhausted",
+    "icon": "main.eliminate",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.eliminate.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.eliminate",
+    },
+    {
+	"id": "main.repossess.exhausted",
+	"label": "Main Objective: Repossess",
+	"inherits": "main.exhausted",
+    "icon": "main.repossess",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.repossess.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.repossess",
+    },
+    {
+	"id": "main.sabotage.exhausted",
+	"label": "Main Objective: Sabotage",
+	"inherits": "main.exhausted",
+    "icon": "main.sabotage",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.sabotage.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.sabotage",
+    },
+    {
+	"id": "main.stalingrad.north.exhausted",
+	"label": "Main Objective: Stalingrad North",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.north.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.west.exhausted",
+	"label": "Main Objective: Stalingrad West",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.west.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.south.exhausted",
+	"label": "Main Objective: Stalingrad South",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.south.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "side.cutoff.exhausted",
+	"label": "Side Objective: A Supply Blockade",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.cutoff.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.cutoff",
+    "decayTo": "side.cutoff",
+	"unique": true
+    },
+    {
+	"id": "side.adeptwinter.exhausted",
+	"label": "Side Objective: Detain a Winter-Adept",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptwinter.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptwinter",
+    "decayTo": "side.adeptwinter",
+    },
+    {
+	"id": "side.adeptlantern.exhausted",
+	"label": "Side Objective: Detain a Lantern-Adept",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptlantern.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptlantern",
+    "decayTo": "side.adeptlantern",
+    },
+    {
+	"id": "side.adeptgrail.exhausted",
+	"label": "Side Objective: Detain a Grail-Adept",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptgrail.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptgrail",
+    "decayTo": "side.adeptgrail",
+    },
+    {
+	"id": "side.weaponscache.exhausted",
+	"label": "Side Objective: Arms Cache",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.weaponscache.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.weaponscache",
+    "decayTo": "side.weaponscache",
+    },
+    {
+	"id": "side.rescueallies.exhausted",
+	"label": "Side Objective: Rescue Allies",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.rescueallies.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.rescueallies",
+    "decayTo": "side.rescueallies",
+    },
+    {
+	"id": "side.yuri.exhausted",
+	"label": "Side Objective: Yuri Serenko",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.yuri.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.yuri",
+    "decayTo": "side.yuri",
+	"unique": true
+    },
+    {
+	"id": "side.iosef.exhausted",
+	"label": "Side Objective: Iosef Volodin",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.iosef.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.iosef",
+    "decayTo": "side.iosef",
+	"unique": true
+    },
+    {
+	"id": "side.konstantin.exhausted",
+	"label": "Side Objective: Dr. Konstantin Ismailov",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.konstantin.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.konstantin",
+    "decayTo": "side.konstantin",
+	"unique": true
+    },
+    {
+	"id": "side.nikolai.exhausted",
+	"label": "Side Objective: Nikolai Belyaev",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.nikolai.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.nikolai",
+    "decayTo": "side.nikolai",
+	"unique": true
+    },
+    {
+	"id": "side.ebrehel.exhausted",
+	"label": "Path to the Sword-Keeper",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.ebrehel.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.ebrehel",
+    "decayTo": "side.ebrehel",
+	"unique": true
+    },
+    {
+	"id": "side.monastery.exhausted",
+	"label": "Pechersk Lavra",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.monastery.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.monastery",
+	"unique": true,
+	"icon": "vaultlandbeyondforest1"
+    },
+    {
+	"id": "side.camilla.exhausted",
+	"label": "A Skirmish in the Wilds?",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.camilla.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.camilla",
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.office.exhausted",
+	"label": "OPRP Regional Office",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.office.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.office",
+    "decayTo": "side.office",
+	"unique": true
+    },
+    {
+	"id": "side.factory.exhausted",
+	"label": "Harsk-Brumov Manufacturing",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.factory.exhausted"
+	},
+    "resaturate": true,
+	"unique": true,
+    "decayTo": "side.factory",
+	"icon": "vaultcapital3"
+    },
+    {
+	"id": "side.gallery.exhausted",
+	"label": "Kusnetsov Gallery",
+	"inherits": "side.exhausted",
+    "decayTo": "side.gallery",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.gallery.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.gallery",
+	"unique": true
+    },
+    {
+	"id": "side.nest.exhausted",
+	"label": "Labhite's Nest",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.nest.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.nest",
+	"unique": true,
+	"icon": "vaultrendingmountains1"
+    },
+    {
+	"id": "side.voronezh.exhausted",
+	"label": "Mist-Shrouded Path",
+	"lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.voronezh.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.voronezh",
+    "decayTo": "side.voronezh",
+	"unique": true
+    },
+    ]
+}

@@ -1,0 +1,3349 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.tactics2.first",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Orders have been issued. The enemy engines roar.",
+            "description": "Orders have been issued. The enemy engines roar.",
+            "actionId": "foetactics2",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics2": 1
+            },
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Orders have been issued. The enemy engines roar.",
+            "description": "Orders have been issued. The enemy engines roar.",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+                "strategy.tactics2": 1
+            },
+			"playAudioTrack": "bgm.foetactics2.mp3",
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "internaldeck": {
+                "spec": [
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackfriend",
+                    "umiriattackfriend",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "description": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+        "id": "foe.umiri.attack.tactics2_one.attack",
+        "label": "Enemy Launching Tactical Assault!",
+        "startdescription": "Tearing up railroad tracks, demolishing houses. These fascist bandits!",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+        },
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "infrastructure",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics2_two.pre"
+            },
+            {
+            "id": "foe.umiri.attack.tactics2.end1"
+            },
+        ],
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+            {
+            "id": "produce.trauma",
+            "additional": true,
+            "chance": 40
+            },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.friend.immortal",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Aid from the Eternal</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Inviolate Defence</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "producetimeover",
+            "label": "Exhausted!",
+            "startdescription": "Exhausted!",
+            "description": "Exhausted!",
+            "warmup": 0,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "producetimeover.friend.immortal"
+                },
+                {
+                    "id": "producetimeover.deflect"
+                }
+            ],
+        },
+        {
+            "id": "producetimeover.deflect",
+            "label": "Exhausted!",
+            "startdescription": "This secret technique successfully repelled the German bombardment. They withdraw briefly, but you are utterly spent. [You used <i>Inviolate Defence</i> to defend against a tactical assault; recovery time is doubled.]",
+            "description": "This secret technique successfully repelled the German bombardment. They withdraw briefly, but you are utterly spent. [You used <i>Inviolate Defence</i> to defend against a tactical assault; recovery time is doubled.]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "producetimeover.friend.immortal",
+            "label": "Exhausted!",
+            "startdescription": "The Eternal successfully repelled the German bombardment. They withdraw briefly, but he is utterly spent. [You used <i>Aid from the Eternal</i> to defend against a tactical assault; recovery time is doubled.]",
+            "description": "The Eternal successfully repelled the German bombardment. They withdraw briefly, but he is utterly spent. [You used <i>Aid from the Eternal</i> to defend against a tactical assault; recovery time is doubled.]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+                "friend.immortal": 1
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "producetimeover.damaged",
+                    "chance": 30
+                }
+            ],
+        },
+        {
+            "id": "producetimeover.damaged",
+            "label": "Wounded!",
+            "startdescription": "Flesh is no match for steel. [You used <i>Aid from the Eternal</i> to defend against a tactical assault; this may sometimes result in injury.]",
+            "description": "Flesh is no match for steel. [You used <i>Aid from the Eternal</i> to defend against a tactical assault; this may sometimes result in injury.]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_damaged": 1
+            },
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsedge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsforge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsap",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.setback",
+            "label": "Repelling the Enemy Offensive",
+            "startdescription": "And in the end, we learned to speak with steel.",
+            "description": "And in the end, we learned to speak with steel.",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.pre"
+                },
+                {
+                "id": "foe.umiri.attack.tactics2.end1"
+                },
+            ],
+        },
+        
+        {
+            "id": "foe.umiri.attack.tactics2_two.pre",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Orders have been issued. The enemy engines roar.",
+            "description": "Orders have been issued. The enemy engines roar.",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "description": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack",
+	"label": "Lost Resources!",
+	"startdescription": "We are in retreat, abandoning all supplies—adding insult to injury.",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack_end",
+	"label": "Lost Resources!",
+	"startdescription": "We are in retreat, abandoning all supplies—adding insult to injury.",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.pre"
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2.end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics2_two.friend.immortal",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Aid from the Eternal</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Inviolate Defence</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsedge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsforge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsap",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.setback",
+            "label": "Repelling the Enemy Offensive",
+            "startdescription": "And in the end, we learned to speak with steel.",
+            "description": "And in the end, we learned to speak with steel.",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+                "strategy.tactics2.up_edge": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.pre"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2.end2"
+                },
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2_three.pre",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Orders have been issued. The enemy engines roar.",
+            "description": "Orders have been issued. The enemy engines roar.",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.up_edge",
+                    "mutate": "needsedgeforge",
+                    "level": "[needsforge] - 16",
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.edgeforge",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.edgeforge",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Orders have been issued. The enemy engines roar.",
+            "description": "Orders have been issued. The enemy engines roar.",
+            "actionId": "foetactics2",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -30,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
+            "description": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedgeforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack",
+	"label": "Direct Assault",
+	"startdescription": "The steel tide crushes our last resistance. They grind over burning wrecks, over mangled corpses...",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Friend",
+		"required": {
+            "friend": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "friend.hidden": 1,
+            "anno.mark": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack_end",
+	"label": "Direct Assault",
+	"startdescription": "The steel tide crushes our last resistance. They grind over burning wrecks, over mangled corpses...",
+	"requirements": {
+	},
+	"aspects": {
+	},
+    "xpans": {
+        "stop_goal": 1
+    },
+    "slots": [
+        {
+        "id": "needsfoe1",
+        "label": "Obstruction",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe2",
+        "label": "Obstruction",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe3",
+        "label": "Obstruction",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+    ],
+    "effects": {
+        "side.rescueallies": -99,
+        "side.weaponscache": -99,
+        "side.adeptgrail": -99,
+        "side.adeptlantern": -99,
+        "side.adeptwinter": -99,
+        "side.rescuepartisans": -99
+    },
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "needsedge",
+            "level": 2,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "needsforge",
+            "level": 30,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had1",
+            "level": 0,
+            "additive": false
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had2",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end1",
+        "chance": 50
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2_three.attack_end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics2_three.friend.immortal",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Aid from the Eternal</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.\n\n[During this tactic, <i>Inviolate Defence</i> can only be used once. Use it wisely.]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsedge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsedgeforge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedgeforge": 1,
+                "forge": "needsedgeforge",
+                "edge": "needsedgeforge",
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsforge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsap",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.setback",
+            "label": "Repelling the Enemy Offensive",
+            "startdescription": "And in the end, we learned to speak with steel.",
+            "description": "And in the end, we learned to speak with steel.",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 30,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2.end1",
+            "label": "German Offensive Halted",
+            "startdescription": "Demand for German tanks outstrips supply.",
+            "description": "Demand for German tanks outstrips supply.",
+            "warmup": 30,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2.end2",
+            "label": "German Offensive Halted",
+            "startdescription": "Demand for German tanks outstrips supply.",
+            "description": "Demand for German tanks outstrips supply.",
+            "warmup": 30,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end1",
+            "label": "Defeated!",
+            "startdescription": "...The scent of blood and gunpowder spreads across the scorched earth.",
+            "description": "...The scent of blood and gunpowder spreads across the scorched earth.",
+            "warmup": 0,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack_end11"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end11",
+            "label": "Defeated!",
+            "startdescription": "...The scent of blood and gunpowder spreads across the scorched earth.",
+            "description": "...The scent of blood and gunpowder spreads across the scorched earth.",
+            "warmup": 0,
+            "aspects": {
+                "makecasualty": 1,
+            }
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end2",
+            "label": "Crushing Defeat!",
+            "startdescription": "...The silence and stench of decay settle over the ruins.",
+            "description": "...The silence and stench of decay settle over the ruins.",
+            "warmup": 0,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack_end22"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end22",
+            "label": "Crushing Defeat!",
+            "startdescription": "...The silence and stench of decay settle over the ruins.",
+            "description": "...The silence and stench of decay settle over the ruins.",
+            "warmup": 0,
+            "aspects": {
+                "killfriend": 1,
+            }
+        },
+        
+        {
+            "id": "foe.umiri.attack.tactics3.first",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "actionId": "foetactics3",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics3": 1
+            },
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3"
+                }
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics3",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "requirements": {
+                "strategy.tactics3": 1
+            },
+			"playAudioTrack": "bgm.foetactics3.mp3",
+            "internaldeck": {
+                "spec": [
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackfriend",
+                    "umiriattackfriend",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "grandReqs": {
+                "Max( ([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]), ([~/exterior:foe.bombers] + [~/exterior:foe.bombers.hidden]) ) >= 1": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3a",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3a",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+                "strategy.tactics3.up_edgea": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "Enemy",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "Enemy",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "Enemy",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": -2,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "The earth trembles, soil showers down, viscera resonate with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "description": "The earth trembles, soil showers down, viscera resonate with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend2",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend3",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.deflect.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsforgemoth"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.friend.immortal.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.friend.immortal.3foe",
+            "label": "Successful Counterattack?",
+            "startdescription": "Stand and fight.\n\n[You are attempting to use <i>Aid from the Eternal</i> to repel a heavy firepower assault. This carries a chance of failure!]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.friend.immortal",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.deflect.3foe",
+            "label": "Successful Counterattack?",
+            "startdescription": "Stand and fight.\n\n[You are attempting to use <i>Inviolate Defence</i> to repel a heavy firepower assault. This carries a chance of failure!]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.needsedge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.needsforgemoth",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsforgemoth": 1,
+                "forge": "needsforgemoth",
+                "moth": "needsforgemoth"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.setback",
+            "label": "Repelling the Enemy Offensive",
+            "startdescription": "We know war is cruel, but we have no other choice.",
+            "description": "We know war is cruel, but we have no other choice.",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.artillery",
+                    "mutate": "needsforgemoth",
+                    "level": 2,
+                    "additive": true
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_one.attack",
+        "label": "Enemy Launching Tactical Assault!",
+        "startdescription": "Smoke and dust slowly settle. Nothing intact remains here—only rubble and twisted metal as far as the eye can see.",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 4,
+                "additive": true
+            },
+            {
+                "filter": "foe.artillery",
+                "mutate": "needsforgemoth",
+                "level": 2,
+                "additive": true
+            },
+        ],
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "infrastructure",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "haltverb": {
+	        "main": 99,
+            "side": 99,
+            "side.2": 99,
+            "side.3": 99,
+            "operation.heart": 99,
+            "operation.edge": 99,
+        },
+        "purge": {
+            "hindrance": 99,
+        },
+        "xpans": {
+            "stop_goal": 1
+        },
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_two.attack"
+            },
+        ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_two.attack",
+        "label": "Face the Fire!",
+        "startdescription": "The battlefield returns to silence. This army has turned to ash in the flames.",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Friend",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_two.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_two.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_two.end",
+        "label": "Face the Fire!",
+        "startdescription": "The battlefield returns to silence. This army has turned to ash in the flames.",
+        "requirements": {
+        },
+        "aspects": {
+            "killfriend": 1
+        },
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_three.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_three.attack",
+        "label": "Face the Fire",
+        "startdescription": "The battlefield returns to silence—only scattered equipment remains, and the wailing of the wounded.",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Friend",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_three.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_three.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_three.end",
+        "label": "Face the Fire",
+        "startdescription": "The battlefield returns to silence—only scattered equipment remains, and the wailing of the wounded.",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack"
+            }
+        ],
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.attack",
+        "label": "Artillery Aftermath",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.",
+        "requirements": {
+            "foe": 3
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Friend",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.weakened": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_four.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_four.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.end",
+        "label": "Artillery Aftermath",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.",
+        "requirements": {
+        },
+        "aspects": {
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "friend",
+                "mutate": "edge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "forge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "lantern",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "moth",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "heart",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "grail",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "winter",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "knock",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "friend.weakened",
+                "level": 1,
+                "additive": false
+            },
+        ],
+        "furthermore": [
+        {
+            "target": "~/tabletop",
+            "mutations": [
+                {
+                    "filter": "influence_temp",
+                    "mutate": "influence_temp",
+                    "level": 1,
+                    "additive": true,
+                    "VFX": "CardBurn"
+                }
+            ]
+        }
+        ],
+        "linked": [
+            {
+                "id": "foe.umiri.attack.tactics3_four.end0"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.end0",
+        "label": "Artillery Aftermath",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.",
+        "requirements": {
+        },
+        "purge": {
+	        "influence_temp": 99,
+            "side.rescueallies": 99,
+            "side.weaponscache": 99,
+            "side.adeptgrail": 99,
+            "side.adeptlantern": 99,
+            "side.adeptwinter": 99,
+            "side.rescuepartisans": 99
+        },
+        "linked": [
+        ],
+        "warmup": 0
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics3b",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
+            "description": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.bombers] + [~/exterior:foe.bombers.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "Enemy",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "Enemy",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "Enemy",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one_ex",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one_ex",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
+            "description": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
+            "warmup": 0,
+            "requirements": {
+                "foe": 3
+            },
+            "effects": {
+                "strategy.tactics3.up_edgeb": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one_friend",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one",
+                    "chance": 100
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "description": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend2",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend3",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.deflect.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsaerial"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.friend.immortal.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.friend.immortal.3foe",
+            "label": "Successful Counterattack?",
+            "startdescription": "Stand and fight.\n\n[You are attempting to use <i>Aid from the Eternal</i> to repel a heavy firepower assault. This carries a chance of failure!]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.friend.immortal",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.deflect.3foe",
+            "label": "Successful Counterattack?",
+            "startdescription": "Stand and fight.\n\n[You are attempting to use <i>Inviolate Defence</i> to repel a heavy firepower assault. This carries a chance of failure!]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.needsedge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.needsaerial",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "warmup": 0,
+            "requirements": {
+                "foe.aerial": 1,
+                "friend.aerial": "foe.aerial",
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.setback",
+            "label": "Repelling the Enemy Offensive",
+            "startdescription": "We know war is cruel, but we have no other choice.",
+            "description": "We know war is cruel, but we have no other choice.",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.artillery",
+                    "mutate": "needsforgemoth",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_one.attack",
+        "label": "Enemy Launching Tactical Assault!",
+        "startdescription": "Smoke and dust slowly settle. Nothing intact remains here—only rubble and twisted metal as far as the eye can see.",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "infrastructure",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "haltverb": {
+	        "main": 99,
+            "side": 99,
+            "side.2": 99,
+            "side.3": 99,
+            "operation.heart": 99,
+            "operation.edge": 99,
+        },
+        "purge": {
+            "hindrance": 99,
+        },
+        "xpans": {
+            "stop_goal": 1
+        },
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_one.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_two.attack"
+            },
+        ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_two.attack",
+        "label": "Lost Resources!",
+        "startdescription": "Our resources go up in flames!",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Supplies",
+            "required": {
+                "supplies": 1,
+                "weapon": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "debilitation": 1,
+                "contemnant.weapon": 1,
+                "friend.immortal.blocker": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_two.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_two.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_two.end",
+        "label": "Lost Resources!",
+        "startdescription": "Our resources go up in flames!",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "effects": {
+            "supplies": -99,
+            "weapon": -99
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 4,
+                "additive": true
+            },
+            {
+                "filter": "foe.artillery",
+                "mutate": "needsforgemoth",
+                "level": 1,
+                "additive": true
+            },
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_three.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_three.attack",
+        "label": "Precision Strike!",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.。",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Friend",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_three.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_three.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_three.end",
+        "label": "Precision Strike!",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.。",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.attack",
+        "label": "Carpet Bombing",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.。",
+        "requirements": {
+            "foe": 3
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Friend",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_four.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.end",
+        "label": "Carpet Bombing",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.。",
+        "requirements": {
+        },
+        "aspects": {
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "friend",
+                "mutate": "edge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "forge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "lantern",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "moth",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "heart",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "grail",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "winter",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "knock",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "friend.weakened",
+                "level": 1,
+                "additive": false
+            },
+        ],
+        "furthermore": [
+        {
+            "target": "~/tabletop",
+            "mutations": [
+                {
+                    "filter": "influence_temp",
+                    "mutate": "influence_temp",
+                    "level": 1,
+                    "additive": true,
+                    "VFX": "CardBurn"
+                }
+            ]
+        }
+        ],
+        "linked": [
+            {
+                "id": "foe.umiri.attack.tactics3b_four.end0"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.end0",
+        "label": "Carpet Bombing",
+        "startdescription": "The battlefield falls silent once more—only the low howl of wind through rubble, and the sobbing of soldiers.。",
+        "requirements": {
+        },
+        "linked": [
+        ],
+        "purge": {
+	        "influence_temp": 99,
+            "side.rescueallies": 99,
+            "side.weaponscache": 99,
+            "side.adeptgrail": 99,
+            "side.adeptlantern": 99,
+            "side.adeptwinter": 99,
+            "side.rescuepartisans": 99
+        },
+        "warmup": 0
+        },
+    ]
+}

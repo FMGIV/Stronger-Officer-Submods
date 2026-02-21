@@ -1,0 +1,108 @@
+{
+    "decks": [
+        {
+            "id": "comeanno.tanks",
+            "label": "燃灵加自动机部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+				"friend.tanksanno",
+                "friend.tanksanno",
+                "friend.phlogisticantanno",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.infantryanno",
+            "label": "步兵加侦查部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "husk",
+                "friend.scoutsanno",
+                "friend.scoutsanno",
+                "friend.infantryanno",
+                "friend.infantryanno",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.infantry",
+            "label": "步兵加侦查部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "husk",
+                "friend.engineers",
+                "friend.scouts",
+                "friend.infantry",
+                "friend.infantry",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.bombers",
+            "label": "火炮和飞机和坦克",
+            "description": ".",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "husk",
+                "husk",
+                "husk",
+                "friend.bombers",
+                "friend.artillery",
+                "friend.artillery",
+                "friend.tanks",
+                "friend.tanks",
+                "friend.tanks",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+
+        {
+            "id": "comeanno.manhunters",
+            "label": "人类猎手部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.manhunters.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.artillery",
+            "label": "火炮",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.artillery.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.kommando",
+            "label": "突击部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.kommando.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+    ]
+}

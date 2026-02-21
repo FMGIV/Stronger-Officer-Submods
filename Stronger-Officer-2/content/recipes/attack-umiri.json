@@ -1,0 +1,2168 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.coming2.first.withanno",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+			"maxexecutions": 1,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead.withanno": -1,
+                "proterant.story": 1
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming_first.mp3",
+            "purge": {
+                "strife.incur": 99
+            },
+            "effects": {
+                "foe.umiri.2.withanno": 1,
+                "foe.tanks": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 3,
+                "resetonexhaustion": true
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.umiri.pre": 1,
+                        "foe.officer": 1
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy2"
+                },
+                {
+                    "id": "foe.umiri.coming2.first.withanno"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.coming2.withanno",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead.withanno": -1,
+                "proterant.story": 1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "effects": {
+                "foe.umiri.2.withanno": 1,
+                "foe.tanks": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 3,
+                "resetonexhaustion": true
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.umiri.pre": 1,
+                        "foe.officer": 1
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy2"
+                },
+                {
+                    "id": "foe.umiri.coming2.withanno"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.moreenemy.medium.withanno",
+            "label": "敌军援军正在前来",
+            "startdescription": "此处战局已然失势，德军高层正调集部队以攻下此处",
+            "description": "此处战局已然失势，德军高层正调集部队以攻下此处",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "foe.umiri.2.withanno": 1
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "foe.tanks.hidden": 1,
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 2,
+                "foe.manhunters": 1,
+                "foe.manhunters.hidden": 1,
+                "foe.artillery": 1,
+                "foe.artillery.hidden": 1,
+                "foe.kommando.hidden": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 1,
+                "foeforumiri.tanks": 2,
+                "foeforumiri.infantry": 2,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+            ],
+            "warmup": 30,
+        },
+        
+        {
+            "id": "foe.umiri.circle_stun0",
+            "label": "敌军进攻暂缓",
+            "startdescription": "眼下这位军官还有更重要的事做",
+            "description": "眼下这位军官还有更重要的事做",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strategy.stun": 1
+            },
+            "effects": {
+                "circle_sergei": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.circle_stun"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.circle_stun",
+            "label": "敌军进攻暂缓",
+            "startdescription": "眼下这位军官还有更重要的事做",
+            "description": "眼下这位军官还有更重要的事做",
+            "actionId": "foeactionumiri",
+            "warmup": 30,
+            "extantreqs": {
+                "strategy.stun": 1
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.circle_stun"
+                },
+                {
+                    "id": "foe.umiri.circle"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.eyetoweakened.ex",
+            "label": "敌军上尉正在审视战场",
+            "startdescription": "她已知晓我们的弱点",
+            "description": "她已知晓我们的弱点",
+            "actionId": "eyetoweakened",
+            "warmup": 0,
+            "requirements": {
+                "friend.stronger": 1
+            },
+			"aspects": {
+				"destronger": 1
+			},
+        },
+
+        {
+            "id": "foe.umiri.attack.rally_a0.withanno",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "extantreqs": {
+                "proterant.story": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a.withanno",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a.withanno",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "战壕的那边传来了阵阵枪声。看来<i>伊尔莎</i>的私兵又多了一批，德国人的宪兵队可有的忙了。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.officerdetail": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a.withanno",
+					"chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_downa"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        
+
+    {
+	"id": "turnrome.endgame",
+	"label": "罗马，最后的围城",
+	"startdescription": "新闻自收音机中流出——是在意大利的同盟国军队发来的。但我们听到的是彻彻底底的狂人行径：德军宣布将死守罗马，即使将罗马城夷为平地，也不会退缩一分。我在愤怒中抬手，将收音机砸为碎片。好啊，既然他们渴望疯狂，那我就满足他们。他们将在我的故土哀嚎着死去，",
+	"aspects": {
+	    "exalted": 1
+	},
+	"requirements": {
+	    "rome.mundane": 1
+	},
+	"extantreqs": {
+	    "constructions.c": 1,
+	    "token.star": 1,
+	    "token.echidna": 1,
+	    "ascend.check": 2,
+	    "resolution": 12,
+	    "chain": -1,
+	    "debilitation": -1,
+	    "tool.shape": 1
+	}
+    },
+    {
+	"id": "travel.rome.mundane",
+	"actionid": "mobilize",
+	"label": "1944年，罗马的解放",
+	"startdescription": "我们的首都被占领者们放弃了，现在她再次回到了人民的手中。我们向罗马的行军充满了欢欣与喜悦。我们不费一兵一卒就拿下了这座城市；在这里没有人流血。\n\n那么，为何，我感到如此挫败？",
+	"requirements": {
+	    "rome.mundane": 1
+	},
+	"warmup": 60,
+	"craftable": true,
+	"signalEndingFlavour": "Grand",
+	"signalMusic": "nearvictory.proterant.mp3",
+	"linked": [
+	    {
+		"id": "proterant.ending.high.anno"
+	    },
+	    {
+		"id": "proterant.ending.high"
+	    },
+	    {
+		"id": "proterant.ending.med"
+	    },
+	    {
+		"id": "proterant.ending.low"
+	    }
+	],
+	"burnimage": "liberated"
+    },
+    {
+	"id": "proterant.ending.high.anno",
+	"label": "1944年，罗马投降",
+	"extantreqs": {
+	    "resolution": 14,
+		"tool.shape": 1
+	},
+	"achievements": [
+		"ending.findout_anno"
+	],
+	"ending": "proterant.findout_anno",
+    },
+    {
+	"id": "operate.endinginitiate.proterant",
+	"actionid": "operate",
+	"label": "1944年，罗马解放",
+	"startdescription": "钟楼仍然屹立，忧郁的钟声回荡整个城市——一曲送给我们的敌人与化作废墟的罗马的挽歌。但新的一天即将来临，很快，未来将要求我们振作精神开始重建，重铸这受伤的国家。所以，当夜幕降临时，我们点亮蜡烛，升起火焰，并再一次在罗马城举起自由意大利的国旗。",
+	"requirements": {
+	    "main": 3
+	},
+	"extantreqs": {
+	    "proterant.story": 1,
+        "foe.umiri.mark": -1
+	},
+	"warmup": 60,
+	"craftable": true,
+	"signalEndingFlavour": "Grand",
+	"signalMusic": "nearvictory.proterant.mp3",
+	"linked": [
+	    {
+		"id": "ascendname.lionsmith"
+	    },
+	],
+	"burnimage": "liberated"
+    },
+    {
+	"id": "operate.endinginitiate.proterant.hint",
+	"actionid": "operate",
+	"label": "敌军军官尚未消灭",
+    "previewdescription": "敌军还在负隅顽抗！[你需要杀死敌军军官才能完成这个主要任务]",
+	"requirements": {
+	    "main": 3
+	},
+	"extantreqs": {
+	    "proterant.story": 1,
+	},
+	"craftable": false,
+    "hintonly": true,
+    },
+    
+    {
+	"id": "contemplation.complete.anno",
+	"label": "得出一个结论",
+	"startdescription": "重塑者与的战争仍未结束，这场势均力敌的较量注定难以得出结果。他们会在那些战场最重要的节点继续他们未结束的角斗。\n\n[当双方的争斗暂时结束的时候，你可以找到重塑者。入梦后可获得<i>次要任务：突袭敌军指挥部</i>]",
+	"requirements": {
+	    "contemplation": 1,
+	    "completed": 1,
+        "mission.anno.2": 1
+	},
+	"linked": [
+		{
+			"id": "contemplation.complete.anno.ex"
+		}
+	],
+	"xpans": {
+		"findanno": 99
+	}
+    },
+    {
+	"id": "contemplation.complete.anno.ex",
+	"label": "得出一个结论",
+	"startdescription": "重塑者与的战争仍未结束，这场势均力敌的较量注定难以得出结果。他们会在那些战场最重要的节点继续他们未结束的角斗。\n\n[当双方的争斗暂时结束的时候，你可以找到重塑者。入梦后可获得<i>次要任务：突袭敌军指挥部</i>]",
+	"extantreqs": {
+	    "anno.mark": 1,
+        "foe.umiri.mark": 1,
+		"rome": -1
+	},
+	"effects": {
+		"side.umiri.withanno": 1
+	}
+    },
+    {
+	"id": "defend.opportunity",
+	"label": "进行防御",
+	"startdescription": "敌军迫近了——我们能够奋起抵抗他们吗？\n\n[你仅能投入一张卡牌，且你需要达到敌军的任一阈值才能成功防御。]",
+	"requirements": {
+	    "foe": 1
+	},
+	"slots": [
+	    {
+		"id": "needsresponse",
+		"label": "防御",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attack.nodefense.voice"
+	    },
+	    {
+		"id": "attack.nodefense.ostlingant"
+	    },
+	    {
+		"id": "attack.nodefense"
+	    },
+	    {
+		"id": "destroysupplies.nodefense"
+	    },
+	    {
+		"id": "infrastructure.nodefense"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "defend.skill.deflect"
+	    },
+	    {
+		"id": "defend.aerial"
+	    },
+	    {
+		"id": "defend.ap"
+	    },
+	    {
+		"id": "defend.edge"
+	    },
+	    {
+		"id": "defend.winter"
+	    },
+	    {
+		"id": "defend.heart"
+	    },
+	    {
+		"id": "defend.grail"
+	    },
+	    {
+		"id": "defend.moth"
+	    },
+	    {
+		"id": "defend.lantern"
+	    },
+	    {
+		"id": "defend.forge"
+	    },
+	    {
+		"id": "defend.knock"
+	    },
+	    {
+		"id": "defend.forgemoth"
+	    },
+	    {
+		"id": "defend.edgelantern"
+	    },
+	    {
+		"id": "defend.edgewinter"
+	    },
+	    {
+		"id": "defend.edgeforge"
+	    },
+	    {
+		"id": "defend.knocklantern"
+	    },
+	    {
+		"id": "defend.edgeknock"
+	    },
+	    {
+		"id": "defend.edgeheart"
+	    }
+	]
+    },
+    {
+	"id": "operate.strike.sergei",
+	"actionid": "operate",
+	"label": "进行一次几近不可能的攻击？",
+	"startdescription": "我必须在这一击上用上我的全部。任何比这更弱的一击都不足够。\n\n[你需要提供大量的刃以使这场豪赌的胜率不再为0。但你总有概率失败。]",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething2",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething3",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   }
+	],
+	"warmup": 15,
+	"alt": [
+	    {
+		"id": "operate.strike.sergei.success"
+	    }
+	],
+	"linked": [
+	    {
+		"id": "operate.strike.sergei.failure"
+	    }
+	]
+    },
+    {
+	"id": "fightingsergei.longattack",
+	"label": "食铁者攻击了！",
+	"startdescription": "@#sergei.attack.a|马背上的食铁者即是钢铁的旋风。他前路上的一切都会被他砍倒——#sergei.attack.b|我们的敌人吹响了他的号角，而后一股强大的气流使严冬之雪环绕战场。我们的人尖叫又沉默——食铁者正在风暴内移动！#sergei.attack.c|食铁者带着他的来复枪骑过我们的侧翼，在他身后跟随者一百名惨白的，早已死去的骑手，他们手上的或长或短的燧发枪正瞄准我们，随时待发——@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething2",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething3",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   }
+	],
+	"warmup": 15,
+	"linked": [
+	    {
+		"id": "fightingsergei.wounded"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "fightingsergei.skill.deflect"
+	    },
+	    {
+		"id": "fightingsergei.respond.edge"
+	    },
+	    {
+		"id": "fightingsergei.respond.forge"
+	    },
+	    {
+		"id": "fightingsergei.respond.edgeforge"
+	    }
+	]
+    },
+    {
+	"id": "operate.strike.edgelong",
+	"actionid": "operate",
+	"label": "进行一次几近不可能的攻击？",
+	"startdescription": "我必须在这一击上用上我的全部。任何比这更弱的一击都不足够。\n\n[你需要提供大量的刃以使这场豪赌的胜率不再为0。但你总有概率失败。]",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething2",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething3",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   }
+	],
+	"warmup": 15,
+	"alt": [
+	    {
+		"id": "operate.strike.edgelong.success"
+	    }
+	],
+	"linked": [
+	    {
+		"id": "operate.strike.edgelong.failure"
+	    }
+	]
+    },
+    {
+	"id": "duelling.longattack",
+	"label": "我的对手作出攻击！",
+	"startdescription": "@#wilhelm.attack.a|战争制造者以可怖地速度接近我，他强力的拳头正加速朝我挥来——#wilhelm.attack.b|随着一次使地面开裂的重踏，战争制造者使大地摇晃，而后当他看到我失去平衡时，他快速冲来——#wilhelm.attack.c|随着一声费力的低哼，战争制造者举起手臂攻击我，而我在他的手中看见了火焰——@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething2",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   },
+	   {
+		"id": "needssomething3",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	   }
+	],
+	"warmup": 15,
+	"linked": [
+	    {
+		"id": "duelling.wounded"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "duelling.skill.deflect"
+	    },
+	    {
+		"id": "duelling.respond.edge"
+	    },
+	    {
+		"id": "duelling.respond.winter"
+	    },
+	    {
+		"id": "duelling.respond.edgewinter"
+	    }
+	]
+    },
+    {
+	"id": "encounteradditional",
+	"label": "逆境",
+	"startdescription": "@#foe.campguard|我清楚地记得他们，记得他们是如何打断我们的肋骨，用枪指着我们，看着我们如挨打的狗一般呜咽而发笑。这些人只听得见上级命令。#foe.watchdog|<i>德国牧羊犬</i>。这些野兽在帝国内很流行，因为它们与狼十分相似。而这些野兽在索比堡也很流行，因为它们可以迅速地把人撕成碎片，供军官观赏取乐。#foe.searchlight|他们说“仁慈仅在影中觅得”。这道来自上方的光则让我以亲身经历理解了这句话。foe.starvation|有时，当我挨饿，我会梦见那红色的杯子，并听它嘲笑我。#foe.cold|有时，天气冷到了大脑自我欺骗，认为外面很温暖的程度。但我们都知道在索比堡只有一个季节，那便是冬季。#foe.grame|若碎狼是灵魂的绝望超出灵魂光芒之具现，戕狼是吞噬灵魂的痛苦之具现，那么忿狼便是未得复仇者与未得回应者那满溢溃烂的怒火的具现。想必我身上也寄宿着不少。#foe.shade|你不累吗？过来，过来。与我们一同行于这无日无月，无苦无悲，无此无彼的道路上吧。过来吧，然后便无需再承受。#hindrance.exilevoice|奢华如酒，寒冷如冬，凋亡如骨。这笑声过于残酷，宛如一把插入肋间，搅动脏腑的尖刀。没有哪种声音能令我更恐惧。#hindrance.exiletouch|击打，灼烧，指甲被拔出，皮肤被剥下。流亡者曾对我施以更甚于此的苦痛，而他施以苦痛时带着愉悦。#hindrance.exiledesign|流亡者每晚都诗意地对我描述其想让我成为的样子，夜复一夜。一切施以我身的痛苦与嗫于我耳的秘密都会磨砺我，把我变成更加可怖的什么。我恐惧着——恐惧着成为流亡者最完美也最可怖的器具。但我真的该恐惧吗？#aggro.bombers|近几年，俄国的飞机在天上飞可是一道罕见的风景——<i>德国空军</i>在战争伊始便折去了苏联的双翼——但各处都还有一些红鸟仍在天空飞翔。#aggro.artillery|当红军需要完全、彻底地消灭一个目标时，记得别站在火炮打击区里。#aggro.tanks|苏联以迅猛之势量产这些战争机器。或许数个月的高强度服役便足以报废一台，但毫无疑问其备品早已在送来前线的途中。#aggro.godbuilder|一支由修习盗火术的政委——“造神者”——们组成的小队领导着这支步兵分队。他们在麾下战士们的武器与血肉中燃起辉煌的火焰。#aggro.infantry|苏联的步兵：衣薄受冻，武备落后，注定死亡。他们不过是即将摧毁东线防御，淹没帝国城市的大浪中的一滴水。#aggro.sniper|一个俄国神射手正在侧翼待命，并冷静地预测着他的下一个目标。#aggro.scouts|哨卫与探路者，俄国军队的前锋部队，引领苏联的反推进前往柏林。#foe.wrake|有些痛苦过于强烈，以至于这些痛苦比身受痛苦之人存在得更久——而这失去容器的移动酷刑正急于寻求新的居所。你不会希望这居所是你的。#foe.cross|当我们从介壳种手中夺走世界时，它们选择了逃离。事到如今它们又为何返回？#hindrance.colonel|今天，上校目盲的双眼审视战场。这份力量只是他敌意暂存于此的一丝余寒，但这已经足以将惨叫冻结在喉头，并使最为自信的战士在恐惧中沉默。#foe.skaptodon|潜地的巨兽，其爪牙分开石头有如划开水一样轻松。当一只剑齿兽来到地面之上时，它总会分开一些别的什么，比如说人，或坦克，或任何在战斗中遇见剑齿兽的不幸家伙。#foe.echidniform.airborne|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.echidniform.grounded|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.hesukhine|此种怪物安静且有耐心到不寻常的地步，或许可以以“害羞”形容。匿形兽是狮子匠的子嗣中最为敏锐狡猾的一种。在狩猎时，匿形兽的行动准则是不被发现——确切的说，不被发现，直到无济于事之时。#foe.spathiurus|这些生物在研究怪物之人之间的俗称是“击剑狮子”。但不要想着与它们击剑——它们尾部末端的刃状附属物可以轻松穿刺一切钢铁或石头。当然，穿刺肉体则更加容易。#foe.malkin|猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。#foe.warder|门关军团的高级军官；守护此世与漫宿的边界之人。他们所有人均声称伐诃语为其母语；他们所有人都熟知哪个词汇许可通行，而哪个词汇禁止通行。#foe.boundsmen|门关军团的拟人士兵。它们被训练直立行走和以人类语言说话，但它们无法完全压抑其本质。有时它们会忘记眨眼。有时它们会食用死人之躯。#foe.phlogisticant|自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。#foe.engine|它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。#foe.riflemen|那岛上新王的仆从。没什么特别的，除了他们似乎比你手下的一般士兵更加训练有素一些之外。#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounteradditional.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounteradditional.failure.nonlethal"
+	    },
+	    {
+		"id": "encounteradditional.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondadditional.aerial"
+	    },
+	    {
+		"id": "respondadditional.ap"
+	    },
+	    {
+		"id": "respondadditional.edge"
+	    },
+	    {
+		"id": "respondadditional.winter"
+	    },
+	    {
+		"id": "respondadditional.heart"
+	    },
+	    {
+		"id": "respondadditional.grail"
+	    },
+	    {
+		"id": "respondadditional.moth"
+	    },
+	    {
+		"id": "respondadditional.lantern"
+	    },
+	    {
+		"id": "respondadditional.forge"
+	    },
+	    {
+		"id": "respondadditional.knock"
+	    },
+	    {
+		"id": "respondadditional.forgemoth"
+	    },
+	    {
+		"id": "respondadditional.edgelantern"
+	    },
+	    {
+		"id": "respondadditional.edgewinter"
+	    },
+	    {
+		"id": "respondadditional.edgeforge"
+	    },
+	    {
+		"id": "respondadditional.knocklantern"
+	    },
+	    {
+		"id": "respondadditional.forgeheart"
+	    },
+	    {
+		"id": "respondadditional.winterlantern"
+	    },
+	    {
+		"id": "respondadditional.edgeknock"
+	    },
+	    {
+		"id": "respondadditional.edgeheart"
+	    },
+	    {
+		"id": "respondadditional.edgegrail"
+	    },
+	    {
+		"id": "respondadditional.winterheart"
+	    },
+	    {
+		"id": "respondadditional.lanternheart"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "encounternative",
+	"label": "Adversity",
+	"startdescription": "@#hindrance.robigo|<i>谁在那里？拉孔贝吗？还是李？不管是谁，请帮帮我。呼吸正变得困难……这里好黑。好黑。</i>#hindrance.colonel|今天，上校目盲的双眼审视战场。这份力量只是他敌意暂存于此的一丝余寒，但这已经足以将惨叫冻结在喉头，并使最为自信的战士在恐惧中沉默。#foe.skaptodon|潜地的巨兽，其爪牙分开石头有如划开水一样轻松。当一只剑齿兽来到地面之上时，它总会分开一些别的什么，比如说人，或坦克，或任何在战斗中遇见剑齿兽的不幸家伙。#foe.echidniform.airborne|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.echidniform.grounded|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.hesukhine|此种怪物安静且有耐心到不寻常的地步，或许可以以“害羞”形容。匿形兽是狮子匠的子嗣中最为敏锐狡猾的一种。在狩猎时，匿形兽的行动准则是不被发现——确切的说，不被发现，直到无济于事之时。#foe.spathiurus|这些生物在研究怪物之人之间的俗称是“击剑狮子”。但不要想着与它们击剑——它们尾部末端的刃状附属物可以轻松穿刺一切钢铁或石头。当然，穿刺肉体则更加容易。#foe.malkin|猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。#foe.warder|门关军团的高级军官；守护此世与漫宿的边界之人。他们所有人均声称伐诃语为其母语；他们所有人都熟知哪个词汇许可通行，而哪个词汇禁止通行。#foe.boundsmen|门关军团的拟人士兵。它们被训练直立行走和以人类语言说话，但它们无法完全压抑其本质。有时它们会忘记眨眼。有时它们会食用死人之躯。#foe.phlogisticant|自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。#foe.engine|它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。#foe.riflemen|那岛上新王的仆从。没什么特别的，除了他们似乎比你手下的一般士兵更加训练有素一些之外。#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”#hindrance.star.a|来自天穹的狂怒之火，被狮子匠的一击掷向地面。称之为“愤怒”都过于保守。#hindrance.star.b|现在，这颗星正在死去；它的火光正泛着红。但我仍然剩下一件事需要做：我需要取得它的心脏，将其从外壳中解放，并整个吞下。这么做或许会把我烧成灰。即便如此，我仍会试试。@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounternative.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounternative.failure.nonlethal"
+	    },
+	    {
+		"id": "encounternative.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondnative.aerial"
+	    },
+	    {
+		"id": "respondnative.ap"
+	    },
+	    {
+		"id": "respondnative.edge"
+	    },
+	    {
+		"id": "respondnative.winter"
+	    },
+	    {
+		"id": "respondnative.heart"
+	    },
+	    {
+		"id": "respondnative.grail"
+	    },
+	    {
+		"id": "respondnative.moth"
+	    },
+	    {
+		"id": "respondnative.lantern"
+	    },
+	    {
+		"id": "respondnative.forge"
+	    },
+	    {
+		"id": "respondnative.knock"
+	    },
+	    {
+		"id": "respondnative.forgemoth"
+	    },
+	    {
+		"id": "respondnative.edgelantern"
+	    },
+	    {
+		"id": "respondnative.edgewinter"
+	    },
+	    {
+		"id": "respondnative.edgeforge"
+	    },
+	    {
+		"id": "respondnative.knocklantern"
+	    },
+	    {
+		"id": "respondnative.forgeheart"
+	    },
+	    {
+		"id": "respondnative.winterlantern"
+	    },
+	    {
+		"id": "respondnative.edgeknock"
+	    },
+	    {
+		"id": "respondnative.edgeheart"
+	    },
+	    {
+		"id": "respondnative.edgegrail"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "encounteradditional",
+	"label": "逆境",
+	"startdescription": "@#foe.campguard|我清楚地记得他们，记得他们是如何打断我们的肋骨，用枪指着我们，看着我们如挨打的狗一般呜咽而发笑。这些人只听得见上级命令。#foe.watchdog|<i>德国牧羊犬</i>。这些野兽在帝国内很流行，因为它们与狼十分相似。而这些野兽在索比堡也很流行，因为它们可以迅速地把人撕成碎片，供军官观赏取乐。#foe.searchlight|他们说“仁慈仅在影中觅得”。这道来自上方的光则让我以亲身经历理解了这句话。#foe.starvation|有时，当我挨饿，我会梦见那红色的杯子，并听它嘲笑我。#foe.cold|有时，天气冷到了大脑自我欺骗，认为外面很温暖的程度。但我们都知道在索比堡只有一个季节，那便是冬季。#foe.grame|若碎狼是灵魂的绝望超出灵魂光芒之具现，戕狼是吞噬灵魂的痛苦之具现，那么忿狼便是未得复仇者与未得回应者那满溢溃烂的怒火的具现。想必我身上也寄宿着不少。#foe.shade|你不累吗？过来，过来。与我们一同行于这无日无月，无苦无悲，无此无彼的道路上吧。过来吧，然后便无需再承受。#hindrance.exilevoice|奢华如酒，寒冷如冬，凋亡如骨。这笑声过于残酷，宛如一把插入肋间，搅动脏腑的尖刀。没有哪种声音能令我更恐惧。#hindrance.exiletouch|击打，灼烧，指甲被拔出，皮肤被剥下。流亡者曾对我施以更甚于此的苦痛，而他施以苦痛时带着愉悦。#hindrance.exiledesign|流亡者每晚都诗意地对我描述其想让我成为的样子，夜复一夜。一切施以我身的痛苦与嗫于我耳的秘密都会磨砺我，把我变成更加可怖的什么。我恐惧着——恐惧着成为流亡者最完美也最可怖的器具。但我真的该恐惧吗？#aggro.bombers|近几年，俄国的飞机在天上飞可是一道罕见的风景——<i>德国空军</i>在战争伊始便折去了苏联的双翼——但各处都还有一些红鸟仍在天空飞翔。#aggro.artillery|当红军需要完全、彻底地消灭一个目标时，记得别站在火炮打击区里。#aggro.tanks|苏联以迅猛之势量产这些战争机器。或许数个月的高强度服役便足以报废一台，但毫无疑问其备品早已在送来前线的途中。#aggro.godbuilder|一支由修习盗火术的政委——“造神者”——们组成的小队领导着这支步兵分队。他们在麾下战士们的武器与血肉中燃起辉煌的火焰。#aggro.infantry|苏联的步兵：衣薄受冻，武备落后，注定死亡。他们不过是即将摧毁东线防御，淹没帝国城市的大浪中的一滴水。#aggro.sniper|一个俄国神射手正在侧翼待命，并冷静地预测着他的下一个目标。#aggro.scouts|哨卫与探路者，俄国军队的前锋部队，引领苏联的反推进前往柏林。#foe.wrake|有些痛苦过于强烈，以至于这些痛苦比身受痛苦之人存在得更久——而这失去容器的移动酷刑正急于寻求新的居所。你不会希望这居所是你的。#foe.cross|当我们从介壳种手中夺走世界时，它们选择了逃离。事到如今它们又为何返回？#hindrance.colonel|今天，上校目盲的双眼审视战场。这份力量只是他敌意暂存于此的一丝余寒，但这已经足以将惨叫冻结在喉头，并使最为自信的战士在恐惧中沉默。#foe.skaptodon|潜地的巨兽，其爪牙分开石头有如划开水一样轻松。当一只剑齿兽来到地面之上时，它总会分开一些别的什么，比如说人，或坦克，或任何在战斗中遇见剑齿兽的不幸家伙。#foe.echidniform.airborne|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.echidniform.grounded|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.hesukhine|此种怪物安静且有耐心到不寻常的地步，或许可以以“害羞”形容。匿形兽是狮子匠的子嗣中最为敏锐狡猾的一种。在狩猎时，匿形兽的行动准则是不被发现——确切的说，不被发现，直到无济于事之时。#foe.spathiurus|这些生物在研究怪物之人之间的俗称是“击剑狮子”。但不要想着与它们击剑——它们尾部末端的刃状附属物可以轻松穿刺一切钢铁或石头。当然，穿刺肉体则更加容易。#foe.malkin|猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。#foe.warder|门关军团的高级军官；守护此世与漫宿的边界之人。他们所有人均声称伐诃语为其母语；他们所有人都熟知哪个词汇许可通行，而哪个词汇禁止通行。#foe.boundsmen|门关军团的拟人士兵。它们被训练直立行走和以人类语言说话，但它们无法完全压抑其本质。有时它们会忘记眨眼。有时它们会食用死人之躯。#foe.phlogisticant|自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。#foe.engine|它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。#foe.riflemen|那岛上新王的仆从。没什么特别的，除了他们似乎比你手下的一般士兵更加训练有素一些之外。#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounteradditional.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounteradditional.failure.nonlethal"
+	    },
+	    {
+		"id": "encounteradditional.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondadditional.aerial"
+	    },
+	    {
+		"id": "respondadditional.ap"
+	    },
+	    {
+		"id": "respondadditional.edge"
+	    },
+	    {
+		"id": "respondadditional.winter"
+	    },
+	    {
+		"id": "respondadditional.heart"
+	    },
+	    {
+		"id": "respondadditional.grail"
+	    },
+	    {
+		"id": "respondadditional.moth"
+	    },
+	    {
+		"id": "respondadditional.lantern"
+	    },
+	    {
+		"id": "respondadditional.forge"
+	    },
+	    {
+		"id": "respondadditional.knock"
+	    },
+	    {
+		"id": "respondadditional.forgemoth"
+	    },
+	    {
+		"id": "respondadditional.edgelantern"
+	    },
+	    {
+		"id": "respondadditional.edgewinter"
+	    },
+	    {
+		"id": "respondadditional.edgeforge"
+	    },
+	    {
+		"id": "respondadditional.knocklantern"
+	    },
+	    {
+		"id": "respondadditional.forgeheart"
+	    },
+	    {
+		"id": "respondadditional.winterlantern"
+	    },
+	    {
+		"id": "respondadditional.edgeknock"
+	    },
+	    {
+		"id": "respondadditional.edgeheart"
+	    },
+	    {
+		"id": "respondadditional.edgegrail"
+	    },
+	    {
+		"id": "respondadditional.winterheart"
+	    },
+	    {
+		"id": "respondadditional.lanternheart"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "encounternative",
+	"label": "逆境",
+	"startdescription": "@#foe.campguard|我清楚地记得他们，记得他们是如何打断我们的肋骨，用枪指着我们，看着我们如挨打的狗一般呜咽而发笑。这些人只听得见上级命令。#foe.watchdog|<i>德国牧羊犬</i>。这些野兽在帝国内很流行，因为它们与狼十分相似。而这些野兽在索比堡也很流行，因为它们可以迅速地把人撕成碎片，供军官观赏取乐。#foe.searchlight|他们说“仁慈仅在影中觅得”。这道来自上方的光则让我以亲身经历理解了这句话。foe.starvation|有时，当我挨饿，我会梦见那红色的杯子，并听它嘲笑我。#foe.cold|有时，天气冷到了大脑自我欺骗，认为外面很温暖的程度。但我们都知道在索比堡只有一个季节，那便是冬季。#foe.grame|若碎狼是灵魂的绝望超出灵魂光芒之具现，戕狼是吞噬灵魂的痛苦之具现，那么忿狼便是未得复仇者与未得回应者那满溢溃烂的怒火的具现。想必我身上也寄宿着不少。#foe.shade|你不累吗？过来，过来。与我们一同行于这无日无月，无苦无悲，无此无彼的道路上吧。过来吧，然后便无需再承受。#hindrance.exilevoice|奢华如酒，寒冷如冬，凋亡如骨。这笑声过于残酷，宛如一把插入肋间，搅动脏腑的尖刀。没有哪种声音能令我更恐惧。#hindrance.exiletouch|击打，灼烧，指甲被拔出，皮肤被剥下。流亡者曾对我施以更甚于此的苦痛，而他施以苦痛时带着愉悦。#hindrance.exiledesign|流亡者每晚都诗意地对我描述其想让我成为的样子，夜复一夜。一切施以我身的痛苦与嗫于我耳的秘密都会磨砺我，把我变成更加可怖的什么。我恐惧着——恐惧着成为流亡者最完美也最可怖的器具。但我真的该恐惧吗？#aggro.bombers|近几年，俄国的飞机在天上飞可是一道罕见的风景——<i>德国空军</i>在战争伊始便折去了苏联的双翼——但各处都还有一些红鸟仍在天空飞翔。#aggro.artillery|当红军需要完全、彻底地消灭一个目标时，记得别站在火炮打击区里。#aggro.tanks|苏联以迅猛之势量产这些战争机器。或许数个月的高强度服役便足以报废一台，但毫无疑问其备品早已在送来前线的途中。#aggro.godbuilder|一支由修习盗火术的政委——“造神者”——们组成的小队领导着这支步兵分队。他们在麾下战士们的武器与血肉中燃起辉煌的火焰。#aggro.infantry|苏联的步兵：衣薄受冻，武备落后，注定死亡。他们不过是即将摧毁东线防御，淹没帝国城市的大浪中的一滴水。#aggro.sniper|一个俄国神射手正在侧翼待命，并冷静地预测着他的下一个目标。#aggro.scouts|哨卫与探路者，俄国军队的前锋部队，引领苏联的反推进前往柏林。#foe.wrake|有些痛苦过于强烈，以至于这些痛苦比身受痛苦之人存在得更久——而这失去容器的移动酷刑正急于寻求新的居所。你不会希望这居所是你的。#foe.cross|当我们从介壳种手中夺走世界时，它们选择了逃离。事到如今它们又为何返回？#hindrance.robigo|<i>谁在那里？拉孔贝吗？还是李？不管是谁，请帮帮我。呼吸正变得困难……这里好黑。好黑。</i>#hindrance.colonel|今天，上校目盲的双眼审视战场。这份力量只是他敌意暂存于此的一丝余寒，但这已经足以将惨叫冻结在喉头，并使最为自信的战士在恐惧中沉默。#foe.skaptodon|潜地的巨兽，其爪牙分开石头有如划开水一样轻松。当一只剑齿兽来到地面之上时，它总会分开一些别的什么，比如说人，或坦克，或任何在战斗中遇见剑齿兽的不幸家伙。#foe.echidniform.airborne|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.echidniform.grounded|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.hesukhine|此种怪物安静且有耐心到不寻常的地步，或许可以以“害羞”形容。匿形兽是狮子匠的子嗣中最为敏锐狡猾的一种。在狩猎时，匿形兽的行动准则是不被发现——确切的说，不被发现，直到无济于事之时。#foe.spathiurus|这些生物在研究怪物之人之间的俗称是“击剑狮子”。但不要想着与它们击剑——它们尾部末端的刃状附属物可以轻松穿刺一切钢铁或石头。当然，穿刺肉体则更加容易。#foe.malkin|猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。#foe.warder|门关军团的高级军官；守护此世与漫宿的边界之人。他们所有人均声称伐诃语为其母语；他们所有人都熟知哪个词汇许可通行，而哪个词汇禁止通行。#foe.boundsmen|门关军团的拟人士兵。它们被训练直立行走和以人类语言说话，但它们无法完全压抑其本质。有时它们会忘记眨眼。有时它们会食用死人之躯。#foe.phlogisticant|自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。#foe.engine|它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。#foe.riflemen|那岛上新王的仆从。没什么特别的，除了他们似乎比你手下的一般士兵更加训练有素一些之外。#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”#hindrance.star.a|来自天穹的狂怒之火，被狮子匠的一击掷向地面。称之为“愤怒”都过于保守。#hindrance.star.b|现在，这颗星正在死去；它的火光正泛着红。但我仍然剩下一件事需要做：我需要取得它的心脏，将其从外壳中解放，并整个吞下。这么做或许会把我烧成灰。即便如此，我仍会试试。@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1,
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounternative.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounternative.failure.nightmare"
+	    },
+	    {
+		"id": "encounternative.failure.nonlethal"
+	    },
+	    {
+		"id": "encounternative.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondnative.special"
+	    },
+	    {
+		"id": "respondnative.aerial"
+	    },
+	    {
+		"id": "respondnative.ap"
+	    },
+	    {
+		"id": "respondnative.edge"
+	    },
+	    {
+		"id": "respondnative.winter"
+	    },
+	    {
+		"id": "respondnative.heart"
+	    },
+	    {
+		"id": "respondnative.grail"
+	    },
+	    {
+		"id": "respondnative.moth"
+	    },
+	    {
+		"id": "respondnative.lantern"
+	    },
+	    {
+		"id": "respondnative.forge"
+	    },
+	    {
+		"id": "respondnative.knock"
+	    },
+	    {
+		"id": "respondnative.forgemoth"
+	    },
+	    {
+		"id": "respondnative.edgelantern"
+	    },
+	    {
+		"id": "respondnative.edgewinter"
+	    },
+	    {
+		"id": "respondnative.edgeforge"
+	    },
+	    {
+		"id": "respondnative.knocklantern"
+	    },
+	    {
+		"id": "respondnative.forgeheart"
+	    },
+	    {
+		"id": "respondnative.winterlantern"
+	    },
+	    {
+		"id": "respondnative.edgeknock"
+	    },
+	    {
+		"id": "respondnative.edgeheart"
+	    },
+	    {
+		"id": "respondnative.edgegrail"
+	    },
+	    {
+		"id": "respondnative.winterheart"
+	    },
+	    {
+		"id": "respondnative.lanternheart"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "shakedown.prep",
+	"actionid": "operation.edge",
+	"label": "挨家挨户……",
+	"startdescription": "让我们开始吧。\n\n[行动中会遭遇挑战。如果你能够投入足够的卡牌以满足相应的性相需求，那么这次行动将会更加有效。]",
+	"warmup": 10,
+	"effects": {
+	    "challenge.shakedown.1": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "资源",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "opx.meetchallenge"
+	    }
+	]
+    },
+    {
+	"id": "assistlocals.prep",
+	"actionid": "operation.heart",
+	"label": "挨家挨户……",
+	"startdescription": "让我们开始吧。\n\n[行动中会遭遇挑战。如果你能够投入足够的卡牌以满足相应的性相需求，那么这次行动将会更加有效。]",
+	"warmup": 10,
+	"effects": {
+	    "challenge.assistlocals.1": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "资源",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+        "forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"linked": [
+	    {
+		"id": "opx.meetchallenge"
+	    }
+	]
+    },
+    {
+	"id": "opx.meetchallenge",
+	"label": "挑战",
+	"startdescription": "@#challenge.shakedown.1|威慑——是以刺耳的狂怒，还是肃杀的寂静？\n#challenge.shakedown.2|他们不肯交出任何物资。什么会让他们开口？公开殴打？还是杀鸡儆猴？\n#challenge.shakedown.3|我们可以压榨这些人，让他们吐出一切。我们将留给他们恐惧，还是痛苦？\n#challenge.assistlocals.1|我们可以从自我介绍开始——一份善意或许可以使我们获得当地人的支持。迷人的话语或许也能。\n#challenge.assistlocals.2|我们能提供怎样的援助？分发药品，还是分享食物？\n#challenge.assistlocals.3|我可以让我们的医生协助一部分当地医院诊疗，或者让我们的炊事员在教堂和广场处设立厨房。\n@",
+	"warmup": 30,
+	"requirements": {
+	    "complication": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "资源",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+		    "wounded": 1,
+		    "damaged": 1,
+		    "exhausted": 1,
+			"faction.anno": 1
+        }
+	    }
+	],
+	"alt": [
+	    {
+		"id": "opx.resolve.heart"
+	    },
+	    {
+		"id": "opx.resolve.grail"
+	    },
+	    {
+		"id": "opx.resolve.edge"
+	    },
+	    {
+		"id": "opx.resolve.winter"
+	    }
+	],
+	"linked": [
+	    {
+		"id": "opx.failchallenge"
+	    }
+	]
+    },
+    {
+	"id": "spit.nospace.penalty",
+	"actionid": "spit.winter",
+	"label": "宿于野外",
+	"startdescription": "在坚硬的地面上入睡，暴露于夜晚的寒冷中——即使是最为坚强的士兵也会因此受伤。\n\n[当你的部队规模超过你可用的空间数量，一部分你的友军会因暴露于恶劣环境中枯竭，甚至负伤。]",
+	"grandreqs": { "[~/extant:forcesize] > [~/extant:room]": 1 },
+	"tablereqs": {
+	    "friend": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfriend",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+			"faction.anno": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 30,
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"linked": [
+	    {
+		"id": "spit.nospace.penalty.killfriend.wounded"
+	    },
+	    {
+		"id": "spit.nospace.penalty.killfriend.damaged"
+	    },
+	    {
+		"id": "spit.nospace.penalty.wound",
+		"chance": 30
+	    },
+	    {
+		"id": "spit.nospace.penalty.removeexperience"
+	    }
+	]
+    },
+    {
+	"id": "revealenemyidentity",
+	"label": "进行防御",
+	"startdescription": "敌军迫近了——我们能够奋起抵抗他们吗？\n\n[你仅能投入一张卡牌，且你需要达到敌军的任一阈值才能成功防御。]",
+	"requirements": {
+	    "foe.hidden": 1
+	},
+	"aspects": {
+	    "revealidentity": 1
+	},
+	"internaldeck": {
+		"spec": [
+			"umiriattackme",
+			"umiriattackme",
+			"umiriattackme",
+			"umiriattackfriend",
+			"umiriattackfriend",
+		],
+		"draws": 1,
+		"resetonexhaustion": true
+	},
+	"linked": [
+	    {
+		"id": "revealenemyidentity.takeadditional"
+	    }
+	]
+    },
+    {
+	"id": "revealenemyidentity.takeadditional",
+	"label": "进行防御",
+	"startdescription": "敌军迫近了——我们能够奋起抵抗他们吗？\n\n[你仅能投入一张卡牌，且你需要达到敌军的任一阈值才能成功防御。]",
+	"aspects": {
+	    "takeadditional": 1
+	},
+	"linked": [
+	    {
+		"id": "defend.opportunity_friend"
+	    },
+	    {
+		"id": "defend.opportunity"
+	    }
+	]
+    },
+    {
+	"id": "defend.opportunity_friend",
+	"label": "进行防御",
+	"startdescription": "敌军迫近了——我们能够奋起抵抗他们吗？\n\n[你仅能投入一张卡牌，且你需要达到敌军的任一阈值才能成功防御。]",
+	"requirements": {
+	    "foe": 1,
+		"umiriattackfriend": 1
+	},
+	"extantreqs": {
+		"anno.mark": 1
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "防御",
+		"required": {
+			"faction.anno": 1,
+			"local": 1
+		},
+		"forbidden": {
+			"remnant": 1,
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"valkyrie": 1,
+			"anno.mark": 1,
+			"friend.medics": 1
+		},
+		"greedy": true
+		}
+	],
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attack.nodefense.voice"
+	    },
+	    {
+		"id": "attack.nodefense.ostlingant"
+	    },
+	    {
+		"id": "attack.nodefense_friend"
+	    },
+	    {
+		"id": "destroysupplies.nodefense_friend"
+	    },
+	    {
+		"id": "infrastructure.nodefense_friend"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "defend.skill.deflect"
+	    },
+	    {
+		"id": "defend.aerial"
+	    },
+	    {
+		"id": "defend.ap"
+	    },
+	    {
+		"id": "defend.edge"
+	    },
+	    {
+		"id": "defend.winter"
+	    },
+	    {
+		"id": "defend.heart"
+	    },
+	    {
+		"id": "defend.grail"
+	    },
+	    {
+		"id": "defend.moth"
+	    },
+	    {
+		"id": "defend.lantern"
+	    },
+	    {
+		"id": "defend.forge"
+	    },
+	    {
+		"id": "defend.knock"
+	    },
+	    {
+		"id": "defend.forgemoth"
+	    },
+	    {
+		"id": "defend.edgelantern"
+	    },
+	    {
+		"id": "defend.edgewinter"
+	    },
+	    {
+		"id": "defend.edgeforge"
+	    },
+	    {
+		"id": "defend.knocklantern"
+	    },
+	    {
+		"id": "defend.edgeknock"
+	    },
+	    {
+		"id": "defend.edgeheart"
+	    }
+	]
+    },
+    {
+	"id": "defend.opportunity",
+	"label": "进行防御",
+	"startdescription": "敌军迫近了——我们能够奋起抵抗他们吗？\n\n[你仅能投入一张卡牌，且你需要达到敌军的任一阈值才能成功防御。]",
+	"requirements": {
+	    "foe": 1
+	},
+	"slots": [
+	    {
+		"id": "needsresponse",
+		"label": "防御",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+			"faction.anno": 1
+        }
+	    }
+	],
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attack.nodefense.voice"
+	    },
+	    {
+		"id": "attack.nodefense.ostlingant"
+	    },
+	    {
+		"id": "attack.nodefense"
+	    },
+	    {
+		"id": "destroysupplies.nodefense"
+	    },
+	    {
+		"id": "infrastructure.nodefense"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "defend.skill.deflect"
+	    },
+	    {
+		"id": "defend.aerial"
+	    },
+	    {
+		"id": "defend.ap"
+	    },
+	    {
+		"id": "defend.edge"
+	    },
+	    {
+		"id": "defend.winter"
+	    },
+	    {
+		"id": "defend.heart"
+	    },
+	    {
+		"id": "defend.grail"
+	    },
+	    {
+		"id": "defend.moth"
+	    },
+	    {
+		"id": "defend.lantern"
+	    },
+	    {
+		"id": "defend.forge"
+	    },
+	    {
+		"id": "defend.knock"
+	    },
+	    {
+		"id": "defend.forgemoth"
+	    },
+	    {
+		"id": "defend.edgelantern"
+	    },
+	    {
+		"id": "defend.edgewinter"
+	    },
+	    {
+		"id": "defend.edgeforge"
+	    },
+	    {
+		"id": "defend.knocklantern"
+	    },
+	    {
+		"id": "defend.edgeknock"
+	    },
+	    {
+		"id": "defend.edgeheart"
+	    }
+	]
+    },
+    {
+	"id": "attack.nodefense_friend",
+	"label": "毫无防备！",
+	"startdescription": "我们无法挤出在战场上面对敌人的力量。现在我们的软弱将遭到报应——",
+	"requirements": {
+	    "decision.enemy.attack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfriend",
+		"label": "友军",
+		"required": {
+		    "friend": 1,
+			"faction.anno": 1
+		},
+		"essential": {
+			"local": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+			"anno.mark": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "attack.nodefense.second_friend",
+		"chance": 50
+	    },
+	    {
+		"id": "attack.conclude_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "attack.nodefense.second_friend",
+	"label": "毫无防备！",
+	"startdescription": "我们无法挤出在战场上面对敌人的力量。现在我们的软弱将遭到报应——",
+	"slots": [
+	    {
+		"id": "needsfriend",
+		"label": "友军",
+		"required": {
+		    "friend": 1,
+			"faction.anno": 1
+		},
+		"essential": {
+			"local": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+			"anno.mark": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "attack.conclude_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "attack.nodefense",
+	"label": "毫无防备！",
+	"startdescription": "我们无法挤出在战场上面对敌人的力量。现在我们的软弱将遭到报应——",
+	"requirements": {
+	    "decision.enemy.attack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfriend",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+			"faction.anno": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "attack.nodefense.second",
+		"chance": 50
+	    },
+	    {
+		"id": "attack.conclude"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "attack.nodefense.second",
+	"label": "毫无防备！",
+	"startdescription": "我们无法挤出在战场上面对敌人的力量。现在我们的软弱将遭到报应——",
+	"slots": [
+	    {
+		"id": "needsfriend",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+			"faction.anno": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "attack.conclude"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "attack.conclude",
+	"label": "毫无防备！",
+	"startdescription": "血溅于空。我军出现了伤亡。",
+	"aspects": {
+	    "makeadditional": 1,
+	    "makecasualty": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.wrake.killed"
+	    },
+	    {
+		"id": "foe.lethal.kill"
+	    },
+	    {
+		"id": "foe.elusive.conceal"
+	    }
+	],
+	"inductions": [
+		{
+			"id": "produce.wounds",
+			"chance": 50,
+			"expulsion": {
+				"filter": {
+					"lethal_debilitation_trigger": 1
+				},
+				"limit": 1
+			}
+		}
+	],
+	"alt": [
+	    {
+		"id": "attack.conclude.growth"
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    }
+	]
+    },
+    {
+    "id": "foe.lethal.kill",
+    "label": "无人生还",
+    "startdescription": "尖叫化作沉默。赤红的血在月光下变得漆黑。这一敌军毫不仁慈。",
+    "requirements": {
+        "foe.lethal": 1
+    },
+    "aspects": {
+        "killfriend": 1
+    },
+	"linked": [
+	    {
+		"id": "foe.elusive.conceal"
+	    },
+	]
+    },
+    {
+	"id": "attack.conclude_friend",
+	"label": "毫无防备！",
+	"startdescription": "血溅于空。我军出现了伤亡。",
+	"aspects": {
+	    "makeadditional": 1,
+	    "makecasualty": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.elusive.conceal"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "attack.conclude.growth_friend"
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	]
+    },
+    {
+	"id": "attack.conclude.growth_friend",
+	"label": "毫无防备！",
+	"startdescription": "血溅于空。我军出现了伤亡。",
+	"requirements": {
+	    "foe.growth": 1
+	},
+	"aspects": {
+	    "makeadditional": 1,
+	    "killfriend": 1
+	},
+	"linked": [
+	    {
+		"id": "attack.conclude.growth.continue_friend"
+	    }
+	]
+    },
+    {
+	"id": "attack.conclude.growth.continue_friend",
+	"label": "绽放的憎恶",
+	"startdescription": "戴冠之孳的触碰承诺的不是死亡，而是生命。人们很快便学会畏惧这承诺。",
+	"requirements": {
+	    "foe.growth": 1
+	},
+	"aspects": {
+	    "growthinfect": 1
+	},
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	]
+    },
+
+    {
+	"id": "destroysupplies.nodefense_friend",
+	"label": "失去资源！",
+	"startdescription": "我们的资源正在火中燃烧！",
+	"requirements": {
+	    "decision.enemy.destroysupplies": 1
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "物资",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "destroysupplies.conclude"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "destroysupplies.conclude",
+	"label": "失去资源！",
+	"startdescription": "我们的资源正在火中燃烧！",
+	"requirements": {
+	    "decision.enemy.destroysupplies": 1
+	},
+	"aspects": {
+	    "makeadditional": 1
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99
+	},
+	"linked": [
+	    {
+		"id": "foe.elusive.conceal"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    }
+	]
+    },
+    {
+	"id": "infrastructure.nodefense_friend",
+	"label": "化为残骸！",
+	"startdescription": "一处我军的重要设施已被摧毁！",
+	"requirements": {
+	    "decision.enemy.infrastructure": 1
+	},
+	"aspects": {
+	    "destroy": 1,
+	    "makeadditional": 1
+	},
+	"slots": [
+	    {
+		"id": "needsinfrastructure",
+		"label": "军事设施",
+		"required": {
+		    "infrastructure": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "foe.elusive.conceal"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    }
+	]
+    },
+
+        {
+            "id": "foeumiriofficer.side.withanno",
+            "label": "尝试突击敌军指挥营",
+            "previewdescription": "我们的密探送来了一份宝贵的情报，内容是德军指挥部的布防情况。如果我们能抓住这个机会，或许能够直接摧毁德军的大脑。",
+            "startdescription": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "description": "几封密电已被送到了战壕各处，我们必须秘密调动最精锐的人员。无人知晓他们将参加何种任务，现在，他们正向目标地点前进。",
+            "warmup": 10,
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "side.umiri.withanno": 1,
+                "provisions": 2,
+            },
+            "extantreqs": {
+                "side.marker": -3
+            },
+            "tablereqs": {
+                "foe.officerdetail": -3
+            },
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "start.objective.side.umiri"
+                },
+                {
+                    "id": "start.objective.side.2.umiri"
+                },
+                {
+                    "id": "start.objective.side.3.umiri"
+                }
+            ],
+        },
+    {
+	"id": "start.objective.side.3.umiri",
+	"actionid": "operate",
+	"label": "尝试达成再一个次要目标",
+	"startdescription": "我已经派我的人去达成当前战区的两个次要目标。但若我还有多余人手，我可以命令他们将第三个次要目标也付诸行动。但第四个就会使我们的战线过于分散。",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=2": 1
+	},
+	"requirements": {
+	    "side": 1,
+	},
+	"craftable": false,
+	"warmup": 0,
+	"alt": [
+	    {
+		"id": "objective.side.mark.3",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side.2.umiri",
+	"actionid": "operate",
+	"label": "尝试达成另一个次要目标",
+	"startdescription": "我已经派我的人去达成当前战区的一个次要目标。但若我还有多余人手，我可以命令他们将第二个次要目标也付诸行动。",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=1": 1
+	},
+	"requirements": {
+	    "side": 1,
+	},
+	"craftable": false,
+	"warmup": 0,
+	"alt": [
+	    {
+		"id": "objective.side.mark.2",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side.umiri",
+	"actionid": "operate",
+	"label": "尝试达成一个次要目标",
+	"startdescription": "我已经做针对这一目标出了相应的准备与谋划。我们将在获得这一优势之后壮大。",
+	"requirements": {
+	    "side": 1,
+	},
+	"extantreqs": {
+	    "side.marker": -1
+	},
+	"craftable": false,
+	"warmup": 0,
+	"alt": [
+	    {
+		"id": "objective.side.mark",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    ]
+}

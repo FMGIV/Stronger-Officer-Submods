@@ -1,0 +1,1297 @@
+{
+    "recipes": [
+        {
+            "id": "friend.anno.coming.forumiri.first00",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "maxexecutions": 1,
+            "extantreqs": {
+                "anno.mark": -1,
+                "wound.camilla.foranno": -1,
+                "proterant.story": 1,
+                "foe.umiri.mark": 1,
+            },
+            "requirements": {
+                "annocomingessential": 3
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.coming.forumiri.first0"
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.coming.forumiri.first0",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "maxexecutions": 5,
+            "extantreqs": {
+                "anno.mark": -1,
+                "wound.camilla.foranno": -1,
+                "proterant.story": 1,
+                "foe.umiri.mark": 1,
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.coming.forumiri.first"
+                },
+                {
+                    "id": "friend.anno.coming.forumiri"
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.coming.forumiri.rome",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "maxexecutions": 1,
+            "extantreqs": {
+                "anno.mark": -1,
+                "proterant.story": 1,
+                "rome.here": 1,
+                "tool.shape": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.coming.forumiri.first"
+                },
+                {
+                    "id": "friend.anno.coming.forumiri"
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.coming.forumiri.first",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "maxexecutions": 1,
+            "effects": {
+                "mission.anno.0": 1
+            },
+			"playAudioTrack": "bgm.help.mp3",
+            "linked": [
+                {
+                    "id": "friend.anno.coming.forumiri"
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.coming.forumiri",
+            "label": "太阳新军正在进入战场",
+            "startdescription": "天空传来机械的轰鸣，大地之上行走着造物的身影，看样子我们的盟军赶到了！",
+            "actionId": "annocoming",
+            "warmup": 10,
+            "effects": {
+                "friend.anno.hidden": 1
+            },
+			"playAudioTrack": "bgm.annocoming.mp3",
+            "linked": [
+                {
+                    "id": "friend.anno.coming.meet"
+                },
+                {
+                    "id": "friend.anno.coming"
+                },
+            ]
+        },
+        {
+            "id": "friend.anno.coming.meet",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "extantreqs": {
+                "mission.anno.2": 1
+            },
+            "aspects": {
+                "findanno": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.coming"
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.coming",
+            "label": "太阳新军正在进入战场",
+            "startdescription": "更多的效忠新王的士兵和机械正在赶来这片战场。",
+            "actionId": "annocoming",
+            "warmup": 45,
+            "effects": {
+                "friend.infantryanno": 2,
+                "friend.scoutsanno": 1,
+                "friend.tanksanno": 1,
+                "friend.artilleryanno": 1,
+                "friend.valkyrie3": 1,
+                "friend.tanks": 1,
+                "friend.bombers": 1,
+                "friend.phlogisticant": 2,
+            },
+			"deckeffects": {
+				"comeanno.tanks": 4,
+				"comeanno.infantryanno": 4,
+				"comeanno.infantry": 2,
+				"comeanno.bombers": 4,
+			},
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "friend.anno.cominglocal"
+                }
+            ]
+        },
+        {
+            "id": "friend.anno.cominglocal",
+            "label": "太阳新军正在进入战场",
+            "actionId": "annocoming",
+            "warmup": 0,
+            "mutations": [
+                {
+                    "filter": "friend",
+                    "mutate": "local",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "friend.anno.circle"
+                }
+            ]
+        },
+        
+        {
+            "id": "friend.anno.circle.first",
+            "label": "太阳新军正在调整他们的部署",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.camilla.foranno": -1,
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.circle",
+                    "chance": 100
+                },
+            ],
+        },
+        {
+            "id": "friend.anno.circle_stun0",
+            "label": "新军的部署陷入了停滞",
+            "startdescription": "也许是缺乏补给，亦或者其他什么。新军的部署此刻陷入了停滞",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "strategy.stun": 1
+            },
+            "effects": {
+                "anno_stop": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.circle_stun"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.circle_stun",
+            "label": "新军的部署陷入了停滞",
+            "startdescription": "也许是缺乏补给，亦或者其他什么。新军的部署此刻陷入了停滞",
+            "actionId": "annoaction",
+            "warmup": 30,
+            "extantreqs": {
+                "strategy.stun": 1
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.circle_stun"
+                },
+                {
+                    "id": "friend.anno.circle"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.circle_stop0",
+            "label": "恐惧即我",
+            "startdescription": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。",
+            "description": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "skill.intimidate.active": 1
+            },
+            "effects": {
+                "anno_stop": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.circle_stop"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.circle_stop",
+            "label": "恐惧即我",
+            "startdescription": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。",
+            "description": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。",
+            "actionId": "annoaction",
+            "warmup": 30,
+            "extantreqs": {
+                "skill.intimidate.active": 1
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.circle_stop"
+                },
+                {
+                    "id": "friend.anno.circle"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.circle",
+            "label": "太阳新军正在调整他们的部署",
+            "startdescription": "蒸汽和硫磺的气息又浓重的几分，自动机位于原地待命。那位指挥官在思考自己的下一步行动。",
+            "actionId": "annoaction",
+            "warmup": 60,
+            "requirements": {
+            },
+            "effects": {
+                "strategy.powerup": -1,
+                "strategy.stun": -1,
+                "strategy.airstrike": -1,
+                "anno_stop": -99
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.circle_stun0",
+                    "chance": 100
+                },
+                {
+                    "id": "friend.anno.circle_stop0",
+                    "chance": 0
+                },
+                {
+                    "id": "friend.anno.attack7",
+                    "chance": 30
+                },
+                {
+                    "id": "friend.anno.attack5",
+                    "chance": 40
+                },
+                {
+                    "id": "friend.anno.attack3",
+                    "chance": 40
+                },
+                {
+                    "id": "friend.anno.attack0",
+                    "chance": 50
+                },
+                {
+                    "id": "friend.anno.circle"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "friend.anno.valkyriepre",
+                    "chance": 30
+                },
+                {
+                    "id": "friend.anno.reinforcements",
+                    "chance": 30
+                },
+            ]
+        },
+        {
+            "id": "friend.anno.reinforcements",
+            "label": "太阳新军正在呼叫支援",
+            "startdescription": "更多的效忠新王的士兵和机械正在赶来这片战场",
+            "actionId": "reinforcements.king",
+            "warmup": 30,
+            "extantreqs": {
+				"faction.anno": -10
+            },
+            "effects": {
+                "friend.tanksanno": 1,
+                "friend.phlogisticantanno": 2
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.reinforcements.local"
+                }
+            ],
+            "deckeffects": {
+                "comeanno.tanks": 5
+            }
+        },
+        {
+            "id": "friend.anno.reinforcements.local",
+            "label": "太阳新军正在呼叫支援",
+            "actionId": "reinforcements.king",
+            "warmup": 0,
+            "mutations": [
+                {
+                    "filter": "friend",
+                    "mutate": "local",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+
+        {
+            "id": "friend.anno.valkyriepre",
+            "label": "女武神已经就绪",
+            "startdescription": "女武神准备就绪，现在该让她出动了。",
+            "actionId": "friendvalkyrie",
+            "warmup": 10,
+            "extantreqs": {
+				"valkyrie.mark": 1
+            },
+			"aspects": {
+				"fatiguing": 1
+			},
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备工作",
+                "required": {
+					"friend.scoutsanno": 1,
+					"friend.scouts": 1,
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrieready"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrieready",
+            "label": "女武神已经就绪",
+            "startdescription": "女武神准备就绪，现在该让她出动了。",
+            "description": "意外的终止。",
+            "actionId": "friendvalkyrie",
+            "warmup": 10,
+            "extantreqs": {
+				"valkyrie.mark": 1
+            },
+            "aspects": {
+                "fatiguing": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"valkyrie.mark": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.player"
+				},
+				{
+					"id": "friend.anno.valkyrie.annowithscouts"
+				},
+				{
+					"id": "friend.anno.valkyrie.anno"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.player",
+            "label": "女武神正在等待指令",
+            "startdescription": "我们的怪物需要我们给她找个猎物了。",
+            "actionId": "friendvalkyrie",
+            "warmup": 30,
+            "extantreqs": {
+				"tool.shape": 1
+            },
+            "requirements": {
+                "valkyrie": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe": 1
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                },
+                "greedy": false
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.kill"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.annowithscouts",
+            "label": "女武神已经锁定目标",
+            "startdescription": "猎物已经锁定，现在该撕碎他们了！",
+            "actionId": "friendvalkyrie",
+            "warmup": 30,
+            "requirements": {
+				"foe": -1,
+				"isscouts": 1,
+                "valkyrie": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe.tanks": 1,
+					"foe.tanks.hidden": 1,
+					"foe.artillery": 1,
+					"foe.artillery.hidden": 1,
+					"foe.bombers": 1,
+					"foe.bombers.hidden": 1
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                },
+                "greedy": true
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.kill"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.anno",
+            "label": "女武神进入战场",
+            "startdescription": "女武神自高空俯冲，寻找她的猎物！！",
+            "actionId": "friendvalkyrie",
+            "warmup": 30,
+            "requirements": {
+				"foe": -1,
+                "valkyrie": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe": 1
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                },
+                "greedy": true
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.kill"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.kill",
+            "label": "女武神已经锁定目标",
+            "startdescription": "敌军已经锁定，现在只需要等待",
+            "actionId": "friendvalkyrie",
+            "warmup": 10,
+            "extantreqs": {
+            },
+			"aspects": {
+				"killfoe": 1
+			},
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.debuff"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.debuff",
+            "label": "女武神掠过战场",
+            "startdescription": "女武神掠过战场，她正在搜寻目标！",
+            "description": "女武神掠过战场，她正在搜寻目标！",
+            "actionId": "friendvalkyrie",
+            "warmup": 10,
+            "extantreqs": {
+            },
+			"aspects": {
+			},
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe": 1
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+					"weakened": 1
+                },
+                "greedy": true
+                }
+            ],
+			"linked": [
+				{
+					"id": "friend.anno.valkyrie.debuff",
+					"chance": 50
+				},
+				{
+					"id": "friend.anno.valkyrie.end"
+				},
+			]
+        },
+        {
+            "id": "friend.anno.valkyrie.end",
+            "label": "女武神掠过战场",
+            "startdescription": "战场已经明晰，那些可笑的家伙没有机会反抗了。",
+            "description": "战场已经明晰，那些可笑的家伙没有机会反抗了。",
+            "actionId": "friendvalkyrie",
+            "warmup": 10,
+            "extantreqs": {
+            },
+			"aspects": {
+	    		"weaken": 1,
+                "revealidentity": 1,
+				"fatiguing": 1
+			},
+			"linked": [
+			],
+            "inductions": [
+				{
+				"id": "produce.strife",
+				"additional": true,
+				"chance": 65
+				},
+				{
+				"id": "produce.strife.contemnant",
+				"additional": true,
+				"chance": 50
+				},
+            ]
+        },
+
+        {
+            "id": "friend.anno.attack0",
+            "label": "太阳新军开始行动了",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "internaldeck": {
+                "spec": [
+                    "strategy.stun",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack"
+                }
+            ]
+        },
+        {
+            "id": "friend.anno.attack3",
+            "label": "太阳新军开始行动了",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.stun",
+                    "strategy.stun",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack"
+                }
+            ]
+        },
+        {
+            "id": "friend.anno.attack5",
+            "label": "太阳新军开始行动了",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.stun",
+                    "strategy.stun",
+                    "strategy.stun",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack"
+                }
+            ]
+        },
+        {
+            "id": "friend.anno.attack7",
+            "label": "太阳新军开始行动了",
+            "actionId": "annoaction",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 7
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.stun",
+                    "strategy.stun",
+                    "strategy.stun",
+                    "strategy.powerup",
+                    "strategy.powerup",
+                    "strategy.airstrike",
+                    "strategy.airstrike",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack"
+                }
+            ]
+        },
+        {
+            "id": "friend.anno.attack",
+            "label": "太阳新军开始行动了",
+            "startdescription": "士兵与机械于太阳下行走，他们开始行军了。",
+            "actionId": "annoaction",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.circle"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "friend.anno.attack.stun.umiri",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.stun": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.powerup.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.powerup": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.stun.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.stun": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.airstrike.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.airstrike": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.powerup",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.powerup": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.stun",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.stun": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "friend.anno.attack.airstrikepre",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.airstrike": 1
+                        },
+                        "limit": 1
+                    }
+                },
+			],
+		},
+    {
+	"id": "edgelong.attack.you",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“那么，这只小狗狗会怎么做呢？低头求饶？拔腿逃跑？还是张口咬下？”#foe.duffoure|“我会解决的干净利落——只要你让我解决。”#foe.camilla|“或许，杀死你会是一次新颖的锻炼。”#foe.wilhelm|“你——粉碎你的骨头将会是<i>真正</i>战斗之前一次不错的热身。”#foe.sergei|“我将把你撕碎，小兵。”@\n\n[若你想要防御，你需要提供友军以替你阻挡刃之长生者的攻击。这会杀死你的友军。]",
+	"warmup": 30,
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "炮灰？",
+		"required": {
+		    "friend": 1,
+		    "legacyplotitem": 1,
+		    "challenge": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "wounded": 1,
+		    "damaged": 1,
+		    "dream.colonel": 1,
+		    "dream.lionsmith": 1,
+		    "tool": 1,
+		    "faction.anno": 1,
+			"anno.mark": 1,
+			"valkyrie": 1,
+		    "ascension.marker.casket": 1
+		}
+	    }
+	],
+	"linked": [
+	    {
+		"id": "edgelong.attack.you.nodefense"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "contemnant.usechallenge"
+	    },
+	    {
+		"id": "contemnant.friend.immortal"
+	    },
+	    {
+		"id": "sergei.usedinsight"
+	    },
+	    {
+		"id": "longdefend.skill.deflect"
+	    },
+	    {
+		"id": "edgelong.attack.you.defense"
+	    }
+	]
+    },
+    {
+	"id": "edgelong.attack.allies",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"actionId": "long.camilla",
+	"tablereqs": {
+	    "friend": 1
+	},
+	"extantreqs": {
+	    "contemnant.story": -1
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+			"anno.mark": 1,
+			"valkyrie": 1,
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "edgelong.expel"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	]
+    },
+    {
+	"id": "abandon.ally",
+	"actionid": "abandon",
+	"label": "重新委派友军",
+	"startdescription": "我可以通过将这一友军委派至别处以减小我分队的规模。或许我们必须轻装行军。或许我们必须逃离。",
+	"description": "Done.",
+	"extantreqs": {
+	    "lake.here": -1
+	},
+	"requirements": {
+	    "friend": 1,
+	    "damage.body": -1,
+	    "lore": -1,
+	    "faction.anno": -1,
+	},
+	"effects": {
+	    "friend": -99
+	},
+	"warmup": 10,
+	"craftable": true
+    },
+    {
+	"id": "travelling.cycle.complete.exit",
+	"actionid": "ticktock",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"description": "——并再一次投身于战火\n\n@#vilna.here|我们已有两年没有占领维尔纳，但现在德军前来，意图夺走其与联盟之间名为立陶宛的隔墙。若我们放任他们这么做，后果会很严重。#bialystok.here|德国入侵的矛尖落于此处。防卫线正变得愈发薄弱；德国国防军的推进毫不停歇；而波兰人同等的厌恶我们与德军。让我们在仍有可能时进行一次顺利的撤退。#minsk.here|我们窃取了波兰与立陶宛的工业骨干：铸造厂、工厂、挖掘机与铺轨机，并将其送到此处为我们工作。它们为我们做出了如此令人敬佩的贡献——我们决不能让它们因在德军手下工作而蒙羞。#vitebsk.here|维特伯斯克——我们总有一天要放弃这枚棋子。但即便我们无法在德国国防军的猛攻下长久守住这座城市，在砖石与街道中我们仍能够寻求另一种胜利。#orsha.here|在第聂伯河与亚契斯塔河的分岔处，有一座城市名为奥尔沙。这两条水路赋予了其被争夺的价值，德军和我们都认可这一点。#smolensk.here|苏联工业的另一颗宝石：食物工业，纺织业，制造业，甚至还有宝石加工业。若我们无法带着这颗宝石逃离，那德军也不能。我们将开始作业，这项作业需要果断的迅捷，以及大量的爆破炸药。#vyazma.here|很久以前维亚济马就是对于向莫斯科进军的敌军的一个赤裸的威慑。德国国防军的包围已将此处的防卫线撕成碎片，我们只能用防卫线的碎片凑合。#rzhev.here|敌人的又一处卑鄙的包围以瓦解并歼灭了我军于此处的很大一部分部队告终。现在剩余部队正承受德国战争机器迫近的双颚，还有即将来临的无情大雪。#bryansk.here|布良斯克不久后就会落到德军手中，但你要我说的话，他们将无法长久占有这里。在解决斯大林格勒的问题之后，我们将返回这里，取回属于我们的城市。#kyiv.here|罗斯古老的起源之地，但现在正受到难以阻挡的威胁。狼群正从四面八方逼近。我们需要抵挡侵攻足够久，以让此地的工业有时间向东转移。#kursk.here|城外的空地布满了德军坦克和卑劣且覆有装甲之物。我想，这片战场只应该属于卑劣且覆有装甲之物。但我们有命令在身，不可退缩。#livny.here|另一块东西之间的小缓冲地。这座小城十分的俄罗斯：它安静地承受其痛苦，无论历经多少年的苦难。#voronezh.here|此地是黑土地区的中心，此地富饶的土地正如肌肉一般支撑着名为强行工业化的骨骼；正是从此地开始，名为铁路的动脉穿过曾为最为漆黑的森林，向莫斯科延伸。#kharkov.here|哈尔科夫是斯大林强硬的追求苏联工业实力的产物。甚至在乌克兰大饥荒时，人们在街上成批饿死，哈尔科夫的工厂仍随着火与烟忠实地运转。德国国防军的到来或许会打乱工厂的日程。或许。#uman.here|德国空军骚扰并轰炸途径乌曼的士兵，已使他们绝且疲惫。原本的机械化步兵现在仅剩带着枪的步兵。我们最好与仍能战斗的士兵们一同从这座城市撤退。#odessa.here|这座城市因位于黑海海岸而被德军作为一个征服的目的地而觊觎，同时对于我们而言，这是一个需要尽可能久坚守的地点。我们无法永远坚守——但我们也无需如此。#perekop.here|在革命之后，布尔什维克在此地建造农业城镇，贸易进而产生。现在德军前来占领此地，以切断连接克里米亚与乌克兰的桥梁。他们会得到它，但这不意味着我们会留给他们一片适合占领的土地。#izyum.here|德军在这座城市的城郊歼灭了我军一个大突出部——红军高层的一次灾难性的误算。伊久姆时日无多，于此地流的血已经够多的了。@",
+	"effects": {
+	    "wasteland.a": -1,
+	    "wasteland.b": -1
+	},
+	"mutations": [
+	    {
+		"filter": "friend",
+		"mutate": "local",
+		"level": 1
+	    }
+	],
+	"aspects": {
+	    "refresh": 1
+	},
+	"alt": [
+	    {
+		"id": "travelling.officerpresent",
+		"additional": true,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"foe.rankofficer": 1
+		    }
+		}
+	    }
+	],
+	"inductions": [
+	    {
+		"id": "travelling.frienddestronger",
+		"expulsion": {
+		    "limit": 99,
+		    "filter": {
+			"friend.stronger": 1
+		    }
+		}
+	    },
+	    {
+		"id": "crater.setupguard.jerome",
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"uqjerome": 1
+		    }
+		}
+	    }
+	],
+    },
+    {
+	"id": "travelling.frienddestronger",
+	"actionid": "frienddestronger",
+	"label": "强化失效",
+	"startdescription": "我看到烈焰正从部队和装甲上褪去。[当到达一个新地区时，强化效果会失效。]",
+	"requirements": {
+	    "friend.stronger": 1
+	},
+	"aspects": {
+		"destronger": 1
+	},
+	"warmup": 5,
+    },
+    {
+	"id": "foe.begin.exhaust",
+	"label": "疲惫与失效",
+	"startdescription": "大敌之力高涨，是故我们的力量低落。人们的脚步变慢，士气下降，武器卡壳并失效，甚至我也可能感到某种强大负担的压力施加于我的身上，并因此退缩。",
+	"description": "无人曾言战争简单。",
+	"requirements": {
+	    "draw.foe.exhaust": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "枯竭",
+		"required": {
+		    "friend": 1,
+		    "weapon": 1,
+		    "lore": 1,
+		    "loc.hospital": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "remnant": 1,
+		    "faction.anno": 1
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "hint.getreinforcements.noroom",
+	"actionid": "communicate",
+	"label": "人数已经够多？",
+	"startdescription": "呼叫更多友军前来我们的阵地是不明智的——且我们难以维持更多部队，因我们已没有更多住所能够分给他们。\n\n[当你的部队规模大于等于空间总数，你将无法呼叫友军支援。]",
+	"grandreqs": { "[~/extant:forcesize] >= [~/extant:room]": 1 },
+	"requirements": {
+	    "friend": 1,
+	    "exhausted": -1,
+		"faction.anno": -1
+	},
+	"craftable": "false",
+	"hintonly": true
+    },
+    {
+	"id": "getreinforcements.withcomms",
+	"actionid": "communicate",
+	"label": "请求友军支援",
+	"startdescription": "自电缆与电磁波中传递言语。若我们需要更多人力，这就是我们请求的方式。",
+	"grandreqs": { "[~/extant:forcesize] < [~/extant:room]": 1 },
+	"extantreqs": {
+	    "loc.commtower": 1,
+	    "lake.here": -1
+	},
+	"requirements": {
+	    "friend": 1,
+	    "exhausted": -1,
+	    "edgelong": -1,
+	    "wounded": -1,
+	    "damaged": -1,
+		"faction.anno": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "spit.getreinforcements.withcomms",
+		"additional": true
+	    }
+	]
+    },
+    {
+	"id": "getreinforcements.nocomms",
+	"actionid": "communicate",
+	"label": "派遣友军确保援军",
+	"startdescription": "我们的通信站现已不可用，故广播与电报已不再是可选项。若我们需要援军，某人需要长途跋涉前往下一个友军阵地，并带着援军返回。\n\n[当没有通信站时，请求援军需要的时间要长得多。]",
+	"grandreqs": { "[~/extant:forcesize] < [~/extant:room]": 1 },
+	"extantreqs": {
+	    "loc.commtower": -1,
+	    "lake.here": -1
+	},
+	"requirements": {
+	    "friend": 1,
+	    "wounded": -1,
+	    "damaged": -1,
+	    "edgelong": -1,
+	    "exhausted": -1,
+		"faction.anno": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "spit.getreinforcements.nocomms",
+		"additional": true,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "givewound.fifth",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"extantreqs": {
+	    "damage.body": 4
+	},
+	"internaldeck": {
+	    "spec": [
+		"wound.eye",
+		"wound.ear",
+		"wound.hand",
+		"wound.leg"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true,
+	    "defaultcard": "wound.eye"
+	},
+	"linked": [
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.ear",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"extantreqs": {
+	    "wound.ear": -1,
+	    "debilitation.ear": -1,
+	    "debilitation.ear.colonel": -1,
+	    "debilitation.ear.colonel.exhausted": -1
+	},
+	"requirements": {
+	    "draw.ear": 1
+	},
+	"effects": {
+	    "wound.ear": 1
+	},
+	"linked": [
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.eye",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"extantreqs": {
+	    "wound.eye": -1,
+	    "debilitation.eye": -1,
+	    "debilitation.eye.colonel": -1,
+	    "debilitation.eye.colonel.exhausted": -1
+	},
+	"requirements": {
+	    "draw.eye": 1
+	},
+	"effects": {
+	    "wound.eye": 1
+	},
+	"linked": [
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.hand",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"extantreqs": {
+	    "wound.hand": -1,
+	    "debilitation.hand": -1,
+	    "debilitation.hand.colonel": -1,
+	    "debilitation.hand.colonel.exhausted": -1
+	},
+	"requirements": {
+	    "draw.hand": 1
+	},
+	"effects": {
+	    "wound.hand": 1
+	},
+	"linked": [
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.leg",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"extantreqs": {
+	    "wound.leg": -1,
+	    "debilitation.leg": -1,
+	    "debilitation.leg.colonel": -1,
+	    "debilitation.leg.colonel.exhausted": -1
+	},
+	"requirements": {
+	    "draw.leg": 1
+	},
+	"effects": {
+	    "wound.leg": 1
+	},
+	"linked": [
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.clear",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"effects": {
+	    "draw.ear": -1,
+	    "draw.eye": -1,
+	    "draw.leg": -1,
+	    "draw.hand": -1
+	},
+	"linked": [
+	    {
+		"id": "givewound.drawagain"
+	    },
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "givewound.drawagain",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"deckeffects": {
+	    "mywounds": 1
+	},
+	"linked": [
+	    {
+		"id": "givewound.ear"
+	    },
+	    {
+		"id": "givewound.eye"
+	    },
+	    {
+		"id": "givewound.hand"
+	    },
+	    {
+		"id": "givewound.leg"
+	    },
+	    {
+		"id": "givewound.clear"
+	    },
+        {
+        "id": "turn.seamlesswounds"
+        },
+        {
+        "id": "turn.clockworkmalign"
+        },
+	]
+    },
+    {
+	"id": "turn.clockworkmalign",
+	"label": "我受伤了！",
+	"startdescription": "疼痛来得迟缓。直到我发觉某处本该存在的感知，如今只剩虚无。这时，它才一口咬进骨髓。",
+	"requirements": {
+	    "lethal_debilitation_trigger": 1
+	},
+    "effects": {
+        "clockworkleadtowounds": 1
+    },
+	"aspects": {
+	    "malign": 1
+	}
+    },
+        
+    ]
+}

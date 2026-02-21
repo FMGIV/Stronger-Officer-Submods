@@ -1,0 +1,2920 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.defense.first",
+            "label": "敌军正在调整防守策略",
+            "actionId": "foedefense",
+            "warmup": 0,
+            "requirements": {
+                "strategy.defense": 1
+            },
+			"maxexecutions": 1,
+			"playAudioTrack": "bgm.foedefense.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.defense",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "看来他们打算巩固阵线。",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+                "strategy.defense": 1
+            },
+            "tablereqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense2",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.defense1",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_d",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.defense0",
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense2",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "德国人正向这条防线调集重火力支援。",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "maxexecutions": 100,
+            "grandReqs": {
+                "([~/extant:foe.bombers] + [~/extant:foe.bombers.hidden]) <= 2 || ([~/extant:foe.artillery] + [~/extant:foe.artillery.hidden]) <= 2": 1
+            },
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "effects": {
+                "foe.artillery": 1,
+                "foe.bombers": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 4,
+            },
+            "aspects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense1",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "装甲营的伪装网已被撕开，引擎正轰鸣。德国人的斥候一定正在前方开路。",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "maxexecutions": 100,
+            "tablereqs": {
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "foe.infantry": 1,
+                "foe.kommando.hidden": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.tanks": 3,
+                "foeforumiri.infantry": 4,
+            },
+            "aspects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense0",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "铁锹掘入冻土的闷响持续了整夜，战壕在广袤的平原上连成愈加曲折的沟壑。看来我们需要更强大的火力。",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+                "strategy.defense": 1
+            },
+            "tablereqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.infantry": 1,
+                        "foe.infantry.hidden": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense_full"
+                },
+                {
+                    "id": "foe.umiri.attack.defense0",
+                    "chance": 35
+                },
+                {
+                    "id": "foe.umiri.attack.defense_begin"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense_full",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "铁锹掘入冻土的闷响持续了整夜，战壕在广袤的平原上连成愈加曲折的沟壑。看来我们需要更强大的火力。",
+            "description": "铁锹掘入冻土的闷响持续了整夜，战壕在广袤的平原上连成愈加曲折的沟壑。看来我们需要更强大的火力。",
+            "actionId": "foedefense",
+            "requirements": {
+                "foe.infantry": 3
+            },
+            "warmup": 0,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense_begin"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.defense_begin",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "铁锹掘入冻土的闷响持续了整夜，战壕在广袤的平原上连成愈加曲折的沟壑。看来我们需要更强大的火力。",
+            "description": "铁锹掘入冻土的闷响持续了整夜，战壕在广袤的平原上连成愈加曲折的沟壑。看来我们需要更强大的火力。",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "requirements": {
+                "foe.infantry": 1
+            },
+            "effects": {
+                "hindrance.fortifications": "foe.infantry"
+            },
+            "linked": [
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_d",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "授勋，枪毙逃兵，洗脑宣传，德国人还是这老一套。这就是为什么帝国总是有那么多不怕死的疯子。",
+            "description": "授勋，枪毙逃兵，洗脑宣传，德国人还是这老一套。这就是为什么帝国总是有那么多不怕死的疯子。",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "tablereqs": {
+                "weakened": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "foe.resilient",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.kommando",
+                    "mutate": "foe.resilient",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_d1",
+                    "chance": 50
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_d1",
+            "label": "敌军正在调整防守策略",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "授勋，枪毙逃兵，洗脑宣传，德国人还是这老一套。这就是为什么帝国总是有那么多不怕死的疯子。",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+            },
+            "tablereqs": {
+                "weakened": 7
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "foe.resilient",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.kommando",
+                    "mutate": "foe.resilient",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+
+        {
+            "id": "foe.umiri.attack.rally.first",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 0,
+			"maxexecutions": 1,
+            "requirements": {
+                "strategy.rally": 1
+            },
+			"playAudioTrack": "bgm.foerally.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "strategy.rally": 1
+            },
+            "extantreqs": {
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a0",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_f",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_e",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_c",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_b",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_a",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a0",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.officerdetail": -4,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "战壕的那边传来了阵阵枪声。看来<i>伊尔莎</i>的私兵又多了一批，德国人的宪兵队可有的忙了。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+                "foe.officerdetail": -7
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.officerdetail": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a1",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "战壕的那边传来了阵阵枪声。看来<i>伊尔莎</i>的私兵又多了一批，德国人的宪兵队可有的忙了。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.officerdetail": -4
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.officerdetail": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downa"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.rally_b",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "foe.tanks": 3
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "grandReqs": {
+                "([~/extant:foe.tanks] + [~/extant:foe.tanks.hidden]) >= ([~/extant:foe.infantry] + [~/extant:foe.infantry.hidden] +2)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_b1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_b1",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "他们的引擎响了一整夜，看来他们选好了下一批敢死队的人选了。",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 1,
+                "foe.tanks": -1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.infantry",
+                    "foe.infantry",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downb"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "foe.infantry": 4
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "grandReqs": {
+                "([~/extant:foe.infantry] + [~/extant:foe.infantry.hidden]) >= ([~/extant:foe.tanks] + [~/extant:foe.tanks.hidden] +2)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_c1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c1",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_c2",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c2",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "这个节骨眼上他们竟然把部队调走了？这一定有蹊跷。",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {
+                "foe.infantry": -9
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "foe.tanks",
+                    "foe.tanks",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downc"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_e",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/extant:foe.infantry] + [~/extant:foe.kommando] + [~/extant:foe.kommando.hidden] + [~/extant:foe.infantry.hidden]) >= 4": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                    "foe.kommando": 1,
+                    "foe.kommando.hidden": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.officerdetail": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_e1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_e1",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "看来他们找了些更专业的人来，希望他们不会造成更大的麻烦。",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+                "foe": 1
+            },
+            "effects": {
+                "foe.infantry": -1,
+                "foe.infantry.hidden": -1,
+                "foe.kommando": -1,
+                "foe.kommando.hidden": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.manhunters",
+                    "foe.manhunters",
+                    "foe.sniper",
+                    "foe.sniper",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downe"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_f",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "他们以虚界的力量触碰了这些尸骸，现在它们为德国人所用了，无论这些尸体曾经隶属于何方。",
+            "actionId": "foerally",
+            "warmup": 10,
+            "extantreqs": {
+                "strife.tracker": 7
+            },
+            "grandReqs": {
+                "([~/exterior:foe.corpses] >= 1) || ([~/exterior:friend.corpses] >= 1)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.corpses": 1,
+                    "friend.corpses": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_f1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_f1",
+            "label": "敌军正在重整部队",
+            "startdescription": "我们截获了德国人的电报，他们正召集部队，重整编制。",
+            "description": "他们以虚界的力量触碰了这些尸骸，现在它们为德国人所用了，无论这些尸体曾经隶属于何方。",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+                "remnant": 1
+            },
+            "effects": {
+                "foe.chasseur": 1,
+                "foe.corpses": -1,
+                "friend.corpses": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_downa",
+            "label": "敌军正在调整防守策略",
+            "description": "战壕的那边传来了阵阵枪声。看来<i>伊尔莎</i>的私兵又多了一批，德国人的宪兵队可有的忙了。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downb",
+            "label": "敌军正在调整防守策略",
+            "description": "他们的引擎响了一整夜，看来他们选好了下一批敢死队的人选了。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downc",
+            "label": "敌军正在调整防守策略",
+            "description": "这个节骨眼上他们竟然把部队调走了？这一定有蹊跷。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downe",
+            "label": "敌军正在调整防守策略",
+            "description": "看来他们找了些更专业的人来，希望他们不会造成更大的麻烦。",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics1.first",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "履带碾过战壕......",
+            "description": "履带碾过战壕......",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics1": 1
+            },
+			"maxexecutions": 1,
+			"playAudioTrack": "bgm.foetactics1.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics1",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "履带碾过战壕......",
+            "description": "履带碾过战壕......",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "strategy.tactics1": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_begin",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_begin",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": ".....军靴满是泥泞。",
+            "description": ".....军靴满是泥泞。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "foe.tanks": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": -1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_again",
+                    "chance": 30
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_prep"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_again",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": ".....军靴满是泥泞。",
+            "description": ".....军靴满是泥泞。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_prep"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_prep",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人即将向我们的防线发动猛攻，我们作何应对？\n\n[这一阶段放入的资源将不会消耗，如未能打断，敌军将发动两线乃至多线的战术进攻，<i>不侵守御</i>或<i>永生者的协助</i>不能抵挡这次来自整条战线的进攻]",
+            "description": "德国人即将向我们的防线发动猛攻，我们作何应对？\n\n[这一阶段放入的资源将不会消耗，如未能打断，敌军将发动两线乃至多线的战术进攻，<i>不侵守御</i>或<i>永生者的协助</i>不能抵挡这次来自整条战线的进攻]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_forge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_edge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_attack0"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_edge",
+            "label": "我们发现了敌军的行踪",
+            "startdescription": "我们已经拿到了他们军队驻地的坐标，回应他们的将是我们精心准备的炮弹。",
+            "description": "我们已经拿到了他们军队驻地的坐标，回应他们的将是我们精心准备的炮弹。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "edge": "needsedge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_forge",
+            "label": "我们发现了敌军的行踪",
+            "startdescription": "履带断裂，引擎抛锚，看来德国人的进攻将不了了之了。",
+            "description": "履带断裂，引擎抛锚，看来德国人的进攻将不了了之了。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "forge": "needsforge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_attack0",
+            "label": "敌军正在行军！",
+            "startdescription": "大地在低吼，这些钢铁巨兽正缓缓前进，身后紧跟着灰色的浪潮。",
+            "description": "大地在低吼，这些钢铁巨兽正缓缓前进，身后紧跟着灰色的浪潮。",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_attack"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_attack",
+            "label": "敌军正在行军！",
+            "startdescription": "大地在低吼，这些钢铁巨兽正缓缓前进，身后紧跟着灰色的浪潮。",
+            "description": "大地在低吼，这些钢铁巨兽正缓缓前进，身后紧跟着灰色的浪潮。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_attack"
+                }
+            ],
+            "inductions": [
+                {
+                "id": "doubleattack.1.startup.ex",
+                "expulsion": {
+                    "filter": {
+                        "foe.infantry": 1
+                    },
+                    "limit": 1
+                }
+                },
+                {
+                "id": "doubleattack.2.startup.ex",
+                "expulsion": {
+                    "filter": {
+                        "foe.infantry": 1
+                    },
+                    "limit": 1
+                }
+                },
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks",
+            "label": "敌军正在行军！",
+            "startdescription": "钢铁延伸火力，血肉感知战场，他们正有条不紊的向前推进！\n\n[此战术触发后将会吸收一个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+                "foe": -2
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_edge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_forge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_attack"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "skill.deflect": 1
+            },
+            "extantreqs": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_deflect_ex"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_deflect_ex",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ],
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_edge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "edge": "needsedge"
+            },
+            "extantreqs": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_forge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "forge": "needsforge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack_end",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_main"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_attack_main",
+            "label": "敌军的攻势势不可挡",
+            "startdescription": "德国人洋洋得意地在我们的阵地插上了他们的旗帜，我们的目标已被他们知晓。",
+            "description": "德国人洋洋得意地在我们的阵地插上了他们的旗帜，我们的目标已被他们知晓。",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "xpans": {
+                "stop_goal": 1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "makecasualty": 1,
+                "fatiguing": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "阻挠",
+                "required": {
+                    "side.rescueallies": 1,
+                    "side.weaponscache": 1,
+                    "side.adeptgrail": 1,
+                    "side.adeptlantern": 1,
+                    "side.adeptwinter": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+            ],
+            "effects": {
+                "side.rescueallies": -99,
+                "side.weaponscache": -99,
+                "side.adeptgrail": -99,
+                "side.adeptlantern": -99,
+                "side.adeptwinter": -99,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                }
+            ]
+        },
+    {
+	"id": "produce.wounds",
+	"actionid": "explorevault_casualty",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
+	"deckeffects": {
+	    "mywounds": 1
+	},
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "givewound.fifth"
+	    },
+	    {
+		"id": "givewound.ear"
+	    },
+	    {
+		"id": "givewound.eye"
+	    },
+	    {
+		"id": "givewound.hand"
+	    },
+	    {
+		"id": "givewound.leg"
+	    },
+	    {
+		"id": "givewound.clear"
+	    }
+	],
+    "inductions": [
+        {
+            "id": "produce.wounds.defiance",
+            "chance": 30
+        }
+    ]
+    },
+    {
+	"id": "produce.wounds.defiance_dead",
+	"actionid": "wounds_defiance",
+	"label": "斗争印记",
+	"startdescription": "我的大敌在与我的斗争中受伤",
+    "extantreqs": {
+        "foe.umiri.mark": 1,
+        "obdurant.story": 1
+    },
+    "requirements": {
+        "foe.officerdetail": 1
+    },
+	"effects": {
+	    "umiri.defiance": 1
+	},
+	"warmup": 10,
+	"linked": [
+	]
+    },
+    {
+	"id": "produce.wounds.defiance",
+	"actionid": "wounds_defiance",
+	"label": "斗争印记",
+	"startdescription": "我在与我大敌的斗争中受伤",
+    "extantreqs": {
+        "foe.umiri.mark": 1,
+        "obdurant.story": 1
+    },
+	"effects": {
+	    "umiri.defiance": 1
+	},
+	"warmup": 10,
+	"linked": [
+	]
+    },
+
+        {
+        "id": "doubleattack.1.startup.ex",
+        "actionid": "enemyaction.double.1",
+        "label": "步坦协同！",
+        "startdescription": "敌军正在迫近——",
+        "effects": {
+            "decision.enemy.doubleattack": 1,
+            "up_edge": 1,
+	        "decision.enemy.attack": 1
+        },
+        "aspects": {
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 0,
+                "additive": true
+            },
+            {
+                "filter": "strategy.tactics1.had",
+                "mutate": "strategy.tactics1.had",
+                "level": 0,
+                "additive": false
+            },
+        ],
+        "requirements": {
+        },
+        "linked": [
+            {
+            "id": "foe.coordinated.getsecond.pre"
+            },
+            {
+            "id": "revealenemyidentity"
+            },
+            {
+            "id": "defend.opportunity.ingluviate"
+            },
+            {
+            "id": "defend.opportunity"
+            },
+            {
+            "id": "nonefound"
+            }
+        ],
+        "warmup": 10,
+        "alt": [
+            {
+            "id": "foe.commander.extraenemy",
+            "additional": true
+            }
+        ]
+        },
+        {
+        "id": "doubleattack.2.startup.ex",
+        "actionid": "enemyaction.double.2",
+        "label": "步坦协同！",
+        "startdescription": "敌军正在迫近——",
+        "effects": {
+            "decision.enemy.doubleattack": 1,
+            "up_edge": 1,
+	        "decision.enemy.attack": 1
+        },
+        "aspects": {
+        },
+        "requirements": {
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 0,
+                "additive": true
+            },
+            {
+                "filter": "strategy.tactics1.had",
+                "mutate": "strategy.tactics1.had",
+                "level": 0,
+                "additive": false
+            },
+        ],
+        "linked": [
+            {
+            "id": "foe.coordinated.getsecond.pre"
+            },
+            {
+            "id": "revealenemyidentity"
+            },
+            {
+            "id": "defend.opportunity.ingluviate"
+            },
+            {
+            "id": "defend.opportunity"
+            },
+            {
+            "id": "nonefound"
+            }
+        ],
+        "warmup": 10,
+        "alt": [
+            {
+            "id": "foe.commander.extraenemy",
+            "additional": true
+            }
+        ]
+        },
+    
+    {
+	"id": "doubleattack.1.startup",
+	"actionid": "enemyaction.double.1",
+	"label": "一次夹击！",
+	"startdescription": "敌军计划了一次对其对手的双线进攻——",
+	"effects": {
+	    "decision.enemy.attack": 1
+	},
+	"aspects": {
+	    "takeadditional": 1
+	},
+    "extantreqs": {
+        "strategy.tactics1": -1,
+        "strategy.tactics2": -1,
+        "strategy.tactics3": -1,
+    },
+	"requirements": {
+	    "decision.enemy.doubleattack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "foe": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "foe.rankofficer": 1,
+		    "soviet": 1,
+		    "detectivetemptation": 1,
+		    "foe.exilenightmare": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "foe.coordinated.getsecond.pre"
+	    },
+	    {
+		"id": "revealenemyidentity"
+	    },
+	    {
+		"id": "defend.opportunity.ingluviate"
+	    },
+	    {
+		"id": "defend.opportunity"
+	    },
+	    {
+		"id": "nonefound"
+	    }
+	],
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "foe.commander.extraenemy",
+		"additional": true
+	    }
+	]
+    },
+    {
+	"id": "doubleattack.2.startup",
+	"actionid": "enemyaction.double.2",
+	"label": "一次夹击！",
+	"startdescription": "敌军计划了一次对其对手的双线进攻——",
+	"effects": {
+	    "decision.enemy.attack": 1
+	},
+	"aspects": {
+	    "takeadditional": 1
+	},
+    "extantreqs": {
+        "strategy.tactics1": -1,
+        "strategy.tactics2": -1,
+        "strategy.tactics3": -1,
+    },
+	"requirements": {
+	    "decision.enemy.doubleattack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "foe": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "foe.rankofficer": 1,
+		    "soviet": 1,
+		    "detectivetemptation": 1,
+		    "foe.exilenightmare": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "foe.coordinated.getsecond.pre"
+	    },
+	    {
+		"id": "revealenemyidentity"
+	    },
+	    {
+		"id": "defend.opportunity.ingluviate"
+	    },
+	    {
+		"id": "defend.opportunity"
+	    },
+	    {
+		"id": "nonefound"
+	    }
+	],
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "foe.commander.extraenemy",
+		"additional": true
+	    }
+	]
+    },
+
+    ]
+}

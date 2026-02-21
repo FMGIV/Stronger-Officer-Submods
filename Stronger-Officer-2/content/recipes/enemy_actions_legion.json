@@ -1,0 +1,181 @@
+{
+"recipes": [
+    {
+	"id": "found.boundsmen",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴步调一致地移动——",
+	"requirements": {
+	    "foe.coordinated": 1,
+	    "foe.boundsmen": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "foe.boundsmen": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "uqlionel": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "defend.fire.3",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.2",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.1",
+		"chance": 20
+	    },
+	    {
+		"id": "target.king",
+		"chance": 30
+	    },
+	    {
+		"id": "target.ss",
+		"chance": 60
+	    },
+	    {
+		"id": "legion.defend.opportunity.pre"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "found.otherlegionenemy",
+	"label": "一次敌袭！",
+	"startdescription": "",
+	"requirements": {
+	    "faction.legion": 1
+	},
+	"linked": [
+	    {
+		"id": "defend.fire.3",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.2",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.1",
+		"chance": 20
+	    },
+	    {
+		"id": "target.king",
+		"chance": 30
+	    },
+	    {
+		"id": "target.ss",
+		"chance": 60
+	    },
+	    {
+		"id": "legion.defend.opportunity.pre"
+	    }
+	]
+    },
+    {
+	"id": "target.legion.ss",
+	"label": "针对索隐会？",
+	"startdescription": "我们全部都在争夺那颗星——这意味着我们多方势力相互之间均为敌对。而这一次，门关军团选择了另一方作为目标。",
+	"tablereqs": {
+	    "faction.king": 1
+	},
+	"extantreqs": {
+		"clockwork.mark": 1
+	},
+	"aspects": {
+	    "revealidentity": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "faction.karotechia": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "clockwork.mark": 1,
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "target.legion.ss.defeat",
+		"chance": 35
+	    },
+	    {
+		"id": "target.legion.ss.victory"
+	    }
+	]
+    },
+    {
+	"id": "target.legion.ss.defeat",
+	"label": "门关军团并未获胜",
+	"startdescription": "今夜，钥匙未能叩开那扇紧闭的门扉。军团士兵隐于夜色与迷雾间久久凝望，终究无声地退回帘幕之后。",
+    },
+    {
+	"id": "target.legion.ss.victory",
+	"label": "门关军团获胜了！",
+	"startdescription": "索隐会的据点在黎明前便被抹去，遍地皆是被刺穿与撕裂的尸骸，尚未凝固的血液在晨霭中泛着幽暗的微光。",
+	"aspects": {
+	    "killkarotechia": 1
+	}
+    },
+	
+    {
+	"id": "lionel.attack.startup0",
+	"actionid": "attack.lionel",
+	"label": "指挥官行动了！",
+	"startdescription": "“我给了你机会离开——但你们这种人从不会照做。为刺激那对力量鲁莽的渴望，你们会做出任何事。”",
+	"aspects": {
+	    "takeadditional": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"decision.enemy.doubleattack",
+		"decision.enemy.attack",
+		"decision.enemy.attack",
+		"decision.enemy.attack",
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true
+	},
+	"linked": [
+	    {
+		"id": "lionel.physicalattack"
+	    },
+	    {
+		"id": "lionel.makemaze"
+	    }
+	]
+    },
+    {
+	"id": "lionel.makemaze",
+	"label": "山楂的陷阱",
+	"startdescription": "看守门关的司辰授予了这位门关军团的守门中尉特殊的权柄。而其中之一则是允许这位中尉——只要遵循正确的礼节——请求空间本身醒转并听从他的指令。",
+	"description": "那一瞬间，我失去了一切平衡感与方向感。有什么变化了。现在醒时世界的经纬接到了一项新的命令，那就是妨碍我们的一切战争努力。",
+	"requirements": {
+	    "decision.enemy.doubleattack": 1
+	},
+	"aspects": {
+		"makeadditional": 1
+	},
+	"effects": {
+	    "side.spacemaze": 1
+	},
+	"warmup": 30
+    }
+]
+}

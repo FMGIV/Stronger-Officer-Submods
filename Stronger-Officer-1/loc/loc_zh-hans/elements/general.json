@@ -1,0 +1,1548 @@
+{
+"elements": [
+    {
+	"id": "corrivality.stalemate",
+	"label": "纷争：僵持",
+	"description": "现在流亡者与他的大敌均无法取得优势。暂时没有什么重要的事情将发生。",
+	"xtriggers": {
+	    "epiphany": "corrivality.exile",
+	    "depiphany": "corrivality.foe"
+	}
+    },
+    {
+	"id": "corrivality.exile",
+	"label": "纷争：流亡者优势",
+	"description": "吾友正痛击其大敌。",
+	"xtriggers": {
+	    "depiphany": "corrivality.stalemate"
+	},
+	"verbicon": "corrivality.exile"
+    },
+    {
+	"id": "corrivality.foe",
+	"label": "纷争：大敌优势",
+	"description": "大敌又一次逼得吾友逃跑。",
+	"xtriggers": {
+	    "depiphany": "corrivality.stalemate"
+	},
+	"verbicon": "corrivality.foe"
+    },
+    {
+	"id": "nothing",
+	"label": "无事发生",
+	"description": "平凡且平静。",
+	"icon": "strategy.downtime.revealed",
+	"lifetime": 1
+    },
+    {
+	"id": "days.silence",
+	"label": "寂静的日子",
+	"description": "战争还有许多等着我们。",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "seasonsilence"
+    },
+    {
+	"id": "days.dream",
+	"label": "超常的日子",
+	"description": "这些夜晚适合入梦。",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "ascensionenlightenmenta"
+    },
+    {
+	"id": "days.hindrances",
+	"label": "恶劣的日子",
+	"description": "苍天降下难题。",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "hindrance.storms"
+    },
+    {
+	"id": "days.resupply",
+	"label": "愉快的日子",
+	"description": "给饥饿者食物，给疲倦者慰藉。",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "rarity.grail"
+    },
+    {
+	"id": "days.conclusion",
+	"label": "暗淡的日子",
+	"description": "一个终局？",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "apostlelantern.pillar2"
+    },
+    {
+	"id": "days.strife",
+	"label": "狂热的日子",
+	"description": "而那火焰将升的更高。",
+	"aspects": {
+	    "season": 1
+	},
+	"icon": "influenceedgee"
+    },
+    {
+	"id": "provisions",
+	"label": "补给品",
+	"description": "弹药，绷带，易碎的肉罐头。",
+	"aspects": {
+	    "supplies": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	}
+    },
+    {
+	"id": "resolution",
+	"label": "了局",
+	"description": "我见证了此事的终结。[一个衡量你作为参与纷争之人的名声与能力的标准。若你活到了退役之时，了局的数量将决定你之后过上了怎样的生活。]",
+    },
+    {
+	"id": "progression",
+	"label": "进度",
+	"description": "向着终局。",
+	"lifetime": 1,
+	"icon": "progress"
+    },
+    {
+	"id": "strife",
+	"label": "抗争",
+	"description": "每当我们战斗，我们就为纷争添加燃料，驱动其巨大的螺旋回转。而纷争则点燃并激化我们身处的这战争中的世界作为回报。被称为流亡者之人以“美丽”形容这一现象。[随着抗争的增加，你的敌军将会变得更加激进，更加繁多。一股可怖的力量或许会在抗争达到七之后被吸引至你的所在地。]",
+	"aspects": {
+	    "strife.tracker": 1
+	}
+    },
+    {
+	"id": "trauma",
+	"label": "精神创伤",
+	"description": "灵魂只能承受那么多。[合计五道精神创伤将击碎你的意志。]",
+	"aspects": {
+	    "winter": 6,
+	    "damage.mind": 1
+	},
+	"xtriggers": { 
+	    "wolftransform": "foe.splinter"
+	},
+	"lifetime": 1000
+    },
+    {
+	"id": "test.transform",
+	"label": "Make Splinters",
+	"aspects": {
+	    "lore": 1
+	}
+    },
+    {
+	"id": "mem.regret",
+	"label": "记忆：悔恨",
+	"description": "人生总有选择，故人生总有悔恨。",
+	"aspects": {
+	    "winter": 4,
+	    "forge": 4
+	},
+	"lifetime": 180
+    },
+    {
+	"id": "mem.joy",
+	"label": "记忆：愉快",
+	"description": "曾经有过一段更好的时光。我很确信。",
+	"aspects": {
+	    "heart": 4,
+	    "lantern": 4
+	},
+	"lifetime": 180,
+	"icon": "contentment"
+    },
+    {
+	"id": "mem.rage",
+	"label": "记忆：狂怒",
+	"description": "愤怒——愤怒是一种武器。",
+	"aspects": {
+	    "edge": 4,
+	    "heart": 4
+	},
+	"lifetime": 180,
+	"icon": "rage"
+    },
+    {
+	"id": "mem.fear",
+	"label": "记忆：恐惧",
+	"description": "在灵魂的阴影中，存在着我们希望将其遗忘的事物。",
+	"aspects": {
+	    "winter": 4,
+	    "moth": 4
+	},
+	"lifetime": 180,
+	"icon": "dread"
+    },
+    {
+	"id": "mem.calm",
+	"label": "记忆：平静",
+	"description": "故于风暴眼之中存有平静。",
+	"aspects": {
+	    "winter": 4,
+	    "heart": 4
+	},
+	"lifetime": 180,
+	"icon": "tranquillity"
+    },
+    {
+	"id": "mem.grief",
+	"label": "记忆：悲痛",
+	"description": "痛苦与悲伤。",
+	"aspects": {
+	    "winter": 4,
+	    "edge": 4
+	},
+	"lifetime": 180,
+	"icon": "apostlelantern.pillar2"
+    },
+    {
+	"id": "mem.ingenuity",
+	"label": "记忆：才智",
+	"description": "一个好计划的最初一部分。",
+	"aspects": {
+	    "lantern": 4,
+	    "forge": 4
+	},
+	"lifetime": 180,
+	"icon": "insight"
+    },
+    {
+	"id": "mem.taste",
+	"label": "记忆：滋味",
+	"description": "时刻将这些思绪留在脑海中会激发欲望。",
+	"aspects": {
+	    "grail": 4,
+	    "moth": 4
+	},
+	"lifetime": 180,
+	"icon": "ascensionsensationa"
+    },
+    {
+	"id": "mem.unexpected",
+	"label": "记忆：意外",
+	"description": "有时世间没有逻辑可遵循。有时点不能连成线。",
+	"aspects": {
+	    "knock": 4,
+	    "moth": 4
+	},
+	"lifetime": 180,
+	"icon": "ascensionchangec"
+    },
+    {
+	"id": "mem.revelation",
+	"label": "记忆：启示",
+	"description": "<b>我看见了。</b>",
+	"aspects": {
+	    "lantern": 4,
+	    "moth": 4
+	},
+	"lifetime": 180,
+	"icon": "fascination"
+    },
+    {
+	"id": "cunning",
+	"label": "狡诈",
+	"description": "“兵以诈立。”\n\n——<i>《孙子兵法》</i>",
+	"aspects": {
+	    "edge": 6
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "wisdom",
+	"label": "智慧",
+	"description": "一个士兵必须知晓如何移动棋子方为最优——也需知晓何时牺牲棋子方为最优。",
+	"aspects": {
+	    "lantern": 6
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "patience",
+	"label": "耐心",
+	"description": "胜过蛮力之物。",
+	"aspects": {
+	    "winter": 6
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "wound.eye",
+	"label": "受损的面部",
+	"description": "我应该立即找人处理这一伤口。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.eye",
+	    "brilliant": "wound.eye.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "医师",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.eye"
+    },
+    {
+	"id": "wound.hand",
+	"label": "被贯穿的手",
+	"description": "我应该立即找人处理这一伤口。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.hand",
+	    "brilliant": "wound.hand.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "医师",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.hand"
+    },
+    {
+	"id": "wound.leg",
+	"label": "破碎的膝盖",
+	"description": "我应该立即找人处理这一伤口。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.leg",
+	    "brilliant": "wound.leg.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "医师",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.leg"
+    },
+    {
+	"id": "wound.ear",
+	"label": "被撕裂的耳",
+	"description": "我应该立即找人处理这一伤口。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.ear",
+	    "brilliant": "wound.ear.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "医师",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.ear"
+    },
+    {
+	"id": "debilitation.eye",
+	"label": "失去的眼睛",
+	"description": "一半的世界已与黑夜无异。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "winter": 4,
+	    "debilitation": 1,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "epiphany": "debilitation.eye.colonel"
+	}
+    },
+    {
+	"id": "debilitation.hand",
+	"label": "被截肢的手",
+	"description": "我想，我现在只能用小型武器了。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "winter": 4,
+	    "debilitation": 1,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "epiphany": "debilitation.hand.colonel"
+	}
+    },
+    {
+	"id": "debilitation.leg",
+	"label": "被截肢的腿",
+	"description": "若我是一匹马，他们想必会直接射杀我。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "winter": 4,
+	    "debilitation": 1,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "epiphany": "debilitation.leg.colonel"
+	}
+    },
+    {
+	"id": "debilitation.ear",
+	"label": "变聋的耳朵",
+	"description": "是枪火声，还是雨声？有时我无法分辨。[合计五道创伤与残疾将杀死你。]",
+	"aspects": {
+	    "winter": 4,
+	    "debilitation": 1,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "epiphany": "debilitation.ear.colonel"
+	}
+    },
+    {
+	"id": "loc.hospital",
+	"label": "战地医院",
+	"description": "一间医疗设施齐全的医院对于任何士兵都是福音。但很不幸，我们现在只能用这里凑合。[负伤的友军可在此处被治愈。]",
+	"aspects": {
+	    "infrastructure": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "loc.hospital.exhausted",
+	    "destroy": "loc.hospital.destroyed"
+	},
+	"slots": [
+	    {
+		"id": "needswounded1",
+		"label": "伤患",
+		"required": {
+		    "wounded": 1,
+		    "wound.eye": 1,
+		    "wound.hand": 1,
+		    "wound.leg": 1,
+		    "wound.ear": 1
+		},
+		"forbidden": {
+		    "remnant": 1
+		}
+	    },
+	    {
+		"id": "needswounded2",
+		"label": "伤患",
+		"required": {
+		    "wounded": 1,
+		    "wound.eye": 1,
+		    "wound.hand": 1,
+		    "wound.leg": 1,
+		    "wound.ear": 1
+		},
+		"forbidden": {
+		    "remnant": 1
+		}
+	    },
+	    {
+		"id": "needswounded3",
+		"label": "伤患",
+		"required": {
+		    "wounded": 1,
+		    "wound.eye": 1,
+		    "wound.hand": 1,
+		    "wound.leg": 1,
+		    "wound.ear": 1
+		},
+		"forbidden": {
+		    "remnant": 1
+		}
+	    }
+	]
+    },
+    {
+	"id": "loc.hospital.exhausted",
+	"label": "战地医院（枯竭）",
+	"description": "一间医疗设施齐全的医院对于任何士兵都是福音。但很不幸，我们现在只能用这里凑合。[负伤的友军可在此处被治愈。]",
+	"aspects": {
+	    "infrastructure": 1
+	},
+	"xtriggers": {
+	    "destroy": "loc.hospital.destroyed"
+	},
+	"lifetime": 300,
+	"decayTo": "loc.hospital",
+	"icon": "loc.hospital",
+	"resaturate": true
+    },
+    {
+	"id": "loc.hospital.destroyed",
+	"label": "战地医院（毁坏）",
+	"description": "现在我们没处安置伤员了。[你可以使用工兵与补给品以恢复这处设施。]",
+	"aspects": {
+	    "infrastructure.destroyed": 1
+	},
+	"xtriggers": {
+	    "restore": "loc.hospital"
+	},
+	"slots": [
+	    {
+		"id": "needsengineers",
+		"label": "人力",
+		"required": {
+		    "friend.engineers": 1
+		},
+		"forbidden": {
+		    "exhausted": 1
+		}
+	    },
+	    {
+		"id": "needsprovisions1",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    },
+	    {
+		"id": "needsprovisions2",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	]
+    },
+    {
+	"id": "loc.commtower",
+	"label": "通信站",
+	"description": "在电线中传递的话语。拿起接收器——有人在听。[当这一设施存在时，你将能够快速地请求支援。]",
+	"aspects": {
+	    "infrastructure": 1
+	},
+	"xtriggers": {
+	    "destroy": "loc.commtower.destroyed"
+	}
+    },
+    {
+	"id": "loc.commtower.destroyed",
+	"label": "通信站（毁坏）",
+	"description": "现在谁将听到我们的声音？[你可以使用工兵与补给品以恢复这处设施。]",
+	"aspects": {
+	    "infrastructure.destroyed": 1
+	},
+	"xtriggers": {
+	    "restore": "loc.commtower"
+	},
+	"slots": [
+	    {
+		"id": "needsengineers",
+		"label": "人力",
+		"required": {
+		    "friend.engineers": 1
+		},
+		"forbidden": {
+		    "exhausted": 1
+		}
+	    },
+	    {
+		"id": "needsprovisions1",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    },
+	    {
+		"id": "needsprovisions2",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	]
+    },
+    {
+	"id": "loc.barracks",
+	"label": "营房",
+	"description": "屋顶挡下雨水，墙则挡下剩余一切。我们的同志能够在此处足够舒适地住宿。",
+	"aspects": {
+	    "infrastructure": 1,
+	    "room": 10
+	},
+	"xtriggers": {
+	    "destroy": "loc.barracks.destroyed"
+	}
+    },
+    {
+	"id": "loc.barracks.destroyed",
+	"label": "营房（毁坏）",
+	"description": "这里已不再那么适合入睡。[你可以使用工兵与补给品以恢复这处设施。]",
+	"aspects": {
+	    "infrastructure.destroyed": 1
+	},
+	"xtriggers": {
+	    "restore": "loc.barracks"
+	},
+	"slots": [
+	    {
+		"id": "needsengineers",
+		"label": "人力",
+		"required": {
+		    "friend.engineers": 1
+		},
+		"forbidden": {
+		    "exhausted": 1
+		}
+	    },
+	    {
+		"id": "needsprovisions1",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    },
+	    {
+		"id": "needsprovisions2",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	]
+    },
+    {
+	"id": "loc.farm",
+	"label": "征用的农场",
+	"description": "旧稻草，粗糙的地面。但至少我们并未睡在室外。",
+	"aspects": {
+	    "infrastructure": 1,
+	    "room": 6
+	},
+	"xtriggers": {
+	    "destroy": "husk"
+	}
+    },
+    {
+	"id": "loc.church",
+	"label": "征用的教堂",
+	"description": "神在注视着。",
+	"aspects": {
+	    "infrastructure": 1,
+	    "room": 4
+	},
+	"xtriggers": {
+	    "destroy": "husk"
+	}
+    },
+    {
+	"id": "op.madrugad",
+	"label": "昕旦的阴影",
+	"description": "那于太阳之前的时刻等待的寒冷正位于此处；昕旦在此处撰写其账簿。",
+	"aspects": {
+	    "winter": 6,
+	    "forge": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.velvet",
+	"label": "丝毧的阴影",
+	"description": "盘卷的树根，阴影的荫蔽，雾中的鸣动——这些都标志着丝毧的存在。",
+	"aspects": {
+	    "heart": 6,
+	    "moth": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.beachcomber",
+	"label": "拾滩鸦的阴影",
+	"description": "弹片闪烁如白银，白骨像上好的白瓷般引诱。这份贪婪说明寻求之司辰，拾滩鸦，现暂时在此地栖息。",
+	"aspects": {
+	    "grail": 6,
+	    "knock": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.thecolonel",
+	"label": "上校的阴影",
+	"description": "视野与声响变得迟钝，颜色从世间万物流失。我脖颈上的严寒好似一把抵在此处的利刃。上校正于高处注视。",
+	"aspects": {
+	    "edge": 6,
+	    "winter": 4,
+	    "lantern": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.thelionsmith",
+	"label": "狮子匠的阴影",
+	"description": "一股自负的热力自周围的极寒中升起，火焰发出嘘声并嘲笑。无法激发愤怒的思绪变得难以留存。狮子匠在此出席纷争。",
+	"aspects": {
+	    "edge": 6,
+	    "forge": 4,
+	    "heart": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.wolfdivided",
+	"label": "裂分之狼的阴影",
+	"description": "那气味既不是焦油，也不是血，也不是臭氧。裂分之狼的狂怒在空气中沸腾。",
+	"aspects": {
+	    "edge": 6,
+	    "winter": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.wolf"
+    },
+    {
+	"id": "op.wolves",
+	"label": "狼群",
+	"description": "“冬天喂狼的人春天会被狼吃。”\n\n——古希腊谚语",
+	"aspects": {
+	    "edge": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.dove",
+	"label": "白鸽",
+	"description": "一只象征和平的鸟——或许它迷路了。",
+	"aspects": {
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.cat",
+	"label": "猫",
+	"description": "可爱的小杀手。",
+	"aspects": {
+	    "grail": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.cats"
+    },
+    {
+	"id": "op.ruins",
+	"label": "废墟",
+	"description": "崩塌的大厦，老旧的石壁。这些废墟能够提供一点防护，但仅止于此。",
+	"aspects": {
+	    "heart": 4,
+	    "forge": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.sewers",
+	"label": "下水道",
+	"description": "阴影生存之处，我们亦能生存。",
+	"aspects": {
+	    "grail": 4,
+	    "moth": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.highplace",
+	"label": "高处",
+	"description": "登高是为了自上方攻击。",
+	"aspects": {
+	    "edge": 4,
+	    "lantern": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.heights"
+    },
+    {
+	"id": "op.snows",
+	"label": "飞雪",
+	"description": "我们早已知悉寒冬的手段，在这大雪中我们将能自在地行动。",
+	"aspects": {
+	    "winter": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.storms",
+	"label": "风暴",
+	"description": "落于我们身上的雨使我们恢复体力，如同一种洗礼。",
+	"aspects": {
+	    "heart": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.fog",
+	"label": "迷雾",
+	"description": "迷雾为丝毧的赠礼，只要人们理解如何重视它。",
+	"aspects": {
+	    "moth": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.time.dawn",
+	"label": "黎明",
+	"description": "世界净洁之时，日出。",
+	"aspects": {
+	    "lantern": 4,
+	    "knock": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.dawn"
+    },
+    {
+	"id": "op.time.noon",
+	"label": "正午",
+	"description": "自此，太阳只能落下。",
+	"aspects": {
+	    "lantern": 4,
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60
+    },
+    {
+	"id": "op.time.sunset",
+	"label": "日落",
+	"description": "灯火渐明之时，日落。",
+	"aspects": {
+	    "forge": 4,
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.sunset"
+    },
+    {
+	"id": "op.time.night",
+	"label": "夜晚",
+	"description": "于黑暗之下。",
+	"aspects": {
+	    "winter": 4,
+	    "moth": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.night"
+    },
+    {
+	"id": "op.church",
+	"label": "机会：一座教堂",
+	"description": "一处信仰之地，但不具力量。若我需要，我可以征用此处安置一部分我的人，或许我也可以利用这宁静的空间寻得一份有用的领悟。",
+	"aspects": {
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "recruiting": "loc.church"
+	},
+	"slots": [
+	    {
+		"id": "needsintent",
+		"label": "意图",
+		"required": {
+		    "heart": 1,
+		    "edge": 1
+		}
+	    }
+	],
+	"lifetime": 300
+    },
+    {
+	"id": "op.farm",
+	"label": "机会：一处农场",
+	"description": "我们可以劝说农夫为我们提供食物与饮水——毕竟众所周知，拿着枪的人十分具有说服力——或是直接征用他们的土地为我们提供住宿。",
+	"aspects": {
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "recruiting": "loc.farm"
+	},
+	"slots": [
+	    {
+		"id": "needsintent",
+		"label": "意图",
+		"required": {
+		    "grail": 1,
+		    "edge": 1
+		}
+	    }
+	],
+	"lifetime": 300
+    },
+    {
+	"id": "supplies.apmunitions",
+	"label": "穿甲弹",
+	"description": "或许某一天会有无法被任何武器贯穿的装甲出现，但那一天还未来临。",
+	"aspects": {
+	    "edge": 6,
+	    "ap": 1,
+	    "supplies": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	}
+    },
+    {
+	"id": "supplies.explosives",
+	"label": "爆炸物",
+	"description": "被封于巧妙机械中的火与力，其渴望被解放。",
+	"aspects": {
+	    "edge": 4,
+	    "forge": 4,
+	    "weapon": 1,
+	    "supplies": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	}
+    },
+    {
+	"id": "supplies.flares",
+	"label": "闪光弹",
+	"description": "漫长黑暗中的一线光芒。[此物可用于揭露匿踪敌军的行踪。]",
+	"aspects": {
+	    "lantern": 6,
+	    "supplies": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	}
+    },
+    {
+	"id": "tool.moth",
+	"label": "铭刻秘密之石",
+	"description": "勿视，勿言，勿知。它比看上去更重。",
+	"aspects": {
+	    "moth": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.lantern",
+	"label": "太阳碎片",
+	"description": "一个象征，凭借它人们可回忆辉光。",
+	"aspects": {
+	    "lantern": 6,
+	    "tool": 1
+	},
+	"icon": "toollanternb"
+    },
+    {
+	"id": "tool.forge",
+	"label": "沙普尔之钉",
+	"description": "每一根都完全由镍纹铁制作，且长如手臂，比起任何寻常钉子更像铁路道钉。我需要一柄大锤才能将它打入任何事物。",
+	"aspects": {
+	    "forge": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.winter",
+	"label": "真菌样本T-13",
+	"description": "<i>Digitium regius</i>我上一次与这种真菌打交道还是在我与异界事务管制局一同解决的最后几件案子上。他们还没焚烧掉这一样本的事实令我不安，但在战争中，即便是最不适合的那些事物也能作为武器派上用场。",
+	"aspects": {
+	    "winter": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.heart",
+	"label": "库兹涅佐夫之眼",
+	"description": "库兹涅佐夫亲王在其暮年确信了他已被诅咒的想法，并采取了许多诡异方式以净化自身。他自干燥之国取得了这枚珍珠，并试图将其磨碎并服下，但他之后发现自己无法这么做——库兹涅佐夫亲王声称这枚珍珠会“以两种不同的声音发言”反对他任何会玷污珍珠的决定。",
+	"aspects": {
+	    "heart": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.grail",
+	"label": "悦耳小提琴",
+	"description": "一把由提洛尔枫木制成的精美小提琴，于19世纪委托佩雷迦帝的弦乐器制作者们以其受敬重的传统工艺制作而成。拿着这样一件精致、美丽的乐器让我感觉十分不对劲——更别说我完全不知道如何演奏它。",
+	"aspects": {
+	    "grail": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.knock",
+	"label": "可疑的钥匙",
+	"description": "圣彼得被给予了两把钥匙：一把金钥匙，使他能够开启与锁上天国之门；一把银钥匙，使他能够支配地上一切门。这把钥匙并非那两把钥匙之一，但那些并非天国之门，亦非地上的门的门扉将回应它。",
+	"aspects": {
+	    "knock": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "decision.enemy.singleattack",
+	"label": "决策：单一攻击",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.destroysupplies",
+	"label": "决策：破坏物资",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.hide",
+	"label": "决策：藏匿",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.infrastructure",
+	"label": "决策：针对设施",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.cutoff",
+	"label": "决策：切断补给线",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.reinforcements",
+	"label": "决策：呼叫援军",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.doubleattack",
+	"label": "决策：双重攻击",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "decision.enemy.attack",
+	"label": "决策：双重攻击",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "readiness.token",
+	"label": "就绪标记",
+	"isHidden": true,
+	"lifetime": 1,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.eye",
+	"label": "眼",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.hand",
+	"label": "手",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.ear",
+	"label": "耳",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.leg",
+	"label": "腿",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.exile.influence",
+	"label": "影响",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.exile.banishtrauma",
+	"label": "驱除精神创伤",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.exile.weakenenemy",
+	"label": "弱化敌军",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.exile.banishhindrance",
+	"label": "驱逐障碍",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.foe.enemy",
+	"label": "敌军",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.foe.hindrance",
+	"label": "障碍",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.foe.exhaust",
+	"label": "消耗",
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "draw.colonel.1",
+	"label": "上校之梦1",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.colonel": 1
+	}
+    },
+    {
+	"id": "draw.colonel.2",
+	"label": "上校之梦2",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.colonel": 1
+	}
+    },
+    {
+	"id": "draw.colonel.3",
+	"label": "上校之梦3",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.colonel": 1
+	}
+    },
+    {
+	"id": "draw.lionsmith.1",
+	"label": "狮子匠之梦1",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.lionsmith": 1
+	}
+    },
+    {
+	"id": "draw.lionsmith.2",
+	"label": "狮子匠之梦2",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.lionsmith": 1
+	}
+    },
+    {
+	"id": "draw.lionsmith.3",
+	"label": "狮子匠之梦3",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.lionsmith": 1
+	}
+    },
+    {
+	"id": "draw.wolf.1",
+	"label": "狼之梦1",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.wolf": 1
+	}
+    },
+    {
+	"id": "draw.wolf.2",
+	"label": "狼之梦2",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.wolf": 1
+	}
+    },
+    {
+	"id": "draw.wolf.3",
+	"label": "狼之梦3",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "dream.wolf": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.lore",
+	"label": "密传提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.debilitations",
+	"label": "残疾提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.ebrehel",
+	"label": "艾布雷赫提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.medusa",
+	"label": "美杜莎提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.musvashir",
+	"label": "鼠与狮提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.main",
+	"label": "主要目标提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "draw.hintobdurant.stalingrad",
+	"label": "斯大林格勒提示",
+	"lifetime": 1,
+	"isHidden": true,
+	"aspects": {
+	    "decision": 1
+	}
+    },
+    {
+	"id": "challenge.shakedown.1",
+	"label": "勒索挑战1",
+	"aspects": {
+	    "minedge": 5,
+	    "minwinter": 5,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "challenge.shakedown.2"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "challenge.shakedown.2",
+	"label": "勒索挑战2",
+	"aspects": {
+	    "minedge": 10,
+	    "minwinter": 10,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "challenge.shakedown.3"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "challenge.shakedown.3",
+	"label": "勒索挑战3",
+	"aspects": {
+	    "minedge": 15,
+	    "minwinter": 15,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "end.shakedown"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "end.shakedown",
+	"label": "勒索结束",
+	"aspects": {
+	    "opx.speaklocals": 1
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "challenge.assistlocals.1",
+	"label": "帮助本地人挑战1",
+	"aspects": {
+	    "minheart": 5,
+	    "mingrail": 5,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "challenge.assistlocals.2"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "challenge.assistlocals.2",
+	"label": "帮助本地人挑战2",
+	"aspects": {
+	    "minheart": 10,
+	    "mingrail": 10,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "challenge.assistlocals.3"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "challenge.assistlocals.3",
+	"label": "帮助本地人挑战3",
+	"aspects": {
+	    "minheart": 15,
+	    "mingrail": 15,
+	    "complication": 1,
+	    "opx.speaklocals": 1
+	},
+	"xtriggers": {
+	    "next": "end.assistlocals"
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "end.assistlocals",
+	"label": "帮助本地人结束",
+	"aspects": {
+	    "opx.speaklocals": 1
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+	"id": "countdown.identifier",
+	"label": "倒计时标志",
+	"aspects": {
+	    "long.blocker": 1
+	},
+	"lifetime": 1,
+	"isHidden": true,
+	"verbicon": "countdown"
+    }
+]
+}

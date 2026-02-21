@@ -1,0 +1,1641 @@
+{
+    "recipes": [
+    {
+	"id": "edgelong.sergei.attack.allies",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"requirements": {
+	    "foe.sergei": 1
+	},
+	"tablereqs": {
+	    "friend": 1
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "Target",
+		"required": {
+		    "friend": 1,
+		    "foe": 1
+		},
+		"forbidden": {
+		    "foe.bombers.refuel": 1,
+            "foe.uneat": 1
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killfriend": 1,
+	    "killfoe": 1,
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "sergei_attack.umiri_haveto",
+		"chance": 100
+	    },
+	    {
+		"id": "sergei_attack.umiri_passive",
+		"chance": 100
+	    },
+	    {
+		"id": "edgelong.expel"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	],
+	"effects": {
+	    "foe.chasseur.reviving": -99
+	}
+    },
+    {
+	"id": "edgelong.cycle",
+	"label": "刃之长生者正在徘徊",
+	"startdescription": "@#foe.exile|“又见面了。让我看看你有没有将我的教诲牢记于心。”#foe.duffoure|“你希望逃离这一切？那就过来。我给你解脱。”#foe.camilla|“这就是战争。它不会干净、迅速，或是惬意。但它是必要的。”#foe.wilhelm|“战士们都到哪里去了？你们没有半点力量与勇气吗？站出来——作为一名士兵，不应该逃避好的死亡。”#foe.sergei|“这片土地太多年没有见过血——以至于已经遗忘了恐惧。但我将会修正这错误。”@\n\n[刃之长生者将不断尝试杀死你和你的友军，直到你离开当前战区。]",
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "sergei_attack.umiri_ive",
+		"chance": 50
+	    },
+	    {
+		"id": "edgelong.prep.attack",
+		"chance": 40
+	    },
+	    {
+		"id": "ambush.cross.startup",
+		"chance": 50
+	    },
+	    {
+		"id":  "camilla.here"
+	    },
+	    {
+		"id":  "wilhelm.here"
+	    },
+	    {
+		"id": "edgelong.prep.attack",
+		"chance": 40
+	    },
+	    {
+		"id": "exilehere.executetrauma",
+		"chance": 40
+	    },
+	    {
+		"id": "edgelong.cycle"
+	    }
+	],
+	"effects": {
+	    "readiness.token": 1,
+        "umiri_sergei": -99
+	},
+    },
+        {
+            "id": "sergei_attack.umiri_passive",
+            "label": "意想不到的战局！",
+            "startdescription": "看来她的特遣队被卷进了一个大麻烦......",
+            "description": "看来她的特遣队被卷进了一个大麻烦......",
+            "warmup": 30,
+            "extantreqs": {
+                "foe.umiri.mark": 1,
+                "wound.sergei.forumiri": -1,
+                "wound.sergei.forumiri_end": -1,
+                "sergei": 1
+            },
+            "requirements": {
+                "foe.officerdetail": 1,
+                "otherworldly": -1
+            },
+            "grandReqs": {
+                "([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]) >= 2": 1,
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 3": 1,
+                "([~/exterior:foe.infantry] + [~/exterior:foe.infantry.hidden]) >= 4": 1,
+            },
+            "effects": {},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "slots": [
+                {
+                "id": "needsallies",
+                "label": "Target",
+                "required": {
+                    "foe.umiri.mark": 1
+                },
+                "forbidden": {
+                    "foe.bombers.refuel": 1,
+                    "foe.uneat": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri_haveto",
+            "label": "意想不到的战局！",
+            "startdescription": "似乎长生者为自己选了一个合适的对手......",
+            "description": "似乎长生者为自己选了一个合适的对手......",
+            "warmup": 30,
+            "extantreqs": {
+                "foe.umiri.mark": 1,
+                "wound.sergei.forumiri": -1,
+                "wound.sergei.forumiri_end": -1,
+                "sergei": 1
+            },
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri_ive",
+            "label": "意想不到的战局！",
+            "startdescription": "德国人在前线的火力愈发凶猛，但并不是朝向你们，而是那位不朽之人......",
+            "description": "德国人在前线的火力愈发凶猛，但并不是朝向你们，而是那位不朽之人......",
+            "warmup": 30,
+            "extantreqs": {
+                "foe.umiri.mark": 1,
+                "wound.sergei.forumiri": -1,
+                "wound.sergei.forumiri_end": -1,
+                "sergei": 1
+            },
+            "grandReqs": {
+                "([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]) >= 3": 1,
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 4": 1,
+                "([~/exterior:foe.infantry] + [~/exterior:foe.infantry.hidden]) >= 4": 1,
+            },
+            "effects": {},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "slots": [
+                {
+                "id": "needsallies",
+                "label": "Target",
+                "required": {
+                    "foe.umiri.mark": 1
+                },
+                "forbidden": {
+                    "foe.bombers.refuel": 1,
+                    "foe.uneat": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri",
+            "label": "意想不到的战局！",
+            "startdescription": "德国人作何打算，是奋力一击？还是仓皇逃窜？",
+            "description": "德国人作何打算，是奋力一击？还是仓皇逃窜？",
+            "warmup": 30,
+            "requirements": {
+                "foe": 1
+            },
+            "effects": {
+                "umiri_sergei": 1
+            },
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.opening"
+                },
+                {
+                    "id": "sergei_attack.umiri.bombers",
+                    "chance": 30
+                },
+                {
+                    "id": "sergei_attack.umiri.artillery",
+                    "chance": 30
+                },
+                {
+                    "id": "sergei_attack.umiri.tanks",
+                    "chance": 40
+                },
+                {
+                    "id": "sergei_attack.umiri.other"
+                },
+                {
+                    "id": "sergei_attack.umiri.tanks"
+                },
+                {
+                    "id": "sergei_attack.umiri.artillery"
+                },
+                {
+                    "id": "sergei_attack.umiri.bombers"
+                },
+                {
+                    "id": "sergei_attack.umiri.fail"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.fail",
+            "label": "意想不到的战局！",
+            "startdescription": "她失败了，她的部队在长生者的面前四散奔逃。",
+            "description": "她失败了，她的部队在长生者的面前四散奔逃。",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+                "killgerman": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "edgelong.cycle"
+                }
+            ],
+            "alt": [],
+            "inductions": [
+                {
+                "id": "sergei_attack.umiri.dead",
+                "expulsion": {
+                    "filter": {
+                        "strife.tracker": 1,
+                        "foe.umiri.mark": 1
+                    },
+                    "limit": 1
+                }
+                }
+            ]
+        },
+        {
+            "id": "sergei_attack.umiri.dead",
+            "label": "意想不到的战局！",
+            "startdescription": "她失败了，她的部队在长生者的靴下被踏个粉碎，她捡回了一条命，但也仅此而已。",
+            "description": "她失败了，她的部队在长生者的靴下被踏个粉碎，她捡回了一条命，但也仅此而已。",
+            "warmup": 10,
+            "actionId": "umiriout",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+            },
+            "slots": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.deadend"
+                }
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.deadend",
+            "label": "意想不到的战局！",
+            "startdescription": "哈！不堪一击的小丫头！再来几个，要么今天不算完！",
+            "description": "哈！不堪一击的小丫头！再来几个，要么今天不算完！",
+            "warmup": 10,
+            "actionId": "umiriout",
+            "requirements": {
+                "foe.umiri.dead": 1
+            },
+            "effects": {},
+            "aspects": {
+            },
+            "slots": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.opening",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者的头颅已鲜血淋漓。他在狂怒中发出嚎叫。帝国的利刃——<i>伊尔莎</i>准确的抓住了这个破绽......",
+            "description": "食铁者的头颅已鲜血淋漓。他在狂怒中发出嚎叫。帝国的利刃——<i>伊尔莎</i>准确的抓住了这个破绽......",
+            "warmup": 10,
+            "requirements": {
+                "foe.progression": 3
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.fight"
+                }
+            ],
+            "alt": []
+        },
+        {
+            "id": "sergei_attack.umiri.fight",
+            "label": "意想不到的战局！",
+            "startdescription": "......德国人正投入他们的预备队，力求毕其功于一役。",
+            "description": "......德国人正投入他们的预备队，力求毕其功于一役。",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe1",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.fight0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.fight0",
+            "label": "意想不到的战局！",
+            "startdescription": "硝烟尚未散去",
+            "description": "硝烟尚未散去",
+            "warmup": 0,
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.success"
+                },
+                {
+                    "id": "sergei_attack.umiri.setback"
+                }
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.setback",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者撕裂了他们的阵线，精心布置的障碍被撕碎，鲜血和着尘土在战场上肆意喷洒。死亡正亲吻这片土地......",
+            "description": "食铁者撕裂了他们的阵线，精心布置的障碍被撕碎，鲜血和着尘土在战场上肆意喷洒。死亡正亲吻这片土地......",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+                "foe.progression": -2
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                }
+            ],
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+        },
+        {
+            "id": "sergei_attack.umiri.success",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者，刃之长生者，不朽之人现已坠落马下。他额头的鲜血染红了他脚下的土地——埋葬了无数灵魂的土地。他绝望的挣扎，向远方逃窜。德国人则紧随其后。或许我们少了个大麻烦。",
+            "description": "食铁者，刃之长生者，不朽之人现已坠落马下。他额头的鲜血染红了他脚下的土地——埋葬了无数灵魂的土地。他绝望的挣扎，向远方逃窜。德国人则紧随其后。或许我们少了个大麻烦。",
+            "warmup": 10,
+            "grandReqs": {
+                "([needsedge] + [needsedgeforge] + [needswinter]) >= 25": 1
+            },
+            "effects": {
+                "wound.sergei.forumiri": 1,
+                "foe.progression": -99,
+                "umiri_sergei": -99,
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.rest"
+                }
+            ],
+            "achievements": [
+                "ending.sergei_umiri"
+            ],
+            "alt": [],
+            "inductions": [
+                {
+                "id": "sergei_attack.umiri.out",
+                "expulsion": {
+                    "filter": {
+                        "foe.umiri.mark": 1,
+                        "foe.corpses": 1,
+                        "wound.sergei.forumiri": 1
+                    },
+                    "limit": 99
+                }
+                }
+            ]
+        },
+        {
+            "id": "sergei_attack.umiri.rest",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者自战场离开！他低着头，盖着伤口，疾速骑行……\n我想，我们暂时不会再见到他了。",
+            "description": "食铁者自战场离开！他低着头，盖着伤口，疾速骑行……\n我想，我们暂时不会再见到他了。",
+            "warmup": 45,
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "furthermore": [
+            {
+                "target": "~/tabletop",
+                "mutations": [
+                    {
+                        "filter": "wound.sergei.forumiri",
+                        "mutate": "winter",
+                        "level": 1,
+                        "additive": true,
+                        "VFX": "CardBurn"
+                    }
+                ]
+            }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "edgelong.cycle"
+                }
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.out",
+            "label": "意想不到的战局！",
+            "startdescription": "炮火已停止轰鸣，硝烟四起，食铁者的耳被弹片削去一半，靠在岩石上，呼吸带着血沫。她盯着他，那个不可战胜的人。他没有问自己该往哪里走，他的眼睛变得茫然。他胸膛中的呼吸变浅。当她转身离去之时，她听见了火柴划响的声音。",
+            "description": "炮火已停止轰鸣，硝烟四起，食铁者的耳被弹片削去一半，靠在岩石上，呼吸带着血沫。她盯着他，那个不可战胜的人。他没有问自己该往哪里走，他的眼睛变得茫然。他胸膛中的呼吸变浅。当她转身离去之时，她听见了火柴划响的声音。",
+            "warmup": 10,
+            "actionId": "umiriout",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.uneat",
+                    "level": 1,
+                    "additive": true
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+            "alt": [],
+        },
+        {
+            "id": "sergei_attack.umiri.bombers",
+            "label": "意想不到的战局！",
+            "startdescription": "令人胆寒的尖啸声响彻旷野，死神自空中降临。",
+            "description": "令人胆寒的尖啸声响彻旷野，死神自空中降临。",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.bombers] >= 1) || ([~/exterior:foe.bombers.hidden] >= 1)": 1
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.bombers0",
+                    "chance": 100
+                },
+                {
+                    "id": "sergei_attack.umiri.bombers1"
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 70
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.bombers0",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者胯下的战马在嘶鸣，他手中的来复枪对飞机毫无威胁，他被暂时逼退。",
+            "description": "食铁者胯下的战马在嘶鸣，他手中的来复枪对飞机毫无威胁，他被暂时逼退。",
+            "warmup": 10,
+            "effects": {
+                "foe.progression": 1
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.bombers1",
+            "label": "意想不到的战局！",
+            "startdescription": "马蹄声盖过轰炸机的轰鸣。他将死亡送向高空。",
+            "description": "马蹄声盖过轰炸机的轰鸣。他将死亡送向高空。",
+            "warmup": 10,
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.artillery",
+            "label": "意想不到的战局！",
+            "startdescription": "炮弹撕裂天幕。大地苏醒了，以最狂暴的方式。",
+            "description": "炮弹撕裂天幕。大地苏醒了，以最狂暴的方式。",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.artillery] >= 1) || ([~/exterior:foe.artillery.hidden] >= 1)": 1
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.artillery0",
+                    "chance": 100
+                },
+                {
+                    "id": "sergei_attack.umiri.artillery1"
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 70
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.artillery0",
+            "label": "意想不到的战局！",
+            "startdescription": "德国人大炮的可怖火力将他的拥趸化作飞灰，食铁者的攻势已告消散。",
+            "description": "德国人大炮的可怖火力将他的拥趸化作飞灰，食铁者的攻势已告消散。",
+            "warmup": 10,
+            "effects": {
+                "foe.progression": 1
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.artillery1",
+            "label": "意想不到的战局！",
+            "startdescription": "食铁者正发出令人胆战心惊的狂笑。他的战马正穿越弹幕，四处烈焰升腾。",
+            "description": "食铁者正发出令人胆战心惊的狂笑。他的战马正穿越弹幕，四处烈焰升腾。",
+            "warmup": 10,
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.tanks",
+            "label": "意想不到的战局！",
+            "startdescription": "履带正碾过战壕，帝国最尖利的矛头此刻齐齐指向这不朽者。",
+            "description": "履带正碾过战壕，帝国最尖利的矛头此刻齐齐指向这不朽者。",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.tanks] >= 1) || ([~/exterior:foe.tanks.hidden] >= 1)": 1
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.tanks0",
+                    "chance": 70
+                },
+                {
+                    "id": "sergei_attack.umiri.tanks1"
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 70
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.tanks0",
+            "label": "意想不到的战局！",
+            "startdescription": "装甲正将他的笑声与疯狂一同掩埋。他麾下的幻影部队烟消云散。",
+            "description": "装甲正将他的笑声与疯狂一同掩埋。他麾下的幻影部队烟消云散。",
+            "warmup": 10,
+            "effects": {
+                "foe.progression": 1
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.tanks1",
+            "label": "意想不到的战局！",
+            "startdescription": "完全无用，长生者正刺穿德国人的进攻，坦克正燃烧。",
+            "description": "完全无用，长生者正刺穿德国人的进攻，坦克正燃烧。",
+            "warmup": 10,
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.other",
+            "label": "意想不到的战局！",
+            "startdescription": "又一批部队走出了战壕，他们正坦然的走向死亡，和那可能的十不存一的胜利。",
+            "description": "又一批部队走出了战壕，他们正坦然的走向死亡，和那可能的十不存一的胜利。",
+            "warmup": 10,
+            "tablereqs": {
+                "foe": 1
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "edgelong": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri.other0",
+                    "chance": 50
+                },
+                {
+                    "id": "sergei_attack.umiri.other1"
+                },
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 70
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.other0",
+            "label": "意想不到的战局！",
+            "startdescription": "海量可堪一用的“武器”才是制胜之道。",
+            "description": "海量可堪一用的“武器”才是制胜之道。",
+            "warmup": 10,
+            "effects": {
+                "foe.progression": 1
+            },
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.umiri.other1",
+            "label": "意想不到的战局！",
+            "startdescription": "德国人成片成片的倒下，尸体筑成了新的战壕。",
+            "description": "德国人成片成片的倒下，尸体筑成了新的战壕。",
+            "warmup": 10,
+            "effects": {
+            },
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1,
+                "killfoe": 1
+            },
+            "alt": [
+                {
+                "id": "expel.insight",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "lore": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.skill.deflect",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.dead",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "remnant": 1,
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                    }
+                }
+                },
+                {
+                "id": "expel.immortalfriend",
+                "additional": true,
+                "expulsion": {
+                    "limit": 99,
+                    "filter": {
+                    "friend.immortal": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.umiri"
+                },
+            ],
+            "inductions": []
+        },
+    {
+	"id": "expel.dead",
+	"actionid": "fatality",
+	"label": "被歼灭！",
+	"startdescription": "他们被粉碎，倒在刃之长生者的脚边——他们没有一分一毫的机会。",
+	"warmup": 10,
+	"requirements": {
+	    "remnant": 1
+	},
+    "mutations": [
+        {
+            "filter": "remnant",
+            "mutate": "foe.officerdetail",
+            "level": -1,
+            "additive": true
+        },
+    ]
+    },
+    {
+	"id": "communicate.camilla",
+	"actionid": "communicate",
+	"label": "与大陆之敌会面",
+	"startdescription": "我找到了那位浑身伤疤的女性，她正坐在一只狻猊的尸体上擦拭她的左轮手枪。“打得不错，士兵，”在我接近时，她抬起头对我说。“我应该如何回报你的协助？”",
+	"description": "这位女士眨了眨眼，感到困惑。我想我应该说点什么。",
+	"requirements": {
+	    "friend.camilla": 1,
+	    "associate": -1
+	},
+	"slots": [
+	    {
+		"id": "needschoice",
+		"label": "话题",
+		"required": {
+		    "contemplation": 1,
+            "foe.umiri.mark": 1
+		}
+	    }
+	],
+	"alt": [
+	    {
+		"id": "communicate.camilla.umiri"
+	    },
+	    {
+		"id": "communicate.camilla.stopwarmaker"
+	    },
+	    {
+		"id": "communicate.camilla.musvashir"
+	    }
+	],
+	"warmup": 30,
+	"craftable": true
+    },
+    {
+	"id": "communicate.camilla.umiri",
+	"label": "与大陆之敌谈论你的大敌？",
+	"startdescription": "“你是说那个近来颇负盛名的小姑娘？”大陆之敌显然对此已有耳闻，“你想拜托我帮助你击败她？”",
+	"description": "大陆之敌低笑：不，不，这并不麻烦。我亲爱的敌手近来颇为关注他的这位同乡——看来他的热情似乎有些过于泛滥了。那么作为他真正的大敌和这位小姑娘的前辈，于情于理，我有必要帮他检验一下成色。",
+	"requirements": {
+	    "foe.umiri.mark": 1
+	},
+	"effects": {
+	},
+	"mutations": [
+	    {
+		"filter": "friend.camilla",
+		"mutate": "edge",
+		"level": 24
+	    },
+	    {
+		"filter": "friend.camilla",
+		"mutate": "winter",
+		"level": 12
+	    },
+	    {
+		"filter": "friend.camilla",
+		"mutate": "lantern",
+		"level": 12
+	    },
+	    {
+		"filter": "friend.camilla",
+		"mutate": "associate",
+		"level": 1
+	    }
+	]
+    },
+
+    ]
+}

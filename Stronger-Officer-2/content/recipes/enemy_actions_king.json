@@ -1,0 +1,256 @@
+{
+"recipes": [
+    {
+	"id": "found.riflemen",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴步调一致地移动——",
+	"requirements": {
+	    "foe.coordinated": 1,
+	    "foe.riflemen": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "foe.riflemen": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "uqjerome": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "defend.fire.3",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.2",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.1",
+		"chance": 20
+	    },
+	    {
+		"id": "target.legion",
+		"chance": 30
+	    },
+	    {
+		"id": "target.king.ss",
+		"chance": 60
+	    },
+	    {
+		"id": "king.defend.opportunity.pre"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "found.otherkingenemy",
+	"label": "一次敌袭！",
+	"startdescription": "我们的敌人之一寻求对我们的袭击——",
+	"requirements": {
+	    "faction.king": 1
+	},
+	"linked": [
+	    {
+		"id": "defend.fire.3",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.2",
+		"chance": 20
+	    },
+	    {
+		"id": "defend.fire.1",
+		"chance": 20
+	    },
+	    {
+		"id": "target.legion",
+		"chance": 30
+	    },
+	    {
+		"id": "target.king.ss",
+		"chance": 60
+	    },
+	    {
+		"id": "king.defend.opportunity.pre"
+	    }
+	]
+    },
+    {
+	"id": "target.king.ss",
+	"label": "针对索隐会？",
+	"startdescription": "我们全部都在争夺那颗星——这意味着我们多方势力相互之间均为敌对。而这一次，新王的军队选择了另一方作为目标。",
+	"tablereqs": {
+	    "faction.karotechia": 1
+	},
+	"extantreqs": {
+		"clockwork.mark": 1
+	},
+	"aspects": {
+	    "revealidentity": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "敌军",
+		"required": {
+		    "faction.karotechia": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "clockwork.mark": 1,
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "target.king.ss.defeat",
+		"chance": 35
+	    },
+	    {
+		"id": "target.king.ss.victory"
+	    }
+	]
+    },
+    {
+	"id": "target.king.ss.defeat",
+	"label": "新王的军队并未获胜",
+	"startdescription": "胜利的天平纹丝未动，黑鹰的爪牙警醒而狡黠，英国人如潮水般涌来，又在撞上礁石后徒劳地退去。",
+    },
+    {
+	"id": "target.king.ss.victory",
+	"label": "新王的军队获胜了！",
+	"startdescription": "肆虐的金焰将索隐会的阵地舔舐殆尽，琉璃般的大地倒映着白昼之光。新王的军队如洪流碾过防线。",
+	"aspects": {
+	    "killkarotechia": 1
+	}
+    },
+	
+    {
+	"id": "jerome.attack.startup0",
+	"actionid": "attack.jerome",
+	"label": "指挥官行动了！",
+	"startdescription": "“退下。我代表新王来此。”",
+	"aspects": {
+	    "takeadditional": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"decision.enemy.doubleattack",
+		"decision.enemy.doubleattack",
+		"decision.enemy.doubleattack",
+		"decision.enemy.reinforcements",
+		"decision.enemy.reinforcements",
+		"decision.enemy.reinforcements",
+		"decision.enemy.attack",
+		"decision.enemy.attack",
+		"decision.enemy.attack",
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true
+	},
+	"linked": [
+	    {
+		"id": "jerome.physicalattack"
+	    },
+	    {
+		"id": "jerome.dreamattack.pre"
+	    },
+	    {
+		"id": "jerome.orderguard"
+	    }
+	]
+    },
+    {
+	"id": "jerome.orderguard",
+	"label": "炮灰上前",
+	"startdescription": "“快点找到那东西，快！你们的国家——你们的<i>王</i>要求你们成功！”\n\n[杰罗姆能够指示其他敌军保护他，使他在这些护卫被击杀前无法被攻击。]",
+	"requirements": {
+	    "decision.enemy.reinforcements": 1
+	},
+	"aspects": {
+		"makeadditional": 1
+	},
+	"slots": [
+	    {
+		"id": "needsking",
+		"label": "敌军",
+		"required": {
+		    "faction.king": 1
+		},
+		"greedy": true
+	    },
+	    {
+		"id": "needsking2",
+		"label": "敌军",
+		"required": {
+		    "faction.king": 1
+		},
+		"greedy": true
+	    }
+	],
+	"mutations": [
+	    {
+		"filter": "faction.king",
+		"mutate": "foe.guardjerome",
+		"level": 1
+	    },
+	    {
+		"filter": "uqjerome",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    }
+	],
+	"warmup": 15
+    },
+    {
+	"id": "jerome.setupguard",
+	"actionid": "spit.lantern",
+	"label": "撤退与掩护",
+	"startdescription": "“不，不……不该是这样。我拒绝接受。我<i>拒绝</i>以败者之身死去。”",
+	"requirements": {
+	    "monster.wound": -2,
+	    "uqjerome": 1
+	},
+	"slots": [
+	    {
+		"id": "needsking",
+		"label": "敌军",
+		"required": {
+		    "faction.king": 1
+		},
+		"greedy": true
+	    },
+	    {
+		"id": "needsking2",
+		"label": "敌军",
+		"required": {
+		    "faction.king": 1
+		},
+		"greedy": true
+	    }
+	],
+	"mutations": [
+	    {
+		"filter": "faction.king",
+		"mutate": "foe.guardjerome",
+		"level": 1
+	    },
+	    {
+		"filter": "uqjerome",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    }
+	],
+	"warmup": 15
+    },
+]
+}

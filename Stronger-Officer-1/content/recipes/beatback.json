@@ -1,0 +1,2841 @@
+{
+    "recipes": [
+        {
+            "id": "producecasualty.hand",
+            "label": "Breached!",
+            "startdescription": "Every scar of the Tribune is a weapon—and she is no exception.",
+            "description": "Every scar of the Tribune is a weapon—and she is no exception.",
+            "warmup": 10,
+            "actionid": "handtokilltanks",
+            "extantreqs": {
+                "foe.wound.hand": 1,
+                "foe.umiri.mark": 1
+            },
+            "requirements": {
+                "friend.tanks": 1
+            },
+            "effects": {},
+            "aspects": {
+                "killfriend": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+    {
+	"id": "attackenemy.edge",
+	"actionid": "operate",
+	"label": "Stage an attack using a violent strategy",
+	"startdescription": "Words end. Now is the time in which force will make its determinations.",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.officer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.overwhelm",
+	"actionid": "operate",
+	"label": "Stage an overwhelming attack using a violent strategy",
+	"startdescription": "The convergence of opposed forces demands a resolution, and we are the stronger. Let's see them withstand this.",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"grandreqs": { "[edge]-[needsedge]": 5 },
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.officer.overwhelm",
+	"actionid": "operate",
+	"label": "Stage an overwhelming attack using a violent strategy",
+	"startdescription": "The convergence of opposed forces demands a resolution, and we are the stronger. Let's see them withstand this.",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": 1,
+        "foe.umiri.mark": -1
+	},
+	"extantreqs": {
+	    "foe.officerdetail": -1
+	},
+	"grandreqs": { "[edge]-[needsedge]": 5 },
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge",
+	"actionid": "operate",
+	"label": "Stage an attack using a violent strategy",
+	"startdescription": "Words end. Now is the time in which force will make its determinations.",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": -1,
+	    "uqjerome": -1,
+	    "uqlionel": -1,
+        "clocked.mark": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.edge.officer",
+	"actionid": "operate",
+	"label": "Stage an attack using a violent strategy",
+	"startdescription": "Words end. Now is the time in which force will make its determinations.",
+	"requirements": {
+	    "foe": 1,
+	    "provisions": 1,
+	    "needsedge": 1,
+	    "edge": "needsedge",
+	    "foe.rankofficer": 1,
+        "foe.umiri.mark": -1
+	},
+	"extantreqs": {
+	    "foe.officerdetail": -1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.complicate",
+		"chance": 30
+	    },
+	    {
+		"id": "attackenemy.success.officer"
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+        {
+            "id": "makecamillakillumiri.pre.s",
+            "label": "Attack Your Arch-Nemesis Together with the Continental Enemy?",
+            "previewdescription": "The cold wind howls, the lights flicker. A terrible power appears on the enemy's horizon, joining forces with your troops.",
+            "startdescription": "The cold wind howls, the lights flicker. A terrible power appears on the enemy's horizon, joining forces with your troops.",
+            "warmup": 0,
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "provisions": 2,
+                "friend": 1,
+                "friend.camilla": 1,
+            },
+            "extantreqs": {
+                "side.marker": -3
+            },
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "makecamillakillumiri.pre"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.s",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "previewdescription": "Our spies have delivered valuable intelligence—the defensive dispositions of the German headquarters. If we seize this opportunity, we may be able to cripple the enemy directly.",
+            "startdescription": "Encrypted messages have been delivered throughout the trenches. We must secretly mobilize our most elite personnel. No one knows what mission awaits them. Now, they make their way toward the target.",
+            "description": "Encrypted messages have been delivered throughout the trenches. We must secretly mobilize our most elite personnel. No one knows what mission awaits them. Now, they make their way toward the target.",
+            "warmup": 0,
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "provisions": 2,
+                "friend": 1,
+                "side.umiri.withanno": -1
+            },
+            "extantreqs": {
+                "side.marker": -3
+            },
+            "tablereqs": {
+                "foe.officerdetail": -3
+            },
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side"
+                }
+            ],
+        },
+        {
+            "id": "makecamillakillumiri.pre",
+            "label": "Attack Your Arch-Nemesis Together with the Continental Enemy?",
+            "previewdescription": "The cold wind howls, the lights flicker. A terrible power appears on the enemy's horizon, joining forces with your troops.",
+            "startdescription": "The cold wind howls, the lights flicker. A terrible power appears on the enemy's horizon, joining forces with your troops.",
+            "warmup": 10,
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": -1,
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Enemy Officer",
+                "required": {
+                    "foe.umiri.mark": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "makecamillakillumiri.pre"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "foeumiriofficer.side000",
+                    "expulsion": {
+                        "filter": {
+                            "foe.umiri.mark": 1,
+                            "umiri.mark": 1,
+                            "moth": 1,
+                            "lantern": 1,
+                            "forge": 1,
+                            "edge": 1,
+                            "winter": 1,
+                            "heart": 1,
+                            "grail": 1,
+                            "knock": 1
+                        },
+                        "limit": 99
+                    }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "previewdescription": "Our spies have delivered valuable intelligence—the defensive dispositions of the German headquarters. If we seize this opportunity, we may be able to cripple the enemy directly.",
+            "startdescription": "Encrypted messages have been delivered throughout the trenches. We must secretly mobilize our most elite personnel. No one knows what mission awaits them. Now, they make their way toward the target.",
+            "description": "Encrypted messages have been delivered throughout the trenches. We must secretly mobilize our most elite personnel. No one knows what mission awaits them. Now, they make their way toward the target.",
+            "warmup": 10,
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": -1,
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Enemy Officer",
+                "required": {
+                    "foe.umiri.mark": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "foeumiriofficer.side.objective1.end0",
+                    "expulsion": {
+                        "filter": {
+                            "foe.umiri.mark": 1,
+                            "umiri.mark": 1,
+                            "moth": 1,
+                            "lantern": 1,
+                            "forge": 1,
+                            "edge": 1,
+                            "winter": 1,
+                            "heart": 1,
+                            "grail": 1,
+                            "knock": 1
+                        },
+                        "limit": 99
+                    }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side000",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The command post is heavily fortified. Concrete, barbed wire, searchlights—we must dismantle these defenses or find a path through safely.",
+            "description": "The command post is heavily fortified. Concrete, barbed wire, searchlights—we must dismantle these defenses or find a path through safely.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+                "umiri_camilla": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.end0"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.end0",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The command post is heavily fortified. Concrete, barbed wire, searchlights—we must dismantle these defenses or find a path through safely.",
+            "description": "The command post is heavily fortified. Concrete, barbed wire, searchlights—we must dismantle these defenses or find a path through safely.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+                "hindrance.fortifications": 1,
+                "umiri.attacked": 1,
+	            "side.marker": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsfoe",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "A dark, windy night. Everything proceeds according to plan...\n\n[Ensure <b>friendly forces</b> are present in the operation.]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label":  "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective2.needslantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.needsknock"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.needsforge"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsforge",
+            "label": "Breaching Enemy Defenses",
+            "startdescription": "We possess the power to change this. Tearing through barbed wire, crossing bunkers—we advance steadily.",
+            "description": "We possess the power to change this. Tearing through barbed wire, crossing bunkers—we advance steadily.",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needslantern",
+            "label": "Breaching Enemy Defenses",
+            "startdescription": "The power of the Night Watch has shown us the way. We will cross this area.",
+            "description": "The power of the Night Watch has shown us the way. We will cross this area.",
+            "warmup": 0,
+            "requirements": {
+                "needslantern": 1,
+                "lantern": "needslantern",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.needsknock",
+            "label": "Breaching Enemy Defenses",
+            "startdescription": "All defenses part before our strength. We will open a path.",
+            "description": "All defenses part before our strength. We will open a path.",
+            "warmup": 0,
+            "requirements": {
+                "needsknock": 1,
+                "knock": "needsknock",
+                "friend": 1
+            },
+            "effects": {
+                "hindrance": -1,
+                "progression": 1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre0"
+                },
+            ],
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 70,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 70,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.pre0",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "We have infiltrated their command post. We must make it quick.",
+            "description": "We have infiltrated their command post. We must make it quick.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                }
+            ],
+            "alt": [],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.pre",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "description": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.officerdetail": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.rankofficer": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "effects": {},
+            "aspects": {
+                "revealidentity": 1
+            },
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe1"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe2"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe3"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe4"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.end"
+                }
+            ],
+            "alt": [],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe1",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "description": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.sniper": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe2",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "description": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.manhunters": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe3",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "description": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.tanks": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "[foe.umiri.wound]",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe4",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "description": "The enemy has fallen into chaos—only her task force continues to carry out orders with resolve. They are on their way.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.officerdetail": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": "[foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsfoe",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "Her task force is surrounding us. What can we do?\n\n[Ensure <b>friendly forces</b> are present in the operation.]",
+            "description": "Her task force is surrounding us. What can we do?\n\n[Ensure <b>friendly forces</b> are present in the operation.]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "foe.officerdetail": 1
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label":  "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needswinter"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsmoth"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgelantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgeforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsedgewinter"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective1.needsap"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedge",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "This will be our strategy: we will break them, and grind them to nothing under our bootheels.",
+	        "warmup": 10,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needswinter",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Under silence and snow we will come for them. And then it will be too late for anyone.",
+	        "warmup": 10,
+            "requirements": {
+                "needswinter": 1,
+                "winter": "needswinter",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 60,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsmoth",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Ordered chaos, I would like to think. Sometimes we must rely on the unpredictable and unorthodox.",
+	        "warmup": 10,
+            "requirements": {
+                "needsmoth": 1,
+                "moth": "needsmoth",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsforge",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "This is sufficient. Fire and machinery and all their clever applications have won us this bout.",
+	        "warmup": 10,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsap",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Like smashing open an egg. This enemy's armour might have protected them for a time, but no more.",
+	        "warmup": 10,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgeforge",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "The shattering of the Lionsmith's sword is a great mystery of both Forge and Edge. We evoke that mystery now, even if we do not know it.",
+	        "warmup": 10,
+            "requirements": {
+                "needsedgeforge": 1,
+                "edge": "needsedgeforge",
+                "forge": "needsedgeforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgelantern",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "When we strike, we ought to strike with clarity and without mercy. The Colonel knew this, as did the Watchman, as did the Sun.",
+	        "warmup": 10,
+            "requirements": {
+                "needsedgelantern": 1,
+                "edge": "needsedgelantern",
+                "lantern": "needsedgelantern",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.needsedgewinter",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "All battles resolve in death, and until the battle resolves, there is agony. We bring agony, now.",
+	        "warmup": 10,
+            "requirements": {
+                "needsedgewinter": 1,
+                "edge": "needsedgewinter",
+                "winter": "needsedgewinter",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective1.pre"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail_bad",
+            "label": "Hasty Retreat",
+            "startdescription": "The enemy has discovered us! Alarms blare. We are forced to withdraw. The enemy's pursuit forces exact a heavy toll.",
+            "description": "The enemy has discovered us! Alarms blare. We are forced to withdraw. The enemy's pursuit forces exact a heavy toll.",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "makecasualty": 1,
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail_end",
+            "label": "Hasty Retreat",
+            "startdescription": "We have stumbled into an enemy trap! Barbed wire ensnares us. Alarms sound from all directions. We are forced to turn back—the operation is terminated.",
+            "description": "We have stumbled into an enemy trap! Barbed wire ensnares us. Alarms sound from all directions. We are forced to turn back—the operation is terminated.",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "makecasualty": 1,
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_bad",
+                    "chance": 50
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.fail",
+            "label": "Hasty Retreat",
+            "startdescription": "Defeated.",
+            "description": "Defeated.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "hindrance": -1,
+                "foe.tanks": -1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_end"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                },
+                {
+                    "id": "produce.trauma",
+                    "chance": 50
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.fail",
+            "label": "Hasty Retreat",
+            "startdescription": "Defeated.",
+            "description": "Defeated.",
+            "warmup": 0,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "hindrance": -1,
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "- [foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail_end"
+                }
+            ],
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                },
+                {
+                    "id": "produce.trauma",
+                    "chance": 50
+                },
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective1.end",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "The task force has been eliminated. We have brought an end to them.",
+            "description": "The task force has been eliminated. We have brought an end to them.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "progression": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": -1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "- [foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needswinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.sniper",
+                    "mutate": "needsmoth",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgewinter",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgeforge",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.manhunters",
+                    "mutate": "needsedgelantern",
+                    "level": "- [foe.umiri.wound] * 2",
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Success.",
+            "description": "Success.",
+            "warmup": 0,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "needsedge",
+                    "level": -30,
+                    "additive": false
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 10,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -10,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": "[foe.umiri.wound]",
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 12,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 8,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.officerdetail",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_eye"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_eye",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Success.",
+            "description": "Success.",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.wound.eye": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": -99,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": -99,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgelantern",
+                    "level": 16,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 0,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_hand"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_hand",
+            "label": "Clearing the Command Post Perimeter",
+            "startdescription": "Success.",
+            "description": "Success.",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.wound.hand": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgelantern",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgeforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedgemoth",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective2.end_aspect"
+                },
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective2.end_aspect",
+            "label": "Closing In",
+            "startdescription": "We have broken through layer after layer of obstacles. The command post is within sight.",
+            "description": "We have broken through layer after layer of obstacles. The command post is within sight.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.needsfoe"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsfoe",
+            "label": "Attempt to Raid the Enemy Command Post",
+            "startdescription": "In the midst of chaos, we have spotted our target. It seems she will fight to the end...\n\n[Ensure <b>friendly forces</b> are present in the operation.]",
+            "description": "In the midst of chaos, we have spotted our target. It seems she will fight to the end...\n\n[Ensure <b>friendly forces</b> are present in the operation.]",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [
+                {
+                "id": "defend",
+                "label":  "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.fail"
+                },
+            ],
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgelantern"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgeforge"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsedgemoth"
+                },
+                {
+                    "id": "foeumiriofficer.side.objective3.needsap"
+                },
+            ],
+            "inductions": [
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedge",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "This will be our strategy: we will break them, and grind them to nothing under our bootheels.",
+	        "warmup": 10,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgelantern",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "When we strike, we ought to strike with clarity and without mercy. The Colonel knew this, as did the Watchman, as did the Sun.",
+	"warmup": 10,
+            "requirements": {
+                "needsedgelantern": 1,
+                "edge": "needsedgelantern",
+                "lantern": "needsedgelantern",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgemoth",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "以身为饵，诱敌深入，再一举攻之！",
+            "description": "以身为饵，诱敌深入，再一举攻之！",
+            "warmup": 10,
+            "requirements": {
+                "needsedgemoth": 1,
+                "edge": "needsedgemoth",
+                "moth": "needsedgemoth",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsedgeforge",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "The shattering of the Lionsmith's sword is a great mystery of both Forge and Edge. We evoke that mystery now, even if we do not know it.",
+	"warmup": 10,
+            "requirements": {
+                "needsedgeforge": 1,
+                "edge": "needsedgeforge",
+                "forge": "needsedgeforge",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.needsap",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "Like smashing open an egg. This enemy's armour might have protected them for a time, but no more.",
+	"warmup": 10,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured",
+                "friend": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1
+            },
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.objective3.end"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 50,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                },
+                {
+                "id": "producecasualty.hand",
+                "additional": true,
+                "chance": 80,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend.tanks": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foeumiriofficer.side.objective3.end",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "Though we had no hope of victory against their armor, we managed to drive them back. <i>Ilse</i> abandoned her vehicle and fled. She has tasted defeat.",
+            "warmup": 10,
+            "actionid": "sideofficer",
+            "requirements": {
+            },
+            "effects": {
+                "progression": 1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.stalingrad"
+                },
+                {
+                    "id": "foeumiriofficer.side.end"
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.stalingrad",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "The German offensive has been shattered. Their forces scatter in all directions—but she will not swallow this defeat. She will not flee this place of destiny. The flames of her vengeance burn brighter than ever. She will fight again, until death or victory.",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "progression": 3
+            },
+            "extantreqs": {
+                "stalingrad.here": 1
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killumiri": 1
+            },
+            "alt": [
+                {
+                    "id": "foeumiriofficer.side.defiance"
+                },
+                {
+                    "id": "foeumiriofficer.side.finish"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.end",
+            "label": "Straight into the Beast's Lair",
+            "startdescription": "Our forces are storming the German lines. Leaderless, they retreat in disarray. She is left to choke on the bitter fruit of defeat alone. She will return—with a stronger army and a thirst for revenge. But for now, at least, she will not trouble us.",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "requirements": {
+                "progression": 3
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killgerman": 1
+            },
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+            "alt": [
+                {
+                "id": "weakenenemies.detect",
+                "additional": true
+                },
+                {
+                    "id": "makecamillakillumiri.dead"
+                },
+                {
+                    "id": "makecamillakillumiri"
+                },
+                {
+                    "id": "foeumiriofficer.side.finish"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.finish",
+            "label": "The Final Blow",
+            "startdescription": "Their commander will trouble you no more.",
+            "warmup": 30,
+            "actionid": "sideofficer",
+            "extantreqs": {
+                "foe.wound.eye": 1,
+                "foe.wound.hand": 1,
+            },
+            "effects": {
+                "foe.officerdetail": -1,
+                "progression": -3
+            },
+            "aspects": {
+                "killgerman": 1
+            },
+            "purge": {
+                "foe.wound.eye": 99,
+                "foe.wound.hand": 99,
+            },
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+            "achievements": [
+                "ending.umiri.dead"
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.defiance",
+            "label": "Opposing Blades",
+            "startdescription": "Charge again, meet again, and throw yourself into war once more. You are no different from each other. Your Strife knows no end.",
+            "warmup": 30,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "foe.wound.eye": 1,
+                "foe.wound.hand": 1,
+            },
+            "achievements": [
+                "ending.umiri_defiance"
+            ],
+            "haltverb": {
+                "foecoming": 99,
+                "foeactionumiri": 99,
+            },
+	        "ending": "umiri_defiance",
+            "signalEndingFlavour": "Grand",
+            "signalMusic": "bgm.umiri_defiance.mp3",
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "pre.death_defiance",
+            "label": "Opposing Blades?",
+            "startdescription": "Charge again, meet again, and throw yourself into war once more. You are no different from each other. Your Strife knows no end.",
+            "warmup": 60,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "damage.body": 5
+            },
+            "signalMusic": "bgm.umiri_defiance.mp3",
+            "signalEndingFlavour": "Melancholy",
+            "linked": [
+                {
+                    "id": "death_defiance"
+                },
+                {
+                    "id": "time.cycle"
+                },
+            ],
+        },
+        {
+            "id": "death_defiance",
+            "label": "Opposing Blades?",
+            "startdescription": "Charge again, meet again, and throw yourself into war once more. You are no different from each other. Your Strife knows no end.",
+            "warmup": 30,
+            "extantreqs": {
+                "stalingrad.here": 1,
+                "foe.defiance": 7,
+                "damage.body": 5
+            },
+            "achievements": [
+                "ending.umiri_defiance_bad"
+            ],
+	        "ending": "umiri_defiance_bad",
+            "signalEndingFlavour": "Vile",
+            "linked": [
+            ],
+        },
+
+        {
+        "id": "makecamillakillumiri",
+        "actionid": "edgelongumiri1",
+        "label": "Attack Your Arch-Nemesis Together with the Continental Enemy: Victory!",
+        "startdescription": "The smoke clears, revealing a field strewn with corpses. Your arch-nemesis, grievously wounded, flees in disgrace with the remnants of her forces. This assault has surely cost her dearly.",
+        "warmup": 30,
+        "requirements": {
+            "friend.camilla": 1
+        },
+        "effects": {
+            "friend.camilla": -1,
+            "umiri.blocker.pre": 1,
+            "foe.officerdetail": -1,
+            "progression": -3
+        },
+        "aspects": {
+            "killgerman": 1
+        },
+        "haltverb": {
+            "foecoming": 99,
+            "foeactionumiri": 99,
+        },
+        "achievements": [
+            "ending.camilla_umiri"
+        ],
+        "linked": [
+            {
+                "id": "makecamillakillumiri.dead"
+            },
+        ],
+        "mutations": [
+        ]
+        },
+        {
+        "id": "makecamillakillumiri.dead",
+        "actionid": "edgelongumiri1",
+        "label": "Attack Your Arch-Nemesis Together with the Continental Enemy: Victory!",
+        "startdescription": "The smoke clears, revealing a field strewn with corpses. Beneath a blood-red setting sun, you witness a bloody end: the Continental Enemy carves the scars of silence into your arch-nemesis's troops—then into her weapon, her heart, and finally her soul.",
+        "warmup": 30,
+        "requirements": {
+            "friend.camilla": 1
+        },
+        "extantreqs": {
+            "foe.wound.eye": 1,
+            "foe.wound.hand": 1,
+        },
+        "aspects": {
+            "killgerman": 1
+        },
+        "haltverb": {
+            "foecoming": 99,
+            "foeactionumiri": 99,
+        },
+        "effects": {
+            "umiri.blocker.pre": -1,
+            "foe.officerdetail": -1,
+            "progression": -3
+        },
+        "achievements": [
+            "ending.camilla_umiri",
+            "ending.umiri.dead"
+        ],
+        "mutations": [
+        ]
+        },
+        {
+            "id": "foeumiriofficer.side.expose.eye",
+            "label": "Use the Chilliarch's Eye to Assist Scouts in Reconnoitering the Enemy Command Post",
+            "previewdescription": "The enemy officer is in a camp far from the battlefield. We will dispatch a scout unit to gather intelligence. They will be blessed by the Chilliarch's Eye.\n[The larger the enemy task force, the greater the chance your unit will be detected—and the greater the chance they will be wounded.]",
+            "startdescription": "We know their position. Move quickly...",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "debilitation.eye.colonel": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1,
+                "dissolution": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.flares",
+            "label": "Use Flares to Assist Scouts in Reconnoitering the Enemy Command Post",
+            "previewdescription": "The enemy officer is in a camp far from the battlefield. The enemy will be drawn to the flares, leaving an opening for a scout unit to slip in. They will likely succeed.\n[The larger the enemy task force, the greater the chance your unit will be detected—and the greater the chance they will be wounded.]",
+            "startdescription": "The enemy is distracted. We must move now...",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "supplies.flares": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1,
+                "dissolution": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts",
+            "label": "Reconnoiter the Enemy Command Post",
+            "previewdescription": "The enemy officer is in a camp far from the battlefield. We will dispatch a scout unit under cover of night to gather intelligence. They will likely succeed.\n[The larger the enemy task force, the greater the chance your unit will be detected—and the greater the chance they will be wounded.]",
+            "startdescription": "Slip in under cover of darkness. Vanish before dawn...",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+                "friend.scouts": 1
+            },
+            "extantreqs": {
+                "umiri.mark": -1,
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "fatiguing": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": true,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts7",
+                    "chance": 50
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts5",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts3",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts1",
+                    "chance": 30
+                },
+                {
+                    "id": "foeumiriofficer.side.expose.scouts0"
+                },
+            ],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts7",
+            "label": "Frustrated!",
+            "startdescription": "A sharp whistle cuts through the air. Panicked footsteps converge on our position. We must retreat.",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 7
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 70
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts5",
+            "label": "Frustrated!",
+            "startdescription": "A sharp whistle cuts through the air. Panicked footsteps converge on our position. We must retreat.",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 5
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 50
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts3",
+            "label": "Frustrated!",
+            "startdescription": "A sharp whistle cuts through the air. Panicked footsteps converge on our position. We must retreat.",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 3
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 30
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts1",
+            "label": "Frustrated!",
+            "startdescription": "A sharp whistle cuts through the air. Panicked footsteps converge on our position. We must retreat.",
+            "actionid": "operate",
+            "tablereqs": {
+                "foe.officerdetail": 1
+            },
+            "warmup": 10,
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foeumiriofficer.side.expose.fail",
+                    "chance": 10
+                }
+            ],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.scouts0",
+            "label": "Successfully Infiltrated the Enemy Command Post",
+            "startdescription": "The enemy remains unaware. We have gathered sufficient intelligence.",
+            "actionid": "operate",
+            "requirements": {
+            },
+            "warmup": 30,
+            "effects": {},
+            "aspects": {
+                "exposedumiri": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose.fail",
+            "label": "Frustrated!",
+            "startdescription": "A searchlight suddenly swings toward us. Gunfire erupts from all sides...",
+            "actionid": "operate",
+            "requirements": {
+            },
+            "warmup": 10,
+            "effects": {},
+            "aspects": {
+                "makecasualty": 1
+            },
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.expose0",
+            "label": "Attempt to Reconnoiter the Enemy Command Post?",
+            "previewdescription": "The enemy officer is in a camp far from the battlefield. If I can launch an assault on the command post, the enemy will suffer a heavy blow. But first, I need to gather certain intelligence.\n[You need <i>Secondary Objective: Raid the Command Post</i> to attack this officer. Use specific units or items to gather information and obtain <i>Secondary Objective: Raid the Command Post</i>.]",
+            "actionid": "operate",
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "foeumiriofficer.side.0",
+            "label": "Attempt to Raid the Enemy Command Post?",
+            "previewdescription": "enemies with the Officer's Detail aspect still patrol near the headquarters. Acting rashly will invite fierce resistance—but success would severely weaken the enemy.\n[This objective can only be triggered when enemies with the Officer's Detail aspect are <b>three or fewer</b>, and requires <b>continuous presence of friendly forces</b> in the card slot.]",
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "makecamillakillumiri.hint",
+            "label": "Attack Your Arch-Nemesis Together with the Continental Enemy?",
+            "previewdescription": "This Eternal is a master of the Colonel's ways. With such aid, the enemy will surely break in the winter cold.\n[This task requires enemies with the Officer's Detail aspect to be three or fewer, and requires continuous presence of friendly forces in the card slot.]",
+            "actionid": "operate",
+            "requirements": {
+                "umiri.mark": 1,
+                "friend.camilla": 1
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "main&side_exhausted.hint",
+            "label": "Main Objective Exhausted?",
+            "previewdescription": "The Germans are launching a fierce assault against us. Perhaps now is not the time to deal with such matters.", 
+            "actionid": "operate",
+            "requirements": {
+                "main&side_exhausted": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
+        "id": "attackenemy.hint",
+        "actionid": "operate",
+        "label": "Plan an Assault on the Enemy?",
+        "startdescription": "The enemy lies ahead. I need a strategy—and the manpower and resources to execute it.\n\n[Investing aspects that meet any of the enemy's thresholds will allow you to launch an assault. If the invested aspects exceed the corresponding threshold by at least five ranks, the assault is guaranteed to succeed.]",
+        "requirements": {
+            "foe": 1,
+            "foe.hidden": -1,
+            "foe.umiri.mark": -1
+        },
+        "craftable": false,
+        "hintonly": true
+        },
+    {
+	"id": "start.objective.side.3",
+	"actionid": "operate",
+	"label": "Pursue yet another Secondary Objective",
+	"startdescription": "I already have my men pursuing two other secondary objectives, but if I have the manpower to spare, I could order third be put into motion. Any more may spread us too thin.",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=2": 1
+	},
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark.3",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side.2",
+	"actionid": "operate",
+	"label": "Pursue another Secondary Objective",
+	"startdescription": "I already have my men pursuing another secondary objective, but if I have the manpower to spare, I could order second be put into motion.",
+	"grandReqs": { 
+	    "[~/extant:side.marker]=1": 1
+	},
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark.2",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+    {
+	"id": "start.objective.side",
+	"actionid": "operate",
+	"label": "Pursue a Secondary Objective",
+	"startdescription": "My preparations and strategies are laid accordingly. Here we will strive after an advantage.",
+	"requirements": {
+	    "side": 1,
+	    "provisions": 2,
+        "umiri.mark": -1
+	},
+	"extantreqs": {
+	    "side.marker": -1
+	},
+	"craftable": true,
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "objective.side.mark",
+	 	"additional": true,
+		"expulsion": {
+		    "filter": {
+		 	"main": 1,
+			"side": 1,
+			"edge": 1,
+			"winter": 1,
+			"heart": 1,
+			"grail": 1,
+			"moth": 1,
+			"lantern": 1,
+			"forge": 1,
+			"knock": 1
+		    },
+		    "limit": 4
+		}
+	    }
+	]
+    },
+        {
+            "id": "test.hint",
+            "label": "测试",
+            "previewdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了", 
+	        "startdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了",
+            "actionid": "operate",
+            "requirements": {
+                "friend": 1
+            },
+            "warmup": 5,
+			"playAudioTrack": "bgm.annocoming.mp3",
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+        {
+            "id": "test2.hint",
+            "label": "测试",
+            "previewdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了", 
+	        "startdescription": "要是你在正常游戏中见到这句话，那可以提醒我，我应该是忘关了",
+            "actionid": "operate",
+            "requirements": {
+                "foe": 1
+            },
+            "warmup": 5,
+			"playAudioTrack": "bgm.umiri_defiance.mp3",
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [],
+            "alt": [],
+        },
+    ]
+}

@@ -1,0 +1,972 @@
+{
+"elements": [
+	{
+		"id": "anno_sergei",
+		"label": "Change Slot Icon",
+		"description": "Change Slot Icon",
+		"aspects": {
+		},
+		"verbicon": "edgelonganno2",
+		"lifetime": 1,
+		"isAspect": false,
+		"isHidden": true
+	},
+	{
+		"id": "anno_camilla",
+		"label": "Change Slot Icon",
+		"description": "Change Slot Icon",
+		"aspects": {
+		},
+		"verbicon": "edgelonganno1",
+		"lifetime": 1,
+		"isAspect": false,
+		"isHidden": true
+	},
+    {
+	"id": "wound.camilla.foranno",
+	"label": "百年纷争",
+	"lifetime": 3000,
+	"aspects": {
+		"long.blocker": 1
+	},
+	"decayTo": "wound.camilla.foranno.ex",
+	"description": "盟军军官正和刃长生者缠斗！[此卡牌在场时，盟军军官和刃之长生者将不会赶到。]",
+	"isAspect": false,
+    },
+    {
+	"id": "wound.camilla.foranno.ex",
+	"label": "百年纷争",
+	"aspects": {
+		"edge": 2,
+		"lantern": 2
+	},
+	"description": "一份关于她们斗争的回忆。",
+	"isAspect": false,
+    },
+    {
+	"id": "wound.sergei.foranno",
+	"label": "“辉光”",
+	"description": "看来我们的食铁者先生收到了一点小小的惊吓。[现在食铁者不会再吸收新军了。]",
+	"isAspect": false,
+    },
+    {
+	"id": "reinforcement.fall",
+	"label": "失败",
+	"description": "一次失败的援助",
+	"isAspect": false,
+    },
+    {
+	"id": "reinforcement.success",
+	"label": "成功",
+	"description": "一次成功的援助",
+	"isAspect": false,
+    },
+    {
+	"id": "success_anno",
+	"label": "成功",
+	"description": "盟军一次成功的推进",
+	"isAspect": true,
+	"lifetime": 1
+    },
+
+        {
+            "id": "foe.umiri.2.withanno",
+            "label": "冯海铃<b>上校</b>",
+            "description": "战争为她留下了伤疤，也同样为她留下了力量。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "german": 1,
+				"foe.wound.eye": 1,
+                "foe.umiri.wound": 1,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+			"slots": [],
+			"icon": "foe.umiri.2",
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "xtriggers": {
+                "refresh": "foe.umiri.2.withanno",
+                "concealidentity": "foe.umiri.2.withanno.hidden"
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.2.withanno.hidden",
+            "label": "未知敌军",
+            "description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+            "inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.2.withanno.hidden",
+                "revealidentity": "foe.umiri.2.withanno"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "foe.umiriinbattalion",
+            "label": "<i>冯海铃<b>上校</b></i>",
+            "description": "夹击之中她露出了破绽，这是绝无仅有的机会，我们需要使用全部的力量。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "german": 1,
+				"needsedgelantern": 16,
+				"needsedgewinter": 16,
+				"needsedgeforge": 16,
+                "foe": 1
+            },
+			"icon": "foe.umiri.2",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiriinrome",
+            "label": "<i>冯海铃<b>上校</b></i>",
+            "description": "夹击之中她露出了破绽，这是绝无仅有的机会，我们需要使用全部的力量，再一次。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "german": 1,
+				"needsedgelantern": 24,
+				"needsedgewinter": 24,
+				"needsedgeforge": 24,
+                "foe": 1
+            },
+			"icon": "foe.umiri.2",
+            "unique": true,
+            "isAspect": false,
+        },
+    {
+	"id": "foe.template",
+	"label": "Foe Template",
+	"aspects": {
+	    "foe": 1
+	},
+	"slots": [
+	    {
+		"id": "needsresources1",
+		"label": "资源",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "wounded": 1,
+		    "damaged": 1,
+			"faction.anno": 1
+		}
+	    },
+	    {
+		"id": "needsresources2",
+		"label": "资源",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "wounded": 1,
+		    "damaged": 1,
+			"faction.anno": 1
+		}
+	    },
+	    {
+		"id": "needsresources3",
+		"label": "更多？",
+		"description": "一份力量？一个聚点？一个来自地面或天空的征兆？",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "friend": 1,
+		    "supplies": 1,
+		    "weapon": 1,
+			"faction.anno": 1
+		}
+	    },
+	    {
+		"id": "needsprovisions",
+		"label": "补给品",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	]
+    },
+    {
+	"id": "clockwork",
+	"label": "这是发条",
+	"description": "证明这是发条爵士，可以攻击",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "clockwork.mark",
+	"label": "这是发条",
+	"description": "证明这是发条爵士，无论生死",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "faction.karotechia",
+	"label": "“索隐会”",
+	"description": "这支部队的番号从未在第三帝国的官方记录中出现过，但隐秘世界对这群遗珍窃贼从不陌生。他们极少在遗迹与圣所之外的地方现身，为何偏偏是此时？为何偏偏是此地？或许我们此行有着共同的目标。[这一势力的敌人有时也会攻击其他敌人。]",
+	"isAspect": true
+    },
+    {
+	"id": "simultaneous",
+	"label": "协同进攻",
+	"description": "结伴而行。[拥有该性相的敌军进攻时有可能再触发一个拥有此性相的敌军的攻击，最多触发两次]",
+	"isAspect": true
+    },
+    {
+	"id": "karotechia.rankofficer",
+	"label": "地位：索隐会军官",
+	"description": "[要想袭击拥有这个性相的敌军需要先击杀对应的护卫]",
+	"isAspect": true,
+	"comments": "这个性相没用"
+    },
+    {
+	"id": "karotechia.officerdetail",
+	"label": "护卫：“发条”爵士",
+	"description": "这一敌军被命令保护某位重要人士的安全。[这一敌军保护“发条”爵士。]",
+	"isAspect": true
+    },
+    {
+    "id": "lethal.debilitation",
+    "label": "精准",
+    "description": "每一击都正中要害。[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": true
+    },
+    {
+    "id": "refreshonlyclockwork",
+    "label": "恢复发条爵士",
+    "description": "每一击都正中要害。[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": true
+    },
+    {
+    "id": "lethal_debilitation_trigger",
+    "label": "精准的生成卡牌",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": false,
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+    "id": "clockwork.attack1",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": false,
+	"aspects": {
+		"needsedge": 12
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+    "id": "clockwork.attack2",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": false,
+	"aspects": {
+		"needsedgeforge": 6
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+    {
+    "id": "clockwork.attack3",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": false,
+	"aspects": {
+		"needsedgewinter": 6
+	},
+	"lifetime": 1,
+	"isHidden": true
+    },
+
+    {
+	"id": "foe.clockwork",
+	"label": "“发条”爵士",
+	"description": "“坠落是另一种上升的开端，那颗星将照亮一条你们无从涉足的道路——那是通往超越的狭窄小径。我希望你能有自知之明：与我等将踏上的征程相比，你所怀有的那点欲望是何其浅薄。”[“发条”爵士需要被击伤三次才会死去，此状态下的“发条”爵士不可被攻击。]",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.lethal": 1,
+	    "lethal.debilitation": 1,
+	    "foe.resilient": 1,
+	    "foe.elusive": 1,
+	    "clockwork": 1,
+	    "clockwork.mark": 1,
+	    "faction.karotechia": 1
+	},
+	"xtriggers": {
+	    "longded": "corpse.clockwork",
+	    "refresh": "foe.clockwork",
+	    "killfoe": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "killmortal": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "concealidentity": "foe.clockwork.hidden",
+	    "takeadditional": [
+		{
+		    "id": "lethal_debilitation_trigger",
+		    "morpheffect": "spawn",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -30
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "foe.clockwork.exhausted",
+		    "morpheffect": "transform",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 30
+		},
+	    ],
+	    "weaken": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+	    ]
+    	}
+    },
+    {
+	"id": "foe.clockwork.exhausted",
+	"label": "“发条”爵士（修整中）",
+	"description": "齿轮的转动略显滞涩，但这不会持续太久，时机稍纵即逝。[此状态下的“发条”爵士不再发动攻击，消逝后变为<i>“发条”爵士</i>。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.lethal": 1,
+	    "lethal.debilitation": 1,
+	    "foe.resilient": 1,
+	    "foe.elusive": 1,
+		"needsedge": 24,
+	    "clockwork.mark": 1,
+	    "faction.karotechia": 1
+	},
+	"lifetime": 60,
+	"icon": "foe.clockwork",
+	"resaturate": true,
+	"xtriggers": {
+	    "longded": "corpse.clockwork",
+	    "refresh": "foe.clockwork",
+	    "refreshonlyclockwork": "foe.clockwork.hidden",
+	    "killfoe": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "takeadditional": [
+		{
+		    "id": "lethal_debilitation_trigger",
+		    "morpheffect": "spawn",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -30
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 30
+		},
+	    ],
+	    "killmortal": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "concealidentity": "foe.clockwork.exhausted.hidden",
+	    "weaken": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+	    ],
+    	}
+    },
+    {
+	"id": "foe.clockwork.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "clockwork": 1,
+	    "foe.hidden": 1,
+	    "clockwork.mark": 1,
+	    "faction.karotechia": 1
+	},
+	"xtriggers": {
+	    "longded": "corpse.clockwork",
+	    "refresh": "foe.clockwork.hidden",
+	    "killfoe": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "killmortal": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "revealidentity": "foe.clockwork",
+	    "takeadditional": [
+		{
+		    "id": "lethal_debilitation_trigger",
+		    "morpheffect": "spawn",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -30
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 30
+		},
+	    ],
+	    "weaken": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.clockwork.exhausted.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+	    "clockwork.mark": 1,
+	    "clockwork": 1,
+		"faction.karotechia": 1
+	},
+	"decayTo": "foe.clockwork.hidden",
+	"xtriggers": {
+	    "longded": "corpse.clockwork",
+	    "refresh": "foe.clockwork.hidden",
+	    "refreshonlyclockwork": "foe.clockwork.hidden",
+	    "killfoe": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "killmortal": [
+		{
+		    "id": "monster.wound",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+	    ],
+	    "revealidentity": "foe.clockwork.exhausted",
+	    "takeadditional": [
+		{
+		    "id": "foe.clockwork",
+		    "morpheffect": "transform",
+		    "level": 1
+		},
+		{
+		    "id": "lethal_debilitation_trigger",
+		    "morpheffect": "spawn",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -30
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 30
+		},
+	    ],
+	    "weaken": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+
+    {
+	"id": "corpse.jerome",
+	"label": "杰罗姆·亚历山大已被杀死",
+	"description": "无情的男人，他在最后得到的仁慈和他给出的仁慈一样多。他在名为“野心”的祭坛上牺牲了一切原则——连爱着他的人的感情也不例外。",
+	"aspects": {
+	    "remnant": 1,
+	    "legacyplotitem": 1
+	},
+	"slots": [
+	    {
+		"id": "needslionel",
+		"actionid": "abandon",
+		"label": "莱昂内尔",
+		"required": {
+		    "corpse.lionel": 1
+		}
+	    },
+	    {
+		"id": "needsclockwork",
+		"actionid": "abandon",
+		"label": "“发条”爵士",
+		"required": {
+		    "corpse.clockwork": 1
+		}
+	    }
+	]
+    },
+    {
+	"id": "corpse.lionel",
+	"label": "莱昂内尔·撒克逊已被杀死",
+	"description": "可敬的男人，我有幸在战场上面对并击败他。他最大的错误是从他所爱之人的恶行上移开目光——但他保证了自己因弥补这一错误倒下。",
+	"aspects": {
+	    "remnant": 1,
+	    "legacyplotitem": 1
+	},
+	"slots": [
+	    {
+		"id": "needsclockwork",
+		"actionid": "abandon",
+		"label": "“发条”爵士",
+		"required": {
+		    "corpse.clockwork": 1
+		}
+	    },
+	    {
+		"id": "needsjerome",
+		"actionid": "abandon",
+		"label": "杰罗姆",
+		"required": {
+		    "corpse.jerome": 1
+		}
+	    }
+	]
+    },
+    {
+	"id": "corpse.clockwork",
+	"label": "“发条”爵士已被杀死",
+	"description": "疯癫的男人，他罪恶的狂想已随着身上发条的停转一同灰飞烟灭。他未能从亲手点燃的火焰中幸免。那具曾经狂热布道的躯体如今横陈于地，更像一堆扭曲的废铁，而非他毕身追求的“纯净之人”",
+	"aspects": {
+	    "remnant": 1,
+	    "legacyplotitem": 1,
+		"clockwork.mark": 1,
+	},
+	"slots": [
+	    {
+		"id": "needsjerome",
+		"actionid": "abandon",
+		"label": "杰罗姆",
+		"required": {
+		    "corpse.jerome": 1
+		}
+	    },
+	    {
+		"id": "needslionel",
+		"actionid": "abandon",
+		"label": "莱昂内尔",
+		"required": {
+		    "corpse.lionel": 1
+		}
+	    }
+	]
+    },
+
+    {
+	"id": "foe.task",
+	"label": "索隐会特遣队",
+	"description": "索隐会的精锐连队。伤痛不能使他们迟缓，死亡亦不在他们的恐惧之列。他们手中形制古怪的武器总是被理解得太少，被使用得太多。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "mortal": 1,
+	    "needsedgewinter": 8,
+	    "needsedgemoth": 8,
+		"faction.karotechia": 1,
+		"simultaneous": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.task",
+	    "killfoe": "foe.corpses",
+	    "killmortal": "foe.corpses",
+	    "killkarotechia": "foe.corpses",
+	    "concealidentity": "foe.task.hidden",
+	    "takeadditional": [
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": 2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": 2
+		},
+	    ],
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	}
+    },
+    {
+	"id": "foe.task.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+		"faction.karotechia": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.task.hidden",
+	    "killfoe": "foe.corpses",
+	    "killmortal": "foe.corpses",
+	    "killkarotechia": "foe.corpses",
+	    "revealidentity": "foe.task",
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.disaster",
+	"label": "灾厄兽",
+	"description": "身形庞大却动作迅捷，这头披着装甲的恶兽游走在战场上，追逐着硝烟与血的气息。哪怕隔着那层金属外衣，我也能感受到扑面而来的恶意。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "mortal": 1,
+	    "needsedge": 12,
+	    "needsedgemoth": 6,
+		"simultaneous": 1,
+		"foe.resilient": 1,
+		"faction.karotechia": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.disaster",
+	    "killfoe": "foe.corpse.unnatural",
+	    "killmortal": "foe.corpse.unnatural",
+	    "killkarotechia": "foe.corpses.unnatural",
+	    "concealidentity": "foe.disaster.hidden",
+	    "takeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+	    ],
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	}
+    },
+    {
+	"id": "foe.disaster.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+		"faction.karotechia": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.disaster.hidden",
+	    "killfoe": "foe.corpses.unnatural",
+	    "killmortal": "foe.corpses.unnatural",
+	    "killkarotechia": "foe.corpses.unnatural",
+	    "revealidentity": "foe.disaster",
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.goliath",
+	"label": "“歌利亚”",
+	"description": "在幽闭的礼拜堂深处，奇异的祷文将他们的身躯重塑，使其耸立成不应属于凡世的形貌。枪弹在他们身侧溅落，徒劳如雨打绝壁；刀刃在他们脊背上崩折，清脆如枯枝触地。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "mortal": 1,
+	    "needsedge": 20,
+	    "needsforgemoth": 6,
+	    "foe.armoured": 1,
+		"faction.karotechia": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.goliath",
+	    "killfoe": "foe.corpses",
+	    "killmortal": "foe.corpses",
+	    "killkarotechia": "foe.corpses",
+	    "concealidentity": "foe.goliath.hidden",
+	    "takeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -4
+		},
+		{
+		    "id": "needsforgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		}
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+		{
+		    "id": "needsforgemoth",
+		    "morpheffect": "mutate",
+		    "level": 2
+		}
+	    ],
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsforgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		}
+	    ]
+	}
+    },
+    {
+	"id": "foe.goliath.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+		"faction.karotechia": 1,
+	},
+	"xtriggers": {
+	    "refresh": "foe.goliath.hidden",
+	    "killfoe": "foe.corpses",
+	    "killmortal": "foe.corpses",
+	    "killkarotechia": "foe.corpses",
+	    "revealidentity": "foe.goliath",
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedge",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsforgemoth",
+		    "morpheffect": "mutate",
+		    "level": -2
+		}
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "faction.king",
+	"label": "亨利九世的私兵队",
+	"description": "在纸面上，这支部队为大不列颠与她的盟友而战。但为何这个纵队脱离了主力部队独自行动？为何他们也在追寻我的目标？那座岛上的国王是个不详之人——或许他正觊觎着我正寻求之物，试图寻找一个机会将其攫于手中。[这一势力的敌人有时也会攻击其他敌人。]",
+	"isaspect": true,
+	"induces": [
+	    {
+		"id": "king.cycle"
+	    }
+	]
+    },
+    {
+	"id": "faction.legion",
+	"label": "门关军团",
+	"description": "一支在边界之内维护着某种野蛮和平的野蛮军队。他们极少在梦境的这一侧作战——那他们因何来此？或许这一支分遣队接到命令，要将我的目标送回天上。亦或是这次行动背后有一些更加个人的原因。[这一势力的敌人有时也会攻击其他敌人。]",
+	"isaspect": true,
+	"induces": [
+	    {
+		"id": "legion.cycle"
+	    }
+	]
+    },
+]
+}

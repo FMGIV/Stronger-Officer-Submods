@@ -1,0 +1,1110 @@
+{
+"recipes": [
+        {
+            "id": "friend.anno.attack.stun.umiri",
+            "label": "盟军正在发动战术进攻！",
+            "startdescription": "盟军正向着指挥部发起猛攻！",
+            "description": "盟军正向着指挥部发起猛攻！",
+            "actionId": "annoumiri",
+            "warmup": 10,
+			"playAudioTrack": "bgm.annostun.mp3",
+            "requirements": {
+                "strategy.stun": 1
+            },
+			"effects": {
+				"strategy.stun": -99
+			},
+            "extantreqs": {
+                "rome.here": 1,
+				"foe.umiri.mark": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack.umiri.first"
+                }
+            ],
+        },
+    {
+	"id": "friend.anno.attack.umiri.first",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "盟军正向着指挥部发起猛攻！",
+	"requirements": {
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "准备",
+		"required": {
+			"faction.anno": 1,
+			"local": 1,
+			"valkyrie.mark": 1,
+		},
+		"forbidden": {
+			"remnant": 1,
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+			"friend.medics": 1
+		},
+		"greedy": true
+		},
+		{
+		"id": "defend2",
+		"label": "准备",
+		"required": {
+			"faction.anno": 1,
+			"local": 1,
+			"valkyrie.mark": 1,
+		},
+		"forbidden": {
+			"remnant": 1,
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+			"friend.medics": 1
+		},
+		"greedy": true
+		},
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.a",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "盟军遭遇了敌军的强硬阻挠！",
+	"requirements": {
+	},
+	"aspects": {
+		"revealidentity": 1
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 50,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.have1"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "盟军遭遇了敌军的强硬阻挠！",
+	"requirements": {
+	},
+	"aspects": {
+		"revealidentity": 1
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "敌军特遣队",
+		"required": {
+			"foe.officerdetail": 1,
+		},
+		"forbidden": {
+		},
+		"greedy": true
+		},
+	],
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 100,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.have"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.none"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.none",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+	},
+	"warmup": 0,
+	"effects": {
+		"success_anno": -99
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.pass"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.threeanno",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+		"success_anno": 3
+	},
+	"effects": {
+		"success_anno": -99
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.pass"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.pass",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "我们成功突破敌军的防线！",
+	"requirements": {
+	},
+	"effects": {
+		"success_anno": -99
+	},
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.2.first"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.1.first"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.0.first"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.2.first",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+		"progression": 2
+	},
+	"effects": {
+		"foe.umiriinrome": 1
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.2"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.1.first",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+		"progression": 1
+	},
+	"effects": {
+		"foe.artillery": 1
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.1.fir"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.1.fir",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+		"progression": 1
+	},
+	"effects": {
+	},
+	"mutations": [
+		{
+			"filter": "foe",
+			"mutate": "needsedge",
+			"level": 4,
+			"additive": true
+		},
+		{
+			"filter": "foe",
+			"mutate": "needsforgemoth",
+			"level": 4,
+			"additive": true
+		},
+	],
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.1"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.0.first",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+	},
+	"effects": {
+		"foe.tanks": 1
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.0.fir"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.0.fir",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+	},
+	"effects": {
+	},
+	"mutations": [
+		{
+			"filter": "foe.tanks",
+			"mutate": "needsedge",
+			"level": 4,
+			"additive": true
+		},
+		{
+			"filter": "foe.tanks",
+			"mutate": "needsforge",
+			"level": 4,
+			"additive": true
+		},
+	],
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstacle.0"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.2",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "接近了……",
+	"requirements": {
+		"progression": 2
+	},
+	"effects": {
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "援助",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+		},
+		"greedy": false
+		},
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "friend.anno.attack.umiri.edgeforge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.edgelantern"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.edgewinter"
+	    },
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstaclefall"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.1",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "粉碎防线",
+	"requirements": {
+		"progression": 1
+	},
+	"effects": {
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "援助",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+		},
+		"greedy": false
+		},
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "friend.anno.attack.umiri.edge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.forgemoth"
+	    },
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstaclefall"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.obstacle.0",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "突破阻碍",
+	"effects": {
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "援助",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+		},
+		"greedy": false
+		},
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "friend.anno.attack.umiri.edge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.forge"
+	    },
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.obstaclefall"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.edge",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+	"requirements": {
+	    "needsedge": 1,
+	    "edge": "needsedge"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.forge",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
+	"requirements": {
+	    "needsforge": 1,
+	    "forge": "needsforge"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 50,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.forgemoth",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
+	"requirements": {
+	    "needsforgemoth": 1,
+	    "forge": "needsforgemoth",
+	    "moth": "needsforgemoth",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.edgelantern",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+	"requirements": {
+	    "needsedgelantern": 1,
+	    "edge": "needsedgelantern",
+	    "lantern": "needsedgelantern",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.edgewinter",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
+	"requirements": {
+	    "needsedgewinter": 1,
+	    "edge": "needsedgewinter",
+	    "winter": "needsedgewinter",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.edgeforge",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+	"requirements": {
+	    "needsedgeforge": 1,
+	    "edge": "needsedgeforge",
+	    "forge": "needsedgeforge",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"progression": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.successfully"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.have",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "我们全部都在争夺那颗星——这意味着我们多方势力相互之间均为敌对。而这一次，新王的军队选择了另一方作为目标。",
+	"requirements": {
+		"foe": 1
+	},
+	"aspects": {
+		"makeadditional": 1
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.have1"
+	    }
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.have1",
+	"label": "盟军正在发动战术进攻！",
+	"requirements": {
+		"foe": 1
+	},
+	"aspects": {
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "盟军",
+		"required": {
+			"faction.anno": 1,
+			"local": 1,
+			"valkyrie.mark": 1,
+		},
+		"forbidden": {
+			"remnant": 1,
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1,
+			"friend.medics": 1
+		},
+		"greedy": true
+		},
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.ap"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.aerial"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.edge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.moth"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.winter"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.forge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.forgemoth"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.edgeforge"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.edgelantern"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.edgewinter"
+	    },
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.fall"
+	    }
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.aerial",
+	"label": "死亡从天而降",
+	"startdescription": "火与烟在云中产生。燃烧的残骸如流星雨般从高空落下。这一刻，天空属于我们。",
+	"requirements": {
+	    "foe.aerial": 1,
+	    "friend.aerial": "foe.aerial"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.ap",
+	"label": "突破装甲",
+	"startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+	"requirements": {
+	    "foe.armoured": 1,
+	    "ap": "foe.armoured"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.edge",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+	"requirements": {
+	    "needsedge": 1,
+	    "edge": "needsedge"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.winter",
+	"label": "以耐心得胜",
+	"startdescription": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
+	"requirements": {
+	    "needswinter": 1,
+	    "winter": "needswinter"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.moth",
+	"label": "以欺诈得胜",
+	"startdescription": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
+	"requirements": {
+	    "needsmoth": 1,
+	    "moth": "needsmoth"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.forge",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
+	"requirements": {
+	    "needsforge": 1,
+	    "forge": "needsforge"
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.forgemoth",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
+	"requirements": {
+	    "needsforgemoth": 1,
+	    "forge": "needsforgemoth",
+	    "moth": "needsforgemoth",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.edgelantern",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+	"requirements": {
+	    "needsedgelantern": 1,
+	    "edge": "needsedgelantern",
+	    "lantern": "needsedgelantern",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.edgewinter",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
+	"requirements": {
+	    "needsedgewinter": 1,
+	    "edge": "needsedgewinter",
+	    "winter": "needsedgewinter",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.edgeforge",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+	"requirements": {
+	    "needsedgeforge": 1,
+	    "edge": "needsedgeforge",
+	    "forge": "needsedgeforge",
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99,
+		"success_anno": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail"
+	    },
+	]
+    },
+	
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.fall",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "盟军的先锋部队受阻！",
+	"aspects": {
+	},
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.cycle"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.friendannoattackumiri",
+		"additional": true,
+		"chance": 100
+		}
+	]
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.cycle",
+	"label": "等待支援……",
+	"startdescription": "盟军的先锋部队受阻！",
+	"requirements": {
+	},
+	"aspects": {
+	},
+	"slots": [
+	    {
+		"id": "needsking",
+		"label": "结果",
+		"required": {
+		    "reinforcement.success": 1,
+		    "reinforcement.fall": 1,
+		},
+		"consumes": true,
+		"greedy": true
+	    },
+	],
+	"alt": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.successend"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.fallend"
+	    },
+	],
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.cycle"
+	    },
+	],
+	"warmup": 15
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.successend",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "成功的支援",
+	"requirements": {
+		"reinforcement.success": 1,
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.threeanno"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.officerdetail.a"
+	    },
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.officerdetail.fallend",
+	"label": "盟军正在发动战术进攻！",
+	"startdescription": "失败的支援",
+	"requirements": {
+		"reinforcement.fall": 1,
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.fallallend"
+	    },
+	],
+    },
+	
+
+    {
+	"id": "friend.anno.attack.umiri.successfully",
+	"label": "盟军涌入指挥营！",
+	"startdescription": "敌军正乱作一团，组织撤退！",
+	"requirements": {
+		"progression": 3
+	},
+	"effects": {
+	},
+	"achievements": [
+		"ending.anno_kill_umiri"
+	],
+	"alt": [
+		{
+			"id": "produce.umiri.withdraw",
+			"additional": true
+		}
+	],
+	"warmup": 30,
+	"linked": [
+		{
+			"id": "friend.anno.attack.umiri.successfully.end"
+		}
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.successfully.end",
+	"label": "盟军涌入指挥营！",
+	"startdescription": "敌军正乱作一团，组织撤退！",
+	"warmup": 0,
+	"linked": [
+	],
+    },
+	
+    {
+	"id": "friend.anno.attack.umiri.obstaclefall",
+	"label": "盟军正在撤军",
+	"startdescription": "大势已去",
+	"requirements": {
+	},
+	"effects": {
+		"foe": -99
+	},
+	"warmup": 0,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.fallallend"
+	    },
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.fallallend",
+	"label": "盟军正在撤军",
+	"startdescription": "大势已去",
+	"requirements": {
+	},
+	"aspects": {
+		"takeadditional": 1
+	},
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.fallallend.0"
+	    },
+	    {
+		"id": "friend.anno.attack.umiri.fallallend.1",
+		"chance": 50
+	    },
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.fallallend.0",
+	"label": "盟军正在撤军",
+	"startdescription": "大势已去",
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"warmup": 30,
+	"linked": [
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.fallallend.1",
+	"label": "盟军正在撤军",
+	"startdescription": "大势已去",
+	"requirements": {
+		"progression": 1
+	},
+	"warmup": 30,
+	"aspects": {
+		"makecasualty": 1
+	},
+	"linked": [
+	    {
+		"id": "friend.anno.attack.umiri.fallallend.2",
+		"chance": 50
+	    },
+	],
+    },
+    {
+	"id": "friend.anno.attack.umiri.fallallend.2",
+	"label": "盟军正在撤军",
+	"startdescription": "大势已去",
+	"requirements": {
+		"progression": 2
+	},
+	"warmup": 30,
+	"aspects": {
+		"makecasualty": 1
+	},
+    },
+]
+}

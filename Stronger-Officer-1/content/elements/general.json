@@ -1,0 +1,480 @@
+{
+"elements": [
+    {
+	"id": "wound.eye",
+	"label": "A Wounded Face",
+	"description": "I should have this looked at immediately. [A total of five Wounds and Debilitations will kill you.]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.eye",
+	    "brilliant": "wound.eye.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "Medics",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "Provisions",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.eye"
+    },
+    {
+	"id": "wound.hand",
+	"label": "A Pierced Hand",
+	"description": "I should have this looked at immediately. [A total of five Wounds and Debilitations will kill you.]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.hand",
+	    "brilliant": "wound.hand.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "Medics",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "Provisions",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.hand"
+    },
+    {
+	"id": "wound.leg",
+	"label": "A Shattered Knee",
+	"description": "I should have this looked at immediately. [A total of five Wounds and Debilitations will kill you.]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.leg",
+	    "brilliant": "wound.leg.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "Medics",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "Provisions",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.leg"
+    },
+    {
+	"id": "wound.ear",
+	"label": "A Ripped Ear",
+	"description": "I should have this looked at immediately. [A total of five Wounds and Debilitations will kill you.]",
+	"aspects": {
+	    "knock": 4,
+	    "winter": 4,
+	    "damage.body": 1
+	},
+	"xtriggers": {
+	    "malign": "debilitation.ear",
+	    "brilliant": "wound.ear.healing"
+	},
+	"slots": [
+	    {
+		"id": "needsmedics",
+		"actionid": "abandon",
+		"label": "Medics",
+		"required": {
+		    "friend.medics": 1
+		}
+	    },
+	    {
+		"id": "needprovisions",
+		"actionid": "abandon",
+		"label": "Provisions",
+		"required": {
+		    "provisions": 1
+		},
+		"consumes": true
+	    }
+	],
+	"lifetime": 300,
+	"decayTo": "debilitation.ear"
+    },
+    {
+	"id": "op.madrugad",
+	"label": "The Madrugad's Shadow",
+	"description": "Here is that unerring cold that waits in the hours that precede the sun; here the Madrugad makes her tally.",
+	"aspects": {
+	    "winter": 6,
+	    "forge": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.velvet",
+	"label": "The Velvet's Shadow",
+	"description": "The coiling of the roots, the safety of the shadows, the rumbling in the mists - these mark the presence of the Velvet.",
+	"aspects": {
+	    "heart": 6,
+	    "moth": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.beachcomber",
+	"label": "The Beachcomber's Shadow",
+	"description": "Shrapnel gleams like silver, and bone beckons like finest porcelain. That greedy, seeking Hour called Beachcomber has come to roost.",
+	"aspects": {
+	    "grail": 6,
+	    "knock": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.thecolonel",
+	"label": "The Colonel's Shadow",
+	"description": "Sights and sounds grow duller, and colours leak from the world. The cold on my neck feels like the press of a knife. The Colonel watches from on high.",
+	"aspects": {
+	    "edge": 6,
+	    "winter": 4,
+	    "lantern": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.thelionsmith",
+	"label": "The Lionsmith's Shadow",
+	"description": "A boastful heat rises in the cold; fires hiss and laugh. Thoughts that do not stoke anger become difficult to hold onto. The Lionsmith is here in attendance.",
+	"aspects": {
+	    "edge": 6,
+	    "forge": 4,
+	    "heart": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.wolfdivided",
+	"label": "The Wolf-Divided's Shadow",
+	"description": "That scent which is neither tar nor blood nor ozone. The Wolf-Divided's rage boils beneath the air.",
+	"aspects": {
+	    "edge": 6,
+	    "winter": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.wolf"
+    },
+    {
+	"id": "op.wolves",
+	"label": "Wolves",
+	"description": "'Whoever feeds the wolf in the winter will be eaten by him in the spring.'\n\n- Greek Proverb",
+	"aspects": {
+	    "edge": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.dove",
+	"label": "A Dove",
+	"description": "A bird of peace - perhaps it is lost.",
+	"aspects": {
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.cat",
+	"label": "Cats",
+	"description": "Amiable little killers.",
+	"aspects": {
+	    "grail": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.cats"
+    },
+    {
+	"id": "op.ruins",
+	"label": "Ruins",
+	"description": "Crumbling edifices and old masonry provide what protection they can.",
+	"aspects": {
+	    "heart": 4,
+	    "forge": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.sewers",
+	"label": "Sewers",
+	"description": "Where the shadows survive, so can we.",
+	"aspects": {
+	    "grail": 4,
+	    "moth": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.highplace",
+	"label": "Heights",
+	"description": "To strike from up on high.",
+	"aspects": {
+	    "edge": 4,
+	    "lantern": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "op.heights"
+    },
+    {
+	"id": "op.fire",
+	"label": "Flames",
+	"description": "Fire is the winter that warms and the spring that consumes.",
+	"aspects": {
+	    "forge": 4,
+	    "edge": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.snows",
+	"label": "Snows",
+	"description": "We have learnt winter's measure, and will be at home in it.",
+	"aspects": {
+	    "winter": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.storms",
+	"label": "Storms",
+	"description": "The rain on our backs is a rejuvenation. Baptism.",
+	"aspects": {
+	    "heart": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.fog",
+	"label": "Fog",
+	"description": "Mists are a gift from the Velvet, so long as one can figure how to appreciate them.",
+	"aspects": {
+	    "moth": 6,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.time.dawn",
+	"label": "Dawn",
+	"description": "Sunrise, when the world is clean.",
+	"aspects": {
+	    "lantern": 4,
+	    "knock": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.dawn"
+    },
+    {
+	"id": "op.time.noon",
+	"label": "Noon",
+	"description": "From here, the sun can only decline.",
+	"aspects": {
+	    "lantern": 4,
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60
+    },
+    {
+	"id": "op.time.sunset",
+	"label": "Sunset",
+	"description": "Sunset, when the light is richer.",
+	"aspects": {
+	    "forge": 4,
+	    "winter": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.sunset"
+    },
+    {
+	"id": "op.time.night",
+	"label": "Night",
+	"description": "Under darkness.",
+	"aspects": {
+	    "winter": 4,
+	    "moth": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"lifetime": 60,
+	"icon": "op.night"
+    },
+    {
+	"id": "op.church",
+	"label": "Opportunity: A Church",
+	"description": "A place of faith, but not of power. I could quarter some of my men here if I needed to, or perhaps the quiet space might lead me to a useful realization.",
+	"aspects": {
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "recruiting": "loc.church"
+	},
+	"slots": [
+	    {
+		"id": "needsintent",
+		"label": "Intent",
+		"required": {
+		    "heart": 1,
+		    "edge": 1
+		}
+	    }
+	],
+	"lifetime": 300
+    },
+    {
+	"id": "op.farm",
+	"label": "Opportunity: A Farm",
+	"description": "We could convince the farmers to furnish us with food and drink - men with guns are famously convincing, after all - or perhaps we would rather use their land for lodgings.",
+	"aspects": {
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "recruiting": "loc.farm"
+	},
+	"slots": [
+	    {
+		"id": "needsintent",
+		"label": "Intent",
+		"required": {
+		    "grail": 1,
+		    "edge": 1
+		}
+	    }
+	],
+	"lifetime": 300
+    },
+]
+}

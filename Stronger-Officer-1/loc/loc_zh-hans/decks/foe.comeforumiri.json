@@ -1,0 +1,82 @@
+{
+    "decks": [
+        {
+            "id": "foeforumiri.tanks",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "foe.manhunters.hidden",
+                "foe.tanks.hidden",
+                "foe.tanks.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "foeforumiri.infantry",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "foe.kommando.hidden",
+                "foe.infantry.hidden",
+                "foe.infantry.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "foeforumiri.bombers",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "husk",
+                "husk",
+                "foe.bombers.hidden",
+                "foe.artillery.hidden",
+                "foe.artillery.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "foeforumiri.manhunters",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "foe.manhunters.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "foeforumiri.artillery",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "foe.artillery.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "foeforumiri.kommando",
+            "label": "敌军援军！",
+            "description": "!",
+            "spec": [
+                "husk",
+                "foe.kommando.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+    ]
+}

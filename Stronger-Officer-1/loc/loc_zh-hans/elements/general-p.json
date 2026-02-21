@@ -1,0 +1,396 @@
+{
+"elements": [
+    {
+	"id": "op.earthquake",
+	"label": "地震！",
+	"description": "大地之怒已被唤起。",
+	"aspects": {
+	    "forge": 10,
+	    "heart": 10,
+	    "op": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 60
+    },
+    {
+	"id": "strength",
+	"label": "力量",
+	"description": "“我——我将化作风暴——化作火焰\n我需要独自与一支大军战斗；\n我有十心；我有百臂；\n我感到我过于强大，凡人无法与我战斗——\n<b>带巨人来！</b>”\n\n——爱德蒙·罗斯丹，<i>《西哈诺·德·贝热拉克》</i>",
+	"aspects": {
+	    "edge": 6,
+	    "influence": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "anger",
+	"label": "愤怒",
+	"description": "粉碎我们的束缚，打破我们的誓言；放大我们的声音，露出我们的拳头。无愤怒，则无反抗。",
+	"aspects": {
+	    "forge": 6,
+	    "influence": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "courage",
+	"label": "勇气",
+	"description": "击败耐心之物。",
+	"aspects": {
+	    "heart": 6,
+	    "influence": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 240
+    },
+    {
+	"id": "influence_temp",
+	"label": "临时影响",
+	"description": "这是会被火力覆盖催坏的影响",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "op.woods",
+	"label": "林地",
+	"description": "谢天谢地，这不是<i>那</i>林地。我们可以藏身于此，而无需顾虑何时会被吞噬。通常如此。",
+	"aspects": {
+	    "moth": 4,
+	    "heart": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.stardust",
+	"label": "星辰残留",
+	"description": "这些是那颗星在坠向地面时，自其主体分离的力量的残渣。它们无法长存，但仍拥有足够的力量。",
+	"aspects": {
+	    "lantern": 4,
+	    "forge": 4,
+	    "knock": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "apostlelantern.pillar3"
+    },
+    {
+	"id": "weapon.rifle.4",
+	"label": "加斯帕尔德的步枪",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仍余四颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "edge": 6,
+	    "uses.remaining": 4
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.4.exhausted"
+	},
+	"icon": "weapon.rifle"
+    },
+    {
+	"id": "weapon.rifle.4.exhausted",
+	"label": "加斯帕尔德的步枪（枯竭）",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仍余三颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "exhausted": 1,
+	    "uses.remaining": 3
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.4.exhausted",
+	    "refresh": "weapon.rifle.3"
+	},
+	"lifetime": 30,
+	"decayTo": "weapon.rifle.3",
+	"icon": "weapon.rifle",
+	"resaturate": true
+    },
+    {
+	"id": "weapon.rifle.3",
+	"label": "加斯帕尔德的步枪",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仍余三颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "edge": 6,
+	    "uses.remaining": 3
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.3.exhausted"
+	},
+	"icon": "weapon.rifle"
+    },
+    {
+	"id": "weapon.rifle.3.exhausted",
+	"label": "加斯帕尔德的步枪（枯竭）",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仍余两颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "exhausted": 1,
+	    "uses.remaining": 2
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.3.exhausted",
+	    "refresh": "weapon.rifle.2"
+	},
+	"lifetime": 30,
+	"decayTo": "weapon.rifle.2",
+	"icon": "weapon.rifle",
+	"resaturate": true
+    },
+    {
+	"id": "weapon.rifle.2",
+	"label": "加斯帕尔德的步枪",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仍余两颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "edge": 6,
+	    "uses.remaining": 2
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.2.exhausted"
+	},
+	"icon": "weapon.rifle"
+    },
+    {
+	"id": "weapon.rifle.2.exhausted",
+	"label": "加斯帕尔德的步枪（枯竭）",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仅余一颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "exhausted": 1,
+	    "uses.remaining": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.rifle.2.exhausted",
+	    "refresh": "weapon.rifle.1"
+	},
+	"lifetime": 30,
+	"decayTo": "weapon.rifle.1",
+	"icon": "weapon.rifle",
+	"resaturate": true
+    },
+    {
+	"id": "weapon.rifle.1",
+	"label": "加斯帕尔德的步枪",
+	"description": "在那起事故将杜弗尔家族从那城堡中驱赶出去之前，被称作“大敌”的人将这把步枪与他那以血赢来的大量战利品一同收藏。吾友之后曾很巧合地赠送给他一件极其相似的武器，但那只是为了“让那混账出离愤怒”，杜弗尔本人则绝不使用那把受赠的枪，甚至不会用它引火。尽管如此，我听说他仍出于感伤保留着那把枪；而我则出于实用持有着这一把。被称为“怪兽杀手”的镍纹铁弹丸仅余一颗。",
+	"aspects": {
+	    "weapon": 1,
+	    "edge": 6,
+	    "uses.remaining": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"icon": "weapon.rifle"
+    },
+    {
+	"id": "weapon.club",
+	"label": "蠕虫研磨者",
+	"description": "一根由木头与金属制成的，粗糙的带沟棍棒，曾于第三次蠕虫战争的某场战斗中被使用。这把武器的先端由镍纹铁——星辰之铁——制成，这种材料被广泛用于制作对抗怪物的武器。当然，如果你用它猛击并非怪物的某人的颅骨，这个人也会死。",
+	"aspects": {
+	    "edge": 6,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.club.exhausted",
+	    "refresh": "weapon.club"
+	}
+    },
+    {
+	"id": "weapon.club.exhausted",
+	"label": "蠕虫研磨者（枯竭）",
+	"description": "一根由木头与金属制成的，粗糙的带沟棍棒，曾于第三次蠕虫战争的某场战斗中被使用。这把武器的先端由镍纹铁——星辰之铁——制成，这种材料被广泛用于制作对抗怪物的武器。当然，如果你用它猛击并非怪物的某人的颅骨，这个人也会死。",
+	"aspects": {
+	    "exhausted": 1,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.club.exhausted",
+	    "refresh": "weapon.club"
+	},
+	"lifetime": 90,
+	"decayTo": "weapon.club",
+	"resaturate": true,
+	"icon": "weapon.club"
+    },
+    {
+	"id": "weapon.lionclaw",
+	"label": "狮爪",
+	"description": "模仿刃尾兽的尾刺制作而成的，古怪且暴烈的装置。实用性极差——发射后，这件武器会烫到无法握持，并且那后坐力足以使身体较为瘦弱的人肩膀脱臼——但它那荒谬的火力足以贯穿最为厚重的钢板。这件装置的发明者在其底部自己的名字：“波辛德的霍科博尔德”。",
+	"aspects": {
+	    "edge": 8,
+	    "forge": 4,
+	    "ap": 1,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.lionclaw.exhausted",
+	    "refresh": "weapon.lionclaw"
+	}
+    },
+    {
+	"id": "weapon.lionclaw.exhausted",
+	"label": "狮爪（枯竭）",
+	"description": "模仿刃尾兽的尾刺制作而成的，古怪且暴烈的装置。实用性极差——发射后，这件武器会烫到无法握持，并且那后坐力足以使身体较为瘦弱的人肩膀脱臼——但它那荒谬的火力足以贯穿最为厚重的钢板。这件装置的发明者在其底部自己的名字：“波辛德的霍科博尔德”。",
+	"aspects": {
+	    "exhausted": 1,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.lionclaw.exhausted",
+	    "refresh": "weapon.lionclaw"
+	},
+	"lifetime": 120,
+	"decayTo": "weapon.lionclaw",
+	"resaturate": true,
+	"icon": "weapon.lionclaw"
+    },
+    {
+	"id": "weapon.hilt",
+	"label": "不屈剑柄",
+	"description": "狮子匠不喜欢剑，但在他仍为凡人时，这曾是他的佩剑。他心中的狂怒仍在这剑柄中沸腾，如数个世纪之前的那个时刻一般炽热。将这剑柄握在手中，你的心脏便有可能因涌来的狂怒而爆裂。",
+	"aspects": {
+	    "edge": 10,
+	    "forge": 6,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.hilt.exhausted",
+	    "refresh": "weapon.hilt"
+	}
+    },
+    {
+	"id": "weapon.hilt.exhausted",
+	"label": "不屈剑柄（枯竭）",
+	"description": "狮子匠不喜欢剑，但在他仍为凡人时，这曾是他的佩剑。他心中的狂怒仍在这剑柄中沸腾，如数个世纪之前的那个时刻一般炽热。将这剑柄握在手中，你的心脏便有可能因涌来的狂怒而爆裂。",
+	"aspects": {
+	    "exhausted": 1,
+	    "weapon": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "weapon.hilt.exhausted",
+	    "refresh": "weapon.hilt"
+	},
+	"lifetime": 90,
+	"decayTo": "weapon.hilt",
+	"resaturate": true,
+	"icon": "weapon.hilt"
+    },
+    {
+	"id": "lionsmith.weaponfragment",
+	"label": "狂暴部件",
+	"description": "粉末状的硫磺，锯齿状的黄铜叶片。若我具有足够的部件，它们就可以成为更强大之物。",
+	"aspects": {
+	    "edge": 4,
+	    "supplies": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"slots": [
+	    {
+		"id": "needsfragment",
+		"label": "部件",
+		"required": {
+		    "lionsmith.weaponfragment": 1
+		}
+	    },
+	    {
+		"id": "needsfragment2",
+		"label": "部件",
+		"required": {
+		    "lionsmith.weaponfragment": 1
+		}
+	    }
+	]
+    },
+    {
+	"id": "weapon.stymphalian",
+	"label": "斯廷法洛斯之针",
+	"description": "狮子匠会派出怪物袭击他的学徒以考验他们；狮子匠的学徒会杀死怪物，并从杀死的过程中学习。这种羽状飞镖是很久以前，由一个这样的学徒在一阵顿悟中设计出的。如此可怖的力量，集中于一个如此小的尖端。[这是一件神圣的武器，但只能使用一次。]",
+	"aspects": {
+	    "weapon": 1,
+	    "edge": 12
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	}
+    },
+    {
+	"id": "tool.heart.proterant",
+	"label": "马尔鲁维姆人偶",
+	"description": "我还记得那湖尚未干涸的日子；那时阿布鲁佐地区的女巫会朝水中低语，将她们的小人偶放在小船上，送往她们敬爱并畏惧的双子之神处。在我年轻时，我曾从一个喜欢拧我耳朵的女孩那里偷来一个这种人偶——我想现在这个甚至有可能就是当年那一个。",
+	"aspects": {
+	    "heart": 6,
+	    "tool": 1
+	},
+	"icon": "toolheartb"
+    },
+    {
+	"id": "tool.grail.proterant",
+	"label": "化肌手套",
+	"description": "血肉会因这双手套的触碰而起伏并分离，人们可借此深入探索躯体内部的奥秘，而不需要借助残酷的手术刀。并且，当长久戴着这双手套时，它们会开始像变形虫一样蠕动——实际上，这种感觉还挺舒适。",
+	"aspects": {
+	    "grail": 6,
+	    "tool": 1
+	},
+	"icon": "toolgrailb"
+    },
+    {
+	"id": "tool.moth.proterant",
+	"label": "丑角面具",
+	"description": "“何为狡诈？作弊，而不被发现，并取胜。”（哄笑）“何为勇气？在英雄身上显著的特质，在死掉的英雄身上尤为显著。”（哄笑）“而何为战争？噢，只是一个让男人逃离他们妻子的机会罢了。”（哄堂大笑）",
+	"aspects": {
+	    "moth": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.lantern.proterant",
+	"label": "圣露西亚的十字架",
+	"description": "崇拜太阳及其所有化身的太阳教会的除灵用具。用意大利语大声喊出祈祷或像疯子一样将这东西推向身前并不能让它更有效力，但在使用这东西的时候，不这么做总感觉有些不对。",
+	"aspects": {
+	    "lantern": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.winter.proterant",
+	"label": "宗祖骨灰瓮",
+	"description": "第一位持有杜弗尔之名的人在置闰之前与黎明达成了某种协定。另一位杜弗尔——那被贬谪的小儿子——被塞了一笔钱并被要求远离家族，而后他作为窃贼与杀手之主做出了一番血腥事业。一个杜弗尔的血裔甚至已取得不朽之身，并自负地自称为“巡礼者”。这个瓮内是一位已死的杜弗尔。但即便已化为灰，杜弗尔之血——大地之血——仍保留着不容忽视的力量。",
+	"aspects": {
+	    "winter": 6,
+	    "tool": 1
+	}
+    },
+    {
+	"id": "tool.knock.proterant",
+	"label": "鸮形浮雕勋章",
+	"description": "这样的圆盘曾被用于装饰在战场上做出杰出贡献的罗马士兵的胸甲——但佩戴银制猫头鹰的士兵仅有领受某项特定荣誉之人；只有在不属于醒时世界的战场上战斗过的士兵，才能赢得一枚这样的勋章。",
+	"aspects": {
+	    "knock": 6,
+	    "tool": 1
+	}
+    },
+
+]
+}

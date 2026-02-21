@@ -1,0 +1,1292 @@
+{
+    "recipes": [
+        {
+            "id": "friend.anno.attack.powerup.first",
+            "label": "盟军正在调整防守策略",
+            "actionId": "friendpowerup",
+            "warmup": 0,
+            "requirements": {
+                "strategy.powerup": 1
+            },
+			"playAudioTrack": "bgm.annopowerup.mp3",
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "friend.anno.attack.powerup"
+                }
+            ],
+        },
+        {
+            "id": "friend.anno.attack.powerup",
+            "label": "盟军正在调整防守策略",
+            "startdescription": "灵体释放了他们的辉光。化作了炙热的力量",
+            "actionId": "friendpowerup",
+            "warmup": 10,
+            "requirements": {
+                "strategy.powerup": 1
+            },
+            "tablereqs": {
+                "friend.phlogisticant": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "捕获灵体",
+                "required": {
+					"friend.phlogisticant": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "aspects": {
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack.powerupmanshape"
+                },
+                {
+                    "id": "friend.anno.attack.powerupman"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.powerupmanshape",
+            "label": "挑选适格者",
+            "startdescription": "这份力量来之不易，我们需要挑选适合的人。",
+            "actionId": "foedefense",
+            "warmup": 60,
+            "requirements": {
+                "friend.phlogisticant": 1
+            },
+            "extantreqs": {
+                "tool.shape": 1
+            },
+            "effects": {
+                "friend.phlogisticant": -1
+            },
+            "aspects": {
+                "refresh": 1,
+                "restorehealth": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "盟军调遣",
+                    "required": {
+                        "friend": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "friend.stronger": 1,
+                        "anno.mark": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                },
+                {
+                    "id": "foe.deploy2",
+                    "label": "盟军调遣",
+                    "required": {
+                        "friend": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "anno.mark": 1,
+                        "friend.stronger": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                },
+                {
+                    "id": "foe.deploy3",
+                    "label": "盟军调遣",
+                    "required": {
+                        "friend": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "anno.mark": 1,
+                        "friend.stronger": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.powerupend"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.powerupman",
+            "label": "挑选适格者",
+            "startdescription": "他们正在挑选能承受这力量之人。",
+            "actionId": "foedefense",
+            "warmup": 30,
+            "requirements": {
+                "friend.phlogisticant": 1
+            },
+            "tablereqs": {
+            },
+            "effects": {
+                "friend.phlogisticant": -1
+            },
+            "aspects": {
+                "refresh": 1,
+                "restorehealth": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "盟军调遣",
+                    "required": {
+                        "local": 1,
+                        "faction.anno": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "friend.stronger": 1,
+                        "anno.mark": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                },
+                {
+                    "id": "foe.deploy2",
+                    "label": "盟军调遣",
+                    "required": {
+                        "local": 1,
+                        "faction.anno": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "anno.mark": 1,
+                        "friend.stronger": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                },
+                {
+                    "id": "foe.deploy3",
+                    "label": "盟军调遣",
+                    "required": {
+                        "local": 1,
+                        "faction.anno": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {
+                        "remnant": 1,
+                        "friend.hidden": 1,
+                        "friend.weakened": 1,
+                        "named.local": 1,
+                        "friend.monster": 1,
+                        "valkyrie": 1,
+                        "anno.mark": 1,
+                        "friend.stronger": 1,
+                        "prisoner": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                        
+                        "friend.yuri": 1,
+                        "friend.yuri.exhausted": 1,
+                        "friend.yuri.wounded": 1,
+                        "friend.konstantin": 1,
+                        "friend.konstantin.exhausted": 1,
+                        "friend.konstantin.wounded": 1,
+                        "friend.iosef": 1,
+                        "friend.iosef.exhausted": 1,
+                        "friend.iosef.wounded": 1,
+                        "friend.nikolai": 1,
+                        "friend.nikolai.exhausted": 1,
+                        "friend.nikolai.wounded": 1,
+                    },
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.powerupend"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.powerupend",
+            "label": "注入力量……",
+            "startdescription": "炙热的力量准备就绪，现在将他们注入战士之中。",
+            "actionId": "foedefense",
+            "requirements": {
+            },
+            "aspects": {
+                "refresh": 1,
+                "restorehealth": 1,
+                "bestronger": 1
+            },
+            "mutations": [
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "edge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "forge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "lantern",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "moth",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "heart",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "grail",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "winter",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend.weakened",
+                    "mutate": "knock",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "friend.weakened",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "warmup": 30,
+            "linked": [
+            ]
+        },
+        
+        {
+            "id": "friend.anno.attack.airstrike.first",
+            "label": "探明对方的部队分布",
+            "actionId": "friendairstrike",
+            "warmup": 0,
+			"maxexecutions": 1,
+			"playAudioTrack": "bgm.annoairstrike.mp3",
+            "requirements": {
+                "strategy.airstrike": 1
+            },
+            "linked": [
+                {
+                    "id": "friend.anno.attack.airstrikepre"
+                }
+            ],
+        },
+        {
+            "id": "friend.anno.attack.airstrikepre",
+            "label": "探明对方的部队分布",
+            "startdescription": "斥候出动了，他们将探明敌军的部署",
+            "actionId": "friendairstrike",
+            "warmup": 10,
+            "requirements": {
+                "strategy.airstrike": 1
+            },
+            "tablereqs": {
+                "friend.bombers": 1
+            },
+			"aspects": {
+				"fatiguing": 1
+			},
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备工作",
+                "required": {
+					"friend.scoutsanno": 1,
+					"friend.scouts": 1,
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.airstrike",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.airstrike",
+            "label": "空军正在等待待",
+            "startdescription": "轰炸机集结完毕，随时准备出发。",
+            "description": "他们没有足够的空军进行轰炸，看起来他们也有捉襟见肘的时候。",
+            "actionId": "friendairstrike",
+            "warmup": 10,
+            "requirements": {
+                "strategy.airstrike": 1
+            },
+            "tablereqs": {
+                "friend.bombers": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "空军",
+                "required": {
+					"friend.bombers": 1
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.airstrikestartwithscouts",
+                    "chance": 100
+                },
+                {
+                    "id": "friend.anno.attack.airstrikestart",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.airstrikestartwithscouts",
+            "label": "空军已经锁定了目标",
+            "startdescription": "斥候锁定了躲藏起来的敌人，轰炸马上就到",
+            "actionId": "friendairstrike",
+            "warmup": 15,
+            "requirements": {
+				"isscouts": 1,
+                "friend": 2
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe.tanks": 1,
+					"foe.tanks.hidden": 1,
+					"foe.artillery": 1,
+					"foe.artillery.hidden": 1,
+					"foe.bombers": 1,
+					"foe.bombers.hidden": 1
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+					"weakened": 1
+                },
+                "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.airstrikestartwithscouts",
+                    "chance": 50
+                },
+                {
+                    "id": "friend.anno.attack.airstrikedebuff",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.airstrikestart",
+            "label": "空军正在搜寻目标",
+            "startdescription": "轰炸机正在搜寻敌人，希望他们好运。",
+            "actionId": "friendairstrike",
+            "warmup": 25,
+            "requirements": {
+                "friend": 1,
+                "friend.bombers": 1
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "准备就绪！",
+                "required": {
+					"foe": 1,
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+					"weakened": 1
+                },
+                "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.airstrikestart",
+                    "chance": 50
+                },
+                {
+                    "id": "friend.anno.attack.airstrikedamage",
+                    "chance": 30
+                },
+                {
+                    "id": "friend.anno.attack.airstrikedebuff",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "friend.anno.attack.airstrikedamage",
+            "label": "空军遭到了重创",
+            "startdescription": "轰炸机遭到了敌军的重创，看起来他们没办法再起起飞了。",
+            "actionId": "friendairstrike",
+            "warmup": 10,
+            "grandReqs": {
+                "([foe.artillery] || [foe.bombers]) >= 1": 1
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1,
+                "makecasualty": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.airstrikedebuff",
+            "label": "成功的空袭！",
+            "startdescription": "敌军的军事基地现已一片狼藉。",
+            "description": "敌军的军事基地现已一片狼藉。",
+            "actionId": "friendairstrike",
+            "warmup": 10,
+            "aspects": {
+                "weaken": 1,
+                "revealidentity": 1,
+                "fatiguing": 1
+            },
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+
+        {
+            "id": "friend.anno.attack.stun.first",
+            "label": "盟军正在进军",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍......",
+            "description": "辉光与炮火交织，清扫一切阻碍......",
+            "actionId": "friendstun",
+            "warmup": 0,
+			"playAudioTrack": "bgm.annostun.mp3",
+            "requirements": {
+                "strategy.stun": 1
+            },
+            "extantreqs": {
+                "rome.here": -1
+            },
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun"
+                }
+            ],
+        },
+        {
+            "id": "friend.anno.attack.stun",
+            "label": "盟军正在进军",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍......",
+            "description": "辉光与炮火交织，清扫一切阻碍......",
+            "actionId": "friendstun",
+            "warmup": 30,
+            "requirements": {
+                "strategy.stun": 1
+            },
+            "extantreqs": {
+                "rome.here": -1
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "盟军",
+                "required": {
+                    "faction.anno": 1,
+                    "friend": 1
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                    "remnant": 1,
+	    			"named.local": 1,
+	    			"friend.monster": 1,
+					"valkyrie": 1,
+                    "prisoner": 1,
+                    "exhausted": 1,
+                    "damaged": 1,
+                        "anno.mark": 1,
+	                "wounded": 1,
+					"friend.yuri": 1,
+					"friend.yuri.exhausted": 1,
+					"friend.yuri.wounded": 1,
+					"friend.konstantin": 1,
+					"friend.konstantin.exhausted": 1,
+					"friend.konstantin.wounded": 1,
+					"friend.iosef": 1,
+					"friend.iosef.exhausted": 1,
+					"friend.iosef.wounded": 1,
+					"friend.nikolai": 1,
+					"friend.nikolai.exhausted": 1,
+					"friend.nikolai.wounded": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "盟军",
+                "required": {
+                    "faction.anno": 1,
+                    "friend": 1
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                    "remnant": 1,
+	    			"named.local": 1,
+	    			"friend.monster": 1,
+					"valkyrie": 1,
+                    "prisoner": 1,
+                    "exhausted": 1,
+                    "damaged": 1,
+                        "anno.mark": 1,
+	                "wounded": 1,
+					"friend.yuri": 1,
+					"friend.yuri.exhausted": 1,
+					"friend.yuri.wounded": 1,
+					"friend.konstantin": 1,
+					"friend.konstantin.exhausted": 1,
+					"friend.konstantin.wounded": 1,
+					"friend.iosef": 1,
+					"friend.iosef.exhausted": 1,
+					"friend.iosef.wounded": 1,
+					"friend.nikolai": 1,
+					"friend.nikolai.exhausted": 1,
+					"friend.nikolai.wounded": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "盟军",
+                "required": {
+                    "faction.anno": 1,
+                    "friend": 1
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                    "remnant": 1,
+	    			"named.local": 1,
+	    			"friend.monster": 1,
+					"valkyrie": 1,
+                    "prisoner": 1,
+                    "exhausted": 1,
+                        "anno.mark": 1,
+                    "damaged": 1,
+	                "wounded": 1,
+					"friend.yuri": 1,
+					"friend.yuri.exhausted": 1,
+					"friend.yuri.wounded": 1,
+					"friend.konstantin": 1,
+					"friend.konstantin.exhausted": 1,
+					"friend.konstantin.wounded": 1,
+					"friend.iosef": 1,
+					"friend.iosef.exhausted": 1,
+					"friend.iosef.wounded": 1,
+					"friend.nikolai": 1,
+					"friend.nikolai.exhausted": 1,
+					"friend.nikolai.wounded": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun_foe",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_foe",
+            "label": "敌军试图阻拦行军！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
+            "description": "辉光与炮火交织，清扫一切阻碍.....",
+            "actionId": "friendstun",
+            "warmup": 30,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "敌军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun_friendagain",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_friendagain",
+            "label": "更多的部队正在集结！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
+            "actionId": "friendstun",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "盟军",
+                "required": {
+                    "faction.anno": 1,
+                    "friend": 1
+                },
+                "essential": {
+                    "local": 1
+                },
+                "forbidden": {
+                    "remnant": 1,
+	    			"named.local": 1,
+	    			"friend.monster": 1,
+					"valkyrie": 1,
+                    "prisoner": 1,
+                        "anno.mark": 1,
+                    "exhausted": 1,
+                    "damaged": 1,
+	                "wounded": 1,
+					"friend.yuri": 1,
+					"friend.yuri.exhausted": 1,
+					"friend.yuri.wounded": 1,
+					"friend.konstantin": 1,
+					"friend.konstantin.exhausted": 1,
+					"friend.konstantin.wounded": 1,
+					"friend.iosef": 1,
+					"friend.iosef.exhausted": 1,
+					"friend.iosef.wounded": 1,
+					"friend.nikolai": 1,
+					"friend.nikolai.exhausted": 1,
+					"friend.nikolai.wounded": 1,
+                        "friend.fiorenza": 1,
+                        "friend.fiorenza.exhausted": 1,
+                        "friend.fiorenza.wounded": 1,
+                        "friend.lorenzo": 1,
+                        "friend.lorenzo.exhausted": 1,
+                        "friend.lorenzo.wounded": 1,
+                        "friend.padre": 1,
+                        "friend.padre.exhausted": 1,
+                        "friend.padre.wounded": 1,
+                        "friend.daria": 1,
+                        "friend.daria.exhausted": 1,
+                        "friend.daria.wounded": 1,
+                },
+                "greedy": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun_friendagain",
+                    "chance": 50
+                },
+                {
+                    "id": "friend.anno.attack.stun_foeagain"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_foeagain",
+            "label": "敌军正在调集更多的部队！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
+            "actionId": "friendstun",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "盟军",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+					"foe.umiri.mark": 1,
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun_foeagain",
+                    "chance": 50
+                },
+                {
+                    "id": "friend.anno.attack.stun_end"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_end",
+            "label": "这次的战斗没能分出胜负",
+            "startdescription": "双方各自撤回阵地，这次行军，双方都没能得到自己想要的",
+            "actionId": "friendstun",
+            "warmup": 0,
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+            ],
+            "linked": [
+                {
+                    "id": "friend.anno.attack.stun_friendwin"
+                },
+                {
+                    "id": "friend.anno.attack.stun_foewin"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_foewin",
+            "label": "敌军的防线被瓦解！",
+            "startdescription": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
+            "description": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
+            "actionId": "friendstun",
+            "warmup": 10,
+            "grandReqs": {
+                "([needsedge] + [needsedgewinter] + [needswinter]) >= {[edge] + ([lantern] + [forge]) / 4 + 10}": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "makecasualty": 1,
+            },
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "friend.anno.attack.stun_friendwin",
+            "label": "新军的行军失利！",
+            "startdescription": "新军的攻势被敌人阻挡，他们正在重新集结。",
+            "description": "新军的攻势被敌人阻挡，他们正在重新集结。",
+            "actionId": "operate",
+            "warmup": 10,
+            "grandReqs": {
+                "([needsedge] + [needsedgewinter] + [needswinter] + [needsforge] / 4 + 10) <= {[edge] + ([lantern] + [forge]) / 4}": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "killfoe": 1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe.officerdetail",
+                    "mutate": "foe.officerdetail",
+                    "level": 0
+                }
+            ],
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "travelslot.end",
+	"label": "向外行军",
+	"startdescription": "身后是战争，身前亦是战争。",
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "travelling.cycle.haltverbs",
+		"additional": true,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"warzone": 1
+		    }
+		}
+	    },
+	    {
+		"id": "time.first.contemnant",
+		"additional": true
+	    },
+	    {
+		"id": "time.first.proterant",
+		"additional": true
+	    },
+	    {
+		"id": "time.first.obdurant",
+		"additional": true
+	    },
+	    {
+		"id": "corrivality.first",
+		"additional": true
+	    },
+	    {
+		"id": "wolfcycle.first",
+		"additional": true
+	    }
+	],
+	"inductions": [
+	    {
+		"id": "travelling.frienddestronger",
+		"additional": true,
+		"expulsion": {
+		    "limit": 99,
+		    "filter": {
+			"friend.stronger": 1
+		    }
+		}
+	    }
+	],
+	"mutations": [
+	    {
+		"filter": "friend.departing",
+		"mutate": "friend",
+		"level": 0
+	    },
+	    {
+		"filter": "friend",
+		"mutate": "friend.departing",
+		"level": 0
+	    }
+	],
+	"burnimage": "marching"
+    },
+
+    ]
+}

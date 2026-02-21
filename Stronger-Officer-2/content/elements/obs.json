@@ -1,0 +1,987 @@
+{
+"elements": [
+    {
+	"id": "side.umiri.withanno",
+	"label": "次要目标：突袭敌军指挥部",
+	"description": "重塑者与海铃的战争不过轻易的终止，如果没有外人的干涉，他们大概不会轻易结束。也许一次从侧翼的进攻可以帮助我的盟友找到机会。这样，也许战斗结束之后，她会有兴趣和我好好聊聊。[你可以通过将<i>意图：重塑者与铁玫瑰</i>入梦来重复获得这张卡牌]",
+	"inherits": "side.template",
+	"lifetime": 0,
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "enemywithdraw"
+		},
+		{
+		    "id": "foe.umiri.dead.withanno",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.disaster",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.goliath",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.umiriinbattalion",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.umiri.withanno.exhausted"
+	},
+	"icon": "side.umiri2"
+    },
+    {
+	"id": "side.umiri.withanno.exhausted",
+	"label": "次要目标：突袭敌军指挥部",
+	"description": "重塑者与海铃的战争不过轻易的终止，如果没有外人的干涉，他们大概不会轻易结束。也许一次从侧翼的进攻可以帮助我的盟友找到机会。这样，也许战斗结束之后，她会有兴趣和我好好聊聊。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.umiri.withanno",
+	"unique": true,
+	"xtriggers": {
+        "stop_goal": "side.umiri.withanno.exhausted"
+	},
+	"icon": "side.umiri2"
+    },
+    {
+	"id": "main.rout",
+	"label": "主要目标：击溃",
+	"description": "我们的目标非常简单：将敌人完全歼灭。杀光他们。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.manhunters",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.rout.exhausted"
+	}
+    },
+    {
+	"id": "main.capture",
+	"label": "主要目标：占领",
+	"description": "敌军已在此就位——在我们的家与我们的街上就位。将他们驱赶出去，夺回这座城市。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.capture.exhausted"
+	}
+    },
+    {
+	"id": "main.star",
+	"label": "主要目标：坠落之星",
+	"description": "两支军队现已化为乌有，现在我们便能够追寻真正的目标。我从未与星战斗过。它或许会杀死我。但我也从未被杀死过，所以接下来的走向又有谁说得准呢？",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "token.star"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.apollonian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.star.a",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.star.b",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.star.exhausted"
+	},
+	"icon": "vaultloneandlevelsands1"
+    },
+    {
+	"id": "side.rescuepartisans",
+	"label": "次要目标：救援游击队",
+	"description": "一批我们的同伴被敌军锁定了！若我们不加以介入我们就会失去这些友军——都起来，拿好武器！[一个获得新的友军的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "rescuepartisans.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.rescuepartisans.exhausted"
+	},
+	"lifetime": 300
+    },
+   {
+	"id": "side.spacemaze",
+	"label": "现实分裂",
+	"description": "空间在此处折叠，在彼处开裂。仅是向前一步，就可能使你前进到目所能及的范围外；协调一致的行进已变为不可能。我们被一座隐形的迷宫所包围——但任何迷宫都有其心脏。若我们寻得这一迷宫的心脏，我们会被从中解放吗？[只要此卡牌存在，侦查当前战区的行动就大概率会失败。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "husk"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.moonspace",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.greatseal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.spacemaze.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.wilhelm",
+	"label": "城郊的冲突？",
+	"description": "一声巨大的喧嚣在远处回响，金属与石头发出如数百座教堂崩塌般的巨响。烟雾在地平线翻腾。或许是一场战斗——但这破坏至少需要一小支军队才能做到。究竟有什么在那里等着？",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.wilhelm"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.chasseur",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.colonel",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.wilhelm.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest4"
+    },
+    {
+	"id": "main.rome.west",
+	"label": "主要目标：罗马西部",
+	"description": "台伯河岸区遍布德军的封锁；德军坦克在梵蒂冈周边逡巡。对我来说，在台伯河西岸的<i>法西斯分子</i>太多了——但他们尚不知晓他们是来此处送死的。我将教导他们。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.rome.west.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.rome.west.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "main.rome.central",
+	"label": "主要目标：罗马中部",
+	"description": "在此处，帝国的幽灵最为可见；但最新出现的鬼魅是那些<i>法西斯分子</i>。皇帝的士兵曾在这些道路上行军——<i>我</i>曾在这些道路上行军，而那时，当我这么做的时候，我还身缠锁链。但现在，我自由，且我强大，已没有持鞭或持枪的士兵能使我动摇。今天，我就是这个地方唯一值得被畏惧的力量。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.rome.central.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.bombers",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.rome.central.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "main.rome.east",
+	"label": "主要目标：罗马东部",
+	"description": "蔓延在罗马东侧的山丘上充满了法西斯分子的武器：<i>埃斯基林山</i>如此；<i>维米纳莱山</i>亦如此；<i>奎里纳莱山</i>也不例外。建筑依山坡地势而起伏——一个难对付的战场，或者说，一座迷宫。我们需要一条街接一条街地战斗。但这里是我们的家，而我们比那些入侵者更加熟悉这迷宫的每一条道路。是的——这些<i>法西斯分子</i>将会远死他乡。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.rome.east.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.manhunters",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.rome.east.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "side.velletri",
+	"label": "韦莱特里大学",
+	"description": "这所大学的真菌学学部常有外来学者出入：有德国人；有日本人；有时还有秘鲁人和中国人。现在，因为战争，这所大学的大部分建筑都已变为法西斯士兵的营房——但他们视真菌学学部如瘟疫。那里必定有着什么人，因为那里的窗户在夜里总是有脸出现。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.club"
+		},
+		{
+		    "id": "tool.grail.proterant",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.growth",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.velletri.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest5"
+    },
+    {
+	"id": "side.ortucchio",
+	"label": "杜法里宫",
+	"description": "四十年前，一群外国代理人试图向奥尔图基奥的杜弗尔家族行使其管辖权——这并不顺利。他们中三分之一在这家族最为恶名昭彰的末子决定诉诸武力时死于发出的枪弹；另外三分之一在余波中死去，因一个缺乏抵抗力的代理人将一种不详的恶疾传染给了他的同伴。最终，这座<i>宫殿</i>已变得不适合任何人居住。那些仍居住在奥尔图基奥的人不敢踏足那里——他们说只有幽灵在那里行走、我怀疑在那废墟里定居的是更加糟糕之物。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.knock.proterant"
+		},
+		{
+		    "id": "tool.winter.proterant",
+		    "morpheffect": "spawn"
+		},
+		{
+		    "id": "weapon.rifle.4",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.growth",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.robigo",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.ortucchio.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent1"
+    },
+    {
+	"id": "side.benevento",
+	"label": "巫术之树",
+	"description": "贝内文托的<i>嘉娜拉女巫</i>会聚集在萨巴多河岸边一棵古老的胡桃树下，肆意纵马狂奔并吞食可怕的供品。她们拥有狂野的力量与奇怪的食欲。所以村民们将畸形儿的出生怪罪于她们，也正是因此，圣巴巴托斯以教会之名将这棵树连根拔起。即便如此，在安息日的早晨，当地人有时仍会发现他们的马的鬃毛被编织成辫，并因疲惫而吐沫。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.heart.proterant"
+		},
+		{
+		    "id": "tool.lantern.proterant",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.storms",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.secretdoor",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.serpent",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.benevento.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultshires4"
+    },
+    {
+	"id": "side.campobasso",
+	"label": "蒙福特城堡",
+	"description": "它并不像“城堡”一词所象征的那么庞大，但这座山顶上的要塞已被证明同样极其易守难攻——这也是我们这一次进攻选择从下方进入的原因。“如果我年轻些，我可以独自一人挖开这条隧道，”欧索丽娜说。“如果我再年轻些，我可以独自一人<i>攻下这座要塞</i>。人人都会变老，不是吗？”",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.forge"
+		},
+		{
+		    "id": "weapon.revolver.5",
+		    "morpheffect": "spawn"
+		},
+		{
+		    "id": "supplies.explosives",
+		    "morpheffect": "spawn",
+		    "level": 3
+		},
+		{
+		    "id": "supplies.flares",
+		    "morpheffect": "spawn",
+		    "level": 3
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.manhunters",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.campobasso.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.termoli",
+	"label": "朱代特父子有限公司",
+	"description": "乔吉奥的窃贼——长有如夜色般的双翼与如鲜血般的喙的鸦状生物——在这间码头仓库的废墟里筑巢。被其窃来的宝物毫无疑问也都被安置在那里。“我的同僚不敢靠近那里——他们有的过于迷信，有的过于胆怯。至于我？我…… <i>名义上是勇敢的</i>，但勇气只能在你与死亡间撑起一道薄弱的屏障。你才是这里真正的战士，因此我想你应该第一个跨进那扇门。”",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.moth.proterant"
+		},
+		{
+		    "id": "weapon.lionclaw",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.secretdoor",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.termoli.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcapitaldefault"
+    },
+    {
+	"id": "side.ortona",
+	"label": "不可见营地",
+	"description": "不可见军团的士兵正大批离开罗马，以护送某件珍贵之物远离即将降临那座城市的破坏。我不知道那具体是什么，但当我入眠时，我能够在我梦境的黑暗中看见它：炫目、灼热、且早已破碎。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.hilt"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.chasseur",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.ortona.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.lorenzo",
+	"label": "次要目标：洛伦佐",
+	"description": "<i>圣玛利亚医院</i>的一部分因轰炸与交火变得不再安全。不过在那残骸之后是我们仍能使用且急需的设施。清理残骸是一件费事的工作，但洛伦佐表明真正危险的是医院深处，一个巨大且不友善的生物将那里作为巢穴。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.lorenzo.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.warrior",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.lorenzo.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.fiorenza",
+	"label": "次要目标：菲奥伦扎",
+	"description": "一队游击队战士曾尝试救援一些被困在交战区的当地平民。那次行动很糟糕，现在只有十二名游击队战士在那里，保护比他们多得多的平民，其中不乏学生、孩童与老人。躲藏在<i>圣杰拉尔多大教堂</i>内的这些人坚持不了多久。菲奥伦扎认识他们中几乎每个人。她请求我协助她展开救援。我们会是首个听她请求的人吗？",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.fiorenza.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.storms",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.fiorenza.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.padre",
+	"label": "次要目标：鲁杰罗神父",
+	"description": "为将占领者赶出城市，同盟国空军对那不勒斯进行了无慈悲的轰炸。太多无辜者因此而死，而被错杀之人重新行于世上的案例并不罕见。在轰炸最为集中且猛烈的地点，这样的亡魂最多。愤怒？困惑？毫无察觉？“这些都不重要，”教士解释道、“神赋予了我们职责。平息其痛苦，许可其离开的职责。”",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.padre.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.padre.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.daria",
+	"label": "次要目标：达莉亚",
+	"description": "很长一段时间内，达莉亚致力于从官方记录中抹消有关她的一切痕迹。她曾认为这项工作已经完成，但显然一份政府文件的备份被撤退中的法西斯军队移动到了这栋建筑内。“那片城区仍处于敌军控制之下，”达莉亚说。“并且那栋建筑本身对任何足够熟练的<i>狙击手</i>而言都是绝佳的狙击位置。但倘若我们安静地前进，我们应该都能保住脑袋。”",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.daria.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.daria.exhausted"
+	},
+	"unique": true
+    },
+	
+    {
+	"id": "main.rout.exhausted",
+	"label": "主要目标：击溃",
+	"description": "我们的目标非常简单：将敌人完全歼灭。杀光他们。",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.rout",
+	"icon": "main.rout",
+	"xtriggers": {
+        "stop_goal": "main.rout.exhausted"
+	}
+    },
+    {
+	"id": "main.capture.exhausted",
+	"label": "主要目标：占领",
+	"description": "敌军已在此就位——在我们的家与我们的街上就位。将他们驱赶出去，夺回这座城市。",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.capture",
+	"icon": "main.capture",
+	"xtriggers": {
+        "stop_goal": "main.capture.exhausted"
+	}
+    },
+    {
+	"id": "main.star.exhausted",
+	"label": "主要目标：坠落之星",
+	"description": "两支军队现已化为乌有，现在我们便能够追寻真正的目标。我从未与星战斗过。它或许会杀死我。但我也从未被杀死过，所以接下来的走向又有谁说得准呢？",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.star",
+	"xtriggers": {
+        "stop_goal": "main.star.exhausted"
+	},
+	"icon": "vaultloneandlevelsands1"
+    },
+    {
+	"id": "side.rescuepartisans.exhausted",
+	"label": "次要目标：救援游击队",
+	"description": "一批我们的同伴被敌军锁定了！若我们不加以介入我们就会失去这些友军——都起来，拿好武器！[一个获得新的友军的机会。]",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.rescuepartisans",
+    "decayTo": "side.rescuepartisans",
+	"xtriggers": {
+        "stop_goal": "side.rescuepartisans.exhausted"
+	},
+    },
+   {
+	"id": "side.spacemaze.exhausted",
+	"label": "现实分裂",
+	"description": "空间在此处折叠，在彼处开裂。仅是向前一步，就可能使你前进到目所能及的范围外；协调一致的行进已变为不可能。我们被一座隐形的迷宫所包围——但任何迷宫都有其心脏。若我们寻得这一迷宫的心脏，我们会被从中解放吗？[只要此卡牌存在，侦查当前战区的行动就大概率会失败。]",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.spacemaze",
+    "decayTo": "side.spacemaze",
+	"xtriggers": {
+        "stop_goal": "side.spacemaze.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.wilhelm.exhausted",
+	"label": "城郊的冲突？",
+	"description": "一声巨大的喧嚣在远处回响，金属与石头发出如数百座教堂崩塌般的巨响。烟雾在地平线翻腾。或许是一场战斗——但这破坏至少需要一小支军队才能做到。究竟有什么在那里等着？",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.wilhelm",
+	"xtriggers": {
+        "stop_goal": "side.wilhelm.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest4"
+    },
+    {
+	"id": "main.rome.west.exhausted",
+	"label": "主要目标：罗马西部",
+	"description": "台伯河岸区遍布德军的封锁；德军坦克在梵蒂冈周边逡巡。对我来说，在台伯河西岸的<i>法西斯分子</i>太多了——但他们尚不知晓他们是来此处送死的。我将教导他们。",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.rome.west",
+	"xtriggers": {
+        "stop_goal": "main.rome.west.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "main.rome.central.exhausted",
+	"label": "主要目标：罗马中部",
+	"description": "在此处，帝国的幽灵最为可见；但最新出现的鬼魅是那些<i>法西斯分子</i>。皇帝的士兵曾在这些道路上行军——<i>我</i>曾在这些道路上行军，而那时，当我这么做的时候，我还身缠锁链。但现在，我自由，且我强大，已没有持鞭或持枪的士兵能使我动摇。今天，我就是这个地方唯一值得被畏惧的力量。",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.rome.central",
+	"xtriggers": {
+        "stop_goal": "main.rome.central.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "main.rome.east.exhausted",
+	"label": "主要目标：罗马东部",
+	"description": "蔓延在罗马东侧的山丘上充满了法西斯分子的武器：<i>埃斯基林山</i>如此；<i>维米纳莱山</i>亦如此；<i>奎里纳莱山</i>也不例外。建筑依山坡地势而起伏——一个难对付的战场，或者说，一座迷宫。我们需要一条街接一条街地战斗。但这里是我们的家，而我们比那些入侵者更加熟悉这迷宫的每一条道路。是的——这些<i>法西斯分子</i>将会远死他乡。",
+	"inherits": "main.rome.east",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "main.rome.east",
+	"xtriggers": {
+        "stop_goal": "main.rome.east.exhausted"
+	},
+	"icon": "main.rome",
+	"unique": true
+    },
+    {
+	"id": "side.velletri.exhausted",
+	"label": "韦莱特里大学",
+	"description": "这所大学的真菌学学部常有外来学者出入：有德国人；有日本人；有时还有秘鲁人和中国人。现在，因为战争，这所大学的大部分建筑都已变为法西斯士兵的营房——但他们视真菌学学部如瘟疫。那里必定有着什么人，因为那里的窗户在夜里总是有脸出现。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.velletri",
+	"xtriggers": {
+        "stop_goal": "side.velletri.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest5"
+    },
+    {
+	"id": "side.ortucchio.exhausted",
+	"label": "杜法里宫",
+	"description": "四十年前，一群外国代理人试图向奥尔图基奥的杜弗尔家族行使其管辖权——这并不顺利。他们中三分之一在这家族最为恶名昭彰的末子决定诉诸武力时死于发出的枪弹；另外三分之一在余波中死去，因一个缺乏抵抗力的代理人将一种不详的恶疾传染给了他的同伴。最终，这座<i>宫殿</i>已变得不适合任何人居住。那些仍居住在奥尔图基奥的人不敢踏足那里——他们说只有幽灵在那里行走、我怀疑在那废墟里定居的是更加糟糕之物。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.ortucchio",
+	"xtriggers": {
+        "stop_goal": "side.ortucchio.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent1"
+    },
+    {
+	"id": "side.benevento.exhausted",
+	"label": "巫术之树",
+	"description": "贝内文托的<i>嘉娜拉女巫</i>会聚集在萨巴多河岸边一棵古老的胡桃树下，肆意纵马狂奔并吞食可怕的供品。她们拥有狂野的力量与奇怪的食欲。所以村民们将畸形儿的出生怪罪于她们，也正是因此，圣巴巴托斯以教会之名将这棵树连根拔起。即便如此，在安息日的早晨，当地人有时仍会发现他们的马的鬃毛被编织成辫，并因疲惫而吐沫。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.benevento",
+	"xtriggers": {
+        "stop_goal": "side.benevento.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultshires4"
+    },
+    {
+	"id": "side.campobasso.exhausted",
+	"label": "蒙福特城堡",
+	"description": "它并不像“城堡”一词所象征的那么庞大，但这座山顶上的要塞已被证明同样极其易守难攻——这也是我们这一次进攻选择从下方进入的原因。“如果我年轻些，我可以独自一人挖开这条隧道，”欧索丽娜说。“如果我再年轻些，我可以独自一人<i>攻下这座要塞</i>。人人都会变老，不是吗？”",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.campobasso",
+    "decayTo": "side.campobasso",
+	"xtriggers": {
+        "stop_goal": "side.campobasso.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.termoli.exhausted",
+	"label": "朱代特父子有限公司",
+	"description": "乔吉奥的窃贼——长有如夜色般的双翼与如鲜血般的喙的鸦状生物——在这间码头仓库的废墟里筑巢。被其窃来的宝物毫无疑问也都被安置在那里。“我的同僚不敢靠近那里——他们有的过于迷信，有的过于胆怯。至于我？我…… <i>名义上是勇敢的</i>，但勇气只能在你与死亡间撑起一道薄弱的屏障。你才是这里真正的战士，因此我想你应该第一个跨进那扇门。”",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.termoli",
+	"xtriggers": {
+        "stop_goal": "side.termoli.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcapitaldefault"
+    },
+    {
+	"id": "side.ortona.exhausted",
+	"label": "不可见营地",
+	"description": "不可见军团的士兵正大批离开罗马，以护送某件珍贵之物远离即将降临那座城市的破坏。我不知道那具体是什么，但当我入眠时，我能够在我梦境的黑暗中看见它：炫目、灼热、且早已破碎。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+    "decayTo": "side.ortona",
+	"xtriggers": {
+        "stop_goal": "side.ortona.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.lorenzo.exhausted",
+	"label": "次要目标：洛伦佐",
+	"description": "<i>圣玛利亚医院</i>的一部分因轰炸与交火变得不再安全。不过在那残骸之后是我们仍能使用且急需的设施。清理残骸是一件费事的工作，但洛伦佐表明真正危险的是医院深处，一个巨大且不友善的生物将那里作为巢穴。",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.lorenzo",
+    "decayTo": "side.lorenzo",
+	"xtriggers": {
+        "stop_goal": "side.lorenzo.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.fiorenza.exhausted",
+	"label": "次要目标：菲奥伦扎",
+	"description": "一队游击队战士曾尝试救援一些被困在交战区的当地平民。那次行动很糟糕，现在只有十二名游击队战士在那里，保护比他们多得多的平民，其中不乏学生、孩童与老人。躲藏在<i>圣杰拉尔多大教堂</i>内的这些人坚持不了多久。菲奥伦扎认识他们中几乎每个人。她请求我协助她展开救援。我们会是首个听她请求的人吗？",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.fiorenza",
+    "decayTo": "side.fiorenza",
+	"xtriggers": {
+        "stop_goal": "side.fiorenza.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.padre.exhausted",
+	"label": "次要目标：鲁杰罗神父",
+	"description": "为将占领者赶出城市，同盟国空军对那不勒斯进行了无慈悲的轰炸。太多无辜者因此而死，而被错杀之人重新行于世上的案例并不罕见。在轰炸最为集中且猛烈的地点，这样的亡魂最多。愤怒？困惑？毫无察觉？“这些都不重要，”教士解释道、“神赋予了我们职责。平息其痛苦，许可其离开的职责。”",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.padre",
+    "decayTo": "side.padre",
+	"xtriggers": {
+        "stop_goal": "side.padre.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.daria.exhausted",
+	"label": "次要目标：达莉亚",
+	"description": "很长一段时间内，达莉亚致力于从官方记录中抹消有关她的一切痕迹。她曾认为这项工作已经完成，但显然一份政府文件的备份被撤退中的法西斯军队移动到了这栋建筑内。“那片城区仍处于敌军控制之下，”达莉亚说。“并且那栋建筑本身对任何足够熟练的<i>狙击手</i>而言都是绝佳的狙击位置。但倘若我们安静地前进，我们应该都能保住脑袋。”",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+    "resaturate": true,
+	"icon": "side.daria",
+    "decayTo": "side.daria",
+	"xtriggers": {
+        "stop_goal": "side.daria.exhausted"
+	},
+	"unique": true
+    },
+]
+}

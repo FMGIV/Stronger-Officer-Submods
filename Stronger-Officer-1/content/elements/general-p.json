@@ -1,0 +1,44 @@
+{
+"elements": [
+    {
+	"id": "influence_temp",
+	"label": "临时影响",
+	"description": "这是会被火力覆盖催坏的影响",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "op.woods",
+	"label": "Woods",
+	"description": "Not <i>the</i> Wood, thankfully. We can hide here without having to worry about being devoured. Usually.",
+	"aspects": {
+	    "moth": 4,
+	    "heart": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "op.stardust",
+	"label": "Stellar Residue",
+	"description": "Remnants of power, cast off from the body of the star as it raced down from heaven. Ephemeral, but potent.",
+	"aspects": {
+	    "lantern": 4,
+	    "forge": 4,
+	    "knock": 4,
+	    "op": 1,
+		"influence_temp": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "husk"
+	},
+	"lifetime": 300,
+	"icon": "apostlelantern.pillar3"
+    },
+
+]
+}

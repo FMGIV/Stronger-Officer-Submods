@@ -1,0 +1,1153 @@
+{
+    "recipes": [
+    {
+	"id": "startup.produce.friend.phlogisticant0",
+	"actionid": "spit.grail",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
+	"warmup": 10,
+	"effects": {
+		"friend.phlogisticant": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"friend.phlogisticant",
+		"nothing",
+		"nothing",
+	    ],
+	    "draws": 2,
+	    "resetonexhaustion": true,
+	    "defaultcard": "nothing"
+	},
+	"linked": [
+		{
+			"id": "startup.produce.friend.phlogisticant.local"
+		}
+	]
+    },
+    {
+	"id": "startup.produce.friend.phlogisticant",
+	"actionid": "spit.grail",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
+	"warmup": 10,
+	"effects": {
+		"friend.phlogisticant": 1
+	},     
+	"internaldeck": {
+	    "spec": [
+		"friend.phlogisticant",
+		"friend.phlogisticant",
+		"friend.phlogisticant",
+		"nothing",
+	    ],
+	    "draws": 2,
+	    "resetonexhaustion": true,
+	    "defaultcard": "nothing"
+	},
+	"linked": [
+		{
+			"id": "startup.produce.friend.phlogisticant.local"
+		}
+	]
+    },
+    {
+	"id": "startup.produce.friend.phlogisticant.local",
+	"actionid": "explosion",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
+	"mutations": [
+		{
+			"filter": "friend",
+			"mutate": "local",
+			"level": 1,
+			"additive": true
+		},
+	],
+	"linked": [
+	]
+    },
+
+    {
+	"id": "produce.friend.explosion",
+	"actionid": "explosion",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
+	"linked": [
+	    {
+		"id": "produce.friend.explosion.random",
+		"chance": 70
+	    },
+	    {
+		"id": "produce.friend.explosion.yourself"
+	    }
+	]
+    },
+    {
+	"id": "produce.friend.explosion.random",
+	"actionid": "explosion",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
+	"slots": [
+	    {
+		"id": "needstarget",
+		"label": "Casualty",
+		"required": {
+		    "friend": 1,
+		    "foe": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"aspects": {
+	    "makecasualty": 1,
+	    "killfoe": 1
+	}
+    },
+    {
+	"id": "produce.friend.explosion.yourself",
+	"actionid": "explosion",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "givewound.clear"
+	    }
+	]
+    },
+	
+    {
+	"id": "produce.umiri.withdraw",
+	"actionid": "enemyaction.withdraw",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
+	"warmup": 5,
+	"requirements": {
+		"foe.umiri.mark": -1,
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "敌军军官",
+		"required": {
+			"foe.umiri.mark": 1,
+		},
+		"forbidden": {
+		},
+		"greedy": true
+		}
+	],
+	"linked": [
+	    {
+		"id": "produce.umiri.withdraw"
+	    },
+	    {
+		"id": "produce.umiri.withdraw.officerdetail"
+	    },
+	    {
+		"id": "produce.umiri.withdraw.end.first"
+	    },
+	    {
+		"id": "produce.umiri.withdraw.end"
+	    }
+	]
+    },
+    {
+	"id": "produce.umiri.withdraw.officerdetail",
+	"actionid": "enemyaction.withdraw",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
+	"warmup": 5,
+	"tablereqs": {
+		"foe.officerdetail": 1,
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "敌军特遣队",
+		"required": {
+			"foe.officerdetail": 1,
+		},
+		"forbidden": {
+		},
+		"greedy": true
+		}
+	],
+	"linked": [
+	    {
+		"id": "produce.umiri.withdraw.officerdetail"
+	    },
+	    {
+		"id": "produce.umiri.withdraw.end.first"
+	    },
+	    {
+		"id": "produce.umiri.withdraw.end"
+	    }
+	]
+    },
+    {
+	"id": "produce.umiri.withdraw.end.first",
+	"actionid": "enemyaction.withdraw",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
+	"warmup": 5,
+	"maxexecutions": 1,
+	"effects": {
+		"foe": -99,
+		"foe.umiri.dead.withanno": 1
+	},
+	"haltverb": {
+		"foecoming": 99,
+		"foeactionumiri": 99,
+	},
+	"inductions": [
+		{
+			"id": "weakenenemies.detect",
+		},
+	]
+    },
+    {
+	"id": "produce.umiri.withdraw.end",
+	"actionid": "enemyaction.withdraw",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
+	"warmup": 5,
+	"effects": {
+		"foe": -99,
+	},
+	"haltverb": {
+		"foecoming": 99,
+		"foeactionumiri": 99,
+	},
+	"inductions": [
+		{
+			"id": "weakenenemies.detect",
+		},
+	]
+    },
+	
+    {
+	"id": "produce.friendannoattackumiri",
+	"actionid": "enemyobstacle",
+	"label": "盟军受挫！",
+	"startdescription": "正在前进支援盟军侧翼……",
+	"warmup": 10,
+	"aspects": {
+		"revealidentity": 1
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "敌军特遣队",
+		"required": {
+			"hindrance": 1,
+			"foe": 1,
+		},
+		"forbidden": {
+			"foe.officerdetail": 1,
+		},
+		"greedy": true
+		},
+	],
+	"effects": {
+	},
+	"alt": [
+	],
+	"linked": [
+	    {
+		"id": "friendannoattackumiri.needs"
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.needs",
+	"label": "盟军受挫！",
+	"startdescription": "正在前进支援盟军侧翼……",
+	"warmup": 30,
+	"slots": [
+		{
+		"id": "defend",
+		"label": "支援",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		},
+		"forbidden": {
+			"exhausted": 1,
+			"wounded": 1,
+			"damaged": 1,
+			"anno.mark": 1
+		},
+		},
+	],
+	"effects": {
+	},
+	"alt": [
+	    {
+		"id": "friendannoattackumiri.aerial"
+	    },
+	    {
+		"id": "friendannoattackumiri.ap"
+	    },
+	    {
+		"id": "friendannoattackumiri.edge"
+	    },
+	    {
+		"id": "friendannoattackumiri.winter"
+	    },
+	    {
+		"id": "friendannoattackumiri.heart"
+	    },
+	    {
+		"id": "friendannoattackumiri.grail"
+	    },
+	    {
+		"id": "friendannoattackumiri.moth"
+	    },
+	    {
+		"id": "friendannoattackumiri.lantern"
+	    },
+	    {
+		"id": "friendannoattackumiri.forge"
+	    },
+	    {
+		"id": "friendannoattackumiri.knock"
+	    },
+	    {
+		"id": "friendannoattackumiri.forgemoth"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgelantern"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgewinter"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgeforge"
+	    },
+	    {
+		"id": "friendannoattackumiri.knocklantern"
+	    },
+	    {
+		"id": "friendannoattackumiri.forgeheart"
+	    },
+	    {
+		"id": "friendannoattackumiri.winterlantern"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgeknock"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgeheart"
+	    },
+	    {
+		"id": "friendannoattackumiri.edgegrail"
+	    },
+	    {
+		"id": "friendannoattackumiri.winterheart"
+	    },
+	    {
+		"id": "friendannoattackumiri.lanternheart"
+	    }
+	],
+	"linked": [
+		{
+			"id": "friendannoattackumiri.fall",
+		},
+	]
+    },
+    {
+	"id": "friendannoattackumiri.fall",
+	"label": "失败！",
+	"startdescription": "一次失败的援助",
+	"requirements": {
+		"foe": 1
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "友军",
+		"required": {
+            "friend": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "friend.hidden": 1,
+            "anno.mark": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"aspects": {
+		"makecasualty": 1
+	},
+	"effects": {
+	    "reinforcement.fall": 1,
+	},
+    },
+    {
+	"id": "friendannoattackumiri.aerial",
+	"label": "死亡从天而降",
+	"startdescription": "火与烟在云中产生。燃烧的残骸如流星雨般从高空落下。这一刻，天空属于我们。",
+	"requirements": {
+	    "foe.aerial": 1,
+	    "friend.aerial": "foe.aerial"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.ap",
+	"label": "突破装甲",
+	"startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
+	"requirements": {
+	    "foe.armoured": 1,
+	    "ap": "foe.armoured"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edge",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
+	"requirements": {
+	    "needsedge": 1,
+	    "edge": "needsedge"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.winter",
+	"label": "以耐心得胜",
+	"startdescription": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
+	"requirements": {
+	    "needswinter": 1,
+	    "winter": "needswinter"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.heart",
+	"label": "以坚持得胜",
+	"startdescription": "我们不能被停滞。无人能阻止我们的进军。",
+	"requirements": {
+	    "needsheart": 1,
+	    "heart": "needsheart"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.grail",
+	"label": "以食欲得胜",
+	"startdescription": "血管开裂，血已流出。而我们仍饥饿，仍渴望更多。",
+	"requirements": {
+	    "needsgrail": 1,
+	    "grail": "needsgrail"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.moth",
+	"label": "以欺诈得胜",
+	"startdescription": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
+	"requirements": {
+	    "needsmoth": 1,
+	    "moth": "needsmoth"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.lantern",
+	"label": "以辉煌得胜",
+	"startdescription": "真实在此，锐利且坚硬，可用于切割。前路已被照亮。",
+	"requirements": {
+	    "needslantern": 1,
+	    "lantern": "needslantern"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.forge",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
+	"requirements": {
+	    "needsforge": 1,
+	    "forge": "needsforge"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.knock",
+	"label": "以进入得胜",
+	"startdescription": "我曾听说所有创口都是门洞——不过位于此处的是另一种门。前路已被打开。",
+	"requirements": {
+	    "needsknock": 1,
+	    "knock": "needsknock"
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.forgemoth",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
+	"requirements": {
+	    "needsforgemoth": 1,
+	    "forge": "needsforgemoth",
+	    "moth": "needsforgemoth",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edgelantern",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
+	"requirements": {
+	    "needsedgelantern": 1,
+	    "edge": "needsedgelantern",
+	    "lantern": "needsedgelantern",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edgewinter",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
+	"requirements": {
+	    "needsedgewinter": 1,
+	    "edge": "needsedgewinter",
+	    "winter": "needsedgewinter",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edgeforge",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
+	"requirements": {
+	    "needsedgeforge": 1,
+	    "edge": "needsedgeforge",
+	    "forge": "needsedgeforge",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.knocklantern",
+	"label": "钥匙与光芒",
+	"startdescription": "有时单纯开启一扇门是不足够的，有时这扇门必须被带去溶解。",
+	"requirements": {
+	    "needsknocklantern": 1,
+	    "knock": "needsknocklantern",
+	    "lantern": "needsknocklantern",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.forgeheart",
+	"label": "火燃于心",
+	"startdescription": "火焰于肺部内点燃，目标占领灵魂。我们即为前进的意志。",
+	"requirements": {
+	    "needsforgeheart": 1,
+	    "forge": "needsforgeheart",
+	    "heart": "needsforgeheart",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edgeknock",
+	"label": "开启之刃",
+	"startdescription": "千夫长知晓血与血的出口。而我们将用武器制造出那出口，像他曾做的那样。",
+	"requirements": {
+	    "needsedgeknock": 1,
+	    "edge": "needsedgeknock",
+	    "knock": "needsedgeknock",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.edgeheart",
+	"label": "愉悦的毁灭",
+	"startdescription": "轰雷之皮曾被剥皮；轰雷之皮曾被毁灭。我们现在将以毁灭轰雷之皮的方式毁灭我们的敌军。",
+	"requirements": {
+	    "needsedgeheart": 1,
+	    "edge": "needsedgeheart",
+	    "heart": "needsedgeheart",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.winterheart",
+	"label": "平静终局",
+	"startdescription": "与临终仪式上诵读的温暖、庄严的悼词一同，我们终结了我们的敌手。",
+	"requirements": {
+	    "needswinterheart": 1,
+	    "winter": "needswinterheart",
+	    "heart": "needswinterheart",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "friendannoattackumiri.lanternheart",
+	"label": "仍未败倒",
+	"startdescription": "以足够的意志，我便能抵御它们引诱的低语；以足够的光芒，我便能回避它们紧攫的手。",
+	"requirements": {
+	    "needslanternheart": 1,
+	    "lantern": "needslanternheart",
+	    "heart": "needslanternheart",
+	},
+	"aspects": {
+		"dissolution": 1,
+		"fatiguing": 1
+	},
+	"effects": {
+	    "reinforcement.success": 1,
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"alt": [
+	    {
+		"id": "producecasualty",
+		"additional": true,
+		"chance": 30,
+		"expulsion": {
+		    "limit": 1,
+		    "filter": {
+			"friend": 1
+		    }
+		}
+	    }
+	]
+    },
+	
+    {
+	"id": "talktoannosir",
+	"actionid": "communicate",
+	"label": "与盟军军官结识",
+	"startdescription": "“很高兴见到你，人之杀手。”对方向我走来，身上没有什么军官的架子。“我听说了你的事情，感谢你的协助。”",
+	"warmup": 10,
+	"extantreqs": {
+		"foe.umiri.dead.withanno": 1,
+		"foe.umiri.mark": -1,
+	},
+    "craftable": true,
+	"requirements": {
+		"anno.mark": 1,
+	},
+	"aspects": {
+		"findanno": 1
+	},
+	"slots": [
+		{
+		"id": "defend",
+		"label": "“邀功券”",
+		"required": {
+			"foe.umiri.dead.withanno": 1,
+		},
+		"forbidden": {
+		},
+		"consumes": true,
+		"greedy": true
+		}
+	],
+	"linked": [
+	],
+	"effects": {
+	}
+    },
+
+    {
+	"id": "talktoannosir.router",
+	"actionid": "communicate",
+	"label": "与盟军军官交谈",
+	"startdescription": "“你想从我这里得到些什么？人之杀手。”",
+	"description": "无话可谈。",
+	"warmup": 30,
+	"aspects": {
+	},
+    "craftable": true,
+	"slots": [
+		{
+		"id": "defend",
+		"label": "交谈何物？",
+		"required": {
+			"forge": 1,
+			"contemplation": 1
+		},
+		"forbidden": {
+		},
+		"greedy": false
+		}
+	],
+	"alt": [
+		{
+			"id": "talktoannosir.shape"
+		},
+		{
+			"id": "talktoannosir.end"
+		}
+	],
+	"effects": {
+	}
+    },
+    {
+	"id": "talktoannosir.shape",
+	"actionid": "communicate",
+	"label": "与盟军军官交谈",
+	"startdescription": "“具名之位，殿下无意干涉你的试炼，但是我想我们有一名共同的敌人，她挡在了我们两个的路上，也许我们可以一起把她撕碎。狮子也从不独自狩猎，不是吗”",
+	"description": "“收下它，一份小小的礼物。”",
+	"warmup": 0,
+	"extantreqs": {
+	},
+	"maxexecutions": 1,
+	"requirements": {
+		"proterant.story": 1,
+	},
+	"achievements": [
+		"ending.know_anno"
+	],
+	"aspects": {
+	},
+	"linked": [
+	],
+	"effects": {
+		"tool.shape": 1
+	}
+    },
+    {
+	"id": "talktoannosir.end",
+	"actionid": "communicate",
+	"label": "与盟军军官交谈？",
+	"startdescription": "怨念正在汇聚……",
+	"warmup": 10,
+	"requirements": {
+		"forge": 13,
+	},
+	"effects": {
+		"tool.king": 1
+	}
+    },
+        {
+            "id": "talktoannosir0",
+            "label": "与盟军军官结识？",
+            "previewdescription": "你尚未拥有谈资，一位军官可不是随便就能见面的",
+            "actionid": "communicate",
+            "requirements": {
+                "anno.mark": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+    ]
+}

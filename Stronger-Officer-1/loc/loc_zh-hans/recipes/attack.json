@@ -1,0 +1,3562 @@
+{
+    "recipes": [
+    {
+	"id": "corrivality.cycle",
+	"actionid": "corrivality",
+	"label": "驱动世界的引擎",
+	"startdescription": "吾友在别处与他的大敌相争，但刃之长生者的行动将影响战争的走向。他们相争的结果将如波纹一般扩散至前线，而后至后方。\n\n[流亡者与大敌的决斗现在正处于僵持状态。暂时没有什么大事会发生。]",
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "corrivality.change",
+		"chance": 20
+	    },
+	    {
+		"id": "corrivality.cycle"
+	    }
+	],
+    "inductions": [
+        {
+            "id": "foe.umiri.coming3",
+            "chance": 70
+        },
+        {
+            "id": "foe.umiri.coming2",
+            "chance": 50
+        },
+        {
+            "id": "foe.umiri.coming.firstinroute",
+            "chance": 20
+        },
+    ],
+    },
+    {
+    "id": "corrivality.turnfoeadvantage",
+    "actionid": "corrivality",
+    "label": "驱动世界的引擎",
+	"requirements": {
+        "seasondespair": 1
+    },
+    "aspects": {
+        "depiphany": 1
+    },
+    "effects": {
+        "season": -1
+    },
+    "inductions": [
+        {
+            "id": "foe.umiri.coming3",
+        },
+        {
+            "id": "foe.umiri.coming2",
+        },
+        {
+            "id": "foe.umiri.coming.first",
+        },
+        {
+            "id": "foe.umiri.coming",
+        }
+    ],
+    "linked": [
+        {
+        "id": "corrivality.cycle.foe"
+        }
+    ]
+    },
+    {
+	"id": "corrivality.cycle.foe",
+	"actionid": "corrivality",
+	"label": "驱动世界的引擎",
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "corrivality.restore.duel"
+	    },
+	    {
+		"id": "corrivality.restore",
+		"chance": 30
+	    },
+	    {
+		"id": "corrivality.cycle.foe"
+	    }
+	],
+    "inductions": [
+        {
+            "id": "foe.umiri.coming3",
+        },
+        {
+            "id": "foe.umiri.coming2",
+        },
+        {
+            "id": "foe.umiri.coming.first",
+        },
+        {
+            "id": "foe.umiri.coming",
+        }
+    ],
+	"alt": [
+	    {
+		"id": "foe.pickdebuff",
+		"additional": true,
+		"chance": 40
+	    }
+	]
+    },
+        {
+            "id": "use.renew",
+            "craftable": false
+        },
+        {
+            "id": "use.attack.lore.createdefiance",
+            "craftable": false
+        },
+        {
+            "id": "use.attack.lore.notarget.notupgraded",
+            "craftable": false
+        },
+        {
+            "id": "use.attack.lore.notarget",
+            "craftable": false
+        },
+        {
+            "id": "use.attack.weapon.createdefiance",
+            "craftable": false
+        },
+        {
+            "id": "use.attack.weapon.notarget.hint",
+            "craftable": false
+        },
+        {
+            "id": "foe.umiri.coming.firstinroute",
+            "label": "敌军军官正在赶来",
+            "actionId": "foecoming",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": -1,
+                "umiri.blocker": -1
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.coming.first"
+                },
+                {
+                    "id": "foe.umiri.coming"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.coming.strife_incur",
+            "label": "敌军军官正在赶来",
+            "startdescription": "德国人已经注意到了我们这颗“最难拔除的钉子”。那名久经考验的军官就要到来......",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+                "strife.incur": 1,
+                "umiri.blocker": -1
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.coming3"
+                },
+                {
+                    "id": "foe.umiri.coming2"
+                },
+                {
+                    "id": "foe.umiri.coming"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.coming.stalingrad",
+            "label": "敌军军官正在赶来",
+            "startdescription": "我们已退无可退，这也是她与你最后一次交手的机会，看来她将欣然迎战。",
+            "actionId": "foecoming",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+                "stalingrad.here": 1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+			"playAudioTrack": "bgm.strife.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.coming.stalingrad.b"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.coming.stalingrad.b",
+            "label": "敌军军官正在赶来",
+            "startdescription": "我们已退无可退，这也是她与你最后一次交手的机会，看来她将欣然迎战。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+                "stalingrad.here": 1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.coming3"
+                },
+                {
+                    "id": "foe.umiri.coming2"
+                },
+                {
+                    "id": "foe.umiri.coming"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.coming.first",
+            "label": "敌军上尉正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "maxexecutions": 1,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": -1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+			"playAudioTrack": "bgm.foecoming_first.mp3",
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "effects": {
+                "foe.umiri": 1,
+                "foe.tanks": 1,
+                "obdurant.story.umiri": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.officer": 1,
+                        "foe.umiri.pre": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy"
+                },
+                {
+                    "id": "foe.umiri.coming"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.coming",
+            "label": "敌军上尉正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": -1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "effects": {
+                "foe.umiri": 1,
+                "foe.tanks": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.officer": 1,
+                        "foe.umiri.pre": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy"
+                },
+                {
+                    "id": "foe.umiri.coming"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.deploy",
+            "label": "敌军上尉正在赶来",
+            "startdescription": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "description": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "grandReqs": {
+                "([foe.officer] || [foe.umiri.pre]) >= 1": 1
+            },
+            "effects": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "foe.officerdetail",
+                    "level": -1
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.moreenemy"
+                },
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.coming2.first",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 0,
+			"maxexecutions": 0,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+				"foe.wound.hand": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": 1,
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.coming2"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.coming2",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+				"foe.wound.hand": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": 1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "effects": {
+                "foe.umiri.2": 1,
+                "foe.tanks": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 3,
+                "resetonexhaustion": true
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.umiri.pre": 1,
+                        "foe.officer": 1
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy2"
+                },
+                {
+                    "id": "foe.umiri.coming2"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.deploy2",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "description": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "grandReqs": {
+                "([foe.officer] || [foe.umiri.pre]) >= 1": 1
+            },
+            "effects": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "foe.officerdetail",
+                    "level": -1
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.moreenemy"
+                },
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.coming3.first",
+            "label": "敌军上将正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 0,
+			"maxexecutions": 0,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+                "foe.umiri.dead": -1,
+				"foe.wound.hand": 1,
+				"foe.wound.eye": 1,
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.coming3"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.coming3",
+            "label": "敌军上将正在赶来",
+            "startdescription": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "description": "敌人的军队传来了新动向，部队轮换，工事重整，看来德国人要乘胜追击了。我们要有一个新对手了。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.umiri.mark": -1,
+				"foe.wound.hand": 1,
+                "foe.umiri.dead": -1,
+				"foe.wound.eye": 1,
+                "umiri.blocker": -1
+            },
+            "purge": {
+                "strife.incur": 99
+            },
+            "grandReqs": {
+                "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
+            },
+			"playAudioTrack": "bgm.foecoming.mp3",
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 5,
+                "resetonexhaustion": true
+            },
+            "effects": {
+                "foe.umiri.3": 1,
+                "foe.tanks": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "敌军调遣",
+                    "description": "",
+                    "required": {
+                        "foe.umiri.pre": 1,
+                        "foe.officer": 1
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.deploy3"
+                },
+                {
+                    "id": "foe.umiri.coming3"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.deploy3",
+            "label": "敌军上将正在赶来",
+            "startdescription": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "description": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "grandReqs": {
+                "([foe.officer] || [foe.umiri.pre]) >= 1": 1
+            },
+            "effects": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "foe.officerdetail",
+                    "level": -1
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.moreenemy"
+                },
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.moreenemy",
+            "label": "敌军援军正在前来",
+            "startdescription": "此处战局已然失势……",
+            "description": "此处战局已然失势……",
+            "actionId": "foeactionumiri",
+            "tablereqs": {
+                "foe": -10
+            },
+            "effects": {
+            },
+            "deckeffects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.moreenemy.ex"
+                },
+                {
+                    "id": "foe.umiri.moreenemy.high"
+                },
+                {
+                    "id": "foe.umiri.moreenemy.medium"
+                },
+                {
+                    "id": "foe.umiri.moreenemy.primary"
+                },
+            ],
+            "warmup": 0,
+        },
+        {
+            "id": "foe.umiri.moreenemy.high",
+            "label": "敌军援军正在前来",
+            "startdescription": "此处战局已然失势，她将来到前线，那颗冉冉升起的将星，她将力挽狂澜。",
+            "description": "此处战局已然失势，她将来到前线，那颗冉冉升起的将星，她将力挽狂澜。",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "foe.umiri.3": 1
+            },
+            "effects": {
+                "foe.bombers": 1,
+                "foe.tanks": 1,
+                "foe.tanks.hidden": 2,
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 3,
+                "foe.manhunters": 1,
+                "foe.manhunters.hidden": 1,
+                "foe.artillery": 1,
+                "foe.artillery.hidden": 2,
+                "foe.kommando.hidden": 2,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 1,
+                "foeforumiri.tanks": 2,
+                "foeforumiri.infantry": 2,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "warmup": 30,
+        },
+        {
+            "id": "foe.umiri.moreenemy.medium",
+            "label": "敌军援军正在前来",
+            "startdescription": "此处战局已然失势，德军高层正调集部队以攻下此处",
+            "description": "此处战局已然失势，德军高层正调集部队以攻下此处",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "foe.umiri.2": 1
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "foe.tanks.hidden": 1,
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 2,
+                "foe.manhunters": 1,
+                "foe.manhunters.hidden": 1,
+                "foe.artillery": 1,
+                "foe.artillery.hidden": 1,
+                "foe.kommando.hidden": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 1,
+                "foeforumiri.tanks": 2,
+                "foeforumiri.infantry": 2,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "warmup": 30,
+        },
+        {
+            "id": "foe.umiri.moreenemy.primary",
+            "label": "敌军援军正在前来",
+            "startdescription": "此处战局已然失势，德军将派一只新的队伍力求改变颓势。",
+            "description": "此处战局已然失势，德军将派一只新的队伍力求改变颓势。",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "foe.umiri": 1
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 1,
+                "foe.artillery": 1,
+                "foe.kommando.hidden": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 1,
+                "foeforumiri.tanks": 2,
+                "foeforumiri.infantry": 2,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "warmup": 30,
+        },
+        {
+            "id": "foe.umiri.moreenemy.ex",
+            "label": "敌军援军正在前来",
+            "startdescription": "军列昼夜不息，履带碾碎冻土，最后一只预备队也被动员起来，德国人押上了最大的赌注。",
+            "description": "军列昼夜不息，履带碾碎冻土，最后一只预备队也被动员起来，德国人押上了最大的赌注。",
+            "actionId": "foeactionumiri",
+            "tablereqs": {
+                "foe": -3
+            },
+            "maxexecutions": 3,
+            "effects": {
+                "foe.bombers": 1,
+                "foe.tanks": 2,
+                "foe.tanks.hidden": 1,
+                "foe.infantry": 2,
+                "foe.infantry.hidden": 3,
+                "foe.manhunters": 1,
+                "foe.manhunters.hidden": 1,
+                "foe.artillery": 1,
+                "foe.artillery.hidden": 1,
+                "foe.kommando.hidden": 3,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 2,
+                "foeforumiri.tanks": 5,
+                "foeforumiri.infantry": 7,
+                "foeforumiri.manhunters": 2,
+                "foeforumiri.artillery": 2,
+                "foeforumiri.kommando": 3,
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "warmup": 45,
+        },
+        {
+            "id": "foe.umiri.edgelong",
+            "label": "长生之耻",
+            "startdescription": "你的大敌已将刃长生击落马下",
+            "description": "你的大敌已将刃长生击落马下",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "wound.sergei.forumiri_end": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.uneat",
+                    "level": 1
+                },
+                {
+                    "filter": "foe.umiri.mark",
+                    "mutate": "strife.tracker",
+                    "level": 1
+                },
+            ],
+            "furthermore": [
+            {
+                "target": "~/tabletop",
+                "mutations": [
+                    {
+                        "filter": "wound.sergei.forumiri_end",
+                        "mutate": "winter",
+                        "level": 1,
+                        "additive": false,
+                        "VFX": "CardBurn"
+                    }
+                ]
+            }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong0"
+                }
+            ],
+            "warmup": 0,
+        },
+        {
+            "id": "foe.umiri.edgelong2",
+            "label": "狮鼠之斗",
+            "startdescription": "我的大敌再度赶赴至此。听闻她似乎已经举行了某种古老的角争仪式，变得更加强大。或许我之前不该那么做。不过至少，刃之长生者们已经决定不再干扰她了，这对我也是好事。",
+            "description": "我的大敌再度赶赴至此。听闻她似乎已经举行了某种古老的角争仪式，变得更加强大。或许我之前不该那么做。不过至少，刃之长生者们已经决定不再干扰她了，这对我也是好事。",
+            "actionId": "foeactionumiri",
+            "extantreqs": {
+                "wound.camilla.forumiri": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe.umiri.mark",
+                    "mutate": "strife.tracker",
+                    "level": 3
+                },
+            ],
+            "furthermore": [
+            {
+                "target": "~/tabletop",
+                "mutations": [
+                    {
+                        "filter": "wound.camilla.forumiri",
+                        "mutate": "edge",
+                        "level": 1,
+                        "additive": false,
+                        "VFX": "CardBurn"
+                    }
+                ]
+            }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.edgelong20"
+                }
+            ],
+            "warmup": 0,
+        },
+        {
+            "id": "foe.umiri.edgelong0",
+            "label": "长生之耻",
+            "startdescription": "你的大敌已将刃长生击落马下",
+            "description": "你的大敌已将刃长生击落马下",
+            "maxexecutions": 1,
+            "warmup": 10,
+        },
+        {
+            "id": "foe.umiri.edgelong20",
+            "label": "狮鼠之斗",
+            "startdescription": "我的大敌再度赶赴至此。听闻她似乎已经举行了某种古老的角争仪式，变得更加强大。或许我之前不该那么做。不过至少，刃之长生者们已经决定不再干扰她了，这对我也是好事。",
+            "description": "我的大敌再度赶赴至此。听闻她似乎已经举行了某种古老的角争仪式，变得更加强大。或许我之前不该那么做。不过至少，刃之长生者们已经决定不再干扰她了，这对我也是好事。",
+            "maxexecutions": 1,
+            "warmup": 10,
+        },
+
+        {
+            "id": "foe.umiri.circle.first",
+            "label": "敌我双方仍在僵持",
+            "startdescription": "铁灰色的天空低垂，战场正被死一般的寂静笼罩。",
+            "description": "铁灰色的天空低垂，战场正被死一般的寂静笼罩。",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.umiri.mark": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.circle",
+                    "chance": 100
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.circle_sergei0",
+            "label": "敌军进攻暂缓",
+            "startdescription": "眼下这名军官已经把所有的筹码压到了赌桌上，她已无暇顾及我们的行动",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "umiri_sergei": 1
+            },
+            "effects": {
+                "circle_sergei": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.circle_sergei"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.circle_sergei",
+            "label": "敌军进攻暂缓",
+            "startdescription": "眼下这名军官已经把所有的筹码压到了赌桌上，她已无暇顾及我们的行动",
+            "actionId": "foeactionumiri",
+            "warmup": 30,
+            "extantreqs": {
+                "umiri_sergei": 1
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.circle_sergei"
+                },
+                {
+                    "id": "foe.umiri.circle"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.circle",
+            "label": "敌我双方仍在僵持",
+            "startdescription": "铁灰色的天空低垂，战场正被死一般的寂静笼罩。",
+            "description": "铁灰色的天空低垂，战场正被死一般的寂静笼罩。",
+            "actionId": "foeactionumiri",
+            "warmup": 60,
+            "requirements": {
+            },
+            "effects": {
+                "strategy.defense": -1,
+                "strategy.rally": -1,
+                "strategy.tactics1": -1,
+                "strategy.tactics2": -1,
+                "strategy.tactics3": -1,
+                "circle_sergei": -99
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.circle_sergei0",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attacka",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack7",
+                    "chance": 30
+                },
+                {
+                    "id": "foe.umiri.attack5hand",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack5eye",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack5",
+                    "chance": 40
+                },
+                {
+                    "id": "foe.umiri.attack3hand",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack3eye",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack3",
+                    "chance": 40
+                },
+                {
+                    "id": "foe.umiri.attack0",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.eyetoweakened",
+                    "chance": 30
+                },
+            ]
+        },
+        {
+            "id": "foe.umiri.eyetoweakened",
+            "label": "敌军军官正在审视战场",
+            "startdescription": "她的眼睛能窥见那些隐于阴影中的路径，她已知晓我们的弱点。",
+            "actionId": "eyetoweakened",
+            "warmup": 10,
+            "extantreqs": {
+                "foe.wound.eye": 1,
+                "foe.umiri.mark": 1
+            },
+			"aspects": {
+				"fatiguing": 1
+			},
+            "slots": [
+                {
+                "id": "needssupplies",
+                "label": "洞察",
+                "required": {
+                    "friend": 1
+                },
+                "forbidden": {
+                    "remnant": 1,
+                    "friend.hidden": 1,
+                    "friend.weakened": 1,
+	    			"named.local": 1,
+	    			"friend.monster": 1,
+					"valkyrie": 1,
+                    "prisoner": 1,
+					"friend.yuri": 1,
+					"friend.yuri.exhausted": 1,
+					"friend.yuri.wounded": 1,
+					"friend.konstantin": 1,
+					"friend.konstantin.exhausted": 1,
+					"friend.konstantin.wounded": 1,
+					"friend.iosef": 1,
+					"friend.iosef.exhausted": 1,
+					"friend.iosef.wounded": 1,
+					"friend.nikolai": 1,
+					"friend.nikolai.exhausted": 1,
+					"friend.nikolai.wounded": 1,
+                
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "friend",
+                    "mutate": "edge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "forge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "lantern",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "moth",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "heart",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "grail",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "winter",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "knock",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "friend",
+                    "mutate": "friend.weakened",
+                    "level": 1,
+                    "additive": false
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attacka",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.officerdetail": -4,
+                "umiri.attacked": -1
+            },
+            "effects": {
+                "strategy.rally": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack0",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics1",
+                    "strategy.defense",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack3",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack3hand",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 3,
+                "foe.umiri.wound": 2
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack3eye",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 3,
+                "foe.umiri.wound": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.defense",
+                    "strategy.defense",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        
+        {
+            "id": "foe.umiri.attack5hand",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 5,
+                "foe.umiri.wound": 2
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack5eye",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 5,
+                "foe.umiri.wound": 1
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack5",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack7",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "strife.tracker": 7
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack",
+            "label": "敌军开始大范围集结",
+            "startdescription": "每一条道路都传来低沉的鼓震，每一个波段都充斥着恼人的嗡鸣，新一轮的攻击要开始了。",
+            "description": "每一条道路都传来低沉的鼓震，每一个波段都充斥着恼人的嗡鸣，新一轮的攻击要开始了。",
+            "actionId": "foeactionumiri",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.attack.defense.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.defense": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.rally.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.rally": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics1": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics2": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3.first",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics3": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.defense",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.defense": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.rally",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.rally": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics1": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics2": 1
+                        },
+                        "limit": 1
+                    }
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3",
+                    "expulsion": {
+                        "filter": {
+                            "strategy.tactics3": 1
+                        },
+                        "limit": 1
+                    }
+                },
+            ]
+        },
+        
+    {
+	"id": "time.cycle",
+	"actionid": "time.exile",
+	"label": "时间",
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "pre.death_defiance"
+	    },
+	    {
+		"id": "pre.death"
+	    },
+	    {
+		"id": "pre.trauma"
+	    },
+	    {
+		"id": "time.clear"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "foe.umiri.coming.strife_incur",
+		"additional": true,
+	    },
+	    {
+		"id": "foe.umiri.coming.stalingrad",
+		"additional": true,
+	    },
+	    {
+		"id": "foe.umiri.circle.first",
+		"additional": true,
+	    },
+	    {
+		"id": "produce.craterfield",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "arrive.marinette",
+		"additional": true,
+		"chance": 45
+	    },
+	    {
+		"id": "arrive.marinette.whilehiding",
+		"additional": true,
+		"chance": 15
+	    },
+	    {
+		"id": "long.arrival.contemnant.router",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "long.arrival.camilla.router",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "long.arrival.wilhelm.router",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "long.arrival.sergei.router",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "spit.nospace.penalty",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "spit.lefttoelements.penalty",
+		"additional": true,
+		"chance": 30
+	    },
+	    {
+		"id": "dreams.startup",
+		"additional": true
+	    },
+	    {
+		"id": "hindrances.startup",
+		"additional": true
+	    },
+	    {
+		"id": "resupply.startup",
+		"additional": true
+	    },
+	    {
+		"id": "resupply.startup.contemnant",
+		"additional": true
+	    },
+	    {
+		"id": "conclusion.startup",
+		"additional": true
+	    }
+	]
+    },
+        {
+        "id": "arrive.marinette",
+        "actionid": "marinettearrival",
+        "label": "猎团前来",
+	    "startdescription": "持钥人在关着她的容器内低声嘶鸣。“我的原姐妹找上门来了。做好准备。”",
+	    "extantreqs": {
+            "klei.casket": 1,
+            "wasteland": 1,
+            "traveltransition.marker": -1,
+            "foe.huntingparty": -1,
+            "token.escaped": -1
+        },
+        "warmup": 30,
+        "haltverb": {
+            "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        	"foeactionumiri": 99,
+            "enemyaction.single": 99,
+            "enemyaction.double.1": 99,
+            "enemyaction.double.2": 99,
+            "enemyaction.cutoff": 99,
+            "enemyaction.destroysupplies": 99,
+            "enemyaction.hide": 99,
+            "enemyaction.infrastructure": 99,
+            "enemyaction.reinforcements": 99,
+            "produce.monster": 99,
+            "reinforcements.*": 99,
+            "foedebuff": 99,
+            "spit.grail": 99
+        },
+        "linked": [
+            {
+            "id": "arrive.marinette.continue"
+            }
+        ]
+        },
+        {
+        "id": "arrive.marinette.whilehiding",
+        "actionid": "marinettearrival",
+        "label": "猎团前来",
+        "startdescription": "持钥人在关着她的容器内低声嘶鸣。“我的原姐妹找上门来了。做好准备。”",
+	    "extantreqs": {
+            "klei.casket.masked": 1,
+            "wasteland": 1,
+            "traveltransition.marker": -1,
+            "foe.huntingparty": -1,
+            "token.escaped": -1
+        },
+        "warmup": 30,
+        "haltverb": {
+            "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+            "enemyaction.single": 99,
+            "enemyaction.double.1": 99,
+            "enemyaction.double.2": 99,
+            "enemyaction.cutoff": 99,
+            "enemyaction.destroysupplies": 99,
+            "enemyaction.hide": 99,
+            "enemyaction.infrastructure": 99,
+            "enemyaction.reinforcements": 99,
+            "produce.monster": 99,
+            "reinforcements.*": 99,
+            "foedebuff": 99,
+            "spit.grail": 99
+        },
+        "linked": [
+            {
+            "id": "arrive.marinette.continue"
+            }
+        ]
+        },
+    {
+	"id": "travel.sobibor.haltverbs",
+	"label": "试炼静候于内",
+	"startdescription": "我已向西行了如此之远，而现在我发现自己回到了东方。大门打开。我听见远处铁道上火车犹疑的刹车声。我又回到了这里。",
+	"haltverb": {
+	    "operate": 1,
+	    "abandon": 1,
+	    "recon": 1,
+	    "communicate": 1,
+	    "mobilize": 1,
+	    "operation.edge": 99,
+	    "operation.heart": 99,
+	    "operation.forge": 99,
+	    "main": 99,
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "enemyaction.niniame": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "produce.monster": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "attack.jerome": 99,
+	    "attack.king": 99,
+	    "attack.legion": 99,
+	    "attack.lionel": 99,
+	    "explosion": 99,
+	    "fallingstar": 99,
+	    "reinforcements.*": 99,
+	    "stasis": 99,
+	    "verb.retaliatory": 99,
+	    "sovietaction": 99,
+	    "neutral.reinforcements": 99,
+	    "neutral.singleattack": 99,
+	    "sovietaction.aggro": 99,
+	    "aggro.destroysupplies": 99,
+	    "aggro.doubleattack.1": 99,
+	    "aggro.doubleattack.2": 99,
+	    "aggro.hide": 99,
+	    "aggro.reinforcements": 99,
+	    "aggro.singleattack": 99,
+	    "execution": 99,
+	    "flesheater.verb": 99,
+	    "ingluviate.guard": 99,
+	    "marinette.arrival": 99,
+	    "resupply.yellow": 99,
+	    "lurk": 99,
+	    "spit.grail": 99
+	},
+	"linked": [
+	    {
+		"id": "travel.sobibor.purge"
+	    }
+	]
+    },
+    {
+	"id": "travel.sobibor.purge",
+	"label": "试炼静候于内",
+	"startdescription": "我已向西行了如此之远，而现在我发现自己回到了东方。大门打开。我听见远处铁道上火车犹疑的刹车声。我又回到了这里。",
+	"deleteverb": {
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "enemyaction.niniame": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "attack.jerome": 99,
+	    "attack.king": 99,
+	    "attack.legion": 99,
+	    "attack.lionel": 99,
+	    "explosion": 99,
+	    "fallingstar": 99,
+	    "reinforcements.king": 99,
+	    "reinforcements.legion": 99,
+	    "stasis": 99,
+	    "verb.retaliatory": 99,
+	    "sovietaction": 99,
+	    "neutral.reinforcements": 99,
+	    "neutral.singleattack": 99,
+	    "sovietaction.aggro": 99,
+	    "aggro.destroysupplies": 99,
+	    "aggro.doubleattack.1": 99,
+	    "aggro.doubleattack.2": 99,
+	    "aggro.hide": 99,
+	    "aggro.reinforcements": 99,
+	    "aggro.singleattack": 99,
+	    "execution": 99,
+	    "flesheater.verb": 99,
+	    "ingluviate.guard": 99,
+	    "marinette.arrival": 99,
+	    "resupply.yellow": 99,
+	    "lurk": 99,
+	    "spit.grail": 99
+	},
+	"purge": {
+	    "foe.bombers.refuel": 99,
+	    "aggro.bombers.refuel": 99,
+	    "objective": 99,
+	    "location": 99,
+	    "hindrance": 99,
+	    "warzone.current": 99,
+	    "strife": 99,
+	    "foe": 99,
+	    "main": 99,
+	    "side": 99,
+	    "infrastructure": 99,
+	    "infrastructure.destroyed": 99,
+	    "local": 99,
+	    "warzone.current": 99,
+	    "reputation.infamy": 99
+	},
+	"furthermore": [
+	    { 
+		"target": "~/exterior",
+		"effects": { 
+		    "[warzone] && [sobibor]=0": -99,
+		    "foe.bombers.refuel": -99,
+		    "[op] && ![op.axe] && ![broodscent]": -99
+		} 
+	    } 
+	],
+	"xpans": { 
+	    "sobibor.convert": 1 
+	},
+	"linked": [
+	    {
+		"id": "travel.sobibor.purge.round2"
+	    }
+	]
+    },
+    {
+	"id": "duel.countdown.success.stopverbs",
+	"label": "战斗双方正在集合",
+	"startdescription": "困倦的荒野在我面前扩张。我已遵循那古老圣礼的规则来此，除了我之技术与我之武器之外再无携带他物。我现在正于此处等待我的对手到来，",
+	"description": "在西侧，两个正在接近的人影逐渐变得可见。在北侧，另外两个人影正在接近。",
+	"extantreqs": {
+	    "friend": -1,
+	    "wasteland": 1
+	},
+	"haltverb": {
+	    "ticktock": 99,
+	    "main": 99,
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "foedebuff": 99
+	},
+	"linked": [
+	    {
+		"id": "duel.countdown.success.purgecards"
+	    }
+	]
+    },
+    {
+	"id": "duel.countdown.success.stopverbs.proterant",
+	"label": "战斗双方正在集合",
+	"startdescription": "困倦的荒野在我面前扩张。我已遵循那古老圣礼的规则来此，除了我之技术与我之武器之外再无携带他物。我现在正于此处等待我的对手到来，",
+	"description": "在西侧，两个正在接近的人影逐渐变得可见。在北侧，另外两个人影正在接近。",
+	"extantreqs": {
+	    "friend": -1,
+	    "wasteland": 1,
+	    "proterant.story": 1
+	},
+	"haltverb": {
+	    "ticktock": 99,
+	    "main": 99,
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "foedebuff": 99
+	},
+	"linked": [
+	    {
+		"id": "duel.countdown.success.purgecards.proterant"
+	    }
+	]
+    },
+    {
+	"id": "travelling.cycle.complete.haltverbs",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"extantreqs": {
+	    "duel.wilhelm": -1,
+	    "duel.camilla": -1,
+	    "bloodlust": -1,
+	    "long.bossfight.marker": -1,
+	    "foe.huntingparty": -1
+	},
+	"requirements": {
+	    "warzone.current": 1
+	},
+	"haltverb": {
+	    "operate": 1,
+	    "abandon": 1,
+	    "recon": 1,
+	    "communicate": 1,
+	    "mobilize": 1,
+	    "main": 99,
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "enemyaction.niniame": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "produce.monster": 99,
+	    "disgruntle": 99,
+	    "marinettearrival": 99,
+	    "huntingparty": 99
+	},
+	"linked": [
+	    {
+		"id": "travelling.cycle.complete.purge"
+	    }
+	]
+    },
+    {
+	"id": "travelling.cycle.complete.purge",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"deleteverb": {
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "produce.monster": 99
+	},
+	"purge": {
+	    "foe.bombers.refuel": 99,
+	    "objective": 99,
+	    "location": 99,
+	    "hindrance": 99,
+	    "warzone.current": 99,
+	    "foe": 99,
+	    "strife": 99,
+	    "main": 99,
+	    "side": 99,
+	    "infrastructure": 99,
+	    "infrastructure.destroyed": 99,
+	    "local": 99,
+	    "umiri.blocker.pre": 99,
+	    "umiri.blocker.0": 99,
+	    "umiri.blocker.1": 99,
+	    "umiri.blocker.2": 99,
+	},
+	"aspects": {
+	    "arriving": 1
+	},
+	"linked": [
+	    {
+		"id": "travelling.cycle.arriving.two"
+	    }
+	],
+	"furthermore": [
+	    { 
+		"target": "~/exterior",
+		"effects": { 
+		    "[op] && ![op.axe] && ![broodscent]": -99
+		} 
+	    } 
+	],
+    },
+    {
+	"id": "travelling.cycle.haltverbs",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"haltverb": {
+	    "operate": 1,
+	    "abandon": 1,
+	    "recon": 1,
+	    "communicate": 1,
+	    "mobilize": 1,
+	    "operation.edge": 99,
+	    "operation.heart": 99,
+	    "operation.forge": 99,
+	    "main": 99,
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "foetactics1": 99,
+	    "foetactics2": 99,
+	    "foetactics3": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "enemyaction.niniame": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "produce.monster": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "attack.jerome": 99,
+	    "attack.king": 99,
+	    "attack.legion": 99,
+	    "attack.lionel": 99,
+	    "explosion": 99,
+	    "fallingstar": 99,
+	    "reinforcements.*": 99,
+	    "stasis": 99,
+	    "verb.retaliatory": 99,
+	    "sovietaction": 99,
+	    "neutral.reinforcements": 99,
+	    "neutral.singleattack": 99,
+	    "sovietaction.aggro": 99,
+	    "aggro.destroysupplies": 99,
+	    "aggro.doubleattack.1": 99,
+	    "aggro.doubleattack.2": 99,
+	    "aggro.hide": 99,
+	    "aggro.reinforcements": 99,
+	    "aggro.singleattack": 99,
+	    "execution": 99,
+	    "flesheater.verb": 99,
+	    "ingluviate.guard": 99,
+	    "marinette.arrival": 99,
+	    "resupply.yellow": 99,
+	    "lurk": 99,
+	    "spit.grail": 99,
+	    "commander.attack": 99,
+	    "disgruntle": 99,
+	    "marinettearrival": 99,
+	    "nightmare_action": 99
+	},
+	"linked": [
+	    {
+		"id": "travelling.cycle.purge"
+	    }
+	]
+    },
+    {
+	"id": "travelling.cycle.purge",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"deleteverb": {
+	    "side": 99,
+	    "side.2": 99,
+	    "side.3": 99,
+	    "resupply": 99,
+	    "hindrances.verb": 99,
+	    "enemyaction": 99,
+	    "foecoming": 99,
+	    "foedefense": 99,
+	    "foerally": 99,
+	    "sideofficer": 99,
+        "foeactionumiri": 99,
+	    "enemyaction.single": 99,
+	    "enemyaction.double.1": 99,
+	    "enemyaction.double.2": 99,
+	    "enemyaction.cutoff": 99,
+	    "enemyaction.destroysupplies": 99,
+	    "enemyaction.hide": 99,
+	    "enemyaction.infrastructure": 99,
+	    "enemyaction.reinforcements": 99,
+	    "enemyaction.niniame": 99,
+	    "friend.verb": 99,
+	    "fatality": 99,
+	    "spit.*": 99,
+	    "long.wilhelm": 99,
+	    "long.sergei": 99,
+	    "long.camilla": 99,
+	    "explorevault_casualty": 99,
+	    "edgelong.wounds": 99,
+	    "action.legion": 99,
+	    "action.king": 99,
+	    "attack.jerome": 99,
+	    "attack.king": 99,
+	    "attack.legion": 99,
+	    "attack.lionel": 99,
+	    "explosion": 99,
+	    "fallingstar": 99,
+	    "reinforcements.king": 99,
+	    "reinforcements.legion": 99,
+	    "stasis": 99,
+	    "verb.retaliatory": 99,
+	    "sovietaction": 99,
+	    "neutral.reinforcements": 99,
+	    "neutral.singleattack": 99,
+	    "sovietaction.aggro": 99,
+	    "aggro.destroysupplies": 99,
+	    "aggro.doubleattack.1": 99,
+	    "aggro.doubleattack.2": 99,
+	    "aggro.hide": 99,
+	    "aggro.reinforcements": 99,
+	    "aggro.singleattack": 99,
+	    "execution": 99,
+	    "flesheater.verb": 99,
+	    "ingluviate.guard": 99,
+	    "marinette.arrival": 99,
+	    "resupply.yellow": 99,
+	    "lurk": 99,
+	    "spit.grail": 99,
+	    "nightmare_action": 99
+	},
+	"purge": {
+	    "foe.bombers.refuel": 99,
+	    "aggro.bombers.refuel": 99,
+	    "objective": 99,
+	    "location": 99,
+	    "hindrance": 99,
+	    "warzone.current": 99,
+	    "strife": 99,
+	    "friend": 99,
+	    "foe": 99,
+	    "main": 99,
+	    "side": 99,
+	    "infrastructure": 99,
+	    "infrastructure.destroyed": 99,
+	    "local": 99,
+	    "reputation.infamy": 99,
+	    "mem.eva": 99,
+	    "mem.walther": 99,
+	    "mem.vanja": 99,
+	    "mem.tibor": 99,
+	    "foe.grame.inactive": 99,
+	    "foe.shade.inactive": 99,
+	    "niniame.reviving": 99
+	},
+	"furthermore": [
+	    { 
+		"target": "~/exterior",
+		"effects": { 
+		    "[warzone] && [sobibor]=0": -99,
+		    "foe.bombers.refuel": -99,
+		    "[op] && ![op.axe] && ![broodscent]": -99
+		} 
+	    } 
+	],
+	"linked": [
+	    {
+		"id": "travelling.cycle"
+	    }
+	]
+    },
+    
+    {
+	"id": "banish.chasseur.knock",
+	"actionid": "operate",
+	"label": "湮灭敌军最后的残余",
+	"startdescription": "有时，你需要向某人重复说两次。",
+	"description": "它们死了——这次，不会再复活了。",
+	"requirements": {
+	    "foe.chasseur.reviving": 1,
+	    "knock": 6
+	},
+	"aspects": {
+	    "follower_scar_knock": 1,
+	    "fatiguing": 1
+	},
+	"craftable": true,
+	"warmup": 30
+    },
+    {
+	"id": "banish.chasseur.edge",
+	"actionid": "operate",
+	"label": "湮灭敌军最后的残余",
+	"startdescription": "有时，你需要向某人重复说两次。",
+	"description": "它们死了——这次，不会再复活了。",
+	"requirements": {
+	    "foe.chasseur.reviving": 1,
+	    "edge": 6
+	},
+	"aspects": {
+	    "follower_scar_edge": 1,
+	    "fatiguing": 1
+	},
+	"craftable": true,
+	"warmup": 30
+    },
+    {
+	"id": "banish.chasseur.winter",
+	"actionid": "operate",
+	"label": "湮灭敌军最后的残余",
+	"startdescription": "有时，你需要向某人重复说两次。",
+	"description": "它们死了——这次，不会再复活了。",
+	"requirements": {
+	    "foe.chasseur.reviving": 1,
+	    "winter": 6
+	},
+	"aspects": {
+	    "follower_scar_winter": 1,
+	    "fatiguing": 1
+	},
+	"craftable": true,
+	"warmup": 30
+    },
+    {
+	"id": "operate.endinginitiate",
+	"actionid": "operate",
+	"label": "1943年，斯大林格勒之战",
+	"startdescription": "这座城市已被炸为废墟。街道被死去的德国人与俄罗斯人堵塞。但在清晨，当新一天的风吹散硝烟，赤与金的锤镰旗仍在总书记的城市上方飘扬。德军正向西逃离——斯大林格勒仍然屹立。",
+	"requirements": {
+	    "main": 3
+	},
+	"extantreqs": {
+	    "obdurant.story": 1,
+        "foe.umiri.mark": -1
+	},
+	"warmup": 60,
+	"craftable": true,
+	"signalEndingFlavour": "Grand",
+	"signalMusic": "nearvictory.mp3",
+	"linked": [
+	    {
+		"id": "ascendname.colonel"
+	    },
+	    {
+		"id": "obdurant.ending.high"
+	    },
+	    {
+		"id": "obdurant.ending.med"
+	    },
+	    {
+		"id": "obdurant.ending.low"
+	    }
+	],
+	"burnimage": "flagwave"
+    },
+    {
+	"id": "operate.endinginitiate.hint",
+	"actionid": "operate",
+	"label": "敌军军官尚未消灭",
+    "previewdescription": "敌军还在负隅顽抗！[你需要杀死敌军军官才能完成这个主要任务]",
+	"requirements": {
+	    "main": 3
+	},
+	"extantreqs": {
+	    "obdurant.story": 1,
+	},
+	"craftable": false,
+    "hintonly": true,
+    },
+    
+    {
+	"id": "detectadditional.success.foe",
+	"label": "出乎意料的威胁！",
+	"startdescription": "新的某物打算阻挠我们的进军——",
+	"requirements": {
+	    "foe": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 1,
+            "additive": true
+        },
+    ],
+	"aspects": {
+	    "revealidentity": 1
+	},
+	"linked": [
+	    {
+		"id": "detectadditional.success.makeadditional"
+	    }
+	]
+    },
+    {
+	"id": "encounternative.makeadditional",
+	"aspects": {
+	    "makeadditional": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 1,
+            "additive": true
+        },
+    ],
+	"linked": [
+	    {
+		"id": "encounternative"
+	    }
+	]
+    },
+    {
+	"id": "encounteradditional",
+	"label": "逆境",
+	"startdescription": "@#hindrance.colonel|今天，上校目盲的双眼审视战场。这份力量只是他敌意暂存于此的一丝余寒，但这已经足以将惨叫冻结在喉头，并使最为自信的战士在恐惧中沉默。#foe.skaptodon|潜地的巨兽，其爪牙分开石头有如划开水一样轻松。当一只剑齿兽来到地面之上时，它总会分开一些别的什么，比如说人，或坦克，或任何在战斗中遇见剑齿兽的不幸家伙。#foe.echidniform.airborne|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.echidniform.grounded|诱惑是荣誉的大敌。屈服于丽姬亚厄客德娜的诱惑的狮子匠的战士失去了荣誉，但它们会经历极大的变化。在变化中，它们将获得新的思想，新的力量，并且最重要的，新的饥渴。#foe.hesukhine|此种怪物安静且有耐心到不寻常的地步，或许可以以“害羞”形容。匿形兽是狮子匠的子嗣中最为敏锐狡猾的一种。在狩猎时，匿形兽的行动准则是不被发现——确切的说，不被发现，直到无济于事之时。#foe.spathiurus|这些生物在研究怪物之人之间的俗称是“击剑狮子”。但不要想着与它们击剑——它们尾部末端的刃状附属物可以轻松穿刺一切钢铁或石头。当然，穿刺肉体则更加容易。#foe.malkin|猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。#foe.warder|门关军团的高级军官；守护此世与漫宿的边界之人。他们所有人均声称伐诃语为其母语；他们所有人都熟知哪个词汇许可通行，而哪个词汇禁止通行。#foe.boundsmen|门关军团的拟人士兵。它们被训练直立行走和以人类语言说话，但它们无法完全压抑其本质。有时它们会忘记眨眼。有时它们会食用死人之躯。#foe.phlogisticant|自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。#foe.engine|它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。#foe.riflemen|那岛上新王的仆从。没什么特别的，除了他们似乎比你手下的一般士兵更加训练有素一些之外。#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		}
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounteradditional.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounteradditional.failure.nonlethal"
+	    },
+	    {
+		"id": "encounteradditional.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondadditional.aerial"
+	    },
+	    {
+		"id": "respondadditional.ap"
+	    },
+	    {
+		"id": "respondadditional.edge"
+	    },
+	    {
+		"id": "respondadditional.winter"
+	    },
+	    {
+		"id": "respondadditional.heart"
+	    },
+	    {
+		"id": "respondadditional.grail"
+	    },
+	    {
+		"id": "respondadditional.moth"
+	    },
+	    {
+		"id": "respondadditional.lantern"
+	    },
+	    {
+		"id": "respondadditional.forge"
+	    },
+	    {
+		"id": "respondadditional.knock"
+	    },
+	    {
+		"id": "respondadditional.forgemoth"
+	    },
+	    {
+		"id": "respondadditional.edgelantern"
+	    },
+	    {
+		"id": "respondadditional.edgewinter"
+	    },
+	    {
+		"id": "respondadditional.edgeforge"
+	    },
+	    {
+		"id": "respondadditional.knocklantern"
+	    },
+	    {
+		"id": "respondadditional.forgeheart"
+	    },
+	    {
+		"id": "respondadditional.winterlantern"
+	    },
+	    {
+		"id": "respondadditional.edgeknock"
+	    },
+	    {
+		"id": "respondadditional.edgeheart"
+	    },
+	    {
+		"id": "respondadditional.edgegrail"
+	    },
+	    {
+		"id": "respondadditional.winterheart"
+	    },
+	    {
+		"id": "respondadditional.lanternheart"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "encounternative",
+	"label": "逆境",
+	"startdescription": "@#foe.chasseur|大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。#hindrance.snows|寒霜阻挡前进。机械或会失效，而人则有可能冻死。#hindrance.storms|闪电从云中降下，雷声紧随其后。雨声如炮火声般响亮。#hindrance.fog|视野与机动力均受限。强行军很容易陷入伏击，或是将悬崖错判为道路。#hindrance.forest|成群的树在昏暗的森林中矗立不动。前方没有简单的道路。#hindrance.fortifications|地雷阵，铁蒺藜，钢铁路障。我们需要拆解这些防御，或寻得一条能够安全通过的道路。#hindrance.crags|石块与弹坑遍布地面。洞察与谨慎能够使我们安全通过；火焰与机敏则使我们得以在这废墟中清出一条道路。#hindrance.earthquake|大地并未死去，它只是在沉眠。#hindrance.nocturnal|精神的阴影，灵魂的疾病，一团固化的黑暗。#hindrance.apollonian|这是那种能够涤净灵魂的光芒。过来，看着它，过来，看着它——#hindrance.dionysian|在世界下方的森林内生长的野生废料，绿色疾病——林地！林地！林地！#hindrance.lionsmith|今天，狮子匠自傲的目光审视战场。这份力量只是他敌意暂存于此的一丝余威，但这已经足以在血肉中点燃火焰，并将最为勇猛的战士驱离战场。#hindrance.wolf|裂分之狼行于此处。正如同尸骸的恶臭会在其被移走之后残留，裂分之狼的憎恶在他离去之后留存于此。但即便只是狼之憎恶的一份回响，其力量也足以毁灭凡人。#hindrance.worms|此处的世界的表皮已腐烂至无。有东西自这伤口中爬出。#hindrance.unknownlocation|我们的目的地就在附近某处，但“附近”可是一个相当宽泛的描述。我们需要缩小搜查范围。#hindrance.door|一扇厚重的钢门拦住了前路。令人欣慰的是，这扇门是如此的寻常。#hindrance.wreckage|前进的道路被倒塌的建筑与碎石阻挡。我们可以选择使用合适的工具炸开障碍物，或是费力地使用我们的双手进行清理。#hindrance.secretdoor|此处看不见任何出口，或许出口本身就不存在。辨明此事需要一双锐利的眼睛。#hindrance.moonspace|在那奇异的月光之下，上有时会变为下，而前进不一定向前。弧月正给我们带来麻烦。#hindrance.greatseal|令人眼花缭乱的，不可变魔法的集合阻挡了我们的进入。我们同时需要大量的拆解之力与净化之力才能清理道路。#foe.infantry|人数亦是武器。#foe.kommando|接受强调侵略性与敌后机动力的战术训练，精通游击与伏击战术的可怕部队。#foe.sniper|一个居于有利位置的，经验丰富的神射手可抵御百倍之敌。寂静或鬼祟之人或许能够接近其而不被发现。#foe.tanks|一辆德军坦克是一台可怕的机器。正面与其战斗需要莫大的直接火力，但是特制的弹药能够使我们回避一场残酷的战斗。#foe.bombers|先是旋翼的沉闷响声，再是下坠时的漫长尖啸，最后是置身于新生火焰中的人们的惨叫。#foe.artillery|一门被德军工程师与巡逻队看守着的重型火炮。以蛮力袭击或许会管用——我们可以猛攻那个位置闭关摧毁火炮。或是进行一次破坏，留给那些工程师们一份十分响亮且有力的惊喜。#foe.manhunters|一支由致命技艺的学徒率领的步兵分队。面对这些人单纯的力量是不足的——我们必须以我们自己的技艺来抗衡他们带上战场的技艺。#foe.undead|并非所有亡者都得以见证战争的结束。我们可以使用力量与兵器强行放逐他们，但冬之秘密使我们能够给予它们安息。#foe.warrior|狮子匠的怪兽受一些特定的荣誉约束。若一只怪兽吞食了并非由其杀死之敌，它就使自己蒙受耻辱，而狮子匠则会废除其力量与智慧。这只怪兽曾变得过于贪婪，而衰退之痛已使其变得近乎疯狂，但即便已处于临终挣扎中，它仍会是一个棘手之敌。#foe.serpent|一条巨大的蛇，前来战场饱餐死者。其压倒性的力量与致命的毒液或许可以战胜，但启提供了一种安抚它的方式。#foe.growth|被一股来自虚界的力量触碰的尸骸，作为行于此世的萌芽疫病重生。使用火，或光，将其清除。#foe.labhite.grounded|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，但这不意味着行于地面的狻猊就能轻松对付。其力量与怪兽之名相称，且其身躯因莫大的热力而发光。#foe.labhite.airborne|狮子匠最为年轻，也是最为美丽的造物们。狻猊在腾飞时尤为凶猛，以其灼热的吐息与锐利的趾爪歼灭那些不幸引来其怒火之人。#foe.splinter|瘦灰恶兽的一个正在巡猎的碎片。我们使用的武器伤不了它，但使用足够的光辉之力或存续之力，我们能将它呜咽着送回林地。#foe.niniame|不得见之湖的女守护兽，亦是守剑人的长姐。守剑人以极大的代价在巨蛇之母要求她死去时将她带走。她不总是具有尖牙，她也不总是具有坚鳞与利爪——但她仍珍视她的幼妹。#foe.ostlingant|鸟形司辰们的次要仆从，又被称为“携带秘密者”与“欺骗艺人者”。它们并不在阳光下飞翔——实际上，它们不在醒时世界飞翔——它们的乐声也并非凡人所能聆听。#foe.voice|“往回走吧，往回走吧……”#hindrance.star.a|来自天穹的狂怒之火，被狮子匠的一击掷向地面。称之为“愤怒”都过于保守。#hindrance.star.b|现在，这颗星正在死去；它的火光正泛着红。但我仍然剩下一件事需要做：我需要取得它的心脏，将其从外壳中解放，并整个吞下。这么做或许会把我烧成灰。即便如此，我仍会试试。@",
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "反应？",
+		"required": {
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "knock": 1
+		}
+	    }
+	],
+	"linked": [
+	    {
+		"id": "encounternative.lucky",
+		"chance": 30
+	    },
+	    {
+		"id": "encounternative.failure.nightmare"
+	    },
+	    {
+		"id": "encounternative.failure.nonlethal"
+	    },
+	    {
+		"id": "encounternative.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "respondnative.special"
+	    },
+	    {
+		"id": "respondnative.aerial"
+	    },
+	    {
+		"id": "respondnative.ap"
+	    },
+	    {
+		"id": "respondnative.edge"
+	    },
+	    {
+		"id": "respondnative.winter"
+	    },
+	    {
+		"id": "respondnative.heart"
+	    },
+	    {
+		"id": "respondnative.grail"
+	    },
+	    {
+		"id": "respondnative.moth"
+	    },
+	    {
+		"id": "respondnative.lantern"
+	    },
+	    {
+		"id": "respondnative.forge"
+	    },
+	    {
+		"id": "respondnative.knock"
+	    },
+	    {
+		"id": "respondnative.forgemoth"
+	    },
+	    {
+		"id": "respondnative.edgelantern"
+	    },
+	    {
+		"id": "respondnative.edgewinter"
+	    },
+	    {
+		"id": "respondnative.edgeforge"
+	    },
+	    {
+		"id": "respondnative.knocklantern"
+	    },
+	    {
+		"id": "respondnative.forgeheart"
+	    },
+	    {
+		"id": "respondnative.winterlantern"
+	    },
+	    {
+		"id": "respondnative.edgeknock"
+	    },
+	    {
+		"id": "respondnative.edgeheart"
+	    },
+	    {
+		"id": "respondnative.edgegrail"
+	    },
+	    {
+		"id": "respondnative.winterheart"
+	    },
+	    {
+		"id": "respondnative.lanternheart"
+	    }
+	],
+	"warmup": 30
+    },
+    
+    {
+	"id": "encounteradditional.failure.nightmare",
+	"label": "败北！",
+	"startdescription": "我被阻止了！我发现自己和走出索比堡大门的那一天一样弱小无助。梦魇的利齿没入了我的灵魂。",
+	"extantreqs": {
+	    "sobibor.here": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"effects": {
+	    "developing.trauma": 2
+	},
+	"warmup": 10
+    },
+    {
+	"id": "encounteradditional.failure.nonlethal",
+	"label": "一次挫折！",
+	"startdescription": "我们被阻止了！这一次挫折并未取走任何性命，但这使我们付出了时间——或许这比性命更有价值。",
+	"requirements": {
+	    "nonlethal": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "encounteradditional.failure",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"aspects": {
+	    "takeadditional": 1,
+	    "fatiguing": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"linked": [
+	    {
+		"id": "encounteradditional.failure.growth"
+	    },
+	    {
+		"id": "encounteradditional.failure.makecasualty"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "encounteradditional.failure.growth",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"requirements": {
+	    "foe.growth": 1
+	},
+	"aspects": {
+	    "killfriend": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"linked": [
+	    {
+		"id": "encounteradditional.failure.growthcontinue",
+	    }
+	]
+    },
+    {
+	"id": "encounteradditional.failure.growthcontinue",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"aspects": {
+	    "growthinfect": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+    },
+    {
+	"id": "encounteradditional.failure.makecasualty",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"aspects": {
+	    "makecasualty": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"alt": [
+	    {
+		"id": "encounteradditional.failure.killfriends",
+		"chance": 30
+	    }
+	]
+    },
+    {
+	"id": "encounteradditional.failure.killfriends",
+	"label": "惨败！",
+	"startdescription": "死亡。我们在此处面临失败，极其重大的失败。\n\n[尝试达成目标时失败有小概率直接杀死使用的友军。]",
+	"requirements": {
+	    "friend": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"aspects": {
+	    "killfriend": 1
+	}
+    },
+    {
+	"id": "encounternative.failure.nonlethal",
+	"label": "一次挫折！",
+	"startdescription": "我们被阻止了！这一次挫折并未取走任何性命，但这使我们付出了时间——或许这比性命更有价值。",
+	"requirements": {
+	    "nonlethal": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"warmup": 10
+    },
+    {
+	"id": "encounternative.failure",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"aspects": {
+	    "fatiguing": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"linked": [
+	    {
+	    	"id": "encounternative.failure.growth"
+	    },
+	    {
+	    	"id": "encounternative.failure.makecasualty"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "niniame.spawn",
+		"additional": true
+	    },
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "encounternative.failure.growth",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"requirements": {
+	    "foe.growth": 1
+	},
+	"aspects": {
+	    "killfriend": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"linked": [
+	    {
+		"id": "encounternative.failure.growthcontinue",
+	    }
+	]
+    },
+    {
+	"id": "encounternative.failure.makecasualty",
+	"label": "败北！",
+	"startdescription": "我们被阻止了！负伤的士兵与破损的载具在太阳落山时急忙撤退。我必须重新评估策略，以免再次遭遇这样的失败。",
+	"aspects": {
+	    "makecasualty": 1
+	},
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"alt": [
+	    {
+	    	"id": "encounternative.failure.killfriends",
+		"chance": 30
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "encounternative.failure.killfriends",
+	"label": "惨败！",
+	"startdescription": "死亡。我们在此处面临失败，极其重大的失败。\n\n[尝试达成目标时失败有小概率直接杀死使用的友军。]",
+	"requirements": {
+	    "friend": 1
+	},
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "hindrance",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"effects": {
+	    "foe": -99,
+	    "hindrance": -99
+	},
+	"aspects": {
+	    "killfriend": 1
+	}
+    },
+    
+    {
+	"id": "buildbarracks",
+	"actionid": "operate",
+	"label": "命令为我们的人建造新的住所",
+	"startdescription": "我们只能让许多人在这大冷天风餐露宿，直到我们分队半数以上的人因暴露于恶劣环境而死。为我们的人建造一处新的住所能够缓解这一问题。\n\n[这会为你的友军创造一个新的营房，但会永久耗尽你使用的工兵。]",
+	"description": "完成了。建筑矗立于此。",
+	"requirements": {
+	    "main": -1,
+	    "side": -1,
+        "foe": -1,
+        "damaged": -1,
+        "infrastructure.destroyed": -1,
+	    "friend.engineers": 1,
+	    "provisions": 2
+	},
+	"effects": {
+	    "friend.engineers": -99,
+	    "loc.barracks": 1
+	},
+	"warmup": 60,
+	"craftable": true
+    },
+    
+    {
+	"id": "produce.strife",
+	"actionid": "spit.edge",
+	"label": "抗争！",
+	"startdescription": "战斗招致战斗。纷争沸腾并重新开动，因此斗争将持续。",
+	"warmup": 10,
+	"effects": {
+	    "strife": 1
+	},
+    "linked": [
+        {
+            "id": "produce.strife_incur"
+        },
+        {
+            "id": "produce.strife_incur2"
+        },
+        {
+            "id": "produce.strife_incur3"
+        },
+    ]
+    },
+    {
+	"id": "produce.strife_incur",
+	"actionid": "spit.edge",
+	"label": "抗争招致！",
+	"startdescription": "敌军久攻不下，你的表现收到了上级的赞许，也引起了些不必要的关注",
+	"warmup": 10,
+    "maxexecutions": 1,
+    "extantreqs": {
+	    "strife.tracker": 5,
+        "strife.incur": -1
+    },
+	"effects": {
+	    "strife": -1,
+        "strife.incur": 1
+	}
+    },
+    {
+	"id": "produce.strife_incur2",
+	"actionid": "spit.edge",
+	"label": "抗争招致！",
+	"startdescription": "敌军久攻不下，你的表现收到了上级的赞许，也引起了些不必要的关注",
+	"warmup": 10,
+    "maxexecutions": 1,
+    "extantreqs": {
+	    "strife.tracker": 7,
+        "strife.incur": -1
+    },
+	"effects": {
+	    "strife": -1,
+        "strife.incur": 1
+	}
+    },
+    {
+	"id": "produce.strife_incur3",
+	"actionid": "spit.edge",
+	"label": "抗争招致！",
+	"startdescription": "敌军久攻不下，你的表现收到了上级的赞许，也引起了些不必要的关注",
+	"warmup": 10,
+    "maxexecutions": 1,
+    "extantreqs": {
+	    "strife.tracker": 9,
+        "strife.incur": -1
+    },
+	"effects": {
+	    "strife": -1,
+        "strife.incur": 1
+	}
+    },
+    
+    {
+	"id": "resupply.startup",
+	"actionid": "resupply",
+	"label": "供应补给品",
+	"startdescription": "一支友军车队经过我们外围，携带着无价的货物：食物、饮水药物。或许货物中还夹杂着一两块巧克力。\n\n[只要你并非身处战火摧残的地区且并未被敌军切断补给线，你就会在愉快的日子得到更多补给品。]",
+	"requirements": {
+	    "days.resupply": 1
+	},
+	"extantreqs": {
+	    "wasteland": -1,
+	    "side.cutoff": -1,
+	    "side.cutoff.exhausted": -1,
+	    "lake.here": -1
+	},
+	"effects": {
+	    "provisions": 3
+	},
+	"internaldeck": {
+	    "spec": [
+		"provisions",
+		"provisions",
+		"provisions",
+		"husk",
+		"husk"
+	    ],
+	    "draws": 3,
+	    "resetonexhaustion": true
+	},
+	"linked": [
+	    {
+		"id": "resupply.giverifle"
+	    }
+	],
+	"warmup": 30
+    },
+    {
+	"id": "resupply.startup.contemnant",
+	"actionid": "resupply.yellow",
+	"label": "获取补给品?",
+	"startdescription": "一支补给车队经过我们外围，携带着无价的货物：食物、饮水、药物。其上的补给并非供应给我们——更可能是供应给俄军或德军——但这并不意味着我们不会不请自来。\n\n[派遣一位乐意如此的友军前去偷窃补给车队，以获取补给品。有时偷窃会失败，但派遣处于隐匿状态的友军则能够确保成功。若你想亲自前去，就使用你的刃密传。]",
+	"description": "我们中没有人能鼓起勇气进行盗窃。等着我们的只有更多挨饿的日子。",
+	"requirements": {
+	    "days.resupply": 1
+	},
+	"extantreqs": {
+	    "contemnant.story": 1,
+	    "warzone.current": 1,
+	    "wasteland": -1,
+	    "side.cutoff": -1,
+	    "side.cutoff.exhausted": -1,
+	    "lake.here": -1,
+	    "sobibor.here": -1
+	},
+	"slots": [
+	    {
+		"id": "needsally",
+		"label": "友军",
+		"required": {
+		    "friend": 1,
+		    "lore": 1
+		},
+		"forbidden": {
+		    "exhausted": 1,
+		    "wounded": 1,
+		    "damaged": 1,
+		    "remnant": 1,
+		    "hired": 1
+		}
+	    }
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "resupply.contemnant.allygiven"
+	    },
+	    {
+		"id": "resupply.contemnant.loregiven"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.hidden",
+	"actionid": "operate",
+	"label": "筹划一次对敌军的袭击",
+	"startdescription": "前进，进入那浓密的黑暗。我们将找到敌军，或是他们将找到我们。",
+	"requirements": {
+	    "foe": 1,
+	    "foe.hidden": 1,
+	    "provisions": 1
+	},
+	"craftable": true,
+	"warmup": 30,
+	"linked": [
+	    {
+		"id": "attackenemy.failure.necessary",
+		"chance": 100
+	    },
+	    {
+		"id": "attackenemy.failure",
+		"chance": 70
+	    },
+	    {
+		"id": "attackenemy.success"
+	    }
+	]
+    },
+    {
+	"id": "attackenemy.failure.necessary",
+	"label": "筹划一次对敌军的袭击",
+	"startdescription": "前进，进入那浓密的黑暗。我们将找到敌军，或是他们将找到我们。",
+	"grandReqs": {
+	    "[uqjerome] >= 1 || [uqlionel] >= 1 || [clockwork.mark] >= 1 || [tomori.mark] >= 1 || [foe.umiri.mark] >= 1": 1,
+	},
+    "linked": [
+        {
+            "id": "attackenemy.failure"
+        }
+    ]
+    },
+
+    {
+	"id": "hint.militia",
+	"actionid": "operate",
+	"label": "与义勇军商讨？",
+	"startdescription": "他们并非士兵，但同样是战士，且士气高涨。我可以拍他们进城为本地人提供慰藉，或强制同一批本地人派上用场。",
+	"requirements": {
+	    "friend.militia": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.scouts",
+	"actionid": "operate",
+	"label": "与斥候商讨？",
+	"startdescription": "我们的斥候能快速搜查战场，比其他人都要快。我也可以活用他们以在原本破坏性的气候与自然现象中寻找一些可用的优势。",
+	"requirements": {
+	    "friend.scouts": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.medics",
+	"actionid": "operate",
+	"label": "与战地医师商讨？",
+	"startdescription": "我们的医生与护士的职责正是使我们保持在战斗状态——至少保持在接近战斗状态的状态。我可以让他们治疗我军的伤员，或者处理我自己的伤口。",
+	"requirements": {
+	    "friend.medics": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.engineers",
+	"actionid": "operate",
+	"label": "与工兵商讨？",
+	"startdescription": "我们的工兵能够处理一系列关键任务。若我给他们补给品，他们就可以为我们的士兵制造新的住所；若我给他们毁坏的军事设施或受损的机械与足够的补给品，他们就可以将其修复。",
+	"requirements": {
+	    "friend.engineers": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.infantry",
+	"actionid": "operate",
+	"label": "与步兵商讨？",
+	"startdescription": "我们分队的脸面与最前端的肢体。我可以拍他们进城为本地人提供慰藉，或强制同一批本地人派上用场。",
+	"requirements": {
+	    "friend.infantry": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.winteradept",
+	"actionid": "operate",
+	"label": "与一名庄严之术的学徒商讨？",
+	"startdescription": "若某人已然倒下，此人可让其再次站起——不过仅有很短的一段时间。",
+	"requirements": {
+	    "friend.adeptwinter": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.lanternadept",
+	"actionid": "operate",
+	"label": "与一名辉煌之术的学徒商讨？",
+	"startdescription": "此人知晓如何将不纯之物驱离这个世界，也知晓如何从这一过程中取得力量。",
+	"requirements": {
+	    "friend.adeptlantern": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "hint.grailadept",
+	"actionid": "operate",
+	"label": "与一名赤红之术的学徒商讨？",
+	"startdescription": "赤杯给予生命，亦取走生命。我能够自行完成后者，故我需要我的这名囚犯为我完成前者。",
+	"requirements": {
+	    "friend.adeptgrail": 1,
+        "foe.umiri.mark": -1,
+        "umiri.mark": -1,
+        "main": -1,
+        "side": -1,
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    
+    {
+	"id": "dreams.startup",
+	"actionid": "dreaming",
+	"label": "梦境之扉",
+	"startdescription": "居屋接近世界。今晚，任何梦境足够强烈的人都可能行于居屋之内。\n\n[放入合适的卡牌以引导一个有用的梦境。若你什么都不做，你的灵魂将漂流至任何正在等待着的梦境中。]",
+	"requirements": {
+	    "days.dream": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "思虑",
+		"required": {
+		    "contemplation": 1
+		}
+	    }
+	],
+	"warmup": 30,
+	"alt": [
+	    {
+		"id": "obdurant.defiancehints"
+	    },
+	    {
+		"id": "proterant.namehints"
+	    },
+	    {
+		"id": "obdurant.namehints"
+	    },
+	    {
+		"id": "contemplation.complete.anno"
+	    },
+	    {
+		"id": "contemplation.complete"
+	    },
+	    {
+		"id": "contemplate.wolfdream"
+	    },
+	    {
+		"id": "othercontemplations"
+	    }
+	],
+	"linked": [
+	    {
+		"id": "dreams.router"
+	    }
+	]
+    },
+    {
+	"id": "obdurant.defiancehints",
+	"label": "思考对立飞升",
+	"startdescription": "我将在入眠之前熄灭蜡烛，并沉思我的飞升。",
+	"requirements": {
+	    "obdurant.story.umiri": 1
+	},
+	"linked": [
+	    {
+		"id": "obdurant.defiancehints.drawhint"
+	    }
+	]
+    },
+    {
+	"id": "obdurant.defiancehints.drawhint",
+	"label": "思考对立飞升",
+	"internaldeck": {
+	    "spec": [
+		"draw.hintobdurant.defiance",
+		"draw.hintobdurant.dead",
+		"draw.hintobdurant.stalingrad"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true
+	},
+	"linked": [
+	    {
+		"id": "obdurant.hintdesc.defiance"
+	    },
+	    {
+		"id": "obdurant.hintdesc.dead"
+	    },
+	    {
+		"id": "obdurant.hintdesc.stalingradfight"
+	    },
+	    {
+		"id": "obdurant.clearagaina"
+	    }
+	]
+    },
+    {
+	"id": "obdurant.clearagaina",
+	"label": "思考对立飞升",
+	"effects": {
+	    "decision": -99
+	},
+	"linked": [
+	    {
+		"id": "obdurant.defiancehints.drawhint"
+	    }
+	]
+    },
+    {
+	"id": "obdurant.hintdesc.defiance",
+	"label": "斗争之火……",
+	"startdescription": "若我希望燃起斗争之火……",
+	"description": "若我希望燃起斗争之火，我须在我们两人的见证下刻下伤疤——无论在谁身上落下。抑或摧毁她的卫队，这无疑会激怒你的敌人，而她的愤怒将助力斗争之火燃的更旺。",
+	"requirements": {
+	    "draw.hintobdurant.defiance": 1
+	},
+	"warmup": 30
+    },
+    {
+	"id": "obdurant.hintdesc.dead",
+	"label": "无限纷争……",
+	"startdescription": "若我希望于命定之地完成仪式……",
+	"description": "若我希望于命定之地完成仪式，我与我的敌人须于此处完成一次盛大的战斗，而这战斗必将以死亡告终，无论是谁的死亡。",
+	"requirements": {
+	    "draw.hintobdurant.dead": 1
+	},
+	"warmup": 30
+    },
+    {
+	"id": "obdurant.hintdesc.stalingradfight",
+	"label": "命定之地……",
+	"startdescription": "若我希望抵达命定之地……",
+	"description": "若我希望抵达命定之地，我须撤退，抵御德军的追击，直至退无可退，直至那座伟大的城市，联盟的工业心脏，斯大林格勒。",
+	"requirements": {
+	    "draw.hintobdurant.stalingrad": 1
+	},
+	"warmup": 30
+    },
+    {
+	"id": "attackenemy.success",
+	"label": "胜利！",
+	"startdescription": "敌人在我们的脚边倒下，在战争结束之前，更多的敌人将会如此。今天是个好日子，但这只是沧海一粟。",
+	"aspects": {
+	    "killfoe": 1,
+	    "fatiguing": 1
+	},
+	"mutations": [
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds.defiance_dead",
+		"additional": true,
+		"chance": 30
+	    },
+	],
+	"linked": [
+	    {
+		"id": "attackenemy.success.ex"
+	    },
+	]
+    },
+    {
+	"id": "attackenemy.success.ex",
+	"label": "胜利！",
+	"startdescription": "敌人在我们的脚边倒下，在战争结束之前，更多的敌人将会如此。今天是个好日子，但这只是沧海一粟。",
+	"aspects": {
+	},
+	"mutations": [
+	    {
+		"filter": "foe.officerdetail",
+		"mutate": "foe.officerdetail",
+		"level": -1
+	    },
+	    {
+		"filter": "foe.guardjerome",
+		"mutate": "foe.guardjerome",
+		"level": -1
+	    },
+	    {
+		"filter": "battlehunger",
+		"mutate": "battlehunger",
+		"level": -1,
+		"additive": true
+	    },
+	    {
+		"filter": "foe.ingluviate.protect",
+		"mutate": "foe.ingluviate.protect",
+		"level": 0
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.escape",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.escape.marinette",
+		"additional": true,
+		"chance": 100
+	    },
+	    {
+		"id": "produce.escape.bloodonhands",
+		"additional": true,
+		"chance": 100
+	    },
+	    {
+		"id": "resilient.survived",
+		"chance": 30
+	    },
+	    {
+		"id": "braced.survived"
+	    },
+	    {
+		"id": "defeateddefiant.turnintofriend",
+	    },
+	    {
+		"id": "produce.monsterlesson",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "jerome.setupguard",
+		"additional": true,
+		"expulsion": {
+		    "limit": 99,
+		    "filter": {
+			"uqjerome": 1
+		    }
+		}
+	    },
+	    {
+		"id": "lionel.retaliate",
+		"additional": true,
+	    }
+	],
+	"linked": [
+	    {
+		"id": "used.shotgun.collateral",
+		"chance": 60
+	    },
+	    {
+		"id": "used.gaebolg.producewrake"
+	    },
+	    {
+		"id": "orcul.slain"
+	    },
+	    {
+		"id": "jerome.slain"
+	    },
+	    {
+		"id": "lionel.slain"
+	    },
+	    {
+		"id": "clear.bloodlust"
+	    },
+	    {
+		"id": "clear.broodscent"
+	    },
+	    {
+		"id": "startup.clear.malkin"
+	    },
+	]
+    },
+    ]
+}

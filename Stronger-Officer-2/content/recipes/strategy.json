@@ -1,0 +1,185 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.tactics1_prep_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人即将向我们的防线发动猛攻，我们作何应对？[现在敌军尚未发动进攻，我们可主动出击打断敌人的计划吗，又或者投入资源以备战]",
+            "description": "德国人即将向我们的防线发动猛攻，我们作何应对？[现在敌军尚未发动进攻，我们可主动出击打断敌人的计划吗，又或者投入资源以备战]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_forge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_edge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_attack0"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_friend",
+            "label": "敌军正在行军！",
+            "startdescription": "步坦协同[这个战术触发后将会吸收一个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "description": "步坦协同[这个战术触发后将会吸收一个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+                "foe": -2,
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_edge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_forge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_attack_friend"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack_friend",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_friend",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_end_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack_end_friend",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_main"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+
+    ]
+}

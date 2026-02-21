@@ -1,0 +1,14 @@
+{
+"endings": [
+    {
+        "id": "proterant.findout_anno",
+        "label": "纷争延续",
+        "description": "当我们抵达罗马的时候，德军已经从那里撤退了，但我找到了另一个人——那位路上结识的新王的军官，她答应会载我一程，而我将继续战斗直到尽头。\n\n[此为临时文案]",
+        "image": "longway",
+        "flavour": "Melancholy",
+        "anim": "DramaticLight",
+        "achievements": "XXX",
+	"BGmusic": "melancholyending.proterant.mp3"
+    },
+]
+}

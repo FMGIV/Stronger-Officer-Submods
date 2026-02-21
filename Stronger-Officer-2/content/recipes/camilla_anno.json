@@ -1,0 +1,401 @@
+{
+"recipes": [	
+    {
+	"id": "edgelong.attack.allies.noanno",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"tablereqs": {
+	    "friend": 1
+	},
+	"extantreqs": {
+	    "contemnant.story": -1,
+	    "wound.camilla.foranno.ex": -1,
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+			"faction.anno": 1,
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "edgelong.expel"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	]
+    },
+    {
+	"id": "edgelong.attack.allies",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"tablereqs": {
+	    "friend": 1
+	},
+	"extantreqs": {
+	    "contemnant.story": -1
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "camilla_attack.anno_haveto",
+		"chance": 100
+	    },
+	    {
+		"id": "camilla_attack.anno_passive",
+		"chance": 40
+	    },
+	    {
+		"id": "edgelong.expel"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	]
+    },
+    {
+	"id": "edgelong.sergei.attack.allies.anno",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"requirements": {
+	    "foe.sergei": 1
+	},
+    "extantreqs": {
+        "wound.sergei.foranno": 1,
+    },
+	"tablereqs": {
+	    "friend": 1
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "目标",
+		"required": {
+		    "friend": 1,
+		    "foe": 1
+		},
+		"forbidden": {
+			"faction.anno": 1,
+		    "foe.bombers.refuel": 1,
+            "foe.uneat": 1
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killfriend": 1,
+	    "killfoe": 1,
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "sergei_attack.anno_haveto",
+		"chance": 100
+	    },
+	    {
+		"id": "sergei_attack.anno_passive",
+		"chance": 40
+	    },
+	    {
+		"id": "sergei_attack.umiri_haveto",
+		"chance": 100
+	    },
+	    {
+		"id": "sergei_attack.umiri_passive",
+		"chance": 100
+	    },
+	    {
+		"id": "edgelong.expel"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	],
+	"effects": {
+	    "foe.chasseur.reviving": -99
+	}
+    },  
+	{
+	"id": "edgelong.prep.attack",
+	"label": "刃之长生者攻击了！",
+	"linked": [
+	    {
+		"id": "edgelong.contemnant.attackothers",
+		"chance": 40
+	    },
+	    {
+		"id": "edgelong.sergei.attack.allies.noanno",
+		"chance": 50
+	    },
+	    {
+		"id": "edgelong.sergei.attack.allies",
+		"chance": 50
+	    },
+	    {
+		"id": "edgelong.attack.allies.noanno",
+		"chance": 50
+	    },
+	    {
+		"id": "edgelong.attack.allies",
+		"chance": 50
+	    },
+	    {
+		"id": "edgelong.attack.you"
+	    }
+	]
+    },
+        {
+            "id": "sergei_attack.anno_passive",
+            "label": "意想不到的战局！",
+            "startdescription": "盟军军官已经被食铁者弄的很生气了，很生气。",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.sergei.foranno": -1,
+                "valkyrie.mark": 1,
+                "sergei": 1
+            },
+            "requirements": {
+                "faction.anno": 1,
+                "anno.mark": -1
+            },
+            "effects": {
+				"anno_sergei": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "slots": [
+                {
+                "id": "needsallies",
+                "label": "目标",
+                "required": {
+                    "valkyrie.mark": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.anno_haveto",
+            "label": "意想不到的战局！",
+            "startdescription": "盟军军官已经被食铁者弄的很生气了，很生气。",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.sergei.foranno": -1,
+                "sergei": 1
+            },
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+				"anno_sergei": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "sergei_attack.anno",
+            "label": "意想不到的战局！",
+            "startdescription": "没人知道发生了什么，不过老狼看起来无精打采的，暂时没工夫来烦扰我们了。",
+            "warmup": 45,
+            "effects": {
+				"wound.sergei.foranno": 1,
+				"anno_sergei": -99
+			},
+            "achievements": [
+                "ending.sergei_anno"
+            ],
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "edgelong.cycle"
+                }
+            ],
+            "alt": [],
+        },
+		
+        {
+            "id": "camilla_attack.anno_passive",
+            "label": "意想不到的战局！",
+            "startdescription": "盟军军官与其大敌的仇恨已由来已久。",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.camilla.foranno": -1,
+                "camilla": 1
+            },
+            "requirements": {
+                "faction.anno": 1,
+                "anno.mark": -1
+            },
+            "effects": {
+				"anno_camilla": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "slots": [
+                {
+                "id": "needsallies",
+                "label": "目标",
+                "required": {
+                    "anno.mark": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "camilla_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "camilla_attack.anno_haveto",
+            "label": "意想不到的战局！",
+            "startdescription": "盟军军官与其大敌的仇恨已由来已久。",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.camilla.foranno": -1,
+                "camilla": 1
+            },
+            "requirements": {
+                "foe.umiri.mark": 1,
+            },
+            "effects": {
+				"anno_camilla": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "camilla_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
+            "id": "camilla_attack.anno",
+            "label": "意想不到的战局！",
+            "startdescription": "盟军军官与其大敌的仇恨已由来已久，她们将去别处缠斗至一方暂时休止。",
+            "warmup": 45,
+            "effects": {
+				"wound.camilla.foranno": 1,
+				"anno_camilla": -99
+			},
+            "achievements": [
+                "ending.camilla_anno"
+            ],
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "edgelong.cycle"
+                }
+            ],
+            "alt": [],
+        },
+]
+}

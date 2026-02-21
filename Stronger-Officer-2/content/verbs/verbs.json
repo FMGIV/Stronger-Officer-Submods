@@ -1,0 +1,11 @@
+{
+"verbs": [
+    {
+	"id": "attack.ss",
+	"label": "Attack",
+	"description": "",
+	"spontaneous": true,
+	"maxUnique": 3
+    },
+]
+}

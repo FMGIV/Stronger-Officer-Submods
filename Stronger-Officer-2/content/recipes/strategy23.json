@@ -1,0 +1,678 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.tactics2_one_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsap"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.attack_friend",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+        "id": "foe.umiri.attack.tactics2_one.attack_friend",
+        "label": "敌军正在发动战术进攻！",
+        "startdescription": "拔除铁轨，拆毁住房。这些法西斯强盗！",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+        },
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "军用设施",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics2_two.pre"
+            },
+            {
+            "id": "foe.umiri.attack.tactics2.end1"
+            },
+        ],
+        "alt": [
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ]
+        },
+        
+        {
+            "id": "foe.umiri.attack.tactics2_two_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsap"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.attack_friend",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack_friend",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack2_friend",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack_end_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack2_friend",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack_end_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack_end_friend",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.pre"
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2.end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics2_three_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？[这个战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？[这个战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedgeforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsap"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack_friend",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack_friend",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
+	"requirements": {
+	},
+    "slots": [
+        {
+        "id": "friend",
+        "label": "友军",
+        "required": {
+            "faction.anno": 1,
+            "local": 1
+        },
+        "forbidden": {
+			"remnant": 1,
+            "anno.mark": 1,
+        },
+        "greedy": true
+        }
+    ],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_friend",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end_friend"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack_end_friend",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
+	"requirements": {
+	},
+	"aspects": {
+	},
+    "xpans": {
+        "stop_goal": 1
+    },
+    "slots": [
+        {
+        "id": "needsfoe1",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe2",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe3",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+    ],
+    "effects": {
+        "side.rescueallies": -99,
+        "side.weaponscache": -99,
+        "side.adeptgrail": -99,
+        "side.adeptlantern": -99,
+        "side.adeptwinter": -99,
+        "side.rescuepartisans": -99
+    },
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "needsedge",
+            "level": 2,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "needsforge",
+            "level": 30,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had1",
+            "level": 0,
+            "additive": false
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had2",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end1",
+        "chance": 50
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2_three.attack_end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        
+        {
+            "id": "foe.umiri.attack.tactics3_one_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "defend2",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "defend3",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsforgemoth"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsedge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics3b_one_friend",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+                "umiriattackfriend": 1
+            },
+            "extantreqs": {
+                "anno.mark": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "defend2",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+                {
+                "id": "defend3",
+                "label": "防御",
+                "required": {
+                    "faction.anno": 1,
+                    "local": 1,
+                    "valkyrie.mark": 1,
+                },
+                "forbidden": {
+			        "remnant": 1,
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "anno.mark": 1,
+                    "friend.medics": 1
+                },
+                "greedy": true
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsaerial"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsedge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    ]
+}

@@ -1,0 +1,2960 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.defense.first",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "actionId": "foedefense",
+            "warmup": 0,
+            "requirements": {
+                "strategy.defense": 1
+            },
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.defense",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "It seems they intend to consolidate their lines.",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+                "strategy.defense": 1
+            },
+            "tablereqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+			"playAudioTrack": "bgm.foedefense.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense2",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.defense1",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_d",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.defense0",
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense2",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "The Germans are mobilizing heavy firepower support for this defensive line.",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "maxexecutions": 100,
+            "grandReqs": {
+                "([~/extant:foe.bombers] + [~/extant:foe.bombers.hidden]) <= 2 || ([~/extant:foe.artillery] + [~/extant:foe.artillery.hidden]) <= 2": 1
+            },
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "effects": {
+                "foe.artillery": 1,
+                "foe.bombers": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.bombers": 4,
+            },
+            "aspects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense1",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "The camouflage netting of the armored battalion has been torn away. Engines roar. German scouts must be clearing the path ahead.",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "maxexecutions": 100,
+            "tablereqs": {
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "effects": {
+                "foe.tanks": 1,
+                "foe.infantry": 1,
+                "foe.kommando.hidden": 1,
+            },
+            "deckeffects": {
+                "foeforumiri.tanks": 3,
+                "foeforumiri.infantry": 4,
+            },
+            "aspects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense0",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "The dull thud of shovels biting into frozen earth echoed throughout the night. Trenches spread across the vast plain, forming ever more winding ravines. It seems we will need heavier firepower.",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+                "strategy.defense": 1
+            },
+            "tablereqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "slots": [
+                {
+                    "id": "foe.deploy",
+                    "label": "Enemy Maneuvers",
+                    "description": "",
+                    "required": {
+                        "foe.infantry": 1,
+                        "foe.infantry.hidden": 1,
+                    },
+                    "essential": {},
+                    "forbidden": {},
+                    "greedy": true,
+                    "consumes": false
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense_full"
+                },
+                {
+                    "id": "foe.umiri.attack.defense0",
+                    "chance": 35
+                },
+                {
+                    "id": "foe.umiri.attack.defense_begin"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.defense_full",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "The dull thud of shovels biting into frozen earth echoed throughout the night. Trenches spread across the vast plain, forming ever more winding ravines. It seems we will need heavier firepower.",
+            "description": "The dull thud of shovels biting into frozen earth echoed throughout the night. Trenches spread across the vast plain, forming ever more winding ravines. It seems we will need heavier firepower.",
+            "actionId": "foedefense",
+            "requirements": {
+                "foe.infantry": 3
+            },
+            "warmup": 0,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.defense_begin"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.defense_begin",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "The dull thud of shovels biting into frozen earth echoed throughout the night. Trenches spread across the vast plain, forming ever more winding ravines. It seems we will need heavier firepower.",
+            "description": "The dull thud of shovels biting into frozen earth echoed throughout the night. Trenches spread across the vast plain, forming ever more winding ravines. It seems we will need heavier firepower.",
+            "actionId": "foedefense",
+            "warmup": 45,
+            "requirements": {
+                "foe.infantry": 1
+            },
+            "effects": {
+                "hindrance.fortifications": "foe.infantry"
+            },
+            "linked": [
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_d",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "Decorations, shooting deserters, propaganda—the Germans still rely on the same tried-and-true methods. This is why the Empire always has so many fearless madmen.",
+            "description": "Decorations, shooting deserters, propaganda—the Germans still rely on the same tried-and-true methods. This is why the Empire always has so many fearless madmen.",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "tablereqs": {
+                "weakened": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "foe.resilient",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.kommando",
+                    "mutate": "foe.resilient",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_d1",
+                    "chance": 50
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_d1",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "startdescription": "Decorations, shooting deserters, propaganda—the Germans still rely on the same tried-and-true methods. This is why the Empire always has so many fearless madmen.",
+            "description": "Decorations, shooting deserters, propaganda—the Germans still rely on the same tried-and-true methods. This is why the Empire always has so many fearless madmen.",
+            "actionId": "foedefense",
+            "warmup": 10,
+            "requirements": {
+            },
+            "tablereqs": {
+                "weakened": 7
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1
+                },
+                "essential": {
+                    "weakened": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "foe.resilient",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.kommando",
+                    "mutate": "foe.resilient",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+
+        {
+            "id": "foe.umiri.attack.rally.first",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 0,
+			"maxexecutions": 1,
+            "requirements": {
+                "strategy.rally": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "strategy.rally": 1
+            },
+			"playAudioTrack": "bgm.foerally.mp3",
+            "extantreqs": {
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a0",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_f",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_e",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_c",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_b",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.rally_a",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a0",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "extantreqs": {
+                "foe.officerdetail": -4
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "Gunfire echoes from beyond the trenches. It seems <i>Ilse's</i> private soldiers have grown in number once more—the German military police will have their hands full.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.officerdetail": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_a1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_a1",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "Gunfire echoes from beyond the trenches. It seems <i>Ilse's</i> private soldiers have grown in number once more—the German military police will have their hands full.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "tablereqs": {
+                "foe.officerdetail": -2
+            },
+            "effects": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe": 1,
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                    "foe.officerdetail": 1,
+                    "foe.rankofficer": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downa"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.rally_b",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "foe.tanks": 3
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "grandReqs": {
+                "([~/extant:foe.tanks] + [~/extant:foe.tanks.hidden]) >= ([~/extant:foe.infantry] + [~/extant:foe.infantry.hidden] +2)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_b1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_b1",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "Their engines ran all night. It seems they've chosen their next batch of suicide squads.",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {
+                "foe.infantry": 1,
+                "foe.infantry.hidden": 1,
+                "foe.tanks": -1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.infantry",
+                    "foe.infantry",
+                    "husk",
+                    "husk",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downb"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+                "foe.infantry": 4
+            },
+            "extantreqs": {
+                "strife.tracker": 3
+            },
+            "grandReqs": {
+                "([~/extant:foe.infantry] + [~/extant:foe.infantry.hidden]) >= ([~/extant:foe.tanks] + [~/extant:foe.tanks.hidden] +2)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_c1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c1",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1,
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_c2",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_c2",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "At a critical moment like this, they're moving their troops away? There must be something behind this.",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+            },
+            "effects": {
+                "foe.infantry": -9
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.tanks.hidden",
+                    "foe.tanks.hidden",
+                    "foe.tanks",
+                    "foe.tanks",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downc"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_e",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "extantreqs": {
+                "strife.tracker": 5
+            },
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/extant:foe.infantry] + [~/extant:foe.kommando] + [~/extant:foe.kommando.hidden] + [~/extant:foe.infantry.hidden]) >= 4": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                    "foe.kommando": 1,
+                    "foe.kommando.hidden": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                    "foe.officerdetail": 1,
+                    "foe.chasseur.hidden": 1,
+                    "foe.chasseur.reviving": 1,
+                    "foe.cross.hidden": 1,
+                    "foe.echidniform.grounded.hidden": 1,
+                    "foe.echidniform.airborne.hidden": 1,
+                    "foe.growth.hidden": 1,
+                    "foe.hesukhine.hidden": 1,
+                    "foe.labhite.grounded.hidden": 1,
+                    "foe.labhite.airborne.hidden": 1,
+                    "foe.serpent.hidden": 1,
+                    "foe.skaptodon.hidden": 1,
+                    "foe.spathiurus.hidden": 1,
+                    "foe.splinter.hidden": 1,
+                    "foe.undead.hidden": 1,
+                    "foe.warrior.hidden": 1,
+                    "foe.wrake.hidden": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_e1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_e1",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "It seems they've brought in more specialized personnel. Hopefully, they won't cause even greater trouble.",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+                "foe": 1
+            },
+            "effects": {
+                "foe.infantry": -1,
+                "foe.infantry.hidden": -1,
+                "foe.kommando": -1,
+                "foe.kommando.hidden": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "internaldeck": {
+                "spec": [
+                    "foe.manhunters",
+                    "foe.manhunters",
+                    "foe.sniper",
+                    "foe.sniper",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downe"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_f",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "They have touched these corpses with the reach of the Void. Now they serve the Germans—regardless of whose allegiance they once belonged to.",
+            "actionId": "foerally",
+            "warmup": 10,
+            "extantreqs": {
+                "strife.tracker": 7
+            },
+            "grandReqs": {
+                "([~/exterior:foe.corpses] >= 1) || ([~/exterior:friend.corpses] >= 1)": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.corpses": 1,
+                    "friend.corpses": 1,
+                },
+                "essential": {
+                },
+                "forbidden": {
+                    "otherworldly": 1,
+                    "foe.bombers.refuel": 1,
+                    "foe.rankofficer": 1,
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_f1",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_f1",
+            "label": "Enemy Regrouping",
+            "startdescription": "We've intercepted a German message; they are rallying their troops and reorganizing their units.",
+            "description": "They have touched these corpses with the reach of the Void. Now they serve the Germans—regardless of whose allegiance they once belonged to.",
+            "actionId": "foerally",
+            "warmup": 30,
+            "requirements": {
+                "remnant": 1
+            },
+            "effects": {
+                "foe.chasseur": 1,
+                "foe.corpses": -1,
+                "friend.corpses": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "weakened",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needswinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsmoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgeforge",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgewinter",
+                    "level": 0
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedgelantern",
+                    "level": 0
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.rally_downf"
+                }
+            ],
+            "inductions": []
+        },
+        {
+            "id": "foe.umiri.attack.rally_downa",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "description": "Gunfire echoes from beyond the trenches. It seems <i>Ilse's</i> private soldiers have grown in number once more—the German military police will have their hands full.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downb",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "description": "Their engines ran all night. It seems they've chosen their next batch of suicide squads.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downc",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "description": "At a critical moment like this, they're moving their troops away? There must be something behind this.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downe",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "description": "It seems they've brought in more specialized personnel. Hopefully, they won't cause even greater trouble.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.rally_downf",
+            "label": "Enemy Adjusting Defensive Strategy",
+            "description": "It seems they've brought in more specialized personnel. Hopefully, they won't cause even greater trouble.",
+            "actionId": "foerally",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "concealidentity": 1
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics1.first",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Treads grind through the trenches...",
+            "description": "Treads grind through the trenches...",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics1": 1
+            },
+			"maxexecutions": 1,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics1",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "Treads grind through the trenches...",
+            "description": "Treads grind through the trenches...",
+            "actionId": "foetactics1",
+            "warmup": 10,
+			"playAudioTrack": "bgm.foetactics1.mp3",
+            "requirements": {
+                "strategy.tactics1": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_begin",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_begin",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "...Combat boots caked with mud.",
+            "description": "...Combat boots caked with mud.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "foe.tanks": 1
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "internaldeck": {
+                "spec": [
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackme",
+                    "umiriattackfriend",
+                    "umiriattackfriend",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": -1,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_again",
+                    "chance": 30
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_prep_friend"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_prep"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_again",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "...Combat boots caked with mud.",
+            "description": "...Combat boots caked with mud.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "Enemy",
+                "required": {
+                    "foe.infantry": 1,
+                    "foe.infantry.hidden": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_prep_friend"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_prep"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_prep",
+            "label": "Enemy Launching Tactical Assault!",
+            "startdescription": "The Germans are about to launch a fierce assault on our defensive line. How shall we respond?\n\n[Resources committed during this phase will not be consumed. If the assault is not interrupted, the enemy will launch a tactical offensive on two or even multiple fronts. <i>Inviolate Defence</i> or <i>Aid from the Eternal</i> cannot repel this attack from the entire line.]",
+            "description": "The Germans are about to launch a fierce assault on our defensive line. How shall we respond?\n\n[Resources committed during this phase will not be consumed. If the assault is not interrupted, the enemy will launch a tactical offensive on two or even multiple fronts. <i>Inviolate Defence</i> or <i>Aid from the Eternal</i> cannot repel this attack from the entire line.]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_forge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_edge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_attack0"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_edge",
+            "label": "Enemy Movement Detected",
+            "startdescription": "We have obtained the coordinates of their troop positions. Our carefully prepared shells will be their answer.",
+            "description": "We have obtained the coordinates of their troop positions. Our carefully prepared shells will be their answer.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "edge": "needsedge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_forge",
+            "label": "Enemy Movement Detected",
+            "startdescription": "Treads snap, engines stall. It seems the German offensive will fizzle out.",
+            "description": "Treads snap, engines stall. It seems the German offensive will fizzle out.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "forge": "needsforge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_attack0",
+            "label": "Enemy Forces on the March!",
+            "startdescription": "The earth growls. These steel beasts advance slowly, followed by a grey tide.",
+            "description": "The earth growls. These steel beasts advance slowly, followed by a grey tide.",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_attack"
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_attack",
+            "label": "Enemy Forces on the March!",
+            "startdescription": "The earth growls. These steel beasts advance slowly, followed by a grey tide.",
+            "description": "The earth growls. These steel beasts advance slowly, followed by a grey tide.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_friend"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_attack"
+                }
+            ],
+            "inductions": [
+                {
+                "id": "doubleattack.1.startup.ex",
+                "expulsion": {
+                    "filter": {
+                        "foe.infantry": 1
+                    },
+                    "limit": 1
+                }
+                },
+                {
+                "id": "doubleattack.2.startup.ex",
+                "expulsion": {
+                    "filter": {
+                        "foe.infantry": 1
+                    },
+                    "limit": 1
+                }
+                },
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks",
+            "label": "Enemy Forces on the March!",
+            "startdescription": "Steel extends firepower, flesh scours the field—they advance methodically!\n\n[When this tactic triggers, it will absorb and destroy one non-unique Secondary Objective and exhaust all objectives on the field.]",
+            "actionId": "foetactics1",
+            "warmup": 30,
+            "requirements": {
+                "foe": -2
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "Defense",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1,
+                    "faction.anno": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_edge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_forge"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_attack"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_deflect",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "skill.deflect": 1
+            },
+            "extantreqs": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics1_tanks_deflect_ex"
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_deflect_ex",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "actionId": "foetactics1",
+            "warmup": 0,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ],
+            "effects": {
+            },
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_edge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "edge": "needsedge"
+            },
+            "extantreqs": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_forge",
+            "label": "Successful Counterattack!",
+            "startdescription": "Stand and fight.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+                "forge": "needsforge"
+            },
+            "extantreqs": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "effects": {
+            },
+            "alt": [
+                {
+                "id": "produce.strife",
+                "additional": true,
+                "chance": 65
+                },
+                {
+                "id": "produce.strife.contemnant",
+                "additional": true,
+                "chance": 50
+                },
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack",
+	"label": "Lost Resources!",
+	"startdescription": "The defensive line has been completely overrun. Supplies lie scattered everywhere. This carefully constructed defensive line has been destroyed in an instant.",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics1_tanks_attack_end",
+	"label": "Lost Resources!",
+	"startdescription": "The defensive line has been completely overrun. Supplies lie scattered everywhere. This carefully constructed defensive line has been destroyed in an instant.",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics1_tanks_attack_main"
+	    },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics1_tanks_attack_main",
+            "label": "Enemy Offensive Unstoppable",
+            "startdescription": "The Germans triumphantly planted their flag on our position. Our objective has been compromised.",
+            "description": "The Germans triumphantly planted their flag on our position. Our objective has been compromised.",
+            "actionId": "foetactics1",
+            "warmup": 10,
+            "requirements": {
+            },
+            "extantreqs": {
+            },
+            "xpans": {
+                "stop_goal": 1
+            },
+            "aspects": {
+                "dissolution": 1,
+                "makecasualty": 1,
+                "fatiguing": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "Obstruction",
+                "required": {
+                    "side.rescueallies": 1,
+                    "side.weaponscache": 1,
+                    "side.adeptgrail": 1,
+                    "side.adeptlantern": 1,
+                    "side.adeptwinter": 1,
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+            ],
+            "effects": {
+                "side.rescueallies": -99,
+                "side.weaponscache": -99,
+                "side.adeptgrail": -99,
+                "side.adeptlantern": -99,
+                "side.adeptwinter": -99,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "needsforge",
+                    "level": 0,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.tanks",
+                    "mutate": "foe.armoured",
+                    "level": 1,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics1.had",
+                    "mutate": "strategy.tactics1.had",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "produce.wounds",
+                    "chance": 50
+                }
+            ]
+        },
+    {
+	"id": "produce.wounds",
+	"actionid": "explorevault_casualty",
+	"label": "I am wounded!",
+	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"deckeffects": {
+	    "mywounds": 1
+	},
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "givewound.fifth"
+	    },
+	    {
+		"id": "givewound.ear"
+	    },
+	    {
+		"id": "givewound.eye"
+	    },
+	    {
+		"id": "givewound.hand"
+	    },
+	    {
+		"id": "givewound.leg"
+	    },
+	    {
+		"id": "givewound.clear"
+	    }
+	],
+    "inductions": [
+        {
+            "id": "produce.wounds.defiance",
+            "chance": 30
+        }
+    ]
+    },
+    {
+	"id": "produce.wounds.defiance_dead",
+	"actionid": "wounds_defiance",
+	"label": "Mark of the Strife",
+	"startdescription": "My arch-nemesis was wounded in our Strife.",
+    "extantreqs": {
+        "foe.umiri.mark": 1,
+        "obdurant.story": 1
+    },
+    "requirements": {
+        "foe.officerdetail": 1
+    },
+	"effects": {
+	    "umiri.defiance": 1
+	},
+	"warmup": 10,
+	"linked": [
+	]
+    },
+    {
+	"id": "produce.wounds.defiance",
+	"actionid": "wounds_defiance",
+	"label": "Mark of the Strife",
+	"startdescription": "I was wounded in my Strife against my arch-nemesis.",
+    "extantreqs": {
+        "foe.umiri.mark": 1,
+        "obdurant.story": 1
+    },
+	"effects": {
+	    "umiri.defiance": 1
+	},
+	"warmup": 10,
+	"linked": [
+	]
+    },
+
+        {
+        "id": "doubleattack.1.startup.ex",
+        "actionid": "enemyaction.double.1",
+        "label": "Infantry-Tank Coordination!",
+        "startdescription": "The enemy is approaching—",
+        "effects": {
+            "decision.enemy.doubleattack": 1,
+            "up_edge": 1,
+	        "decision.enemy.attack": 1
+        },
+        "aspects": {
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 0,
+                "additive": true
+            },
+            {
+                "filter": "strategy.tactics1.had",
+                "mutate": "strategy.tactics1.had",
+                "level": 0,
+                "additive": false
+            },
+        ],
+        "requirements": {
+        },
+        "linked": [
+            {
+            "id": "foe.coordinated.getsecond.pre"
+            },
+            {
+            "id": "revealenemyidentity"
+            },
+            {
+            "id": "defend.opportunity.ingluviate"
+            },
+            {
+            "id": "defend.opportunity"
+            },
+            {
+            "id": "nonefound"
+            }
+        ],
+        "warmup": 10,
+        "alt": [
+            {
+            "id": "foe.commander.extraenemy",
+            "additional": true
+            }
+        ]
+        },
+        {
+        "id": "doubleattack.2.startup.ex",
+        "actionid": "enemyaction.double.2",
+        "label": "Infantry-Tank Coordination!",
+        "startdescription": "The enemy is approaching—",
+        "effects": {
+            "decision.enemy.doubleattack": 1,
+            "up_edge": 1,
+	        "decision.enemy.attack": 1
+        },
+        "aspects": {
+        },
+        "requirements": {
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 0,
+                "additive": true
+            },
+            {
+                "filter": "strategy.tactics1.had",
+                "mutate": "strategy.tactics1.had",
+                "level": 0,
+                "additive": false
+            },
+        ],
+        "linked": [
+            {
+            "id": "foe.coordinated.getsecond.pre"
+            },
+            {
+            "id": "revealenemyidentity"
+            },
+            {
+            "id": "defend.opportunity.ingluviate"
+            },
+            {
+            "id": "defend.opportunity"
+            },
+            {
+            "id": "nonefound"
+            }
+        ],
+        "warmup": 10,
+        "alt": [
+            {
+            "id": "foe.commander.extraenemy",
+            "additional": true
+            }
+        ]
+        },
+    
+    {
+	"id": "doubleattack.1.startup",
+	"actionid": "enemyaction.double.1",
+	"label": "A Pincer Attack!",
+	"startdescription": "Two of our adversaries have decided to strike at the same time - strategy, or sheer ill luck? Either way, we can expect a nasty skirmish ahead.",
+	"effects": {
+	    "decision.enemy.attack": 1
+	},
+	"aspects": {
+	    "takeadditional": 1
+	},
+    "extantreqs": {
+        "strategy.tactics1": -1,
+        "strategy.tactics2": -1,
+        "strategy.tactics3": -1,
+    },
+	"requirements": {
+	    "decision.enemy.doubleattack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "Enemy",
+		"required": {
+		    "foe": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "foe.rankofficer": 1,
+		    "soviet": 1,
+		    "detectivetemptation": 1,
+		    "foe.exilenightmare": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "foe.coordinated.getsecond.pre"
+	    },
+	    {
+		"id": "revealenemyidentity"
+	    },
+	    {
+		"id": "defend.opportunity.ingluviate"
+	    },
+	    {
+		"id": "defend.opportunity"
+	    },
+	    {
+		"id": "nonefound"
+	    }
+	],
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "foe.commander.extraenemy",
+		"additional": true
+	    }
+	]
+    },
+    {
+	"id": "doubleattack.2.startup",
+	"actionid": "enemyaction.double.2",
+	"label": "A Pincer Attack!",
+	"startdescription": "Two of our adversaries have decided to strike at the same time - strategy, or sheer ill luck? Either way, we can expect a nasty skirmish ahead.",
+	"effects": {
+	    "decision.enemy.attack": 1
+	},
+	"aspects": {
+	    "takeadditional": 1
+	},
+    "extantreqs": {
+        "strategy.tactics1": -1,
+        "strategy.tactics2": -1,
+        "strategy.tactics3": -1,
+    },
+	"requirements": {
+	    "decision.enemy.doubleattack": 1
+	},
+	"slots": [
+	    {
+		"id": "needsenemy",
+		"label": "Enemy",
+		"required": {
+		    "foe": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "foe.rankofficer": 1,
+		    "soviet": 1,
+		    "detectivetemptation": 1,
+		    "foe.exilenightmare": 1
+		},
+		"greedy": true
+	    },
+	],
+	"linked": [
+	    {
+		"id": "foe.coordinated.getsecond.pre"
+	    },
+	    {
+		"id": "revealenemyidentity"
+	    },
+	    {
+		"id": "defend.opportunity.ingluviate"
+	    },
+	    {
+		"id": "defend.opportunity"
+	    },
+	    {
+		"id": "nonefound"
+	    }
+	],
+	"warmup": 10,
+	"alt": [
+	    {
+		"id": "foe.commander.extraenemy",
+		"additional": true
+	    }
+	]
+    },
+
+    ]
+}

@@ -1,0 +1,2548 @@
+{
+    "elements": [
+    {
+	"id": "side.umiri",
+	"label": "次要目标：突袭指挥营",
+	"description": "我们已经掌握了敌军指挥营的内部分布了，是时候让她吃点苦头了。",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+    {
+	"id": "side.umiri2",
+	"label": "次要目标：突袭指挥营",
+	"description": "我们已经掌握了敌军指挥营的内部分布了，是时候让她吃点苦头了。",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+    {
+	"id": "side.umiri3",
+	"label": "次要目标：突袭指挥营",
+	"description": "我们已经掌握了敌军指挥营的内部分布了，是时候让她吃点苦头了。",
+	"inherits": "side.template",
+	"aspects": {
+		"umiri.mark": 1
+	},
+	"xtriggers": {
+		"killgerman": "husk",
+		"killumiri": "husk",
+        "stop_goal": "husk"
+	},
+	"lifetime": 180,
+	"unique": true
+    },
+        {
+            "id": "foe.umiri",
+            "label": "<i>冯海铃</i><b>上尉</b>",
+            "description": "一位崭露头角的年轻军官，亦是与我共赴角争的同道者。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 4,
+                "german": 1,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "人员",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "工具",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "xtriggers": {
+                "refresh": "foe.umiri",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.eye",
+                            "level": 1
+                        }
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.eye",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "foe.umiri.2",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.hidden",
+            "label": "未知敌军",
+            "description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+            "inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.hidden",
+                "revealidentity": "foe.umiri"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "foe.umiri.2",
+            "label": "<i>冯海铃</i><b>上校</b>",
+            "description": "战争为她留下了伤疤，也同样为她留下了力量。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 8,
+                "german": 1,
+                "foe.umiri.wound": 1,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "人员",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "工具",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "xtriggers": {
+                "refresh": "foe.umiri.2",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.hand",
+                            "level": 1
+                        }
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.wound.hand",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "foe.umiri.3",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.2.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri2",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.2.hidden",
+            "label": "未知敌军",
+            "description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+            "inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.2.hidden",
+                "revealidentity": "foe.umiri.2"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "foe.umiri.3",
+            "label": "<i>冯海铃</i><b>上将</b>",
+            "description": "她目盲，她耳聋，她满负伤疤，她与我是同类，但我们之间注定只有一人能存。",
+            "lifetime": 0,
+            "aspects": {
+                "mortal": 1,
+                "foe.rankofficer": 1,
+                "needsedge": 12,
+                "german": 1,
+                "foe.umiri.wound": 2,
+                "foe.umiri.mark": 1,
+                "foe": 1
+            },
+            "slots": [
+                {
+                "id": "needsresources1",
+                "label": "人员",
+                "required": {
+					"friend.scouts": 1,
+                }
+                },
+                {
+                "id": "needsresources2",
+                "label": "工具",
+                "required": {
+					"debilitation.eye.colonel": 1,
+					"supplies.flares": 1
+                }
+                },
+            ],
+            "unique": true,
+            "uniquenessgroup": "umiri",
+            "xtriggers": {
+                "refresh": "foe.umiri.3",
+                "killgerman": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.umiri.dead",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "tool.monocle",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "weapon.sword_umiri",
+                            "level": 1
+                        },
+                    ],
+                "killumiri": [
+                        {
+                            "morpheffect": "transform",
+                            "id": "foe.umiri.dead",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "tool.monocle",
+                            "level": 1
+                        },
+                        {
+                            "morpheffect": "spawn",
+                            "id": "weapon.sword_umiri",
+                            "level": 1
+                        },
+                    ],
+                "concealidentity": "foe.umiri.3.hidden",
+                "exposedumiri": [
+                        {
+                            "morpheffect": "spawn",
+                            "id": "side.umiri3",
+                            "level": 1
+                        },
+                    ],
+            },
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.3.hidden",
+            "label": "未知敌军",
+            "description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+            "inherits": "foe.template",
+            "aspects": {
+                "foe.hidden": 1,
+                "german": 1,
+                "foe.umiri.mark": 1
+            },
+            "xtriggers": {
+                "refresh": "foe.umiri.3.hidden",
+                "revealidentity": "foe.umiri.3"
+            },
+            "icon": "foe.unknown",
+            "noStack": true
+        },
+        {
+            "id": "exposedumiri",
+            "label": "暴露",
+            "description": "让<i>冯海铃</i>爆出次要目标",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "killumiri",
+            "label": "血战",
+            "description": "在斯大林格勒杀死军官",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.blocker",
+            "label": "阻止<i>冯海铃</i>前来",
+            "description": "<i>冯海铃</i>不会前来",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.mark",
+            "label": "<i>冯海铃</i>次要目标",
+            "description": "证明这张牌是<i>冯海铃</i>次要目标",
+            "isAspect": true,
+			"isHidden": true,
+        },
+        {
+            "id": "umiri.attacked",
+            "label": "<i>冯海铃</i>正在被袭击",
+            "description": "<i>冯海铃</i>正在被袭击",
+			"lifetime": 1,
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "draw.hintobdurant.defiance",
+            "label": "斗争意图",
+            "description": "斗争意图",
+			"lifetime": 1,
+			"aspects": {
+				"decision": 1,
+			},
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "draw.hintobdurant.dead",
+            "label": "濒死意图",
+            "description": "濒死意图",
+			"aspects": {
+				"decision": 1,
+			},
+			"lifetime": 1,
+            "isAspect": false,
+			"isHidden": true,
+        },
+        {
+            "id": "obdurant.story.umiri",
+            "label": "永恒的斗争",
+            "description": "战争需要牺牲，亦需要你永恒的斗争。你会遇到你命定的敌人，记住，她为上校的信徒，她亦为凡人。斗争之火须燃至炽烈。若以上均齐备，那最后的时刻就将来临。你，与你的命定之敌须抵达那个终点——你退无可退之处。这仪式最终将以死亡告终，而这或将驱使你们争斗，直至永恒。",
+			"aspects": {
+				"contemplation": 1
+			},
+			"lifetime": 0,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.defiance",
+            "label": "斗争",
+            "description": "[旅途中的<i>斗争</i>到七时，大敌将有可能成为你的对立双刃]",
+            "isAspect": true,
+        },
+        {
+            "id": "strife.incur",
+            "label": "纷争招致",
+            "description": "看来德国人已经注意到我们的防线，他们要调集部队了。[此卡在场时相当于一点“抗争”，<i>冯海铃</i>在下一个有军官驻守的城市必定出现，此卡随即销毁]",
+            "aspects": {
+                "strife.tracker": 1,
+            },
+			"decayTo": "strife"
+        },
+        {
+            "id": "umiri.blocker.pre",
+            "label": "大敌之殇",
+            "description": "我的大敌与我同样领受上校的教诲，从伤疤中获取力量，此次惨败或可使她汲取到更加强大的力量——不过现在，她还需要时间来舔舐伤口。[<i>冯海铃</i>在此后的三个地区中将不再出现。]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 3
+			},
+			"decayTo": "umiri.blocker.0",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.0",
+            "label": "大敌之殇",
+            "description": "我的大敌与我同样领受上校的教诲，从伤疤中获取力量，此次惨败或可使她汲取到更加强大的力量——不过现在，她还需要时间来舔舐伤口。[<i>冯海铃</i>在三个地区内将不再出现。]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 3
+			},
+			"icon": "umiri.blocker.pre",
+			"decayTo": "umiri.blocker.1",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.1",
+            "label": "大敌之殇",
+            "description": "我的大敌与我同样领受上校的教诲，从伤疤中获取力量，此次惨败或可使她汲取到更加强大的力量——不过现在，她还需要时间来舔舐伤口。[<i>冯海铃</i>在两个地区内将不再出现。]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 2
+			},
+			"decayTo": "umiri.blocker.2",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.blocker.2",
+            "label": "大敌之殇",
+            "description": "我的大敌与我同样领受上校的教诲，从伤疤中获取力量，此次惨败或可使她汲取到更加强大的力量——不过现在，她还需要时间来舔舐伤口。[<i>冯海铃</i>在一个地区内将不再出现。]",
+            "lifetime": 0,
+			"aspects": {
+				"umiri.blocker": 1,
+				"uses.remaining": 1
+			},
+			"decayTo": "wound.camilla.forumiri",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.camilla.forumiri",
+            "label": "挑战者的印记[大敌]",
+            "description": "此物标志着你大敌的已成之物。现在战争跟随着她，永无休止。[<i>冯海铃</i>在场时，此卡相当于三点“抗争”。不会有刃之长生者会前来袭击你了。]",
+            "lifetime": 0,
+			"aspects": {
+				"challenger.mark": 1,
+				"long.blocker": 1
+			},
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.sergei.forumiri",
+            "label": "食铁者血流不止！",
+            "description": "我的宿敌赠与那不朽之人的伤口，会提醒裂分之狼的长生者，即使是他，也会死去。[<i>冯海铃</i>在场时，此卡相当于一点“抗争”]",
+            "lifetime": 40,
+            "aspects": {
+            },
+			"decayTo": "wound.sergei.forumiri_end",
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "wound.sergei.forumiri_end",
+            "label": "食铁者的惨败",
+            "description": "这一决定性的失败将长久的提醒这位长生者，他会死去，缓慢的，绝对的，凄惨的死去。他狼狈逃窜，此为凭证。[<i>冯海铃</i>在场时，此卡相当于一点“抗争”]",
+            "lifetime": 0,
+            "aspects": {
+				"wound.sergei": 1
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.dead",
+            "label": "大敌已逝",
+            "description": "你的宿敌魂归虚界，再无德军是你的敌手，在这一重历史中，她的故事已被画上句号。[此卡在场时相当于两点“抗争”]",
+            "lifetime": 0,
+            "aspects": {
+                "strife.tracker": 2
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.pre",
+            "label": "敌军溃败",
+            "description": "德军的部队已经陷入混乱。至少暂时如此。[此卡在场时相当于一点“抗争”]",
+            "lifetime": 0,
+            "aspects": {
+                "strife.tracker": 1,
+                "op": 1
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "umiri.defiance",
+            "label": "斗争印记",
+            "description": "你的大敌为你留下了一段无法泯灭的回忆",
+            "aspects": {
+                "foe.defiance": 1
+            },
+            "lifetime": 0,
+            "unique": false,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.wound.eye",
+            "label": "眼部伤疤",
+            "description": "她已目盲，但是无物可逃离她的目光。如今她的目光所及，皆是通往胜利的道途。[此卡在场时相当于一点“抗争”，<i>冯海铃</i>在场时有一定概率触发<i>弱化友军效果</i>]",
+            "aspects": {
+                "foe.defiance": 1,
+                "strife.tracker": 1,
+            },
+            "lifetime": 0,
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.wound.hand",
+            "label": "手部截肢",
+            "description": "她已身负伤疤，每道伤疤都已被其内化。如今她的手即是武器与熔炉。[此卡在场时相当于一点“抗争”，你在袭击<i>冯海铃</i>指挥部时大概率<i>使坦克受伤</i>]",
+            "lifetime": 0,
+            "aspects": {
+                "foe.defiance": 1,
+                "strife.tracker": 1,
+            },
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "weapon.sword_umiri",
+            "label": "军官佩剑",
+            "description": "古朴的护手，锋利的刀锋，凡俗的武器因它的主人而锐利，因主人而不凡。",
+            "aspects": {
+				"weapon": 1,
+				"edge": 6,
+				"grail": 4
+            },
+            "lifetime": 0,
+			"xtriggers": {
+				"fatiguing": "weapon.sword_umiri.exhausted"
+			},
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "weapon.sword_umiri.exhausted",
+            "label": "军官佩剑",
+            "description": "古朴的护手，锋利的刀锋，凡俗的武器因它的主人而锐利，因主人而不凡。",
+            "aspects": {
+				"weapon": 1,
+	    		"exhausted": 1
+            },
+			"xtriggers": {
+				"fatiguing": "weapon.sword_umiri.exhausted",
+				"refresh": "weapon.sword_umiri"
+			},
+            "unique": true,
+			"lifetime": 90,
+			"decayTo": "weapon.sword_umiri",
+			"icon": "weapon.sword_umiri",
+			"resaturate": true,
+            "isAspect": false,
+        },
+        {
+            "id": "tool.monocle",
+            "label": "单片眼镜",
+            "description": "敌军指挥官的最爱。或许她以此掩盖她那不可视之眼的冰冷目光。",
+            "aspects": {
+                "lantern": 4,
+				"tool": 1
+            },
+            "lifetime": 0,
+            "unique": true,
+            "isAspect": false,
+        },
+        {
+            "id": "foe.umiri.wound",	
+			"label": "负伤",
+			"description": "足够多的伤口足以杀死任何人。<b>任何人</b>。",
+            "isAspect": true,
+            "isHidden": false,
+			"icon": "follower_wound"
+        },
+        {
+            "id": "foe.umiri.mark",
+            "label": "证明这张牌是<i>冯海铃</i>",
+            "description": "伊尔莎·冯·<i>冯海铃</i>(Ilse von Helling)",
+            "lifetime": 1,
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "foe.uneat",
+            "label": "长生之耻",
+            "description": "她麾下的军队战胜了长生者——以致他仓皇逃窜。每一名士兵都以此为荣，每一名士兵都将其传唱。[拥有此性相的敌军不会再被食铁者吸收]",
+            "isAspect": true,
+        },
+        {
+            "id": "foe.progression",
+            "label": "成功",
+            "description": "敌军成功的防御。",
+            "lifetime": 1,
+            "isAspect": true,
+            "isHidden": false
+        },
+        {
+            "id": "friend.weakened",
+            "label": "恐惧",
+            "description": "喊叫被冻结在喉咙，最坚强的战士也因恐惧而战栗......",
+            "isAspect": true,
+            "isHidden": false
+        },
+        {
+            "id": "strategy.defense",
+            "label": "策略：建造防御工事",
+            "description": "1",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.rally",
+            "label": "策略：重整编队",
+            "description": "2",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics",
+            "label": "策略：战术性进攻",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics1",
+            "label": "战术：步坦协同",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics1.had",
+            "label": "战术：步坦协同——标记",
+            "description": "3",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2",
+            "label": "战术：钢铁洪流",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.had1",
+            "label": "战术：钢铁洪流——标记1",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": true,
+            "isHidden": true,
+        },
+        {
+            "id": "strategy.tactics2.had2",
+            "label": "战术：钢铁洪流——标记2",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "main&side_exhausted",
+            "label": "目标枯竭",
+            "description": "这个目标枯竭了",
+            "isAspect": true,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.straight",
+            "label": "战术：钢铁洪流——直接袭击",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.main",
+            "label": "战术：钢铁洪流——阻碍目标",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics2.up_edge",
+            "label": "战术：钢铁洪流——提升阈值",
+            "description": "3",
+            "aspects": {
+                "foe.armoured": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3",
+            "label": "战术：火力覆盖",
+            "description": "3",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3.up_edgea",
+            "label": "提升阈值",
+            "description": "战术：火力覆盖——提升阈值",
+            "aspects": {
+                "needsforgemoth": 2
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "strategy.tactics3.up_edgeb",
+            "label": "提升阈值",
+            "description": "战术：火力覆盖——提升阈值",
+            "aspects": {
+                "foe.aerial": 1
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "up_edge",
+            "label": "提升阈值",
+            "description": "战术：步坦协同——提升阈值",
+            "aspects": {
+                "needsedge": 2
+            },
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "umiri_sergei",
+            "label": "改变卡槽图标",
+            "description": "改变卡槽图标",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri2",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "umiri_camilla",
+            "label": "改变卡槽图标",
+            "description": "改变卡槽图标",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri1",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+        {
+            "id": "circle_sergei",
+            "label": "改变卡槽图标",
+            "description": "改变卡槽图标",
+            "aspects": {
+            },
+            "verbicon": "edgelongumiri0",
+            "lifetime": 1,
+            "isAspect": false,
+            "isHidden": true
+        },
+    {
+	"id": "foe.officer",
+	"label": "敌军军官",
+	"description": "德国国防军那自满的高层之一。击杀此人能够使敌军在此地的行动变得一团糟，但军官极少在没有护卫的情况下出行。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "mortal": 1,
+	    "foe.rankofficer": 1,
+	    "needsedge": 4,
+	    "german": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.officer",
+		"killgerman": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killfoe": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killmortal": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+	    "concealidentity": "foe.officer.hidden"
+	}
+    },
+    {
+	"id": "foe.officer.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1,
+	    "german": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.officer.hidden",
+		"killgerman": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killfoe": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+		"killmortal": [
+                {
+                    "morpheffect": "transform",
+                    "id": "foe.corpses",
+                    "level": 1
+                },
+                {
+                    "morpheffect": "spawn",
+                    "id": "foe.umiri.pre",
+                    "level": 1
+                }
+            ],
+	    "revealidentity": "foe.officer"
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.chasseur",
+	"label": "敌军追猎兵",
+	"description": "大部分士兵在他们被杀死时选择放弃战斗。而这些士兵则并未如此选择。",
+	"inherits": "foe.template",
+	"aspects": {
+	    "otherworldly": 1,
+	    "foe.resilient": 1,
+	    "foe.elusive": 1,
+	    "needsedgewinter": 8,
+	    "needsedgelantern": 8
+	},
+	"xtriggers": {
+	    "refresh": "foe.chasseur",
+	    "killfoe": "foe.chasseur.reviving",
+	    "concealidentity": "foe.chasseur.hidden",
+	    "takeadditional": [
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		}
+	    ],
+	    "makeadditional": [
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": 2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": 2
+		}
+	    ],
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	}
+    },
+    {
+	"id": "foe.chasseur.hidden",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+	"inherits": "foe.template",
+	"aspects": {
+	    "foe.hidden": 1
+	},
+	"xtriggers": {
+	    "refresh": "foe.chasseur.hidden",
+	    "killfoe": "foe.chasseur.reviving",
+	    "revealidentity": "foe.chasseur",
+	    "weaken": [
+		{
+		    "id": "weakened",
+		    "morpheffect": "mutate",
+		    "level": 1
+		},
+		{
+		    "id": "needsedgelantern",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+		{
+		    "id": "needsedgewinter",
+		    "morpheffect": "mutate",
+		    "level": -2
+		},
+	    ]
+	},
+	"icon": "foe.unknown",
+	"noStack": true
+    },
+    {
+	"id": "foe.chasseur.reviving",
+	"label": "敌军追猎兵（复活中）",
+	"description": "那些崇敬上校之人有时会说“除了湮灭，再无失败。”我猜这只意味着他们不知何时应该选择退出。",
+	"aspects": {
+	    "op": 1,
+	    "needswinter": 6,
+	    "needsknock": 6,
+	    "needsedge": 6
+	},
+	"xtriggers": {
+	     "follower_scar_knock": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influenceknockc",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ],
+	     "follower_scar_edge": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influenceedgec",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ],
+	     "follower_scar_winter": [
+		{
+		    "id": "foe.corpse.unnatural",
+		},
+		{
+		    "id": "influencewinterc",
+		    "morpheffect": "spawn",
+		    "level": 1
+		}
+	    ]
+	},
+	"slots": [
+	    {
+		"id": "needssomething1",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		}
+	    },
+	    {
+		"id": "needssomething2",
+		"required": {
+		    "moth": 1,
+		    "lantern": 1,
+		    "forge": 1,
+		    "edge": 1,
+		    "winter": 1,
+		    "heart": 1,
+		    "grail": 1,
+		    "knock": 1
+		}
+	    },
+	],
+	"icon": "foe.chasseur",
+	"decayTo": "foe.chasseur",
+	"resaturate": true,
+	"lifetime": 120
+    },
+    {
+	"id": "skill.deflect",
+	"label": "不侵守御",
+	"description": "这些极其折磨且费力的动作可将身体变为一座要塞。执行这一动作所需的精准与训练通常仅能在长生者身上寻得，但一个凡人——一个极其谨慎，极其训练有素的凡人——或许能够在一定限度上使用这些技术以使本将致命的攻击偏向。[你可以使用这一技能防御来自任何来源的攻击。]",
+	"aspects": {
+	    "lore": 1,
+	    "heart": 8,
+	    "legacyplotitem": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "skill.deflect.exhausted",
+	    "fatiguing_double": "skill.deflect.exhausted_double"
+	},
+	"unique": true
+    },
+    {
+	"id": "skill.deflect.exhausted",
+	"label": "不侵守御（枯竭）",
+	"description": "这些极其折磨且费力的动作可将身体变为一座要塞。执行这一动作所需的精准与训练通常仅能在长生者身上寻得，但一个凡人——一个极其谨慎，极其训练有素的凡人——或许能够在一定限度上使用这些技术以使本将致命的攻击偏向。[你可以使用这一技能防御来自任何来源的攻击。]",
+	"aspects": {
+	    "lore": 1,
+	    "exhausted": 1
+	},
+	"xtriggers": {
+	    "fatiguing_double": "skill.deflect.exhausted_double",
+	    "fatiguing": "skill.deflect.exhausted",
+	    "refresh": "skill.deflect"
+	},
+	"unique": true,
+	"icon": "skill.deflect",
+	"resaturate": true,
+	"lifetime": 160,
+	"decayTo": "skill.deflect"
+    },
+    {
+	"id": "skill.deflect.exhausted_double",
+	"label": "不侵守御（耗竭）",
+	"description": "这些极其折磨且费力的动作可将身体变为一座要塞。执行这一动作所需的精准与训练通常仅能在长生者身上寻得，但一个凡人——一个极其谨慎，极其训练有素的凡人——或许能够在一定限度上使用这些技术以使本将致命的攻击偏向。[你可以使用这一技能防御来自任何来源的攻击。你使用<i>不侵守御</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+	"aspects": {
+	    "lore": 1,
+	    "exhausted": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "skill.deflect.exhausted_double",
+	    "fatiguing_double": "skill.deflect.exhausted_double",
+	    "refresh": "skill.deflect"
+	},
+	"unique": true,
+	"icon": "skill.deflect",
+	"resaturate": true,
+	"lifetime": 320,
+	"decayTo": "skill.deflect"
+    },
+
+    {
+	"id": "fatiguing_double",
+	"label": "双倍恢复时间",
+	"description": "双倍恢复，因为防御战术或其他原因",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "fatiguing_damaged",
+	"label": "受伤",
+	"description": "双倍恢复，因为防御战术或其他原因",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "friend.cross",
+	"label": "持矛盾者格尔凡戈",
+	"description": "石之子嗣、枭之士兵、高傲的淆翅族仍在历史的这一侧活动的最后一人。她并不喜爱人类，但她仍挥舞翅膀、鳞片、以及那尖锐的刺针与我合击，只因我们均为一个共同敌人的死亡而斗争。",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "edge": 20,
+	    "knock": 12,
+	    "moth": 12,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "friend.cross.exhausted",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	    "killmortal": "friend.cross.exhausted",
+	    "killfriend": "friend.cross.exhausted",
+	    "makecasualty": "friend.cross.exhausted",
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	},
+	"icon": "cross"
+    },
+    {
+	"id": "friend.cross.exhausted",
+	"label": "持矛盾者格尔凡戈",
+	"description": "石之子嗣、枭之士兵、高傲的淆翅族仍在历史的这一侧活动的最后一人。她并不喜爱人类，但她仍挥舞翅膀、鳞片、以及那尖锐的刺针与我合击，只因我们均为一个共同敌人的死亡而斗争。",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	},
+	"icon": "cross",
+	"lifetime": 30,
+	"decayTo": "friend.cross",
+	"resaturate": true
+    },
+    {
+	"id": "friend.cross.exhausted_double",
+	"label": "持矛盾者格尔凡戈",
+	"description": "石之子嗣、枭之士兵、高傲的淆翅族仍在历史的这一侧活动的最后一人。她并不喜爱人类，但她仍挥舞翅膀、鳞片、以及那尖锐的刺针与我合击，只因我们均为一个共同敌人的死亡而斗争。[你使用<i>持矛盾者格尔凡戈</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+	"aspects": {
+	    "friend": 1,
+	    "otherworldly": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.cross.postfight",
+	    "fatiguing_damaged": "op.cross.postfight_double",
+	    "fatiguing_double": "friend.cross.exhausted_double",
+	},
+	"icon": "cross",
+	"lifetime": 60,
+	"decayTo": "friend.cross",
+	"resaturate": true
+    },
+    {
+	"id": "op.cross.postfight_double",
+	"label": "持矛盾者格尔凡戈[疗愈中]",
+	"description": "纵使经历了如此的炮火，它的表皮也只是轻微破损，现在，她需要时间恢复她的壳甲……[<i>持矛盾者格尔凡戈</i>在一次战术袭击中受创]",
+	"aspects": {
+	    "local": 1
+	},
+	"decayTo": "friend.cross",
+	"lifetime": 120,
+	"icon": "cross"
+    },
+    {
+	"id": "op.cross.postfight",
+	"label": "负伤之翅格尔凡戈",
+	"description": "现在，我们的共同目标已然达成，我们对彼此已经没用了。我很清楚，如果不是她负伤过重，她必定顺手取走我的性命——而她也很清楚我知晓这点。即便如此，在我接近她时，还是听到了类似话语的声响……",
+	"aspects": {
+	    "local": 1
+	},
+	"icon": "cross"
+    },
+	
+    {
+	"id": "friend.sergei",
+	"label": "食铁者",
+	"description": "对立双刃的另一半现已死去，我很好奇现在是什么支撑着他活着。是战争？是恐惧？还是对死得其所的渴望？或许这头狼只是在单纯的延长其最后的一息。但即使是将死之身，这裂分之狼的长生者仍几乎与他的全盛期一般凶猛。",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "edge": 20,
+	    "winter": 20,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "fatiguing": "friend.sergei.exhausted",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "killmortal": "friend.sergei.exhausted",
+	    "killfriend": "friend.sergei.exhausted",
+	    "makecasualty": "friend.sergei.exhausted",
+	    "damagehealth": "op.sergei.postfight"
+	},
+	"icon": "sergei"
+    },
+    {
+	"id": "friend.sergei.exhausted",
+	"label": "食铁者",
+	"description": "对立双刃的另一半现已死去，我很好奇现在是什么支撑着他活着。是战争？是恐惧？还是对死得其所的渴望？或许这头狼只是在单纯的延长其最后的一息。但即使是将死之身，这裂分之狼的长生者仍几乎与他的全盛期一般凶猛。",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.sergei.postfight",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	},
+	"icon": "sergei",
+	"lifetime": 30,
+	"decayTo": "friend.sergei",
+	"resaturate": true
+    },
+    {
+	"id": "friend.sergei.exhausted_double",
+	"label": "食铁者",
+	"description": "对立双刃的另一半现已死去，我很好奇现在是什么支撑着他活着。是战争？是恐惧？还是对死得其所的渴望？或许这头狼只是在单纯的延长其最后的一息。但即使是将死之身，这裂分之狼的长生者仍几乎与他的全盛期一般凶猛。[你使用<i>食铁者</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+	"aspects": {
+	    "friend": 1,
+	    "edgelong": 1,
+	    "exhausted": 1,
+	    "friend.immortal": 1,
+	    "local": 1
+	},
+	"xtriggers": {
+	    "damagehealth": "op.sergei.postfight",
+	    "fatiguing_damaged": "op.sergei.postfight_double",
+	    "fatiguing_double": "friend.sergei.exhausted_double",
+	},
+	"icon": "sergei",
+	"lifetime": 60,
+	"decayTo": "friend.sergei",
+	"resaturate": true
+    },
+    {
+	"id": "op.sergei.postfight_double",
+	"label": "食铁者[疗愈中]",
+	"description": "“这炮火我很熟悉。”他回来的时候大口喘着粗气，“三年前，我在见过这样的光景。小子，你最好不要，最好永远不要靠近那位军官——濒死的野兽，往往才最危险。”[<i>食铁者</i>在一次战术袭击中受创]",
+	"lifetime": 120,
+	"aspects": {
+	    "local": 1
+	},
+	"decayTo": "friend.sergei",
+	"icon": "defeated.sergei"
+    },
+    {
+	"id": "op.sergei.postfight",
+	"label": "食铁者",
+	"description": "<i>“一切都结束了。”</i>",
+	"aspects": {
+	    "local": 1
+	},
+	"icon": "defeated.sergei"
+    },
+
+
+    {
+	"id": "main.withdraw",
+	"label": "主要目标：撤退",
+	"description": "这一地点很快就将变得难以捍卫。我们必须提供足够的掩护，我们的友军才能在德军的攻势下撤退。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.withdraw.exhausted"
+	}
+    },
+    {
+	"id": "main.eliminate",
+	"label": "主要目标：歼灭",
+	"description": "当地情报表明一个高姿态的目标正位于我们当前的所在地。若我们能够在继续行军前歼灭这一目标，那对于战争而言将是个好兆头。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.eliminate.exhausted"
+	}
+    },
+    {
+	"id": "main.repossess",
+	"label": "主要目标：回收",
+	"description": "一件重要的资产在火焰与碎石中丢失。德军在寻找它——而我们不能让它落到德军手中。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.repossess.exhausted"
+	}
+    },
+    {
+	"id": "main.sabotage",
+	"label": "主要目标：破坏",
+	"description": "这一地点充满了珍贵的基础设施——我们带不走的基础设施。在继续行军之前，我们需要保证德国国防军无法享受我们遗留的任何事物。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "resolution"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.sabotage.exhausted"
+	}
+    },
+    {
+	"id": "main.stalingrad.north",
+	"label": "主要目标：斯大林格勒北部",
+	"description": "正当寒冬压缩并收紧我们周围的空气时，德军袭击城市的北部。在街巷中挫败他们的推进。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.north.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.manhunters",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.west",
+	"label": "主要目标：斯大林格勒西部",
+	"description": "此处有德军先头部队集结，正如高速挥向铁砧宽阔表面的铁锤。所以我们需要把西部变为德国人屠宰场。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.west.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.artillery",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.bombers",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.south",
+	"label": "主要目标：斯大林格勒南部",
+	"description": "南部被战斗所折磨，和城市的其他部分一样。但并非敌军的某物亦在此处战斗——野蛮地战斗。清理南部，并镇压那东西。",
+	"inherits": "main.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "main.stalingrad.south.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.splinter",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "main.stalingrad.exhausted"
+	},
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "side.cutoff",
+	"label": "次要目标：补给封锁",
+	"description": "我军的补给车队遭到敌军的骚扰与袭击。只要这一封锁还存在一天，我们就又多一天无法收到补给——若我们要维持此处的战线，突破这一封锁将是我们的第一要务。[只要此卡牌存在，你就无法在“愉快的日子”事件中得到任何补给品。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "husk"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.cutoff.exhausted"
+	},
+	"lifetime": 300,
+	"unique": true
+    },
+    {
+	"id": "side.adeptwinter",
+	"label": "次要目标：拘留一位冬之学徒",
+	"description": "身为学徒之人向来小心谨慎，而战争则驱使那些无法逃离这个国家的学徒藏得更深。不过我们知晓有一个学徒藏于此地。此人或许不乐意被找到，但其应该更加不乐意被枪击。[一个获得一位冬之学徒协助的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptwinter"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptwinter.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.adeptlantern",
+	"label": "次要目标：拘留一位灯之学徒",
+	"description": "身为学徒之人向来小心谨慎，而战争则驱使那些无法逃离这个国家的学徒藏得更深。不过我们知晓有一个学徒藏于此地。此人或许不乐意被找到，但其应该更加不乐意被枪击。[一个获得一位灯之学徒协助的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptlantern"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.apollonian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.greatseal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptlantern.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.adeptgrail",
+	"label": "次要目标：拘留一位杯之学徒",
+	"description": "身为学徒之人向来小心谨慎，而战争则驱使那些无法逃离这个国家的学徒藏得更深。不过我们知晓有一个学徒藏于此地。此人或许不乐意被找到，但其应该更加不乐意被枪击。[一个获得杯之学徒协助的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.adeptgrail"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.adeptgrail.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.weaponscache",
+	"label": "次要目标：武器储藏处",
+	"description": "一支运送武器的车队在我方前线后方搁浅。若我们立即行动，我们将得以将那些武器据为己有。[一个获得多种武器补给的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weaponscache.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.weaponscache.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.rescueallies",
+	"label": "次要目标：救援友军",
+	"description": "我们战友的一支分队被敌军锁定了！若我们不加以介入我们就会失去这些友军——都起来，拿好武器！[一个获得新的友军的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "rescueallies.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.storms",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.tanks",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.rescueallies.exhausted"
+	},
+	"lifetime": 300
+    },
+    {
+	"id": "side.yuri",
+	"label": "次要目标：尤里·谢连科",
+	"description": "在组织中发现了一个德军间谍，但他在尤里实施正义之前就逃走了。对于尤里而言，在那个间谍得到接应前将其拘捕不仅具有战略意义，而且有关他的职业操守。[一个招募新盟友的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.yuri.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.snows",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.sniper",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.yuri.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.iosef",
+	"label": "次要目标：约瑟夫·沃洛金",
+	"description": "负责看管约瑟夫所在小队的惩戒营军官据称是一个热衷于特定的罕见快乐与艺术品——据约瑟夫说，是那些党不会允许军官持有的——的收藏家。约瑟夫告知我们他的拘押者正在此地搜寻一件这样的物品。若我们先得手，我们将有机会就约瑟夫的自由与这位军官达成交易。[一个招募新盟友的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.iosef.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.serpent",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.iosef.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.konstantin",
+	"label": "次要目标：康斯坦丁·伊斯梅洛夫医生",
+	"description": "伊斯梅洛夫医生与其同僚曾工作的医院现已被德国人在其最近一次的推进中占领，其现在位于德国国防军控制区的后方。在医生逃离时被迫舍弃的物品中，有一件尤为稀有的“医学样本”。他希望我们协助取回这一样本。[一个招募新盟友的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.konstantin.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.apollonian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.konstantin.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.nikolai",
+	"label": "次要目标：尼古拉·别利亚耶夫",
+	"description": "钢铁上有着焦黑的手印——一个淘气的不显要的具名者溜进了军械库，损毁机械并使我们的武器变得不可用。尼古拉意图找到并熄灭这个制造麻烦的破坏者。[一个招募新盟友的机会。]",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "side.nikolai.complete"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.crags",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.earthquake",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.nikolai.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.ebrehel",
+	"label": "通往守剑人之途",
+	"description": "艾布雷赫正在这林中之湖的中央等待着我拿起。我们需要穿过着迷宫般的森林才能抵达，但我们的旅途将会被不得见之湖的生物与力量——还有守剑人本人骚扰。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "nimiane"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.unknownlocation",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.voice",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.ebrehel.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.monastery",
+	"label": "佩切尔斯克修道院",
+	"description": "在20世纪20年代，苏联政府与这一洞窟修道院的僧侣达成了一项协定，之后这一地点就正式（且无形中）被承认作为“非自然现象”的得到核准的储藏地。当然，“自11世纪起，这个修道院就存放（或监禁）着不属于这一世界的物品”在异界事务管制局中属于一个公开的秘密。不过现在，基辅正处于战火之中，而军队则将僧侣驱离这一修道院。危险的事物正在佩切尔斯克修道院地下塑形，且无人看管。我们应该使其永眠。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "promise.medusa"
+		},
+		{
+		    "id": "weapon.skull",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.earthquake",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.growth",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.monastery.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultlandbeyondforest1"
+    },
+    {
+	"id": "side.camilla",
+	"label": "荒野中的冲突？",
+	"description": "在城郊发生了一场异常猛烈的战斗。那些活着从战斗中回来的人报告说并非所有参战之物都是人类。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "friend.camilla"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.fog",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.warrior",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.labhite.grounded",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.camilla.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.office",
+	"label": "异界事务管制局地区办事处",
+	"description": "异界事务管制局是苏联政府用于“管制不自然，未预料，不圣洁之物”的工具。这一部门中的腐败不可磨灭，但我曾是那腐败的受益者之一，所以我在为那里工作时并未在意。如果我没记错，这个办事处中的高度安全的金库内收纳有一些强力但棘手的道具。希望炮击并未惊扰到任何过于危险的物品。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.wormnail"
+		},
+		{
+		    "id": "tool.winter",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.undead",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.nocturnal",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.office.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.factory",
+	"label": "哈斯克-布鲁莫夫制造厂",
+	"description": "在那大战之后，哈斯克-布鲁莫夫公司的火器设计变得愈加非正统与不寻常，而其客户群也变得愈加小众与奇特。城郊的这间铸造厂是这公司仍在制作武器的少数工厂之一，而现在德军占领了这里。我们应该夺回它。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.revolver.5"
+		},
+		{
+		    "id": "tool.forge",
+		    "morpheffect": "spawn"
+		},
+		{
+		    "id": "supplies.explosives",
+		    "morpheffect": "spawn",
+		    "level": 3
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "foe.infantry",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.fortifications",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.factory.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultcapital3"
+    },
+    {
+	"id": "side.gallery",
+	"label": "库兹涅佐夫收藏馆",
+	"description": "库兹涅佐夫亲王在其晚年沉迷于心灵医疗，并曾前往地中海地区旅行数年以满足其兴趣。这一收藏馆现在保有许多他在于1859年逝世之前获得——购买，盗窃，以及发掘——的藏品。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.heart"
+		},
+		{
+		    "id": "tool.grail",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.wreckage",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.door",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.gallery.exhausted"
+	},
+	"unique": true
+    },
+    {
+	"id": "side.nest",
+	"label": "狻猊巢穴",
+	"description": "一只狮子匠的怪兽在城外的树林中筑起了一个巢穴。它正带给德军麻烦，这是好事，但几支我军巡逻队也成了这只怪兽的腹中餐。将其根除并非易事——狻猊年轻，但它们是飞翔于天的恐怖，且十分强大。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "weapon.talon"
+		},
+		{
+		    "id": "tool.lantern",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "foe.labhite.grounded",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "foe.labhite.airborne",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.nest.exhausted"
+	},
+	"unique": true,
+	"icon": "vaultrendingmountains1"
+    },
+    {
+	"id": "side.voronezh",
+	"label": "迷雾缭绕的小径",
+	"description": "在12世纪，一名梁赞亲王在他的败北中逃往沃罗涅日。他从未抵达这城镇。本地传说将其消失归因于背叛野生动物，但最为古老的记录则说在那个时代，当黑橡木林仍矗立时，那位亲王在雾中遇到了某物。败北者有时在某位特定的具名者的迷雾中寻得慰藉——而即使森林早已消失，迷雾仍留存于此。",
+	"inherits": "side.template",
+	"xtriggers": {
+	    "careeradvancement": [
+		{
+		    "id": "tool.moth"
+		},
+		{
+		    "id": "tool.knock",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress0": [
+		{
+		    "id": "hindrance.forest",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress1": [
+		{
+		    "id": "hindrance.moonspace",
+		    "morpheffect": "spawn"
+		}
+	    ],
+	    "opx.progress2": [
+		{
+		    "id": "hindrance.dionysian",
+		    "morpheffect": "spawn"
+		}
+	    ],
+        "stop_goal": "side.voronezh.exhausted"
+	},
+	"unique": true
+    },
+    
+    {
+	"id": "main.exhausted",
+	"label": "主要目标枯竭模板",
+	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"aspects": {
+	    "main": 1,
+	    "exhausted": 1,
+		"main&side_exhausted": 1
+	},
+	},
+    {
+	"id": "side.exhausted",
+	"label": "次要目标枯竭模板",
+	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"aspects": {
+	    "side": 1,
+	    "exhausted": 1,
+		"main&side_exhausted": 1
+	},
+	},
+    {
+	"id": "main.withdraw.exhausted",
+	"label": "主要目标：撤退",
+	"inherits": "main.exhausted",
+    "icon": "main.withdraw",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.withdraw.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.withdraw",
+    },
+    {
+	"id": "main.eliminate.exhausted",
+	"label": "主要目标：歼灭",
+	"inherits": "main.exhausted",
+    "icon": "main.eliminate",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.eliminate.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.eliminate",
+    },
+    {
+	"id": "main.repossess.exhausted",
+	"label": "主要目标：回收",
+	"inherits": "main.exhausted",
+    "icon": "main.repossess",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.repossess.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.repossess",
+    },
+    {
+	"id": "main.sabotage.exhausted",
+	"label": "主要目标：破坏",
+	"inherits": "main.exhausted",
+    "icon": "main.sabotage",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.sabotage.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.sabotage",
+    },
+    {
+	"id": "main.stalingrad.north.exhausted",
+	"label": "主要目标：斯大林格勒北部",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.north.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.west.exhausted",
+	"label": "主要目标：斯大林格勒西部",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.west.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "main.stalingrad.south.exhausted",
+	"label": "主要目标：斯大林格勒南部",
+	"inherits": "main.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "main.stalingrad.south.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "main.stalingrad",
+	"icon": "main.stalingrad",
+	"unique": true
+    },
+    {
+	"id": "side.cutoff.exhausted",
+	"label": "次要目标：补给封锁",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.cutoff.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.cutoff",
+    "decayTo": "side.cutoff",
+	"unique": true
+    },
+    {
+	"id": "side.adeptwinter.exhausted",
+	"label": "次要目标：拘留一位冬之学徒",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptwinter.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptwinter",
+    "decayTo": "side.adeptwinter",
+    },
+    {
+	"id": "side.adeptlantern.exhausted",
+	"label": "次要目标：拘留一位灯之学徒",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptlantern.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptlantern",
+    "decayTo": "side.adeptlantern",
+    },
+    {
+	"id": "side.adeptgrail.exhausted",
+	"label": "次要目标：拘留一位杯之学徒",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.adeptgrail.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.adeptgrail",
+    "decayTo": "side.adeptgrail",
+    },
+    {
+	"id": "side.weaponscache.exhausted",
+	"label": "次要目标：武器储藏处",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.weaponscache.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.weaponscache",
+    "decayTo": "side.weaponscache",
+    },
+    {
+	"id": "side.rescueallies.exhausted",
+	"label": "次要目标：救援友军",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.rescueallies.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.rescueallies",
+    "decayTo": "side.rescueallies",
+    },
+    {
+	"id": "side.yuri.exhausted",
+	"label": "次要目标：尤里·谢连科",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.yuri.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.yuri",
+    "decayTo": "side.yuri",
+	"unique": true
+    },
+    {
+	"id": "side.iosef.exhausted",
+	"label": "次要目标：约瑟夫·沃洛金",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.iosef.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.iosef",
+    "decayTo": "side.iosef",
+	"unique": true
+    },
+    {
+	"id": "side.konstantin.exhausted",
+	"label": "次要目标：康斯坦丁·伊斯梅洛夫医生",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.konstantin.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.konstantin",
+    "decayTo": "side.konstantin",
+	"unique": true
+    },
+    {
+	"id": "side.nikolai.exhausted",
+	"label": "次要目标：尼古拉·别利亚耶夫",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.nikolai.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.nikolai",
+    "decayTo": "side.nikolai",
+	"unique": true
+    },
+    {
+	"id": "side.ebrehel.exhausted",
+	"label": "通往守剑人之途",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.ebrehel.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.ebrehel",
+    "decayTo": "side.ebrehel",
+	"unique": true
+    },
+    {
+	"id": "side.monastery.exhausted",
+	"label": "佩切尔斯克修道院",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.monastery.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.monastery",
+	"unique": true,
+	"icon": "vaultlandbeyondforest1"
+    },
+    {
+	"id": "side.camilla.exhausted",
+	"label": "荒野中的冲突？",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.camilla.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.camilla",
+	"unique": true,
+	"icon": "vaultcontinent3"
+    },
+    {
+	"id": "side.office.exhausted",
+	"label": "异界事务管制局地区办事处",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.office.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.office",
+    "decayTo": "side.office",
+	"unique": true
+    },
+    {
+	"id": "side.factory.exhausted",
+	"label": "哈斯克-布鲁莫夫制造厂",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.factory.exhausted"
+	},
+    "resaturate": true,
+	"unique": true,
+    "decayTo": "side.factory",
+	"icon": "vaultcapital3"
+    },
+    {
+	"id": "side.gallery.exhausted",
+	"label": "库兹涅佐夫收藏馆",
+	"inherits": "side.exhausted",
+    "decayTo": "side.gallery",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.gallery.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.gallery",
+	"unique": true
+    },
+    {
+	"id": "side.nest.exhausted",
+	"label": "狻猊巢穴",
+	"inherits": "side.exhausted",
+    "lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.nest.exhausted"
+	},
+    "resaturate": true,
+    "decayTo": "side.nest",
+	"unique": true,
+	"icon": "vaultrendingmountains1"
+    },
+    {
+	"id": "side.voronezh.exhausted",
+	"label": "迷雾缭绕的小径",
+	"lifetime": 120,
+	"xtriggers": {
+        "stop_goal": "side.voronezh.exhausted"
+	},
+    "resaturate": true,
+	"icon": "side.voronezh",
+    "decayTo": "side.voronezh",
+	"unique": true
+    },
+    {
+	"id": "friend.militia",
+	"label": "友军义勇军",
+	"description": "男人变为士兵不止需要一杆枪与些许斗志。但除此之外需要的东西也不太多，我想。",
+	"aspects": {
+	    "friend": 1,
+	    "mortal": 1,
+	    "forcesize": 2,
+	    "edge": 4,
+	    "heart": 4
+	},
+	"xtriggers": {
+	    "fatiguing": "friend.militia.exhausted",
+	    "killmortal": "friend.corpses",
+	    "killfriend": "friend.corpses",
+	    "makecasualty": "friend.militia.wounded"
+	},
+	"slots": [
+	    {
+		"id": "needswarzone",
+		"actionid": "operate",
+		"label": "战区",
+		"required": {
+		    "warzone.current": 1
+		},
+		"forbidden": {
+		    "wasteland": 1
+		}
+	    },
+	    {
+		"id": "needsintent",
+		"actionid": "operate",
+		"label": "意图",
+		"required": {
+		    "edge": 1,
+		    "heart": 1
+		}
+	    }
+	]
+    },
+    ]
+}

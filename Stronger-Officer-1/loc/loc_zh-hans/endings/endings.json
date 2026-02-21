@@ -1,0 +1,24 @@
+{
+"endings": [
+    {
+        "id": "umiri_defiance",
+        "label": "对立抗争",
+        "description": "你与你的对立双刃此后不断角力，抗争，直到战争结束。\n\n[此为临时文本。]",
+        "image": "umiri_defiance",
+        "flavour": "Grand",
+        "anim": "DramaticLight",
+        "achievements": "XXX",
+	    "BGmusic": "bgm.umiri_defiance.mp3"
+    },
+    {
+        "id": "umiri_defiance_bad",
+        "label": "抗争对立",
+        "description": "你与你的对立双刃此后不断角力，抗争，直到战争结束。[负面胜利]\n\n[此为临时文本。]",
+        "image": "umiri_defiance_bad",
+        "flavour": "Vile",
+        "anim": "DramaticLight",
+        "achievements": "XXX",
+	    "BGmusic": "bgm.umiri_defiance.mp3"
+    },
+]
+}

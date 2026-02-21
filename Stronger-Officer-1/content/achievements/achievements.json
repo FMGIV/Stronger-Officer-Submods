@@ -1,0 +1,56 @@
+{
+"achievements": [
+    { 
+        "id": "ending.umiri_defiance",
+        "iconLocked": "achievement.umiri_defiance", 
+        "iconUnlocked": "achievement.umiri_defiance", 
+        "label": "Opposing Blades",
+        "descriptionLocked": "You and your opposing blade will Strife and contend against each other until the war's end.",
+        "descriptionUnlocked": "You and your opposing blade will Strife and contend against each other until the war's end.",
+        "unlockMessage": "<i>'You and your opposing blade will Strife and contend against each other until the war's end.'</i>\n\n[In Stalingrad, you cornered your arch-nemesis, and thus you became a pair of opposing blades.",
+        "isHidden": false, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.umiri_defiance_bad",
+        "iconLocked": "achievement.defiancemarks", 
+        "iconUnlocked": "achievement.defiancemarks",
+        "label": "Strife and Opposition",
+        "descriptionLocked": "You and your opposing blade will Strife and contend against each other until the war's end. [Reverse Victory]",
+        "unlockMessage": "<i>'You and your opposing blade will Strife and contend against each other until the war's end.'<i>\n\n[In Stalingrad, you were cornered by your arch-nemesis, and thus you became a pair of opposing blades.]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.sergei_umiri",
+        "iconLocked": "achievement.sergei_umiri", 
+        "iconUnlocked": "achievement.sergei_umiri", 
+        "label": "The Fall of the Iron Eater",
+        "descriptionLocked": "Your arch-nemesis has unhorsed Blade Eternal.",
+        "unlockMessage": "<i>'Your arch-nemesis has unhorsed Blade Eternal.'<i>\n\n[In a duel, <i>Von Heiling</i> defeated the Iron Eater.]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.camilla_umiri",
+        "iconLocked": "achievement.camilla_umiri", 
+        "iconUnlocked": "achievement.camilla_umiri", 
+        "label": "The Lion-Rat Duel",
+        "descriptionLocked": "Your arch-nemesis has been through a lion-rat duel.",
+        "unlockMessage": "<i>'Your arch-nemesis has been through a lion-rat duel.'<i>\n\n[Together with a continental enemy, you assaulted <i>Von Heiling</i>.]",
+        "isHidden": true, 
+        "category": "CATEGORY_OBDURANT"
+    },
+    { 
+        "id": "ending.umiri.dead",
+        "iconLocked": "foe.umiri.dead", 
+        "iconUnlocked": "foe.umiri.dead", 
+        "label": "The Great Enemy Vanquished",
+        "descriptionLocked": "You have overcome your arch-nemesis in a Strife.",
+        "descriptionUnlocked": "You have overcome your arch-nemesis in a Strife.",
+        "unlockMessage": "<i>'You have overcome your arch-nemesis in a Strife.'<i>\n\n[You have defeated <i>Von Heiling</i>.]",
+        "isHidden": false, 
+        "category": "CATEGORY_OBDURANT"
+    },
+]
+}

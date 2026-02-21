@@ -1,0 +1,3294 @@
+{
+    "recipes": [
+        {
+            "id": "foe.umiri.attack.tactics2.first",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
+            "description": "命令已然下达，敌人的引擎在嘶吼。",
+            "actionId": "foetactics2",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics2": 1
+            },
+			"maxexecutions": 1,
+			"playAudioTrack": "bgm.foetactics2.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2"
+                }
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
+            "description": "命令已然下达，敌人的引擎在嘶吼。",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+                "strategy.tactics2": 1
+            },
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+        "id": "foe.umiri.attack.tactics2_one.attack",
+        "label": "敌军正在发动战术进攻！",
+        "startdescription": "拔除铁轨，拆毁住房。这些法西斯强盗！",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+        },
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "军用设施",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics2_two.pre"
+            },
+            {
+            "id": "foe.umiri.attack.tactics2.end1"
+            },
+        ],
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+            {
+            "id": "produce.trauma",
+            "additional": true,
+            "chance": 40
+            },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.friend.immortal",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>永生者的协助</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>不侵守御</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "producetimeover",
+            "label": "失效！",
+            "startdescription": "失效！",
+            "description": "失效！",
+            "warmup": 0,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "producetimeover.friend.immortal"
+                },
+                {
+                    "id": "producetimeover.deflect"
+                }
+            ],
+        },
+        {
+            "id": "producetimeover.deflect",
+            "label": "失效！",
+            "startdescription": "这种秘密的技艺成功抵御了德国人的炮火，他们短暂后撤，但你亦精疲力竭。[你使用<i>不侵守御</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+            "description": "这种秘密的技艺成功抵御了德国人的炮火，他们短暂后撤，但你亦精疲力竭。[你使用<i>不侵守御</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+            "id": "producetimeover.friend.immortal",
+            "label": "失效！",
+            "startdescription": "永生者成功抵御了德国人的炮火，他们短暂后撤，但其亦精疲力竭。[你使用<i>永生者的协助</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+            "description": "永生者成功抵御了德国人的炮火，他们短暂后撤，但其亦精疲力竭。[你使用<i>永生者的协助</i>防御了一次战术袭击，这会导致恢复时间变为原来的两倍]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+                "friend.immortal": 1
+            },
+            "aspects": {
+                "fatiguing_double": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "producetimeover.damaged",
+                    "chance": 30
+                }
+            ],
+        },
+        {
+            "id": "producetimeover.damaged",
+            "label": "受创！",
+            "startdescription": "肉身终不敌钢铁[你使用<i>永生者的协助</i>防御了一次战术袭击，这有时会导致其受伤]",
+            "description": "肉身终不敌钢铁。[你使用<i>永生者的协助</i>防御了一次战术袭击，这有时会导致其受伤]",
+            "warmup": 10,
+            "actionId": "timeover",
+            "requirements": {
+            },
+            "aspects": {
+                "fatiguing_damaged": 1
+            },
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsedge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsforge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.needsap",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_one.setback",
+            "label": "抵御敌军的攻势",
+            "startdescription": "而最终，我们学会了用钢铁说话。",
+            "description": "而最终，我们学会了用钢铁说话。",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+            },
+            "mutations": [
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.pre"
+                },
+                {
+                "id": "foe.umiri.attack.tactics2.end1"
+                },
+            ],
+        },
+        
+        {
+            "id": "foe.umiri.attack.tactics2_two.pre",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
+            "description": "命令已然下达，敌人的引擎在嘶吼。",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_two.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "Supplies",
+		"required": {
+		    "supplies": 1,
+		    "weapon": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "debilitation": 1,
+		    "contemnant.weapon": 1,
+		    "friend.immortal.blocker": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_two.attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_two.attack_end",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
+	"requirements": {
+	},
+	"aspects": {
+	    
+	},
+	"effects": {
+	    "supplies": -99,
+	    "weapon": -99,
+        "strategy.tactics2.up_edge": 1
+	},
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.pre"
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2.end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics2_two.friend.immortal",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>永生者的协助</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>不侵守御</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsedge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsforge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.needsap",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_two.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_two.setback",
+            "label": "抵御敌军的攻势",
+            "startdescription": "而最终，我们学会了用钢铁说话。",
+            "description": "而最终，我们学会了用钢铁说话。",
+            "warmup": 10,
+            "requirements": {
+            },
+            "effects": {
+                "strategy.tactics2.up_edge": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.pre"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2.end2"
+                },
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2_three.pre",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
+            "description": "命令已然下达，敌人的引擎在嘶吼。",
+            "actionId": "foetactics2",
+            "warmup": 10,
+            "requirements": {
+            },
+            "grandReqs": {
+                "([~/exterior:foe.tanks] + [~/exterior:foe.tanks.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe",
+                "label": "敌军",
+                "required": {
+                    "foe.tanks": 1,
+                    "foe.tanks.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -2,
+                    "additive": true
+                },
+                {
+                    "filter": "strategy.tactics2.up_edge",
+                    "mutate": "needsedgeforge",
+                    "level": "[needsforge] - 16",
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.edgeforge",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.edgeforge",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
+            "description": "命令已然下达，敌人的引擎在嘶吼。",
+            "actionId": "foetactics2",
+            "warmup": 0,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": -30,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？\n\n[此战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？\n\n[此战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "actionId": "foetactics2",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                }
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedgeforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsforge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.needsap"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics2_three.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
+	"requirements": {
+	},
+	"slots": [
+	    {
+		"id": "needssupplies",
+		"label": "友军",
+		"required": {
+            "friend": 1
+		},
+		"forbidden": {
+		    "remnant": 1,
+		    "friend.hidden": 1,
+            "anno.mark": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack",
+		"chance": 50
+	    },
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end"
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "foe.umiri.attack.tactics2_three.attack_end",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
+	"requirements": {
+	},
+	"aspects": {
+	},
+    "xpans": {
+        "stop_goal": 1
+    },
+    "slots": [
+        {
+        "id": "needsfoe1",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe2",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+        {
+        "id": "needsfoe3",
+        "label": "阻挠",
+        "required": {
+            "side.rescueallies": 1,
+            "side.weaponscache": 1,
+            "side.adeptgrail": 1,
+            "side.adeptlantern": 1,
+            "side.adeptwinter": 1,
+            "side.rescuepartisans": 1
+        },
+        "forbidden": {
+        },
+        "greedy": true
+        },
+    ],
+    "effects": {
+        "side.rescueallies": -99,
+        "side.weaponscache": -99,
+        "side.adeptgrail": -99,
+        "side.adeptlantern": -99,
+        "side.adeptwinter": -99,
+        "side.rescuepartisans": -99
+    },
+    "mutations": [
+        {
+            "filter": "foe",
+            "mutate": "needsedge",
+            "level": 2,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "needsforge",
+            "level": 30,
+            "additive": true
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had1",
+            "level": 0,
+            "additive": false
+        },
+        {
+            "filter": "foe",
+            "mutate": "strategy.tactics2.had2",
+            "level": 0,
+            "additive": false
+        },
+    ],
+	"warmup": 10,
+	"linked": [
+	    {
+		"id": "foe.umiri.attack.tactics2_three.attack_end1",
+        "chance": 50
+	    },
+        {
+        "id": "foe.umiri.attack.tactics2_three.attack_end2"
+        },
+	],
+	"alt": [
+	    {
+		"id": "produce.wounds",
+		"additional": true,
+		"chance": 50
+	    },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 65
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    }
+	]
+    },
+        {
+            "id": "foe.umiri.attack.tactics2_three.friend.immortal",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>永生者的协助</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。\n\n[此战术中只能使用一次<i>不侵守御</i>，请谨慎使用。]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsedge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsedgeforge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedgeforge": 1,
+                "forge": "needsedgeforge",
+                "edge": "needsedgeforge",
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsforge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsforge": 1,
+                "forge": "needsforge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.needsap",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "foe.armoured": 1,
+                "ap": "foe.armoured"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.setback",
+            "label": "抵御敌军的攻势",
+            "startdescription": "而最终，我们学会了用钢铁说话。",
+            "description": "而最终，我们学会了用钢铁说话。",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 30,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics2.end1",
+            "label": "德军的攻势暂停",
+            "startdescription": "德军的坦克供不应求",
+            "description": "德军的坦克供不应求",
+            "warmup": 30,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2.end2",
+            "label": "德军的攻势暂停",
+            "startdescription": "德军的坦克供不应求",
+            "description": "德军的坦克供不应求",
+            "warmup": 30,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "strategy.tactics2.had1",
+                    "mutate": "strategy.tactics2.had1",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "strategy.tactics2.had2",
+                    "mutate": "strategy.tactics2.had2",
+                    "level": 0,
+                    "additive": false
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 2,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforge",
+                    "level": 4,
+                    "additive": true
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end1",
+            "label": "败北！",
+            "startdescription": "......鲜血与火药的气息正在焦土上蔓延",
+            "description": "......鲜血与火药的气息正在焦土上蔓延",
+            "warmup": 0,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack_end11"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end11",
+            "label": "败北！",
+            "startdescription": "......鲜血与火药的气息正在焦土上蔓延",
+            "description": "......鲜血与火药的气息正在焦土上蔓延",
+            "warmup": 0,
+            "aspects": {
+                "makecasualty": 1,
+            }
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end2",
+            "label": "惨败！",
+            "startdescription": "......寂静与腐烂的气息正在废墟上沉积",
+            "description": "......寂静与腐烂的气息正在废墟上沉积",
+            "warmup": 0,
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics2_three.attack_end22"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics2_three.attack_end22",
+            "label": "惨败！",
+            "startdescription": "......寂静与腐烂的气息正在废墟上沉积",
+            "description": "......寂静与腐烂的气息正在废墟上沉积",
+            "warmup": 0,
+            "aspects": {
+                "killfriend": 1,
+            }
+        },
+        
+        {
+            "id": "foe.umiri.attack.tactics3.first",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "actionId": "foetactics3",
+            "warmup": 0,
+            "requirements": {
+                "strategy.tactics3": 1
+            },
+			"maxexecutions": 1,
+			"playAudioTrack": "bgm.foetactics3.mp3",
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3"
+                }
+            ],
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics3",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "requirements": {
+                "strategy.tactics3": 1
+            },
+            "grandReqs": {
+                "Max( ([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]), ([~/exterior:foe.bombers] + [~/exterior:foe.bombers.hidden]) ) >= 1": 1
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3a",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3a",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+                "strategy.tactics3.up_edgea": 1
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "敌军",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "敌军",
+                "required": {
+                    "foe.artillery": 1,
+                    "foe.artillery.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe",
+                    "mutate": "needsforgemoth",
+                    "level": -2,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？\n\n[此战术触发后将会导致你的部队大量伤亡，损失设施，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？\n\n[此战术触发后将会导致你的部队大量伤亡，损失设施，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend2",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend3",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.deflect.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsforgemoth"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.friend.immortal.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.friend.immortal.3foe",
+            "label": "成功的反击？",
+            "startdescription": "奋起，并战斗。\n\n[你正在尝试使用<i>永生者的协助</i>抵御一次重火力袭击，这将有一定概率导致失败！]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.friend.immortal",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.deflect.3foe",
+            "label": "成功的反击？",
+            "startdescription": "奋起，并战斗。\n\n[你正在尝试使用<i>不侵守御</i>抵御一次重火力袭击，这将有一定概率导致失败！]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.needsedge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.needsforgemoth",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsforgemoth": 1,
+                "forge": "needsforgemoth",
+                "moth": "needsforgemoth"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3_one.setback",
+            "label": "抵御敌军的攻势",
+            "startdescription": "我们知道战争是残酷的，但我们没有别的选择。",
+            "description": "我们知道战争是残酷的，但我们没有别的选择。",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.artillery",
+                    "mutate": "needsforgemoth",
+                    "level": 2,
+                    "additive": true
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_one.attack",
+        "label": "敌军正在发动战术进攻！",
+        "startdescription": "烟雾与尘埃慢慢沉降，此处已不存在什么完整的东西了，瓦砾与扭曲的金属四处可见。",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 4,
+                "additive": true
+            },
+            {
+                "filter": "foe.artillery",
+                "mutate": "needsforgemoth",
+                "level": 2,
+                "additive": true
+            },
+        ],
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "军用设施",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "haltverb": {
+	        "main": 99,
+            "side": 99,
+            "side.2": 99,
+            "side.3": 99,
+            "operation.heart": 99,
+            "operation.edge": 99,
+        },
+        "purge": {
+            "hindrance": 99,
+        },
+        "xpans": {
+            "stop_goal": 1
+        },
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_two.attack"
+            },
+        ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_two.attack",
+        "label": "直面炮火！",
+        "startdescription": "战场重归寂静，这支军队已在烈焰中化作飞灰。",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "友军",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_two.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_two.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_two.end",
+        "label": "直面炮火！",
+        "startdescription": "战场重归寂静，这支军队已在烈焰中化作飞灰。",
+        "requirements": {
+        },
+        "aspects": {
+            "killfriend": 1
+        },
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_three.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_three.attack",
+        "label": "直面炮火",
+        "startdescription": "战场重归寂静，只余下四散的装备，与哭号的伤员。",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "友军",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_three.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_three.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_three.end",
+        "label": "直面炮火",
+        "startdescription": "战场重归寂静，只余下四散的装备，与哭号的伤员。",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack"
+            }
+        ],
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.attack",
+        "label": "炮火余震",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽",
+        "requirements": {
+            "foe": 3
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "友军",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.weakened": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3_four.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3_four.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.end",
+        "label": "炮火余震",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽",
+        "requirements": {
+        },
+        "aspects": {
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "friend",
+                "mutate": "edge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "forge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "lantern",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "moth",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "heart",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "grail",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "winter",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "knock",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "friend.weakened",
+                "level": 1,
+                "additive": false
+            },
+        ],
+        "furthermore": [
+        {
+            "target": "~/tabletop",
+            "mutations": [
+                {
+                    "filter": "influence_temp",
+                    "mutate": "influence_temp",
+                    "level": 1,
+                    "additive": true,
+                    "VFX": "CardBurn"
+                }
+            ]
+        }
+        ],
+        "linked": [
+            {
+                "id": "foe.umiri.attack.tactics3_four.end0"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3_four.end0",
+        "label": "炮火余震",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽",
+        "requirements": {
+        },
+        "purge": {
+	        "influence_temp": 99,
+            "side.rescueallies": 99,
+            "side.weaponscache": 99,
+            "side.adeptgrail": 99,
+            "side.adeptlantern": 99,
+            "side.adeptwinter": 99,
+            "side.rescuepartisans": 99
+        },
+        "linked": [
+        ],
+        "warmup": 0
+        },
+
+        {
+            "id": "foe.umiri.attack.tactics3b",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "尖啸声正由远及近，地狱将自空中降临......",
+            "description": "尖啸声正由远及近，地狱将自空中降临......",
+            "actionId": "foetactics3",
+            "warmup": 10,
+            "grandReqs": {
+                "([~/exterior:foe.bombers] + [~/exterior:foe.bombers.hidden]) >= 1": 1
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "needsfoe1",
+                "label": "敌军",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe2",
+                "label": "敌军",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                },
+                {
+                "id": "needsfoe3",
+                "label": "敌军",
+                "required": {
+                    "foe.bombers": 1,
+                    "foe.bombers.hidden": 1
+                },
+                "forbidden": {
+                },
+                "greedy": true
+                }
+            ],
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": -4,
+                    "additive": true
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one_ex",
+                    "chance": 100
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one",
+                    "chance": 100
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one_ex",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "尖啸声正由远及近，地狱将自空中降临......",
+            "description": "尖啸声正由远及近，地狱将自空中降临......",
+            "warmup": 0,
+            "requirements": {
+                "foe": 3
+            },
+            "effects": {
+                "strategy.tactics3.up_edgeb": 1
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one",
+                    "chance": 100
+                },
+            ],
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[此战术触发后将会导致你的部队大量受创，损失设施和补给品，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[此战术触发后将会导致你的部队大量受创，损失设施和补给品，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "actionId": "foetactics3",
+            "warmup": 30,
+            "requirements": {
+            },
+            "aspects": {
+                "revealidentity": 1
+            },
+            "effects": {
+            },
+            "slots": [
+                {
+                "id": "defend1",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend2",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+                {
+                "id": "defend3",
+                "label": "防御",
+                "required": {
+                    "moth": 1,
+                    "lantern": 1,
+                    "forge": 1,
+                    "edge": 1,
+                    "winter": 1,
+                    "heart": 1,
+                    "grail": 1,
+                    "knock": 1
+                },
+                "forbidden": {
+                    "exhausted": 1,
+                    "wounded": 1,
+                    "damaged": 1
+                },
+                "greedy": false
+                },
+            ],
+            "mutations": [
+            ],
+            "alt": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.deflect.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.deflect"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsaerial"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.needsedge"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.friend.immortal.3foe"
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.friend.immortal"
+                },
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+            "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.friend.immortal.3foe",
+            "label": "成功的反击？",
+            "startdescription": "奋起，并战斗。\n\n[你正在尝试使用<i>永生者的协助</i>抵御一次重火力袭击，这将有一定概率导致失败！]",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.friend.immortal",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "friend.immortal": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.deflect.3foe",
+            "label": "成功的反击？",
+            "startdescription": "奋起，并战斗。\n\n[你正在尝试使用<i>不侵守御</i>抵御一次重火力袭击，这将有一定概率导致失败！]",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+                "foe": 3
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback",
+                    "chance": 50
+                },
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.attack",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.deflect",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "skill.deflect": 1,
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ],
+            "inductions": [
+                {
+                "id": "producetimeover",
+                "chance": 100,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "skill.deflect": 1,
+                    "skill.deflect.exhausted": 1,
+                    "skill.deflect.exhausted_double": 1,
+                    "friend.cross": 1,
+                    "friend.cross.exhausted": 1,
+                    "friend.cross.exhausted_double": 1,
+                    "friend.sergei": 1,
+                    "friend.sergei.exhausted": 1,
+                    "friend.sergei.exhausted_double": 1,
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.needsedge",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "needsedge": 1,
+                "edge": "needsedge"
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.needsaerial",
+            "label": "成功的反击！",
+            "startdescription": "奋起，并战斗。",
+            "warmup": 0,
+            "requirements": {
+                "foe.aerial": 1,
+                "friend.aerial": "foe.aerial",
+            },
+            "effects": {
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack.tactics3b_one.setback"
+                },
+            ],
+            "alt": [
+                {
+                "id": "producecasualty",
+                "additional": true,
+                "chance": 30,
+                "expulsion": {
+                    "limit": 1,
+                    "filter": {
+                    "friend": 1
+                    }
+                }
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.tactics3b_one.setback",
+            "label": "抵御敌军的攻势",
+            "startdescription": "我们知道战争是残酷的，但我们没有别的选择。",
+            "description": "我们知道战争是残酷的，但我们没有别的选择。",
+            "warmup": 10,
+            "requirements": {
+            },
+            "aspects": {
+                "dissolution": 1,
+                "fatiguing": 1
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "needsedge",
+                    "level": 4,
+                    "additive": true
+                },
+                {
+                    "filter": "foe.artillery",
+                    "mutate": "needsforgemoth",
+                    "level": 1,
+                    "additive": true
+                },
+            ],
+            "effects": {
+            },
+            "linked": [
+            ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_one.attack",
+        "label": "敌军正在发动战术进攻！",
+        "startdescription": "烟雾与尘埃慢慢沉降，此处已不存在什么完整的东西了，瓦砾与扭曲的金属四处可见。",
+        "requirements": {
+        },
+        "aspects": {
+            "destroy": 1,
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "slots": [
+            {
+            "id": "needsinfrastructure",
+            "label": "军用设施",
+            "required": {
+                "infrastructure": 1
+            },
+            "greedy": true
+            }
+        ],
+        "haltverb": {
+	        "main": 99,
+            "side": 99,
+            "side.2": 99,
+            "side.3": 99,
+            "operation.heart": 99,
+            "operation.edge": 99,
+        },
+        "purge": {
+            "hindrance": 99,
+        },
+        "xpans": {
+            "stop_goal": 1
+        },
+        "warmup": 10,
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_one.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_two.attack"
+            },
+        ],
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_two.attack",
+        "label": "失去资源！",
+        "startdescription": "我们的资源正在火中燃烧！",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "Supplies",
+            "required": {
+                "supplies": 1,
+                "weapon": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "debilitation": 1,
+                "contemnant.weapon": 1,
+                "friend.immortal.blocker": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_two.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_two.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_two.end",
+        "label": "失去资源！",
+        "startdescription": "我们的资源正在火中燃烧！",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "effects": {
+            "supplies": -99,
+            "weapon": -99
+        },
+        "mutations": [
+            {
+                "filter": "foe",
+                "mutate": "needsedge",
+                "level": 4,
+                "additive": true
+            },
+            {
+                "filter": "foe.artillery",
+                "mutate": "needsforgemoth",
+                "level": 1,
+                "additive": true
+            },
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_three.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_three.attack",
+        "label": "精准打击！",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽。",
+        "requirements": {
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "友军",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_three.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_three.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_three.end",
+        "label": "精准打击！",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽。",
+        "requirements": {
+        },
+        "aspects": {
+            "makecasualty": 1
+        },
+        "alt": [
+            {
+            "id": "produce.wounds",
+            "additional": true,
+            "chance": 50
+            },
+	    {
+		"id": "produce.trauma",
+		"additional": true,
+		"chance": 40
+	    },
+            {
+            "id": "produce.strife",
+            "additional": true,
+            "chance": 65
+            },
+            {
+            "id": "produce.strife.contemnant",
+            "additional": true,
+            "chance": 50
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.attack",
+        "label": "地毯式轰炸",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽。",
+        "requirements": {
+            "foe": 3
+        },
+        "slots": [
+            {
+            "id": "needssupplies",
+            "label": "友军",
+            "required": {
+                "friend": 1
+            },
+            "forbidden": {
+                "remnant": 1,
+                "friend.hidden": 1,
+            "anno.mark": 1
+            },
+            "greedy": true
+            }
+        ],
+        "linked": [
+            {
+            "id": "foe.umiri.attack.tactics3b_four.attack",
+            "chance": 50
+            },
+            {
+            "id": "foe.umiri.attack.tactics3b_four.end"
+            }
+        ],
+        "warmup": 10
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.end",
+        "label": "地毯式轰炸",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽。",
+        "requirements": {
+        },
+        "aspects": {
+            "dissolution": 1,
+            "fatiguing": 1
+        },
+        "mutations": [
+            {
+                "filter": "friend",
+                "mutate": "edge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "forge",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "lantern",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "moth",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "heart",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "grail",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "winter",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "knock",
+                "level": -2,
+                "additive": true
+            },
+            {
+                "filter": "friend",
+                "mutate": "friend.weakened",
+                "level": 1,
+                "additive": false
+            },
+        ],
+        "furthermore": [
+        {
+            "target": "~/tabletop",
+            "mutations": [
+                {
+                    "filter": "influence_temp",
+                    "mutate": "influence_temp",
+                    "level": 1,
+                    "additive": true,
+                    "VFX": "CardBurn"
+                }
+            ]
+        }
+        ],
+        "linked": [
+            {
+                "id": "foe.umiri.attack.tactics3b_four.end0"
+            }
+        ],
+        "warmup": 0
+        },
+        {
+        "id": "foe.umiri.attack.tactics3b_four.end0",
+        "label": "地毯式轰炸",
+        "startdescription": "战场重归寂静，只余下风穿越断壁残垣的低啸，与士兵的呜咽。",
+        "requirements": {
+        },
+        "linked": [
+        ],
+        "purge": {
+	        "influence_temp": 99,
+            "side.rescueallies": 99,
+            "side.weaponscache": 99,
+            "side.adeptgrail": 99,
+            "side.adeptlantern": 99,
+            "side.adeptwinter": 99,
+            "side.rescuepartisans": 99
+        },
+        "warmup": 0
+        },
+    ]
+}
