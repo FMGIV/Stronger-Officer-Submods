@@ -1179,9 +1179,9 @@
         },
         {
             "id": "friend.anno.attack.stun_foewin",
-            "label": "敌军的防线被瓦解！",
-            "startdescription": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
-            "description": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
+            "label": "新军的行军失利！",
+            "startdescription": "新军的攻势被敌人阻挡，他们正在重新集结。",
+            "description": "新军的攻势被敌人阻挡，他们正在重新集结。",
             "actionId": "friendstun",
             "warmup": 10,
             "grandReqs": {
@@ -1199,9 +1199,9 @@
         },
         {
             "id": "friend.anno.attack.stun_friendwin",
-            "label": "新军的行军失利！",
-            "startdescription": "新军的攻势被敌人阻挡，他们正在重新集结。",
-            "description": "新军的攻势被敌人阻挡，他们正在重新集结。",
+            "label": "敌军的防线被瓦解！",
+            "startdescription": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
+            "description": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
             "actionId": "operate",
             "warmup": 10,
             "grandReqs": {

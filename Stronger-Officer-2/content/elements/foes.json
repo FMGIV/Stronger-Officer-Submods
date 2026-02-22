@@ -69,6 +69,28 @@
 	"lifetime": 1
     },
 
+    {
+	"id": "foe.malkin",
+	"label": "巨型灵猫",
+	"description": "猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。[这一敌军的攻击无法被防御，且无法被任何来源攻击。不过，杀死场上所有军团持钥者将完全遣返它。]",
+	"inherits": "foe.template",
+	"aspects": {
+	    "otherworldly": 1,
+	    "foe.guardlionel": 1,
+	    "faction.legion": 1
+	},
+	"induces": [
+		{
+			"id": "produce.warder",
+			"chance": 100
+		}
+	],
+	"xtriggers": {
+	    "refresh": "foe.malkin",
+	    "concealidentity": "foe.malkin.hidden",
+	    "annoyance": "husk"
+	}
+    },
         {
             "id": "foe.umiri.2.withanno",
             "label": "冯海铃<b>上校</b>",

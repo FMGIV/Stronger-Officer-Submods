@@ -504,7 +504,7 @@
         {
             "id": "umiri.defiance",
             "label": "斗争印记",
-            "description": "你的大敌为你留下了一段无法泯灭的回忆",
+            "description": "一段你与你大敌之间的无法泯灭的斗争回忆。",
             "aspects": {
                 "foe.defiance": 1
             },

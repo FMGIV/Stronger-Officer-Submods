@@ -595,8 +595,7 @@
             },
 			"aspects": {
 	    		"weaken": 1,
-                "revealidentity": 1,
-				"fatiguing": 1
+                "revealidentity": 1
 			},
 			"linked": [
 			],
@@ -1292,6 +1291,70 @@
 	    "malign": 1
 	}
     },
-        
+    
+    {
+	"id": "operate.startup.shakedown.militia",
+	"actionid": "operate",
+	"label": "从本地人处强征补给",
+	"startdescription": "我们会说这都是为了赢得这场战争，实际上也确实如此。但他们不会喜欢的。\n\n[这将会给予你相当数量的补给品，但会永久毁灭你与本地人之间的一切友好关系。你在一个战区只能如此做一次。]",
+	"requirements": {
+	    "friend.militia": 1,
+	    "warzone.current": 1,
+	    "edge": 5,
+	    "lake.here": -1,
+	    "friend.stronger": -1,
+	    "craterfield.here": -1,
+	    "wasteland.ironeater.here": -1,
+	    "wasteland": -1,
+	    "warzone.abused": -1
+	},
+	"warmup": 10,
+	"craftable": true,
+	"alt": [
+	    {
+		"id": "shakedown.prep",
+		"additional": true,
+		"expulsion": {
+		    "limit": 3,
+		    "filter": {
+			"edge": 1,
+			"warzone.current": 1
+		    }
+		}
+	    }
+	]
+    },
+    {
+	"id": "operate.startup.shakedown.militia.ex",
+	"actionid": "operate",
+	"label": "从本地人处强征补给",
+	"startdescription": "我们会说这都是为了赢得这场战争，实际上也确实如此。但他们不会喜欢的。\n\n[这将会给予你相当数量的补给品，但会永久毁灭你与本地人之间的一切友好关系。你在一个战区只能如此做一次。]",
+	"requirements": {
+	    "friend.militia": 1,
+	    "warzone.current": 1,
+	    "edge": 7,
+	    "lake.here": -1,
+	    "friend.stronger": 1,
+	    "craterfield.here": -1,
+	    "wasteland.ironeater.here": -1,
+	    "wasteland": -1,
+	    "warzone.abused": -1
+	},
+	"warmup": 10,
+	"craftable": true,
+	"alt": [
+	    {
+		"id": "shakedown.prep",
+		"additional": true,
+		"expulsion": {
+		    "limit": 3,
+		    "filter": {
+			"edge": 1,
+			"warzone.current": 1
+		    }
+		}
+	    }
+	]
+    },
     ]
 }

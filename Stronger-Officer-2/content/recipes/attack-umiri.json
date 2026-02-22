@@ -20,8 +20,11 @@
             "purge": {
                 "strife.incur": 99
             },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
             "effects": {
-                "foe.umiri.2.withanno": 1,
                 "foe.tanks": 1
             },
             "internaldeck": {
@@ -51,11 +54,11 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy2"
+                    "id": "foe.umiri.coming2.first.withanno"
                 },
                 {
-                    "id": "foe.umiri.coming2.first.withanno"
-                }
+                    "id": "foe.umiri.deploy2.withanno"
+                },
             ],
         },
         {
@@ -73,12 +76,15 @@
             "purge": {
                 "strife.incur": 99
             },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
             "grandReqs": {
                 "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
             },
 			"playAudioTrack": "bgm.foecoming.mp3",
             "effects": {
-                "foe.umiri.2.withanno": 1,
                 "foe.tanks": 1
             },
             "internaldeck": {
@@ -108,14 +114,60 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy2"
+                    "id": "foe.umiri.coming2.withanno"
                 },
                 {
-                    "id": "foe.umiri.coming2.withanno"
-                }
+                    "id": "foe.umiri.deploy2.withanno"
+                },
             ],
             "craftable": false,
             "hintonly": false,
+        },
+        {
+            "id": "foe.umiri.deploy2.withanno",
+            "label": "敌军上校正在赶来",
+            "startdescription": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "description": "敌军的新指挥官已经就任——还带来了她的护卫队。据说这是一位崭露头角的年轻军官。",
+            "actionId": "foecoming",
+            "warmup": 10,
+            "grandReqs": {
+                "([foe.officer] || [foe.umiri.pre]) >= 1": 1
+            },
+            "effects": {
+                "foe.umiri.2.withanno": 1,
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
+            "mutations": [
+                {
+                    "filter": "foe",
+                    "mutate": "foe.officerdetail",
+                    "level": 1
+                },
+                {
+                    "filter": "foe.rankofficer",
+                    "mutate": "foe.officerdetail",
+                    "level": -1
+                }
+            ],
+            "linked": [
+                {
+                    "id": "foe.umiri.moreenemy"
+                },
+                {
+                    "id": "foe.umiri.edgelong"
+                },
+                {
+                    "id": "foe.umiri.edgelong2"
+                },
+            ],
+            "craftable": false,
+            "hintonly": false,
+            "inductions": [
+                {
+                    "id": "foe.umiri.circle"
+                }
+            ]
         },
         {
             "id": "foe.umiri.moreenemy.medium.withanno",
@@ -445,7 +497,7 @@
     {
 	"id": "contemplation.complete.anno",
 	"label": "得出一个结论",
-	"startdescription": "重塑者与的战争仍未结束，这场势均力敌的较量注定难以得出结果。他们会在那些战场最重要的节点继续他们未结束的角斗。\n\n[当双方的争斗暂时结束的时候，你可以找到重塑者。入梦后可获得<i>次要任务：突袭敌军指挥部</i>]",
+	"startdescription": "重塑者与的战争仍未结束，这场势均力敌的较量注定难以得出结果。他们会在那些战场最重要的节点继续他们未结束的角斗。\n\n[当双方的争斗暂时结束的时候，你可以找到重塑者。双方都在场时，入梦后可获得<i>次要任务：突袭敌军指挥部</i>]",
 	"requirements": {
 	    "contemplation": 1,
 	    "completed": 1,
@@ -463,11 +515,11 @@
     {
 	"id": "contemplation.complete.anno.ex",
 	"label": "得出一个结论",
-	"startdescription": "重塑者与的战争仍未结束，这场势均力敌的较量注定难以得出结果。他们会在那些战场最重要的节点继续他们未结束的角斗。\n\n[当双方的争斗暂时结束的时候，你可以找到重塑者。入梦后可获得<i>次要任务：突袭敌军指挥部</i>]",
 	"extantreqs": {
 	    "anno.mark": 1,
         "foe.umiri.mark": 1,
-		"rome": -1
+		"rome": -1,
+		"approval": -1,
 	},
 	"effects": {
 		"side.umiri.withanno": 1
@@ -502,6 +554,15 @@
 	"warmup": 30,
 	"linked": [
 	    {
+		"id": "attack.nodefense.exilenightmare"
+	    },
+	    {
+		"id": "attack.nodefense.nightmare"
+	    },
+	    {
+		"id": "attack.nodefense.warder"
+	    },
+	    {
 		"id": "attack.nodefense.voice"
 	    },
 	    {
@@ -520,6 +581,9 @@
 	"alt": [
 	    {
 		"id": "defend.skill.deflect"
+	    },
+	    {
+		"id": "defend.friend.immortal"
 	    },
 	    {
 		"id": "defend.aerial"
@@ -571,6 +635,18 @@
 	    },
 	    {
 		"id": "defend.edgeheart"
+	    },
+	    {
+		"id": "defend.edgegrail"
+	    },
+	    {
+		"id": "defend.edgemoth"
+	    },
+	    {
+		"id": "defend.winterheart"
+	    },
+	    {
+		"id": "defend.lanternheart"
 	    }
 	]
     },
@@ -1516,6 +1592,15 @@
 	"warmup": 30,
 	"linked": [
 	    {
+		"id": "attack.nodefense.exilenightmare"
+	    },
+	    {
+		"id": "attack.nodefense.nightmare"
+	    },
+	    {
+		"id": "attack.nodefense.warder"
+	    },
+	    {
 		"id": "attack.nodefense.voice"
 	    },
 	    {
@@ -1534,6 +1619,9 @@
 	"alt": [
 	    {
 		"id": "defend.skill.deflect"
+	    },
+	    {
+		"id": "defend.friend.immortal"
 	    },
 	    {
 		"id": "defend.aerial"
@@ -1585,6 +1673,18 @@
 	    },
 	    {
 		"id": "defend.edgeheart"
+	    },
+	    {
+		"id": "defend.edgegrail"
+	    },
+	    {
+		"id": "defend.edgemoth"
+	    },
+	    {
+		"id": "defend.winterheart"
+	    },
+	    {
+		"id": "defend.lanternheart"
 	    }
 	]
     },

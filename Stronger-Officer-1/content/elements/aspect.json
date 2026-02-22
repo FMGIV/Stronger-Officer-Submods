@@ -373,6 +373,7 @@
 			"aspects": {
 				"contemplation": 1
 			},
+			"unique": true,
 			"lifetime": 0,
             "isAspect": false,
         },
@@ -504,7 +505,7 @@
         {
             "id": "umiri.defiance",
             "label": "Mark of the Struggle",
-            "description": "Your arch-nemesis has left you an indelible memory.",
+            "description": "A Memory of the Indelible Struggle Between You and Your Arch-Nemesis.",
             "aspects": {
                 "foe.defiance": 1
             },

@@ -130,7 +130,7 @@
 	"label": "黑鹰的羽翼",
 	"startdescription": "当夜幕降临，我们发现更多黑鹰的爪牙已被遣至此地。真是麻烦。",
 	"extantreqs": {
-	    "faction.karotechia": -6,
+	    "faction.karotechia": -12,
 	    "corpse.clockwork": -1
 	},
 	"warmup": 30,
@@ -552,7 +552,14 @@
 	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
     {
 	"id": "target.legion2",
@@ -602,7 +609,14 @@
 	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
     {
 	"id": "target.legion3",
@@ -652,7 +666,14 @@
 	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
 
     {
@@ -701,7 +722,14 @@
 	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
     {
 	"id": "target.king2",
@@ -749,7 +777,14 @@
 	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
     {
 	"id": "target.king3",
@@ -797,7 +832,14 @@
 	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
     },
 	
     {

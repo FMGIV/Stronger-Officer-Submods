@@ -6,6 +6,8 @@
 	"description": "重塑者与海铃的战争不过轻易的终止，如果没有外人的干涉，他们大概不会轻易结束。也许一次从侧翼的进攻可以帮助我的盟友找到机会。这样，也许战斗结束之后，她会有兴趣和我好好聊聊。[你可以通过将<i>意图：重塑者与铁玫瑰</i>入梦来重复获得这张卡牌]",
 	"inherits": "side.template",
 	"lifetime": 0,
+	"unique": true,
+	"uniquenessgroup": "umiri.mark",
 	"xtriggers": {
 	    "careeradvancement": [
 		{
@@ -47,6 +49,7 @@
     "resaturate": true,
     "decayTo": "side.umiri.withanno",
 	"unique": true,
+	"uniquenessgroup": "umiri.mark",
 	"xtriggers": {
         "stop_goal": "side.umiri.withanno.exhausted"
 	},

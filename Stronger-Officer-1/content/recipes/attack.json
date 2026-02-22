@@ -292,8 +292,11 @@
                 "draws": 1,
                 "resetonexhaustion": true
             },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
             "effects": {
-                "foe.umiri": 1,
                 "foe.tanks": 1,
                 "obdurant.story.umiri": 1
             },
@@ -314,10 +317,10 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy"
+                    "id": "foe.umiri.coming"
                 },
                 {
-                    "id": "foe.umiri.coming"
+                    "id": "foe.umiri.deploy"
                 }
             ],
         },
@@ -338,6 +341,10 @@
             "purge": {
                 "strife.incur": 99
             },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
 			"playAudioTrack": "bgm.foecoming.mp3",
             "grandReqs": {
                 "([~/extant:foe.officer] || [~/extant:foe.umiri.pre]) >= 1": 1
@@ -353,7 +360,6 @@
                 "resetonexhaustion": true
             },
             "effects": {
-                "foe.umiri": 1,
                 "foe.tanks": 1
             },
             "slots": [
@@ -373,11 +379,11 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy"
+                    "id": "foe.umiri.coming"
                 },
                 {
-                    "id": "foe.umiri.coming"
-                }
+                    "id": "foe.umiri.deploy"
+                },
             ],
             "craftable": false,
             "hintonly": false,
@@ -393,6 +399,7 @@
                 "([foe.officer] || [foe.umiri.pre]) >= 1": 1
             },
             "effects": {
+                "foe.umiri": 1,
                 "foe.officer": -1,
                 "foe.umiri.pre": -1,
             },
@@ -475,8 +482,11 @@
             },
 			"playAudioTrack": "bgm.foecoming.mp3",
             "effects": {
-                "foe.umiri.2": 1,
                 "foe.tanks": 1
+            },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
             },
             "internaldeck": {
                 "spec": [
@@ -505,11 +515,11 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy2"
+                    "id": "foe.umiri.coming2"
                 },
                 {
-                    "id": "foe.umiri.coming2"
-                }
+                    "id": "foe.umiri.deploy2"
+                },
             ],
             "craftable": false,
             "hintonly": false,
@@ -525,6 +535,7 @@
                 "([foe.officer] || [foe.umiri.pre]) >= 1": 1
             },
             "effects": {
+                "foe.umiri.2": 1,
                 "foe.officer": -1,
                 "foe.umiri.pre": -1,
             },
@@ -599,6 +610,10 @@
                 "umiri.blocker": -1,
                 "obdurant.story": 1
             },
+            "requirements": {
+                "foe.officer": -1,
+                "foe.umiri.pre": -1,
+            },
             "purge": {
                 "strife.incur": 99
             },
@@ -617,7 +632,6 @@
                 "resetonexhaustion": true
             },
             "effects": {
-                "foe.umiri.3": 1,
                 "foe.tanks": 1
             },
             "slots": [
@@ -637,11 +651,11 @@
             ],
             "linked": [
                 {
-                    "id": "foe.umiri.deploy3"
+                    "id": "foe.umiri.coming3"
                 },
                 {
-                    "id": "foe.umiri.coming3"
-                }
+                    "id": "foe.umiri.deploy3"
+                },
             ],
             "craftable": false,
             "hintonly": false,
@@ -657,6 +671,7 @@
                 "([foe.officer] || [foe.umiri.pre]) >= 1": 1
             },
             "effects": {
+                "foe.umiri.3": 1,
                 "foe.officer": -1,
                 "foe.umiri.pre": -1,
             },
@@ -1737,6 +1752,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -1783,6 +1799,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -1834,6 +1851,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -1914,6 +1932,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2032,6 +2051,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2076,6 +2096,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2132,6 +2153,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2190,6 +2212,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2287,6 +2310,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,
@@ -2372,6 +2396,7 @@
 	    "sideofficer": 99,
         "foeactionumiri": 99,
         	"annoaction": 99,
+        	"annocoming": 99,
 			"friendpowerup": 99,
 			"friendstun": 99,
 			"friendairstrike": 99,

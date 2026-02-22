@@ -1,6 +1,46 @@
 {
 "recipes": [
     {
+	"id": "target.king.victory",
+	"label": "门关军团获胜了！",
+	"startdescription": "新王的军队在夜间被击败。内脏外流的尸体被丢到泥地上。军团士兵的刺刀与匕首照亮阴影，但仅有一瞬，而后便消失。",
+	"aspects": {
+	    "killking": 1
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	],
+    },
+    {
+	"id": "legion.reinforcements",
+	"actionid": "reinforcements.legion",
+	"label": "门关的看守",
+	"startdescription": "当明月高悬于空时，醒时世界与梦境之间的门完全敞开，门关军团的士兵涌出。真是麻烦。",
+	"extantreqs": {
+	    "faction.legion": -12,
+	    "corpse.lionel": -1
+	},
+	"warmup": 30,
+	"internaldeck": {
+	    "spec": [
+		"foe.boundsmen",
+		"foe.boundsmen",
+		"foe.boundsmen",
+		"foe.boundsmen",
+		"foe.boundsmen",
+		"foe.warder",
+		"foe.warder",
+		"foe.warder"
+	    ],
+	    "draws": 4,
+	    "resetonexhaustion": true
+	}
+    },
+    {
 	"id": "found.boundsmen",
 	"label": "一次敌袭！",
 	"startdescription": "这一敌军与其同伴步调一致地移动——",
@@ -131,7 +171,14 @@
 	"startdescription": "索隐会的据点在黎明前便被抹去，遍地皆是被刺穿与撕裂的尸骸，尚未凝固的血液在晨霭中泛着幽暗的微光。",
 	"aspects": {
 	    "killkarotechia": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "karotechia.officerdetail",
+		"level": 0
+	    }
+	],
     },
 	
     {

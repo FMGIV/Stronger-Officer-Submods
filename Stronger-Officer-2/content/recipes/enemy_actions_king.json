@@ -1,6 +1,49 @@
 {
 "recipes": [
     {
+	"id": "target.legion.victory",
+	"label": "新王的军队获胜了！",
+	"startdescription": "当枪火声散去，战场上满地都是死去的军团士兵。新王的军队踏过战场，踏过死去的军团士兵。他们继续推进。",
+	"aspects": {
+	    "killlegion": 1
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "karotechia.officerdetail",
+		"level": 0
+	    }
+	],
+    },
+    {
+	"id": "king.reinforcements",
+	"actionid": "reinforcements.king",
+	"label": "新王的人马",
+	"startdescription": "当黎明到来，我们发现更多的新王军队前来支援此地。真是麻烦。",
+	"extantreqs": {
+	    "faction.king": -12,
+	    "corpse.jerome": -1
+	},
+	"warmup": 30,
+	"internaldeck": {
+	    "spec": [
+		"foe.riflemen",
+		"foe.riflemen",
+		"foe.riflemen",
+		"foe.riflemen",
+		"foe.riflemen",
+		"foe.phlogisticant",
+		"foe.phlogisticant",
+		"foe.phlogisticant",
+		"foe.engine",
+		"foe.engine",
+		"foe.engine"
+	    ],
+	    "draws": 4,
+	    "resetonexhaustion": true
+	}
+    },
+    {
 	"id": "found.riflemen",
 	"label": "一次敌袭！",
 	"startdescription": "这一敌军与其同伴步调一致地移动——",
@@ -131,7 +174,14 @@
 	"startdescription": "肆虐的金焰将索隐会的阵地舔舐殆尽，琉璃般的大地倒映着白昼之光。新王的军队如洪流碾过防线。",
 	"aspects": {
 	    "killkarotechia": 1
-	}
+	},
+	"mutations": [
+	    {
+		"filter": "foe",
+		"mutate": "karotechia.officerdetail",
+		"level": 0
+	    }
+	],
     },
 	
     {
@@ -158,6 +208,9 @@
 	    "resetonexhaustion": true
 	},
 	"linked": [
+		{
+			"id": "jerome.orderguard.pre"
+		},
 	    {
 		"id": "jerome.physicalattack"
 	    },
@@ -168,6 +221,34 @@
 		"id": "jerome.orderguard"
 	    }
 	]
+    },
+    {
+	"id": "jerome.orderguard.pre",
+	"label": "炮灰上前",
+	"tablereqs": {
+	    "foe.guardjerome": -2
+	},
+	"effects": {
+		"decision.enemy.reinforcements": 1
+	},
+	"mutations": [
+	    {
+		"filter": "faction.king",
+		"mutate": "foe.guardjerome",
+		"level": 1
+	    },
+	    {
+		"filter": "uqjerome",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    }
+	],
+	"linked": [
+		{
+			"id": "jerome.orderguard"
+		}
+	],
+	"warmup": 0
     },
     {
 	"id": "jerome.orderguard",

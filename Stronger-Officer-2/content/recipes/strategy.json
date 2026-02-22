@@ -171,7 +171,7 @@
 	    {
 		"id": "produce.strife",
 		"additional": true,
-		"chance": 65
+		"chance": 100
 	    },
 	    {
 		"id": "produce.strife.contemnant",

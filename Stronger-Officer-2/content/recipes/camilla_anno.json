@@ -10,7 +10,7 @@
 	},
 	"extantreqs": {
 	    "contemnant.story": -1,
-	    "wound.camilla.foranno.ex": -1,
+	    "wound.camilla.foranno.ex": 1,
 	},
 	"slots": [
 	    {
@@ -206,7 +206,7 @@
                 "anno.mark": 1,
                 "wound.sergei.foranno": -1,
                 "valkyrie.mark": 1,
-                "sergei": 1
+                "foe.sergei": 1
             },
             "requirements": {
                 "faction.anno": 1,
@@ -251,7 +251,7 @@
             "extantreqs": {
                 "anno.mark": 1,
                 "wound.sergei.foranno": -1,
-                "sergei": 1
+                "foe.sergei": 1
             },
             "requirements": {
                 "foe.umiri.mark": 1,
@@ -337,7 +337,7 @@
             "extantreqs": {
                 "anno.mark": 1,
                 "wound.camilla.foranno": -1,
-                "camilla": 1
+                "foe.camilla": 1
             },
             "requirements": {
                 "faction.anno": 1,
@@ -381,10 +381,10 @@
             "extantreqs": {
                 "anno.mark": 1,
                 "wound.camilla.foranno": -1,
-                "camilla": 1
+                "foe.camilla": 1
             },
             "requirements": {
-                "foe.umiri.mark": 1,
+                "anno.mark": 1,
             },
             "effects": {
 				"anno_camilla": 1
@@ -412,7 +412,7 @@
             "effects": {
 				"wound.camilla.foranno": 1,
 				"anno_camilla": -99,
-				"camilla": -99,
+				"foe.camilla": -99,
 				"faction.anno": -99,
 			},
             "achievements": [
@@ -426,6 +426,7 @@
 				"friendvalkyrie": 99,
 			},
 			"purge": {
+				"foe.camilla": 99,
 				"faction.anno": 99
 			},
             "aspects": {},

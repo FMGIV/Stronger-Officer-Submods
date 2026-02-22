@@ -1,6 +1,63 @@
 {
     "recipes": [
     {
+	"id": "produce.explosion.random",
+	"actionid": "explosion",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
+	"slots": [
+	    {
+		"id": "needstarget",
+		"label": "Casualty",
+		"required": {
+		    "friend": 1,
+		    "foe": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 10,
+	"aspects": {
+	    "makecasualty": 1,
+	    "killfoe": 1
+	},
+	"mutations": [
+	    {
+		"filter": "remnant",
+		"mutate": "foe.guardjerome",
+		"level": 0
+	    },
+	    {
+		"filter": "remnant",
+		"mutate": "karotechia.officerdetail",
+		"level": 0
+	    }
+	],
+    },
+    {
+	"id": "produce.warder",
+	"actionid": "morewarder",
+	"label": "洞开！",
+	"startdescription": "灵猫挥舞着她的巨爪，空间因其吼叫而震动，更多的军官被吸引而来——",
+	"warmup": 10,
+	"effects": {
+		"foe.warder": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"foe.warder",
+		"foe.warder",
+		"foe.warder",
+		"nothing",
+	    ],
+	    "draws": 2,
+	    "resetonexhaustion": true,
+	    "defaultcard": "nothing"
+	},
+	"linked": [
+	]
+    },
+    {
 	"id": "startup.produce.friend.phlogisticant0",
 	"actionid": "spit.grail",
 	"label": "火焰失控",
@@ -1036,6 +1093,7 @@
 	"extantreqs": {
 		"foe.umiri.dead.withanno": 1,
 		"foe.umiri.mark": -1,
+		"approval": -1
 	},
     "craftable": true,
 	"requirements": {
@@ -1057,10 +1115,33 @@
 		"greedy": true
 		}
 	],
-	"linked": [
+	"alt": [
+		{
+			"id": "talktoannosir.approval"
+		}
 	],
 	"effects": {
 	}
+    },
+    {
+	"id": "talktoannosir.approval",
+	"actionid": "communicate",
+	"label": "与盟军军官结识",
+	"startdescription": "“很高兴见到你，人之杀手。”对方向我走来，身上没有什么军官的架子。“我听说了你的事情，感谢你的协助。”",
+	"warmup": 10,
+	"requirements": {
+		"foe.umiri.dead.withanno": 1,
+	},
+	"aspects": {
+		"findanno": 1
+	},
+	"mutations": [
+		{
+			"filter": "anno.mark",
+			"mutate": "approval",
+			"level": 1
+		}
+	],
     },
 
     {
@@ -1073,7 +1154,8 @@
 	"aspects": {
 	},
 	"requirements": {
-		"friend.anno": 1
+		"friend.anno": 1,
+		"approval": 1
 	},
     "craftable": true,
 	"slots": [

@@ -913,9 +913,9 @@
 		    "level": 1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": 2
+		    "level": 4
 		},
 	    ],
 	    "destronger": [
@@ -925,9 +925,9 @@
 		    "level": -1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": -2
+		    "level": -4
 		},
 	    ],
 	},
@@ -978,9 +978,9 @@
 		    "level": 1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": 2
+		    "level": 4
 		},
 	    ],
 	    "destronger": [
@@ -990,9 +990,9 @@
 		    "level": -1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": -2
+		    "level": -4
 		},
 	    ],
 	},
@@ -1023,9 +1023,9 @@
 		    "level": 1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": 2
+		    "level": 4
 		},
 	    ],
 	    "destronger": [
@@ -1035,9 +1035,9 @@
 		    "level": -1
 		},
 		{
-		    "id": "edge",
+		    "id": "forge",
 		    "morpheffect": "mutate",
-		    "level": -2
+		    "level": -4
 		},
 	    ],
 	},
@@ -1217,6 +1217,11 @@
 		    "level": 1
 		},
 		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+		{
 		    "id": "forge",
 		    "morpheffect": "mutate",
 		    "level": 2
@@ -1227,6 +1232,11 @@
 		    "id": "friend.stronger",
 		    "morpheffect": "mutate",
 		    "level": -1
+		},
+		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": -4
 		},
 		{
 		    "id": "forge",
@@ -1291,6 +1301,11 @@
 		    "level": 1
 		},
 		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+		{
 		    "id": "forge",
 		    "morpheffect": "mutate",
 		    "level": 2
@@ -1301,6 +1316,11 @@
 		    "id": "friend.stronger",
 		    "morpheffect": "mutate",
 		    "level": -1
+		},
+		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": -4
 		},
 		{
 		    "id": "forge",
@@ -1336,6 +1356,11 @@
 		    "level": 1
 		},
 		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": 4
+		},
+		{
 		    "id": "forge",
 		    "morpheffect": "mutate",
 		    "level": 2
@@ -1346,6 +1371,11 @@
 		    "id": "friend.stronger",
 		    "morpheffect": "mutate",
 		    "level": -1
+		},
+		{
+		    "id": "edge",
+		    "morpheffect": "mutate",
+		    "level": -4
 		},
 		{
 		    "id": "forge",
