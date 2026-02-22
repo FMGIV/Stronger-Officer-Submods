@@ -2,8 +2,8 @@
     "elements": [
         {
             "id": "friend.anno",
-            "label": "克莱里昂<b>少校</b>",
-            "description": "伊丽莎白·“安”·克莱里昂。敦刻尔克的英雄，她带着最后的军团将那被诅咒的巨炮变成破铜烂铁。阻止一场撤退变成屠杀。看起来岛上的不详之人还是把他的手伸到了这里。",
+            "label": "Major <i>Clarion</i>",
+            "description": "Elizabeth 'Ann' Clarion. Heroine of Dunkirk, who led the last battalion to reduce that accursed cannon to scrap. Who stopped a retreat from becoming a massacre. It seems the Unfortunate One of the Island has reached out even here.",
             "lifetime": 0,
             "aspects": {
                 "faction.anno": 1,
@@ -26,8 +26,8 @@
         },
         {
             "id": "friend.anno.hidden",
-            "label": "？？？",
-            "description": "一位沉着冷静的盟军军官，总是救助游击队于水火之中，但你却没听说过关于她的任何事情。",
+            "label": "???",
+            "description": "A calm and composed Allied officer who consistently comes to the aid of guerrilla forces—yet you've never heard a single word about her.",
             "aspects": {
                 "anno.hidden": 1,
                 "faction.anno": 1,
@@ -44,8 +44,8 @@
         },
     {
 	"id": "faction.anno",
-	"label": "隶属于英国盟军的军队",
-	"description": "自英国本土而来的盟军，效命于那被岛上的新王。[这一势力的友军无法由你调配。]",
+	"label": "Forces Attached to the British Allied Army",
+	"description": "Allied forces from the British mainland, serving the New King of the Island. [Friendly forces of this faction cannot be commanded by you.]",
 	"isAspect": true,
 	"induces": [
 	]
@@ -60,26 +60,26 @@
     },
     {
 	"id": "anno.hidden",
-	"label": "未知",
-	"description": "这位军官为什么会到这？又为什么会帮助你？你对此毫不知晓。",
+	"label": "Unknown",
+	"description": "Why is this officer here? And why is she helping you? You have no idea.",
 	"isAspect": true
     },
     {
 	"id": "shape",
-	"label": "塑",
-	"description": "“我们都是容器。让我们只容纳那些光芒照耀之时为我们增光添彩的事物吧。”——蒂尔扎·布雷克。[塑：容纳和释放的准则。]",
+	"label": "Mold",
+	"description": "'We are vessels. Let us contain only what adds to our luster when the light shines upon us.' — Tirza Blake. [Mold: the principle of containing and releasing.]",
 	"isAspect": true
     },
     {
 	"id": "shapelong",
-	"label": "塑之长生者",
-	"description": "辉光的力量存续于内，而后绽放。",
+	"label": "Mold-long",
+	"description": "The power of the Glory endures within, then blossoms forth.",
 	"isAspect": true
     },
     {
 	"id": "tool.shape",
-	"label": "塑化晶体",
-	"description": "精神与力量共同塑造的明澈晶体，无声的宣告着新时代的来临。[你已与克莱里昂<b>少校</b>缔结为盟友。]",
+	"label": "Molded Crystal",
+	"description": "A clear crystal fashioned by spirit and strength together, silently heralding the arrival of a new era. [You have formed an alliance with <b>Major</b> Clarion.]",
 	"aspects": {
 		"promise": 1,
 		"tool": 1,
@@ -91,8 +91,8 @@
     },
     {
 	"id": "tool.king",
-	"label": "吊人之证",
-	"description": "属于不灭灯芯，亨利九世，伟大的英格兰的统治者，不大不不列颠，没有北爱尔兰，既不联合，也不王国，以及折磨文案组某成员足足一个月外加修改三版有关剧情者之证\n荣光归于新王[此为彩蛋]",
+	"label": "Proof of the Hanged Man",
+	"description": "A token belonging to The Undying Wick, Henry IX, great ruler of England, Great Brit-No, Without Northern Ireland, Neither United Nor Kingdom, and one who tormented a certain member of the copy team for an entire month plus three revisions of the relevant storyline. Glory to the New King. [This is an Easter egg.]",
 	"aspects": {
 		"tool": 1,
 		"lantern": 1,
@@ -145,32 +145,32 @@
         },
         {
             "id": "annocomingessential",
-            "label": "爱音已至",
-            "description": "第一次爱音必定到来",
+            "label": "Ai Yin Has Arrived",
+            "description": "The first encounter with Ai Yin is destined to occur.",
 			"lifetime": 1,
             "isAspect": false,
 			"isHidden": true,
         },
         {
             "id": "umiriattackme",
-            "label": "攻击自己",
-            "description": "攻击自己",
+            "label": "Attack Self",
+            "description": "Attack Self",
 			"lifetime": 1,
             "isAspect": false,
 			"isHidden": true,
         },
         {
             "id": "umiriattackfriend",
-            "label": "攻击友军军官",
-            "description": "攻击友军军官",
+            "label": "Attack Friendly Officer",
+            "description": "Attack Friendly Officer",
 			"lifetime": 1,
             "isAspect": false,
 			"isHidden": true,
         },
         {
             "id": "anno_stop",
-            "label": "改变卡槽图标",
-            "description": "改变卡槽图标",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
             "aspects": {
             },
             "verbicon": "annoactionover",
@@ -180,8 +180,8 @@
         },
         {
             "id": "signaller_afraid_ss",
-            "label": "改变卡槽图标",
-            "description": "改变卡槽图标",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
             "aspects": {
             },
             "verbicon": "action.ssover",
@@ -191,8 +191,8 @@
         },
         {
             "id": "clockworkleadtowounds",
-            "label": "改变卡槽图标",
-            "description": "改变卡槽图标",
+            "label": "Change Slot Icon",
+            "description": "Change Slot Icon",
             "aspects": {
             },
             "verbicon": "clockwork.wounds",
@@ -202,7 +202,7 @@
         },
         {
             "id": "strategy.powerup",
-            "label": "策略：强化",
+            "label": "Strategy: Enhance",
             "description": "1",
             "lifetime": 1,
             "isAspect": false,
@@ -210,7 +210,7 @@
         },
         {
             "id": "strategy.stun",
-            "label": "策略：硬控",
+            "label": "Strategy: Hard Control",
             "description": "2",
             "lifetime": 1,
             "isAspect": false,
@@ -218,7 +218,7 @@
         },
         {
             "id": "strategy.airstrike",
-            "label": "策略：轰炸",
+            "label": "Strategy: Bombing",
             "description": "3",
             "lifetime": 1,
             "isAspect": false,
@@ -226,7 +226,7 @@
         },
         {
             "id": "enemywithdraw",
-            "label": "冯海铃撤退",
+            "label": "Von Heiling Retreats",
             "description": "1",
 			"induces": [
 				{
@@ -239,8 +239,8 @@
         },
         {
             "id": "foe.umiri.dead.withanno",
-            "label": "敌军撤退！",
-            "description": "敌军被迫撤离此区域，是时候去“邀功”了。[你现在可以和<i>盟军军官</i>进行交谈了]",
+            "label": "Enemy Retreat!",
+            "description": "The enemy has been forced to withdraw from this area. Time to claim our reward.",
             "lifetime": 0,
             "aspects": {
             },
@@ -251,8 +251,8 @@
 
         {
             "id": "mission.anno.0",
-            "label": "意图：重塑者[The Reformer]",
-            "description": "塑之长生者，不灭灯芯已经登临漫宿，他的力量得以孕育出属于他的不朽者。他们率领着军队为他们的君王开拓疆土，但是至少在此刻，我们都在为解放这片土地而努力。但是她为何出现在此地，这里显然不在对方的战略版图之内。",
+            "label": "Contemplation: The Reformer",
+            "description": "The Mold-long, the Undying Wick, has ascended to the Mansus. His power has nurtured his own Immortal. They lead armies to expand their king's territory—but at least for now, we are all striving to liberate this land. Yet why has she appeared here? This place is clearly not part of their strategic plan.",
             "lifetime": 0,
 			"aspects": {
 				"contemplation": 1,
@@ -281,8 +281,8 @@
 		},
         {
             "id": "mission.anno.1",
-            "label": "意图：重塑者的磨练[The Reformer's temper]",
-            "description": "伊丽莎白·“安”·克莱里昂。敦刻尔克的大英雄，率领着近乎破碎的联军，将那束缚着裂分之狼一重面向的恐怖巨炮。变为了战场上的破铜烂铁。阻止一场撤离变成屠杀，新王将这里作为了她新的历练之地，要求她继续完成自己的历练。",
+            "label": "Contemplation: The Reformer's temper",
+            "description": "Elizabeth 'Ann' Clarion. Great hero of Dunkirk, who led the nearly shattered Allied forces and reduced that terrifying great cannon—which imprisoned one aspect of the Wolf-Divided—to scrap on the battlefield. She prevented a retreat from becoming a massacre. The New King has made this place her new proving ground, commanding her to continue her trial.",
             "lifetime": 0,
 			"aspects": {
 				"contemplation": 1,
@@ -320,8 +320,8 @@
 		},
         {
             "id": "mission.anno.2",
-            "label": "意图：重塑者与铁玫瑰[The Reformer and the Iron Rose]",
-            "description": "巨炮崩毁的躯体照亮了加来的夜空，新生的不朽者与身负伤疤的落败者第一次相遇，活灵，战机，装甲，士兵，而后是她们自己。在一场注定只有一人能存活的角斗中，费西法毁灭的炮火为她们的战斗划上了休止符。她们的战争从未结束，她们注定只能有一人活着。",
+            "label": "Contemplation: The Reformer and the Iron Rose",
+            "description": "The shattered body of the great cannon illuminated the night sky over Calais. The newborn immortal and the scarred defeated met for the first time—spirits, war machines, armor, soldiers, and then themselves. In a duel where only one could survive, the destructive fire of Fetisova's cannon put an end to their battle. Their war has never ended. Only one of them is destined to live.",
             "lifetime": 0,
 			"aspects": {
 				"contemplation": 1,
@@ -397,7 +397,7 @@
 	"slots": [
 	    {
 		"id": "resources1",
-		"label": "资源",
+		"label": "Resources",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -417,7 +417,7 @@
 	    },
 	    {
 		"id": "resources2",
-		"label": "资源",
+		"label": "Resources",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -437,8 +437,8 @@
 	    },
 	    {
 		"id": "resources3",
-		"label": "更多？",
-		"description": "一份力量？一个聚点？一个来自地面或天空的征兆？",
+		"label": "Something More?",
+		"description": "A knot of power? A confluence? A sign of the earth, or the sky?",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -461,7 +461,7 @@
 	    },
 	    {
 		"id": "provisions1",
-		"label": "补给",
+		"label": "Provisions",
 		"required": {
 		    "provisions": 1
 		},
@@ -469,7 +469,7 @@
 	    },
 	    {
 		"id": "provisions2",
-		"label": "补给",
+		"label": "Provisions",
 		"required": {
 		    "provisions": 1
 		},
@@ -477,7 +477,7 @@
 	    },
 	    {
 		"id": "provisions3",
-		"label": "补给",
+		"label": "Provisions",
 		"required": {
 		    "provisions": 1
 		},
@@ -577,8 +577,8 @@
     },
    {
 	"id": "constructions.a",
-	"label": "构筑之法：达贾",
-	"description": "“狮子能够被创造，不像孩童那样被创造，不像言语那样被创造，而是像武器那样被创造。”在无影帝国，这句话是至理名言。[你能够使用该卡牌制造一些狮子匠造物。]",
+	"label": "Constructions: Dadgah",
+	"description": "'Lions can be created, not as children are created, nor as words are created, but as weapons are created.' In the Shadowless Empire, these words were wisdom. [You can use this card to craft certain creations of the Lionsmith.]",
 	"aspects": {
 	    "lore": 1,
 	    "ability": 1
@@ -586,7 +586,7 @@
 	"slots": [
 	    {
 		"id": "needsthing1",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -605,7 +605,7 @@
 	    },
 	    {
 		"id": "needsthing2",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -624,7 +624,7 @@
 	    },
 	    {
 		"id": "needsthing3",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -645,8 +645,8 @@
     },
     {
 	"id": "constructions.b",
-	"label": "构筑之法：阿达兰",
-	"description": "“狮子匠制造怪物以打败伤疤护民官。”带翼的，爪利的，牙尖的——在任何方面，狮子匠的子嗣生来就是为了战斗，与敌人战斗，也与同类战斗。[你能够使用该卡牌制造一些更强大的狮子匠造物。]",
+	"label": "Constructions: Adaran",
+	"description": "'The Lionsmith makes monsters to defeat the Tribune.' Winged, clawed, fanged - in all their dimensions, the Lionsmith's children are made for war against the enemy, and against each other. [You can use this card to craft certain stronger creations of the Lionsmith.]",
 	"aspects": {
 	    "lore": 1,
 	    "ability": 1,
@@ -654,7 +654,7 @@
 	"slots": [
 	    {
 		"id": "needsthing1",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -673,7 +673,7 @@
 	    },
 	    {
 		"id": "needsthing2",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -692,7 +692,7 @@
 	    },
 	    {
 		"id": "needsthing3",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -711,7 +711,7 @@
 	    },
 	    {
 		"id": "needsthing4",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -732,8 +732,8 @@
     },
     {
 	"id": "constructions.c",
-	"label": "构筑之法：贝拉姆",
-	"description": "“狮子匠的子嗣自其锤击诞生；因其锤击死去；并在其锤击中重铸。”狮子匠最古老的那些子嗣并不总能在其教育下存活，但那些存活的子嗣步伐使大地开裂，力量使天空震颤。[你能够使用该卡牌制造狮子匠最强的造物中的一部分。]",
+	"label": "Constructions: Behram",
+	"description": "'The Lionsmith's children are born by the hammer's touch; broken by the hammer's touch; reforged by the hammer's touch.' The Lionsmith's eldest children do not always survive their upbringing, but those which do crack the earth with their step and shake the sky with their strength. [You can use this card to craft some of the strongest creations of the Lionsmith.]",
 	"aspects": {
 	    "lore": 1,
 	    "ability": 1
@@ -741,7 +741,7 @@
 	"slots": [
 	    {
 		"id": "needsthing1",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -760,7 +760,7 @@
 	    },
 	    {
 		"id": "needsthing2",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -779,7 +779,7 @@
 	    },
 	    {
 		"id": "needsthing3",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -798,7 +798,7 @@
 	    },
 	    {
 		"id": "needsthing4",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -817,7 +817,7 @@
 	    },
 	    {
 		"id": "needsthing5",
-		"label": "部件",
+		"label": "Components",
 		"actionId": "abandon",
 		"required": {
 		    "edge": 1,
@@ -839,8 +839,8 @@
 
     {
 	"id": "paestum",
-	"label": "帕埃斯图姆",
-	"description": "同盟国最早的登陆行动就在此处展开。一开始，美军匆忙冲过滩头进攻，但德军迅速设立了防线。战斗在这座小城的内外各处爆发。让我们帮那些<i>美国人</i>在意大利立足吧。",
+	"label": "Paestum",
+	"description": "The earliest Allied landings occurred here. American infantrymen rushed up the beachheads in the first day, but the Germans have been quick to set up a defence. Fighting has spread in and around the small town. Let us help these <i>Americani</i> find their footing in Italy.",
 	"aspects": {
 	    "warzone": 1,
 	    "sector.a": 1,
@@ -960,8 +960,8 @@
     },
     {
       "id": "campobasso",
-      "label": "坎波巴索",
-      "description": "加拿大士兵以血与钢为代价，在此地费力地创造了一个小立足点。感谢他们，每一天都有更多的同盟国军来到坎波巴索——但仍有相当大量的德军驻守在城内，控制着城市的中心与北部外围。将他们逐出城市是一件费力但高尚的工作。",
+      "label": "Campobasso",
+      "description": "Canadian troops carved out a small foothold here, purchased painstakingly with blood and steel. Thanks to them, more allies trickle into Campobasso day by day - but a hefty garrison of Germans retains control of the city centre and the northern outskirts. Dislodging them will be a strenous, but noble work.",
       "aspects": {
         "warzone": 1,
         "sector.a": 1

@@ -2639,12 +2639,30 @@
             "alt": [],
         },
         {
+            "id": "foeumiriofficer.side.0.anno",
+            "label": "尝试突击敌军指挥营？",
+            "previewdescription": "仍然有特遣队在指挥部附近巡逻，若贸然行动必遭敌军强烈反抗，但如果成功将大幅度削弱敌军实力。\n[这个任务目标需要敌军特遣队在<b>三个以下</b>才能触发。]",
+            "actionid": "operate",
+            "requirements": {
+                "side.umiri.withanno": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
             "id": "foeumiriofficer.side.0",
             "label": "尝试突击敌军指挥营？",
-            "previewdescription": "仍然有特遣队在指挥部附近巡逻，若贸然行动必遭敌军强烈反抗，但如果成功将大幅度削弱敌军实力。\n[这个任务目标需要敌军特遣队在<b>三个以下</b>才能触发，且需要卡槽内<b>一直都有友军</b>存在]",
+            "previewdescription": "仍然有特遣队在指挥部附近巡逻，若贸然行动必遭敌军强烈反抗，但如果成功将大幅度削弱敌军实力。\n[这个任务目标需要敌军特遣队在<b>三个以下</b>才能触发，且需要卡槽内<b>一直都有友军</b>存在。]",
             "actionid": "operate",
             "requirements": {
                 "umiri.mark": 1,
+                "side.umiri.withanno": -1,
             },
             "effects": {},
             "aspects": {},
@@ -2658,7 +2676,7 @@
         {
             "id": "makecamillakillumiri.hint",
             "label": "与大陆之敌一同进攻你的大敌？",
-            "previewdescription": "这位长生者精通上校之道，若有其相助，敌军必将溃败于凛冬中。[这个任务需要敌军特遣队在三个以下才能触发，且需要卡槽内一直都有友军存在]",
+            "previewdescription": "这位长生者精通上校之道，若有其相助，敌军必将溃败于凛冬中。[这个任务目标需要敌军特遣队在<b>三个以下</b>才能触发，且需要卡槽内<b>一直都有友军</b>存在。]",
             "actionid": "operate",
             "requirements": {
                 "umiri.mark": 1,

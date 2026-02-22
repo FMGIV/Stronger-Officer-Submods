@@ -2223,6 +2223,7 @@
                 "foe.defiance": 7,
                 "foe.wound.eye": 1,
                 "foe.wound.hand": 1,
+                "resolution": 12
             },
             "achievements": [
                 "ending.umiri_defiance"
@@ -2246,7 +2247,8 @@
             "extantreqs": {
                 "stalingrad.here": 1,
                 "foe.defiance": 7,
-                "damage.body": 5
+                "damage.body": 5,
+                "resolution": 12
             },
             "signalMusic": "bgm.umiri_defiance.mp3",
             "signalEndingFlavour": "Melancholy",
@@ -2267,7 +2269,8 @@
             "extantreqs": {
                 "stalingrad.here": 1,
                 "foe.defiance": 7,
-                "damage.body": 5
+                "damage.body": 5,
+                "resolution": 12
             },
             "achievements": [
                 "ending.umiri_defiance_bad"
@@ -2622,12 +2625,30 @@
             "alt": [],
         },
         {
+            "id": "foeumiriofficer.side.0.anno",
+            "label": "Attempt to Raid the Enemy Command Post?",
+            "previewdescription": "enemies with the Officer's Detail aspect still patrol near the headquarters. Acting rashly will invite fierce resistance—but success would severely weaken the enemy.\n[This objective can only be triggered when enemies with the Officer's Detail aspect are <b>three or fewer</b>.]",
+            "actionid": "operate",
+            "requirements": {
+                "side.umiri.withanno": 1,
+            },
+            "effects": {},
+            "aspects": {},
+            "slots": [],
+            "mutations": [],
+            "craftable": false,
+            "hintonly": true,
+            "linked": [],
+            "alt": [],
+        },
+        {
             "id": "foeumiriofficer.side.0",
             "label": "Attempt to Raid the Enemy Command Post?",
             "previewdescription": "enemies with the Officer's Detail aspect still patrol near the headquarters. Acting rashly will invite fierce resistance—but success would severely weaken the enemy.\n[This objective can only be triggered when enemies with the Officer's Detail aspect are <b>three or fewer</b>, and requires <b>continuous presence of friendly forces</b> in the card slot.]",
             "actionid": "operate",
             "requirements": {
                 "umiri.mark": 1,
+                "side.umiri.withanno": -1,
             },
             "effects": {},
             "aspects": {},
@@ -2641,7 +2662,7 @@
         {
             "id": "makecamillakillumiri.hint",
             "label": "Attack Your Arch-Nemesis Together with the Continental Enemy?",
-            "previewdescription": "This Eternal is a master of the Colonel's ways. With such aid, the enemy will surely break in the winter cold.\n[This task requires enemies with the Officer's Detail aspect to be three or fewer, and requires continuous presence of friendly forces in the card slot.]",
+            "previewdescription": "This Eternal is a master of the Colonel's ways. With such aid, the enemy will surely break in the winter cold.\n[This objective can only be triggered when enemies with the Officer's Detail aspect are <b>three or fewer</b>, and requires <b>continuous presence of friendly forces</b> in the card slot.]",
             "actionid": "operate",
             "requirements": {
                 "umiri.mark": 1,

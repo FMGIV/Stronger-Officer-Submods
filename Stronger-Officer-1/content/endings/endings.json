@@ -3,7 +3,7 @@
     {
         "id": "umiri_defiance",
         "label": "Opposing Blades",
-        "description": "You and your opposing blade will Strife and contend against each other until the war's end.\n\n[This is placeholder text.]",
+        "description": "'The German offensive at the front is exhausting day by day. After Stalingrad snapped the main spearhead of their forces, our army has been steadily counterattacking westward along the entire line. Fresh, solid intelligence has just been intercepted: that 'loathsome creature'—my mortal battlefield rival, with whom I have fought to the death several times—has been pulled from the front and sent to the rear. With this move, Hitler might as well be tearing off his own arm. Heaven-sent opportunity is upon us. I am ordering the division to ready itself immediately, press the advantage west, and utterly crush the enemy's line.'\n\n<i>——July 1943, to Marshal Zhukov.</i>",
         "image": "umiri_defiance",
         "flavour": "Grand",
         "anim": "DramaticLight",
@@ -13,7 +13,7 @@
     {
         "id": "umiri_defiance_bad",
         "label": "Struggle and Opposition",
-        "description": "You and your opposing blade will Strife and contend against each other until the war's end.\n\n[Reverse Victory. This is placeholder text.]",
+        "description": "'Lately, I've been haunted by old dreams—conversations in the trenches with my comrades, wordless clashes with my rival in the smoke of battle, and the Namehood that once stood at the heart of the strife... Perhaps I am truly weary. After the battle of Kursk, my performance failed to meet the expectations of my superiors. A single transfer order cut me off completely from the units I knew, from the hail of gunfire. Now, with what little savings I have, I've bought a crude lakeside hut. Every day I buy the papers on time, huddle around my old radio, trying to glean fragments of the distant front from scattered words. In the end, I am left alone in this empty hut, with only the sound of the lake, waiting quietly for my own final act.'\n\n<i>——A tattered diary entry</i>",
         "image": "umiri_defiance_bad",
         "flavour": "Vile",
         "anim": "DramaticLight",

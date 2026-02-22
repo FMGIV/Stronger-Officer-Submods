@@ -3055,10 +3055,12 @@
 	    "days.resupply": 1
 	},
 	"extantreqs": {
+	    "contemnant.story": -1,
 	    "wasteland": -1,
 	    "side.cutoff": -1,
 	    "side.cutoff.exhausted": -1,
-	    "lake.here": -1
+	    "lake.here": -1,
+	    "craterfield.here": -1,
 	},
 	"effects": {
 	    "provisions": 3
@@ -3075,6 +3077,9 @@
 	    "resetonexhaustion": true
 	},
 	"linked": [
+	    {
+		"id": "resupply.givemodello"
+	    },
 	    {
 		"id": "resupply.giverifle"
 	    }
@@ -3097,6 +3102,7 @@
 	    "side.cutoff": -1,
 	    "side.cutoff.exhausted": -1,
 	    "lake.here": -1,
+	    "craterfield.here": -1,
 	    "sobibor.here": -1
 	},
 	"slots": [
@@ -3355,7 +3361,8 @@
 	    "spec": [
 		"draw.hintobdurant.defiance",
 		"draw.hintobdurant.dead",
-		"draw.hintobdurant.stalingrad"
+		"draw.hintobdurant.stalingrad",
+        "draw.hintobdurant.main"
 	    ],
 	    "draws": 1,
 	    "resetonexhaustion": true
@@ -3370,6 +3377,9 @@
 	    {
 		"id": "obdurant.hintdesc.stalingradfight"
 	    },
+        {
+        "id": "obdurant.hintdesc.main"
+        },
 	    {
 		"id": "obdurant.clearagaina"
 	    }

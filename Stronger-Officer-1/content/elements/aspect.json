@@ -3,7 +3,7 @@
     {
 	"id": "side.umiri",
 	"label": "Secondary Objective: Raid the Command Post",
-	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"description": "In that accursed building in the distance, the German command post is transmitting dense radio signals.",
 	"inherits": "side.template",
 	"aspects": {
 		"umiri.mark": 1
@@ -19,7 +19,7 @@
     {
 	"id": "side.umiri2",
 	"label": "Secondary Objective: Raid the Command Post",
-	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"description": "This is no ordinary assault. This is about using steel and blood to extract the fanged tooth embedded in our defensive line.",
 	"inherits": "side.template",
 	"aspects": {
 		"umiri.mark": 1
@@ -35,7 +35,7 @@
     {
 	"id": "side.umiri3",
 	"label": "Secondary Objective: Raid the Command Post",
-	"description": "We've mapped out the internal layout of the enemy command post. Time to make her pay.",
+	"description": "'Either plant the red flag on that building, or remain forever on this artillery-scorched earth.'",
 	"inherits": "side.template",
 	"aspects": {
 		"umiri.mark": 1
@@ -369,7 +369,7 @@
         {
             "id": "obdurant.story.umiri",
             "label": "Eternal Struggle",
-            "description": "War demands sacrifice, and it demands your eternal struggle. You will meet your fated enemy. Remember, she is a follower of the Colonel—yet she is also mortal. The fire of struggle must burn hot. When all is prepared, the final moment will come. You and your fated enemy must reach that end—the point where you have no retreat. This ritual will ultimately conclude in death, and this may drive you to struggle against each other until the end of days.",
+            "description": "War demands sacrifice, and it demands your eternal struggle. You will meet your fated enemy. Remember, she is a follower of the Colonel—yet she is also mortal. You must overcome your enemy to be acknowledged by the great power of Struggle. The fire of struggle must burn hot. When all is prepared, the final moment will come. You and your fated enemy must reach that end—the point where you have no retreat. This ritual will ultimately conclude in death, and this may drive you to struggle against each other until the end of days.",
 			"aspects": {
 				"contemplation": 1
 			},
@@ -380,7 +380,7 @@
         {
             "id": "foe.defiance",
             "label": "The Struggle",
-            "description": "[When <i>The Struggle</i> on your journey reaches seven, your arch-nemesis may become your opposing blade.]",
+            "description": "Testament to the Struggle Between You and Your Arch-Nemesis.",
             "isAspect": true,
         },
         {

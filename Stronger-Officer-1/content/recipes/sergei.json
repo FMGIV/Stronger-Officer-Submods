@@ -121,7 +121,7 @@
                 "foe.umiri.mark": 1,
                 "wound.sergei.forumiri": -1,
                 "wound.sergei.forumiri_end": -1,
-                "sergei": 1
+                "foe.sergei": 1
             },
             "requirements": {
                 "foe.officerdetail": 1,
@@ -172,7 +172,7 @@
                 "foe.umiri.mark": 1,
                 "wound.sergei.forumiri": -1,
                 "wound.sergei.forumiri_end": -1,
-                "sergei": 1
+                "foe.sergei": 1
             },
             "requirements": {
                 "foe.umiri.mark": 1,
@@ -202,7 +202,7 @@
                 "foe.umiri.mark": 1,
                 "wound.sergei.forumiri": -1,
                 "wound.sergei.forumiri_end": -1,
-                "sergei": 1
+                "foe.sergei": 1
             },
             "grandReqs": {
                 "([~/exterior:foe.artillery] + [~/exterior:foe.artillery.hidden]) >= 3": 1,

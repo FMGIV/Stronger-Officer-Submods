@@ -250,7 +250,7 @@
         {
             "id": "foe.umiri.dead.withanno",
             "label": "敌军撤退！",
-            "description": "敌军被迫撤离此区域，是时候去“邀功”了。[你现在可以和<i>盟军军官</i>进行交谈了]",
+            "description": "敌军被迫撤离此区域，是时候去“邀功”了。",
             "lifetime": 0,
             "aspects": {
             },

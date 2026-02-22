@@ -3061,6 +3061,8 @@
 	    "days.resupply": 1
 	},
 	"extantreqs": {
+	    "craterfield.here": -1,
+	    "contemnant.story": -1,
 	    "wasteland": -1,
 	    "side.cutoff": -1,
 	    "side.cutoff.exhausted": -1,
@@ -3360,7 +3362,8 @@
 	    "spec": [
 		"draw.hintobdurant.defiance",
 		"draw.hintobdurant.dead",
-		"draw.hintobdurant.stalingrad"
+		"draw.hintobdurant.stalingrad",
+        "draw.hintobdurant.main"
 	    ],
 	    "draws": 1,
 	    "resetonexhaustion": true
@@ -3375,6 +3378,9 @@
 	    {
 		"id": "obdurant.hintdesc.stalingradfight"
 	    },
+        {
+        "id": "obdurant.hintdesc.main"
+        },
 	    {
 		"id": "obdurant.clearagaina"
 	    }
