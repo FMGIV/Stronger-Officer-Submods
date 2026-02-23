@@ -2,9 +2,9 @@
     "recipes": [
         {
             "id": "foe.umiri.attack.tactics2_one_friend",
-            "label": "Enemy armored forces are massing for an assault!",
-            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
-            "description": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "actionId": "foetactics2",
             "warmup": 30,
             "requirements": {
@@ -21,7 +21,7 @@
             "slots": [
                 {
                 "id": "defend",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -65,8 +65,8 @@
         },
         {
         "id": "foe.umiri.attack.tactics2_one.attack_friend",
-        "label": "Enemy armored forces are massing for an assault!",
-        "startdescription": "Tearing up railroad tracks, demolishing houses. These fascist bandits!",
+        "label": "敌军正在发动战术进攻！",
+        "startdescription": "拔除铁轨，拆毁住房。这些法西斯强盗！",
         "requirements": {
         },
         "aspects": {
@@ -75,7 +75,7 @@
         "slots": [
             {
             "id": "needsinfrastructure",
-            "label": "infrastructure",
+            "label": "军用设施",
             "required": {
                 "infrastructure": 1
             },
@@ -107,9 +107,9 @@
         
         {
             "id": "foe.umiri.attack.tactics2_two_friend",
-            "label": "Enemy armored forces are massing for an assault!",
-            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
-            "description": "The Germans will crush our defenses with their armor. How shall we respond?",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "actionId": "foetactics2",
             "warmup": 30,
             "requirements": {
@@ -126,7 +126,7 @@
             "slots": [
                 {
                 "id": "defend",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -170,8 +170,8 @@
         },
     {
 	"id": "foe.umiri.attack.tactics2_two.attack_friend",
-	"label": "Lost Resources!",
-	"startdescription": "We are in retreat, abandoning all supplies—adding insult to injury.",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
 	"requirements": {
 	},
 	"slots": [
@@ -204,8 +204,8 @@
     },
     {
 	"id": "foe.umiri.attack.tactics2_two.attack2_friend",
-	"label": "Lost Resources!",
-	"startdescription": "We are in retreat, abandoning all supplies—adding insult to injury.",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
 	"requirements": {
 	},
 	"slots": [
@@ -234,8 +234,8 @@
     },
     {
 	"id": "foe.umiri.attack.tactics2_two.attack_end_friend",
-	"label": "Lost Resources!",
-	"startdescription": "We are in retreat, abandoning all supplies—adding insult to injury.",
+	"label": "失去资源！",
+	"startdescription": "我们在溃退，辎重被尽数抛弃，真是雪上加霜。",
 	"requirements": {
 	},
 	"aspects": {
@@ -269,9 +269,9 @@
     },
         {
             "id": "foe.umiri.attack.tactics2_three_friend",
-            "label": "Enemy armored forces are massing for an assault!",
-            "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
-            "description": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？[这个战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "description": "德国人将用装甲碾碎我们的防线，我们作何应对？[这个战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
             "actionId": "foetactics2",
             "warmup": 30,
             "requirements": {
@@ -288,7 +288,7 @@
             "slots": [
                 {
                 "id": "defend",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -335,14 +335,14 @@
         },
     {
 	"id": "foe.umiri.attack.tactics2_three.attack_friend",
-	"label": "Direct Assault",
-	"startdescription": "The steel tide crushes our last resistance. They grind over burning wrecks, over mangled corpses...",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
 	"requirements": {
 	},
     "slots": [
         {
         "id": "friend",
-        "label": "Ally",
+        "label": "友军",
         "required": {
             "faction.anno": 1,
             "local": 1
@@ -367,8 +367,8 @@
     },
     {
 	"id": "foe.umiri.attack.tactics2_three.attack_end_friend",
-	"label": "Direct Assault",
-	"startdescription": "The steel tide crushes our last resistance. They grind over burning wrecks, over mangled corpses...",
+	"label": "直接袭击",
+	"startdescription": "钢铁的浪潮碾碎了我们最后的抵抗。他们正碾过燃烧的残骸，残缺的尸体......",
 	"requirements": {
 	},
 	"aspects": {
@@ -379,7 +379,7 @@
     "slots": [
         {
         "id": "needsfoe1",
-        "label": "Obstruction",
+        "label": "阻挠",
         "required": {
             "side.rescueallies": 1,
             "side.weaponscache": 1,
@@ -394,7 +394,7 @@
         },
         {
         "id": "needsfoe2",
-        "label": "Obstruction",
+        "label": "阻挠",
         "required": {
             "side.rescueallies": 1,
             "side.weaponscache": 1,
@@ -409,7 +409,7 @@
         },
         {
         "id": "needsfoe3",
-        "label": "Obstruction",
+        "label": "阻挠",
         "required": {
             "side.rescueallies": 1,
             "side.weaponscache": 1,
@@ -483,9 +483,9 @@
         
         {
             "id": "foe.umiri.attack.tactics3_one_friend",
-            "label": "The enemy is launching an overwhelming tactical bombing!",
-            "startdescription": "The earth trembles, soil showers down, viscera resonates with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
-            "description": "The earth trembles, soil showers down, viscera resonates with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "actionId": "foetactics3",
             "warmup": 30,
             "requirements": {
@@ -502,7 +502,7 @@
             "slots": [
                 {
                 "id": "defend1",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -520,7 +520,7 @@
                 },
                 {
                 "id": "defend2",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -538,7 +538,7 @@
                 },
                 {
                 "id": "defend3",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -580,9 +580,9 @@
 
         {
             "id": "foe.umiri.attack.tactics3b_one_friend",
-            "label": "The enemy is launching an overwhelming tactical bombing!",
-            "startdescription": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
-            "description": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
+            "description": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[这个战术触发后将会导致你的部队大量伤亡，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "actionId": "foetactics3",
             "warmup": 30,
             "requirements": {
@@ -599,7 +599,7 @@
             "slots": [
                 {
                 "id": "defend1",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -617,7 +617,7 @@
                 },
                 {
                 "id": "defend2",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -635,7 +635,7 @@
                 },
                 {
                 "id": "defend3",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,

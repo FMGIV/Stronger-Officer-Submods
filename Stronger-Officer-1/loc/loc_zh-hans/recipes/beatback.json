@@ -2628,6 +2628,7 @@
             "actionid": "operate",
             "requirements": {
                 "foe.umiri.mark": 1,
+                "foe.umiri.2.withanno": -1
             },
             "effects": {},
             "aspects": {},

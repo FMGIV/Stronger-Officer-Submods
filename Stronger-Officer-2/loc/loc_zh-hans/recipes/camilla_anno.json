@@ -2,8 +2,8 @@
 "recipes": [	
     {
 	"id": "edgelong.attack.allies.noanno",
-	"label": "The Edge-Long Strikes!",
-	"startdescription": "@#foe.exile|'You're nothing.'#foe.duffoure|'Get out of my way.'#foe.camilla|'You die doing your duty. That is a better end than most can hope for.'#foe.wilhelm|'Hah! More! The day is not done until the dead pile at our waists!'#foe.sergei|'Hrgh. More dead.'@",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
 	"warmup": 10,
 	"tablereqs": {
 	    "friend": 1
@@ -15,7 +15,7 @@
 	"slots": [
 	    {
 		"id": "needsallies",
-		"label": "Ally",
+		"label": "友军",
 		"required": {
 		    "friend": 1
 		},
@@ -48,8 +48,8 @@
     },
     {
 	"id": "edgelong.attack.allies",
-	"label": "The Edge-Long Strikes!",
-	"startdescription": "@#foe.exile|'You're nothing.'#foe.duffoure|'Get out of my way.'#foe.camilla|'You die doing your duty. That is a better end than most can hope for.'#foe.wilhelm|'Hah! More! The day is not done until the dead pile at our waists!'#foe.sergei|'Hrgh. More dead.'@",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
 	"warmup": 10,
 	"tablereqs": {
 	    "friend": 1
@@ -60,7 +60,7 @@
 	"slots": [
 	    {
 		"id": "needsallies",
-		"label": "Ally",
+		"label": "友军",
 		"required": {
 		    "friend": 1
 		},
@@ -98,8 +98,8 @@
     },
     {
 	"id": "edgelong.sergei.attack.allies.anno",
-	"label": "The Edge-Long Strikes!",
-	"startdescription": "@#foe.exile|'You're nothing.'#foe.duffoure|'Get out of my way.'#foe.camilla|'You die doing your duty. That is a better end than most can hope for.'#foe.wilhelm|'Hah! More! The day is not done until the dead pile at our waists!'#foe.sergei|'Hrgh. More dead.'@",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.sergei|“哼。更多死人。”@",
 	"warmup": 10,
 	"requirements": {
 	    "foe.sergei": 1
@@ -113,7 +113,7 @@
 	"slots": [
 	    {
 		"id": "needsallies",
-		"label": "Target",
+		"label": "目标",
 		"required": {
 		    "friend": 1,
 		    "foe": 1
@@ -170,8 +170,7 @@
     },  
 	{
 	"id": "edgelong.prep.attack",
-	"label": "The Edge-Long Strikes!",
-	"startdescription": "@#foe.exile|'You're nothing.'#foe.duffoure|'Get out of my way.'#foe.camilla|'You die doing your duty. That is a better end than most can hope for.'#foe.wilhelm|'Hah! More! The day is not done until the dead pile at our waists!'#foe.sergei|'Hrgh. More dead.'@",
+	"label": "刃之长生者攻击了！",
 	"linked": [
 	    {
 		"id": "edgelong.contemnant.attackothers",
@@ -200,8 +199,8 @@
     },
         {
             "id": "sergei_attack.anno_passive",
-            "label": "Clash of Immortals",
-            "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
+            "label": "不朽之争",
+            "startdescription": "那位军官没有避开，而是？正面迎击？！",
             "warmup": 30,
             "extantreqs": {
                 "anno.mark": 1,
@@ -224,7 +223,7 @@
             "slots": [
                 {
                 "id": "needsallies",
-                "label": "Target",
+                "label": "目标",
                 "required": {
                     "valkyrie.mark": 1
                 },
@@ -246,8 +245,8 @@
         },
         {
             "id": "sergei_attack.anno_haveto",
-            "label": "Clash of Immortals",
-            "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
+            "label": "不朽之争",
+            "startdescription": "那位军官没有避开，而是？正面迎击？！",
             "warmup": 30,
             "extantreqs": {
                 "anno.mark": 1,
@@ -277,8 +276,8 @@
         },
         {
             "id": "sergei_attack.anno",
-            "label": "Blinding Radiance",
-            "startdescription": "Radiance bursts forth from within, then searing heat and light illuminate the battlefield. Flames consume his fur entirely... That old wolf has been defeated. Perhaps he will learn his lesson.",
+            "label": "辉光刺目",
+            "startdescription": "辉光自内而外的释放，而后炙热与光明照亮了战场，火焰将他的皮毛尽数焚灭……\n那匹老狼落败了，或许他会学到教训。",
             "warmup": 45,
             "effects": {
 				"wound.sergei.foranno": 1,
@@ -314,8 +313,8 @@
         },
         {
             "id": "anno_out.sergei",
-            "label": "Driving Out the Wolf with Flame",
-            "startdescription": "That officer emerges from the flames.",
+            "label": "举火驱狼",
+            "startdescription": "那个军官自火焰中走出。",
 			"actionId": "annoout",
             "warmup": 10,
             "effects": {
@@ -334,8 +333,8 @@
 		
         {
             "id": "camilla_attack.anno_passive",
-            "label": "Clash of Immortals",
-            "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
+            "label": "不朽之争",
+            "startdescription": "那位军官没有避开，而是？正面迎击？！",
             "warmup": 30,
             "extantreqs": {
                 "anno.mark": 1,
@@ -356,7 +355,7 @@
             "slots": [
                 {
                 "id": "needsallies",
-                "label": "Target",
+                "label": "目标",
                 "required": {
                     "anno.mark": 1
                 },
@@ -378,8 +377,8 @@
         },
         {
             "id": "camilla_attack.anno_haveto",
-            "label": "Clash of Immortals",
-            "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
+            "label": "不朽之争",
+            "startdescription": "那位军官没有避开，而是？正面迎击？！",
             "warmup": 30,
             "extantreqs": {
                 "anno.mark": 1,
@@ -409,8 +408,8 @@
         },
         {
             "id": "camilla_attack.anno",
-            "label": "Clash of Steel and Light",
-            "startdescription": "Technique and strength intertwine. Radiance and iron meet head-on. They leave shallow wounds upon each other—this round, no victor. But she should understand: she and her army will make her pay.",
+            "label": "铁光交锋",
+            "startdescription": "技巧与力量相互交织，辉光与铁器正面交锋，他们为彼此留下浅浅的伤口，这一轮不分胜负，但是她应该明白，她和她的军队会让她付出代价。",
             "warmup": 45,
             "effects": {
 				"wound.camilla.foranno": 1,

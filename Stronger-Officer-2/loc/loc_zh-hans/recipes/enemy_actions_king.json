@@ -2,8 +2,8 @@
 "recipes": [
     {
 	"id": "target.legion.victory",
-	"label": "The King's Men Have Prevailed!",
-	"startdescription": "When the gunfire settles, the battlefield is littered with dead legionnaires. The bootprints of the King's men mark the earth, mark the corpses of the fallen. They have moved on.",
+	"label": "新王的军队获胜了！",
+	"startdescription": "当枪火声散去，战场上满地都是死去的军团士兵。新王的军队踏过战场，踏过死去的军团士兵。他们继续推进。",
 	"aspects": {
 	    "killlegion": 1
 	},
@@ -18,8 +18,8 @@
     {
 	"id": "king.reinforcements",
 	"actionid": "reinforcements.king",
-	"label": "All the King's Men",
-	"startdescription": "When dawn comes, we find more of the King's men have come to reinforce the position. Troublesome.",
+	"label": "新王的人马",
+	"startdescription": "当黎明到来，我们发现更多的新王军队前来支援此地。真是麻烦。",
 	"extantreqs": {
 	    "faction.king": -12,
 	    "corpse.jerome": -1
@@ -45,8 +45,8 @@
     },
     {
 	"id": "found.riflemen",
-	"label": "A Hostile Offensive!",
-	"startdescription": "This enemy unit moves in lockstep with its comrades -",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴步调一致地移动——",
 	"requirements": {
 	    "foe.coordinated": 1,
 	    "foe.riflemen": 1
@@ -54,7 +54,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "foe.riflemen": 1
 		},
@@ -94,8 +94,8 @@
     },
     {
 	"id": "found.otherkingenemy",
-	"label": "A Hostile Offensive!",
-	"startdescription": "One of our enemies seeks to strike at us -",
+	"label": "一次敌袭！",
+	"startdescription": "我们的敌人之一寻求对我们的袭击——",
 	"requirements": {
 	    "faction.king": 1
 	},
@@ -127,8 +127,8 @@
     },
     {
 	"id": "target.king.ss",
-	"label": "Targeting the Index-Arcana?",
-	"startdescription": "We all vie for that star—which means multiple factions are hostile to one another. This time, the New King's forces have chosen a different target.",
+	"label": "针对索隐会？",
+	"startdescription": "我们全部都在争夺那颗星——这意味着我们多方势力相互之间均为敌对。而这一次，新王的军队选择了另一方作为目标。",
 	"tablereqs": {
 	    "faction.karotechia": 1
 	},
@@ -141,7 +141,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -165,13 +165,13 @@
     },
     {
 	"id": "target.king.ss.defeat",
-	"label": "The Légion Has Not Prevailed",
-	"startdescription": "The scales of victory remain motionless. The Black Eagle's talons are alert and cunning. The British surge forth like a tide, only to crash against the rocks and retreat in vain.",
+	"label": "新王的军队并未获胜",
+	"startdescription": "胜利的天平纹丝未动，黑鹰的爪牙警醒而狡黠，英国人如潮水般涌来，又在撞上礁石后徒劳地退去。",
     },
     {
 	"id": "target.king.ss.victory",
-	"label": "The Légion Has Prevailed!",
-	"startdescription": "Raging golden flames lick the Index-Arcana's positions clean. The earth, now like glass, reflects the light of day. The New King's forces roll over the defenses like a flood.",
+	"label": "新王的军队获胜了！",
+	"startdescription": "肆虐的金焰将索隐会的阵地舔舐殆尽，琉璃般的大地倒映着白昼之光。新王的军队如洪流碾过防线。",
 	"aspects": {
 	    "killkarotechia": 1
 	},
@@ -187,8 +187,8 @@
     {
 	"id": "jerome.attack.startup",
 	"actionid": "attack.jerome",
-	"label": "A Commander Takes Action!",
-	"startdescription": "'Move aside. I stand on business for the King.'",
+	"label": "指挥官行动了！",
+	"startdescription": "“退下。我代表新王来此。”",
 	"tablereqs": {
 	    "uqjerome": 1
 	},
@@ -214,7 +214,7 @@
 	"slots": [
 	    {
 		"id": "needsjerome",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "uqjerome": 1
 		},
@@ -239,7 +239,7 @@
     },
     {
 	"id": "jerome.orderguard.pre",
-	"label": "Fodder to the Front",
+	"label": "炮灰上前",
 	"tablereqs": {
 	    "foe.guardjerome": -2
 	},
@@ -267,8 +267,8 @@
     },
     {
 	"id": "jerome.orderguard",
-	"label": "Fodder to the Front",
-	"startdescription": "'Quickly to it, now! Your country expects success - your <i>King</i> expects success!'\n\n[Jerome can command other Enemies to guard him, preventing him from being attacked until they are slain.]",
+	"label": "炮灰上前",
+	"startdescription": "“快点找到那东西，快！你们的国家——你们的<i>王</i>要求你们成功！”\n\n[杰罗姆能够指示其他敌军保护他，使他在这些护卫被击杀前无法被攻击。]",
 	"requirements": {
 	    "decision.enemy.reinforcements": 1
 	},
@@ -278,7 +278,7 @@
 	"slots": [
 	    {
 		"id": "needsking",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -286,7 +286,7 @@
 	    },
 	    {
 		"id": "needsking2",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -310,8 +310,8 @@
     {
 	"id": "jerome.setupguard",
 	"actionid": "spit.lantern",
-	"label": "Withdrawal and Coverage",
-	"startdescription": "'No, no... not like this. I refuse. I will <i>not</i> die defeated.'",
+	"label": "撤退与掩护",
+	"startdescription": "“不，不……不该是这样。我拒绝接受。我<i>拒绝</i>以败者之身死去。”",
 	"requirements": {
 	    "monster.wound": -1,
 	    "uqjerome": 1
@@ -319,7 +319,7 @@
 	"slots": [
 	    {
 		"id": "needsking",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -327,7 +327,7 @@
 	    },
 	    {
 		"id": "needsking2",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},

@@ -2,7 +2,7 @@
     "recipes": [
         {
             "id": "friend.anno.attack.powerup.first",
-            "label": "Allied Forces Adjusting Defensive Strategy",
+            "label": "盟军正在调整防守策略",
             "actionId": "friendpowerup",
             "warmup": 0,
             "requirements": {
@@ -18,8 +18,8 @@
         },
         {
             "id": "friend.anno.attack.powerup",
-            "label": "Allied Forces Adjusting Defensive Strategy",
-            "startdescription": "The spirits unleash their radiance, transformed into scorching power.",
+            "label": "盟军正在调整防守策略",
+            "startdescription": "灵体释放了他们的辉光。化作了炙热的力量",
             "actionId": "friendpowerup",
             "warmup": 10,
             "requirements": {
@@ -33,7 +33,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Capture the Spirit",
+                "label": "捕获灵体",
                 "required": {
 					"friend.phlogisticant": 1
                 },
@@ -58,8 +58,8 @@
         },
         {
             "id": "friend.anno.attack.powerupmanshape",
-            "label": "Selecting the Worthy",
-            "startdescription": "This power is hard-won. We must choose those who are fit.",
+            "label": "挑选适格者",
+            "startdescription": "这份力量来之不易，我们需要挑选适合的人。",
             "actionId": "foedefense",
             "warmup": 60,
             "requirements": {
@@ -78,7 +78,7 @@
             "slots": [
                 {
                     "id": "foe.deploy",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "friend": 1,
                     },
@@ -124,7 +124,7 @@
                 },
                 {
                     "id": "foe.deploy2",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "friend": 1,
                     },
@@ -170,7 +170,7 @@
                 },
                 {
                     "id": "foe.deploy3",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "friend": 1,
                     },
@@ -226,8 +226,8 @@
         },
         {
             "id": "friend.anno.attack.powerupman",
-            "label": "Selecting the Worthy",
-            "startdescription": "They are choosing those who can bear this power.",
+            "label": "挑选适格者",
+            "startdescription": "他们正在挑选能承受这力量之人。",
             "actionId": "foedefense",
             "warmup": 30,
             "requirements": {
@@ -245,7 +245,7 @@
             "slots": [
                 {
                     "id": "foe.deploy",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "local": 1,
                         "faction.anno": 1,
@@ -292,7 +292,7 @@
                 },
                 {
                     "id": "foe.deploy2",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "local": 1,
                         "faction.anno": 1,
@@ -339,7 +339,7 @@
                 },
                 {
                     "id": "foe.deploy3",
-                    "label": "Allied Maneuvers",
+                    "label": "盟军调遣",
                     "required": {
                         "local": 1,
                         "faction.anno": 1,
@@ -396,8 +396,8 @@
         },
         {
             "id": "friend.anno.attack.powerupend",
-            "label": "Imbuing Power...",
-            "startdescription": "The scorching power is ready. Now, infuse it into the warriors.",
+            "label": "注入力量……",
+            "startdescription": "炙热的力量准备就绪，现在将他们注入战士之中。",
             "actionId": "foedefense",
             "requirements": {
             },
@@ -469,7 +469,7 @@
         
         {
             "id": "friend.anno.attack.airstrike.first",
-            "label": "Reconnoiter Enemy Force Dispositions",
+            "label": "探明对方的部队分布",
             "actionId": "friendairstrike",
             "warmup": 0,
 			"maxexecutions": 1,
@@ -485,8 +485,8 @@
         },
         {
             "id": "friend.anno.attack.airstrikepre",
-            "label": "Reconnoiter Enemy Force Dispositions",
-            "startdescription": "Scout units have been dispatched. They will ascertain the enemy's deployment.",
+            "label": "探明对方的部队分布",
+            "startdescription": "斥候出动了，他们将探明敌军的部署",
             "actionId": "friendairstrike",
             "warmup": 10,
             "requirements": {
@@ -503,7 +503,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Preparations",
+                "label": "准备工作",
                 "required": {
 					"friend.scoutsanno": 1,
 					"friend.scouts": 1,
@@ -528,9 +528,9 @@
         },
         {
             "id": "friend.anno.attack.airstrike",
-            "label": "Air Force Awaiting Orders",
-            "startdescription": "The bombers have assembled, ready to depart at any moment.",
-            "description": "They lack sufficient air power to conduct bombing operations. It seems even they have their limits.",
+            "label": "空军正在等待待",
+            "startdescription": "轰炸机集结完毕，随时准备出发。",
+            "description": "他们没有足够的空军进行轰炸，看起来他们也有捉襟见肘的时候。",
             "actionId": "friendairstrike",
             "warmup": 10,
             "requirements": {
@@ -544,7 +544,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Air Force",
+                "label": "空军",
                 "required": {
 					"friend.bombers": 1
                 },
@@ -572,8 +572,8 @@
         },
         {
             "id": "friend.anno.attack.airstrikestartwithscouts",
-            "label": "Air Force Has Locked Target",
-            "startdescription": "Scouts have pinpointed the hidden enemy. The bombing will arrive shortly.",
+            "label": "空军已经锁定了目标",
+            "startdescription": "斥候锁定了躲藏起来的敌人，轰炸马上就到",
             "actionId": "friendairstrike",
             "warmup": 15,
             "requirements": {
@@ -586,7 +586,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe.tanks": 1,
 					"foe.tanks.hidden": 1,
@@ -618,8 +618,8 @@
         },
         {
             "id": "friend.anno.attack.airstrikestart",
-            "label": "Air Force Searching for Targets",
-            "startdescription": "The bombers are searching for the enemy. Let us hope they have luck.",
+            "label": "空军正在搜寻目标",
+            "startdescription": "轰炸机正在搜寻敌人，希望他们好运。",
             "actionId": "friendairstrike",
             "warmup": 25,
             "requirements": {
@@ -634,7 +634,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe": 1,
                 },
@@ -665,8 +665,8 @@
         },
         {
             "id": "friend.anno.attack.airstrikedamage",
-            "label": "Air Force Suffered Heavy Losses",
-            "startdescription": "The bombers have taken heavy losses from enemy fire. It seems they will not be able to take off again.",
+            "label": "空军遭到了重创",
+            "startdescription": "轰炸机遭到了敌军的重创，看起来他们没办法再起起飞了。",
             "actionId": "friendairstrike",
             "warmup": 10,
             "grandReqs": {
@@ -683,9 +683,9 @@
         },
         {
             "id": "friend.anno.attack.airstrikedebuff",
-            "label": "Successful Air Strike!",
-            "startdescription": "The enemy military base is now in shambles.",
-            "description": "The enemy military base is now in shambles.",
+            "label": "成功的空袭！",
+            "startdescription": "敌军的军事基地现已一片狼藉。",
+            "description": "敌军的军事基地现已一片狼藉。",
             "actionId": "friendairstrike",
             "warmup": 10,
             "aspects": {
@@ -700,9 +700,9 @@
 
         {
             "id": "friend.anno.attack.stun.first",
-            "label": "Allied Forces Are Advancing",
-            "startdescription": "Radiance and artillery fire intertwine, sweeping away all obstacles....",
-            "description": "Radiance and artillery fire intertwine, sweeping away all obstacles....",
+            "label": "盟军正在进军",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍......",
+            "description": "辉光与炮火交织，清扫一切阻碍......",
             "actionId": "friendstun",
             "warmup": 0,
 			"playAudioTrack": "bgm.annostun.mp3",
@@ -721,9 +721,9 @@
         },
         {
             "id": "friend.anno.attack.stun",
-            "label": "Allied Forces Are Advancing",
-            "startdescription": "Radiance and artillery fire intertwine, sweeping away all obstacles....",
-            "description": "Radiance and artillery fire intertwine, sweeping away all obstacles....",
+            "label": "盟军正在进军",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍......",
+            "description": "辉光与炮火交织，清扫一切阻碍......",
             "actionId": "friendstun",
             "warmup": 30,
             "requirements": {
@@ -739,7 +739,7 @@
             "slots": [
                 {
                 "id": "needsfoe",
-                "label": "Allied Forces",
+                "label": "盟军",
                 "required": {
                     "faction.anno": 1,
                     "friend": 1
@@ -786,7 +786,7 @@
                 },
                 {
                 "id": "needsfoe2",
-                "label": "Allied Forces",
+                "label": "盟军",
                 "required": {
                     "faction.anno": 1,
                     "friend": 1
@@ -833,7 +833,7 @@
                 },
                 {
                 "id": "needsfoe3",
-                "label": "Allied Forces",
+                "label": "盟军",
                 "required": {
                     "faction.anno": 1,
                     "friend": 1
@@ -892,9 +892,9 @@
         },
         {
             "id": "friend.anno.attack.stun_foe",
-            "label": "The Enemy Attempts to Halt the Advance!",
-            "startdescription": "Radiance and artillery fire intertwine, sweeping away all obstacles...",
-            "description": "Radiance and artillery fire intertwine, sweeping away all obstacles...",
+            "label": "敌军试图阻拦行军！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
+            "description": "辉光与炮火交织，清扫一切阻碍.....",
             "actionId": "friendstun",
             "warmup": 30,
             "requirements": {
@@ -909,7 +909,7 @@
             "slots": [
                 {
                 "id": "needsfoe",
-                "label": "Enemy",
+                "label": "敌军",
                 "required": {
                     "foe": 1,
                 },
@@ -939,7 +939,7 @@
                 },
                 {
                 "id": "needsfoe2",
-                "label": "Enemy",
+                "label": "敌军",
                 "required": {
                     "foe": 1,
                 },
@@ -969,7 +969,7 @@
                 },
                 {
                 "id": "needsfoe3",
-                "label": "Enemy",
+                "label": "敌军",
                 "required": {
                     "foe": 1,
                 },
@@ -1009,8 +1009,8 @@
         },
         {
             "id": "friend.anno.attack.stun_friendagain",
-            "label": "More Troops Are Massing!",
-            "startdescription": "Radiance and artillery fire intertwine, sweeping away all obstacles...",
+            "label": "更多的部队正在集结！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
             "actionId": "friendstun",
             "warmup": 10,
             "requirements": {
@@ -1024,7 +1024,7 @@
             "slots": [
                 {
                 "id": "needsfoe",
-                "label": "Allied Forces",
+                "label": "盟军",
                 "required": {
                     "faction.anno": 1,
                     "friend": 1
@@ -1084,8 +1084,8 @@
         },
         {
             "id": "friend.anno.attack.stun_foeagain",
-            "label": "The Enemy Is Rallying Additional Forces!",
-            "startdescription": "Radiance and artillery fire intertwine, sweeping away all obstacles...",
+            "label": "敌军正在调集更多的部队！",
+            "startdescription": "辉光与炮火交织，清扫一切阻碍.....",
             "actionId": "friendstun",
             "warmup": 10,
             "requirements": {
@@ -1100,7 +1100,7 @@
             "slots": [
                 {
                 "id": "needsfoe",
-                "label": "Allied Forces",
+                "label": "盟军",
                 "required": {
                     "foe": 1,
                 },
@@ -1143,8 +1143,8 @@
         },
         {
             "id": "friend.anno.attack.stun_end",
-            "label": "This Battle Ended Inconclusively",
-            "startdescription": "Both sides withdraw to their positions. Neither achieved what they sought from this advance.",
+            "label": "这次的战斗没能分出胜负",
+            "startdescription": "双方各自撤回阵地，这次行军，双方都没能得到自己想要的",
             "actionId": "friendstun",
             "warmup": 0,
             "extantreqs": {
@@ -1179,9 +1179,9 @@
         },
         {
             "id": "friend.anno.attack.stun_foewin",
-            "label": "New Forces' Advance Halted!",
-            "startdescription": "The New Forces' offensive has been blocked by the enemy. They are regrouping.",
-            "description": "The New Forces' offensive has been blocked by the enemy. They are regrouping.",
+            "label": "新军的行军失利！",
+            "startdescription": "新军的攻势被敌人阻挡，他们正在重新集结。",
+            "description": "新军的攻势被敌人阻挡，他们正在重新集结。",
             "actionId": "friendstun",
             "warmup": 10,
             "grandReqs": {
@@ -1199,9 +1199,9 @@
         },
         {
             "id": "friend.anno.attack.stun_friendwin",
-            "label": "Enemy Defenses Have Been Shattered!",
-            "startdescription": "The New Forces march over enemy corpses. The enemy's resistance has been crushed.",
-            "description": "The New Forces march over enemy corpses. The enemy's resistance has been crushed.",
+            "label": "敌军的防线被瓦解！",
+            "startdescription": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
+            "description": "新军踏过敌人的尸体，敌军的反抗被粉碎了。",
             "actionId": "operate",
             "warmup": 10,
             "grandReqs": {
@@ -1226,8 +1226,8 @@
         },
     {
 	"id": "travelslot.end",
-	"label": "Outward-Bound",
-	"startdescription": "War behind us; war ahead.",
+	"label": "向外行军",
+	"startdescription": "身后是战争，身前亦是战争。",
 	"warmup": 10,
 	"alt": [
 	    {

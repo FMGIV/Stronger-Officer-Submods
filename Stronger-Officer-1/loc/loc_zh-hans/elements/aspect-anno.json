@@ -66,13 +66,13 @@
     {
 	"id": "shape",
 	"label": "塑",
-	"description": "洞见万物本真之形，熔旧塑新[塑是变化与光芒的继承者]",
+	"description": "“照耀之时为我们增光添彩的事物吧。”<i>——蒂尔扎·布雷克</i>。[塑：容纳和释放的准则]",
 	"isAspect": true
     },
     {
 	"id": "shapelong",
 	"label": "塑之长生者",
-	"description": "一位新生准则的不朽之人，能够重塑纷争的强大之力。任何妄图直面他和他的力量的人，无异于自杀。",
+	"description": "辉光的力量存续于内，而后绽放。",
 	"isAspect": true
     },
     {
@@ -253,6 +253,7 @@
             "description": "敌军被迫撤离此区域，是时候去“邀功”了。",
             "lifetime": 0,
             "aspects": {
+				"op": 1
             },
 			"icon": "foe.umiri.dead",
             "unique": true,

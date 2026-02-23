@@ -3,8 +3,8 @@
     {
 	"id": "produce.explosion.random",
 	"actionid": "explosion",
-	"label": "An Explosion!",
-	"startdescription": "Force and fire rip mercilessly through the air -",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
 	"slots": [
 	    {
 		"id": "needstarget",
@@ -37,8 +37,8 @@
     {
 	"id": "produce.warder",
 	"actionid": "morewarder",
-	"label": "Rift Opened!",
-	"startdescription": "The Voidcat swings its massive claws. Space itself trembles at its roar—more officers are drawn to the commotion—",
+	"label": "洞开！",
+	"startdescription": "灵猫挥舞着她的巨爪，空间因其吼叫而震动，更多的军官被吸引而来——",
 	"warmup": 10,
 	"effects": {
 		"foe.warder": 1
@@ -60,8 +60,8 @@
     {
 	"id": "startup.produce.friend.phlogisticant0",
 	"actionid": "spit.grail",
-	"label": "Flames Unbound",
-	"startdescription": "The machinery is broken, defeated - but from the wreck, a conflagration erupts! Back, get back -",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
 	"warmup": 10,
 	"effects": {
 		"friend.phlogisticant": 1
@@ -85,8 +85,8 @@
     {
 	"id": "startup.produce.friend.phlogisticant",
 	"actionid": "spit.grail",
-	"label": "Flames Unbound",
-	"startdescription": "The machinery is broken, defeated - but from the wreck, a conflagration erupts! Back, get back -",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
 	"warmup": 10,
 	"effects": {
 		"friend.phlogisticant": 1
@@ -111,8 +111,8 @@
     {
 	"id": "startup.produce.friend.phlogisticant.local",
 	"actionid": "explosion",
-	"label": "Flames Unbound",
-	"startdescription": "The machinery is broken, defeated - but from the wreck, a conflagration erupts! Back, get back -",
+	"label": "火焰失控",
+	"startdescription": "那机器已被已被破坏，已被击败——但一团火焰从其残骸中喷发而出！后退，快后退——",
 	"mutations": [
 		{
 			"filter": "friend",
@@ -128,8 +128,8 @@
     {
 	"id": "produce.friend.explosion",
 	"actionid": "explosion",
-	"label": "An Explosion!",
-	"startdescription": "Force and fire rip mercilessly through the air -",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
 	"linked": [
 	    {
 		"id": "produce.friend.explosion.random",
@@ -143,8 +143,8 @@
     {
 	"id": "produce.friend.explosion.random",
 	"actionid": "explosion",
-	"label": "An Explosion!",
-	"startdescription": "Force and fire rip mercilessly through the air -",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
 	"slots": [
 	    {
 		"id": "needstarget",
@@ -152,10 +152,6 @@
 		"required": {
 		    "friend": 1,
 		    "foe": 1
-		},
-		"forbidden": {
-			"anno.mark": 1,
-			"foe.umiri.mark": 1
 		},
 		"greedy": true
 	    }
@@ -169,8 +165,8 @@
     {
 	"id": "produce.friend.explosion.yourself",
 	"actionid": "explosion",
-	"label": "An Explosion!",
-	"startdescription": "Force and fire rip mercilessly through the air -",
+	"label": "一场爆炸！",
+	"startdescription": "无情的巨力与火焰撕裂天空——",
 	"warmup": 10,
 	"linked": [
 	    {
@@ -182,8 +178,8 @@
     {
 	"id": "produce.umiri.withdraw",
 	"actionid": "enemyaction.withdraw",
-	"label": "Enemy Retreat!",
-	"startdescription": "The Germans' situation is hopeless! Their forces are in disarray, dragging their vehicles and wounded as they withdraw from the combat zone!",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
 	"warmup": 5,
 	"requirements": {
 		"foe.umiri.mark": -1,
@@ -191,7 +187,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Enemy Officer",
+		"label": "敌军军官",
 		"required": {
 			"foe.umiri.mark": 1,
 		},
@@ -218,8 +214,8 @@
     {
 	"id": "produce.umiri.withdraw.officerdetail",
 	"actionid": "enemyaction.withdraw",
-	"label": "Enemy Retreat!",
-	"startdescription": "The Germans' situation is hopeless! Their forces are in disarray, dragging their vehicles and wounded as they withdraw from the combat zone!",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
 	"warmup": 5,
 	"tablereqs": {
 		"foe.officerdetail": 1,
@@ -227,7 +223,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Enemy Task Force",
+		"label": "敌军特遣队",
 		"required": {
 			"foe.officerdetail": 1,
 		},
@@ -251,8 +247,8 @@
     {
 	"id": "produce.umiri.withdraw.end.first",
 	"actionid": "enemyaction.withdraw",
-	"label": "Enemy Retreat!",
-	"startdescription": "The Germans' situation is hopeless! Their forces are in disarray, dragging their vehicles and wounded as they withdraw from the combat zone!",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
 	"warmup": 5,
 	"maxexecutions": 1,
 	"effects": {
@@ -273,8 +269,8 @@
     {
 	"id": "produce.umiri.withdraw.end",
 	"actionid": "enemyaction.withdraw",
-	"label": "Enemy Retreat!",
-	"startdescription": "The Germans' situation is hopeless! Their forces are in disarray, dragging their vehicles and wounded as they withdraw from the combat zone!",
+	"label": "敌军撤退！",
+	"startdescription": "德军大势已去！他们的军队正乱作一团，拖着载具和伤员撤离战区！",
 	"warmup": 5,
 	"effects": {
 		"foe": -99,
@@ -294,8 +290,8 @@
     {
 	"id": "produce.friendannoattackumiri",
 	"actionid": "enemyobstacle",
-	"label": "Reinforcing the Line",
-	"startdescription": "More enemies, more hardships—entering this battlefield.",
+	"label": "支援阵线",
+	"startdescription": "更多的敌人，更多的困境，正在踏入这片战场。",
 	"warmup": 10,
 	"aspects": {
 		"revealidentity": 1
@@ -303,7 +299,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Enemy Task Force",
+		"label": "敌军特遣队",
 		"required": {
 			"hindrance": 1,
 			"foe": 1,
@@ -326,8 +322,8 @@
     },
     {
 	"id": "friendannoattackumiri.needs",
-	"label": "Reinforcing the Line",
-	"startdescription": "The Allied offensive has stalled. They need our support!",
+	"label": "支援阵线",
+	"startdescription": "盟军的进攻受挫，他们需要我们的支援！",
 	"warmup": 30,
 	"slots": [
 		{
@@ -429,15 +425,15 @@
     },
     {
 	"id": "friendannoattackumiri.fall",
-	"label": "Reinforcing the Line",
-	"startdescription": "Frontline support failed to take effect. The situation at the front is growing worse.",
+	"label": "支援阵线",
+	"startdescription": "前线支援未能起效，前线的情况开始越来越糟。",
 	"requirements": {
 		"foe": 1
 	},
 	"slots": [
 	    {
 		"id": "needssupplies",
-		"label": "Ally",
+		"label": "友军",
 		"required": {
             "friend": 1
 		},
@@ -459,8 +455,8 @@
     },
     {
 	"id": "friendannoattackumiri.aerial",
-	"label": "Death from Above",
-	"startdescription": "Fire and smoke in the clouds. Burning remnants descend from on high like a cluster of comets. For the moment, the skies are ours.",
+	"label": "死亡从天而降",
+	"startdescription": "火与烟在云中产生。燃烧的残骸如流星雨般从高空落下。这一刻，天空属于我们。",
 	"requirements": {
 	    "foe.aerial": 1,
 	    "friend.aerial": "foe.aerial"
@@ -490,8 +486,8 @@
     },
     {
 	"id": "friendannoattackumiri.ap",
-	"label": "Breaking Through",
-	"startdescription": "Like smashing open an egg. This enemy's armour might have protected them for a time, but no more.",
+	"label": "突破装甲",
+	"startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
 	"requirements": {
 	    "foe.armoured": 1,
 	    "ap": "foe.armoured"
@@ -521,8 +517,8 @@
     },
     {
 	"id": "friendannoattackumiri.edge",
-	"label": "Force Prevails",
-	"startdescription": "This will be our strategy: we will break them, and grind them to nothing under our bootheels.",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
 	"requirements": {
 	    "needsedge": 1,
 	    "edge": "needsedge"
@@ -552,8 +548,8 @@
     },
     {
 	"id": "friendannoattackumiri.winter",
-	"label": "Patience Prevails",
-	"startdescription": "Under silence and snow we will come for them. And then it will be too late for anyone.",
+	"label": "以耐心得胜",
+	"startdescription": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
 	"requirements": {
 	    "needswinter": 1,
 	    "winter": "needswinter"
@@ -583,8 +579,8 @@
     },
     {
 	"id": "friendannoattackumiri.heart",
-	"label": "Persistence Prevails",
-	"startdescription": "We cannot be stilled. Our march forward is inexorable.",
+	"label": "以坚持得胜",
+	"startdescription": "我们不能被停滞。无人能阻止我们的进军。",
 	"requirements": {
 	    "needsheart": 1,
 	    "heart": "needsheart"
@@ -614,8 +610,8 @@
     },
     {
 	"id": "friendannoattackumiri.grail",
-	"label": "Appetite Prevails",
-	"startdescription": "Blood has been spilt; blood spills forth. And still we are hungry for more.",
+	"label": "以食欲得胜",
+	"startdescription": "血管开裂，血已流出。而我们仍饥饿，仍渴望更多。",
 	"requirements": {
 	    "needsgrail": 1,
 	    "grail": "needsgrail"
@@ -645,8 +641,8 @@
     },
     {
 	"id": "friendannoattackumiri.moth",
-	"label": "Deception Prevails",
-	"startdescription": "Ordered chaos, I would like to think. Sometimes we must rely on the unpredictable and unorthodox.",
+	"label": "以欺诈得胜",
+	"startdescription": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
 	"requirements": {
 	    "needsmoth": 1,
 	    "moth": "needsmoth"
@@ -676,8 +672,8 @@
     },
     {
 	"id": "friendannoattackumiri.lantern",
-	"label": "Glory Prevails",
-	"startdescription": "Here is truth, hard and sharp enough to cut with. The way is illuminated.",
+	"label": "以辉煌得胜",
+	"startdescription": "真实在此，锐利且坚硬，可用于切割。前路已被照亮。",
 	"requirements": {
 	    "needslantern": 1,
 	    "lantern": "needslantern"
@@ -707,8 +703,8 @@
     },
     {
 	"id": "friendannoattackumiri.forge",
-	"label": "Ingenuity Prevails",
-	"startdescription": "This is sufficient. Fire and machinery and all their clever applications have won us this bout.",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
 	"requirements": {
 	    "needsforge": 1,
 	    "forge": "needsforge"
@@ -738,8 +734,8 @@
     },
     {
 	"id": "friendannoattackumiri.knock",
-	"label": "Ingress Prevails",
-	"startdescription": "I have heard that a wound is a door - here, then, is a different kind of door. The path forward lies opened.",
+	"label": "以进入得胜",
+	"startdescription": "我曾听说所有创口都是门洞——不过位于此处的是另一种门。前路已被打开。",
 	"requirements": {
 	    "needsknock": 1,
 	    "knock": "needsknock"
@@ -769,8 +765,8 @@
     },
     {
 	"id": "friendannoattackumiri.forgemoth",
-	"label": "Deception and Destruction",
-	"startdescription": "First, shadow. Then, fire.",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
 	"requirements": {
 	    "needsforgemoth": 1,
 	    "forge": "needsforgemoth",
@@ -801,8 +797,8 @@
     },
     {
 	"id": "friendannoattackumiri.edgelantern",
-	"label": "The Bright Edge",
-	"startdescription": "When we strike, we ought to strike with clarity and without mercy. The Colonel knew this, as did the Watchman, as did the Sun.",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
 	"requirements": {
 	    "needsedgelantern": 1,
 	    "edge": "needsedgelantern",
@@ -833,8 +829,8 @@
     },
     {
 	"id": "friendannoattackumiri.edgewinter",
-	"label": "The Anguished Edge",
-	"startdescription": "All battles resolve in death, and until the battle resolves, there is agony. We bring agony, now.",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
 	"requirements": {
 	    "needsedgewinter": 1,
 	    "edge": "needsedgewinter",
@@ -865,8 +861,8 @@
     },
     {
 	"id": "friendannoattackumiri.edgeforge",
-	"label": "The Shattered Edge",
-	"startdescription": "The shattering of the Lionsmith's sword is a great mystery of both Forge and Edge. We evoke that mystery now, even if we do not know it.",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
 	"requirements": {
 	    "needsedgeforge": 1,
 	    "edge": "needsedgeforge",
@@ -897,8 +893,8 @@
     },
     {
 	"id": "friendannoattackumiri.knocklantern",
-	"label": "The Key and the Light",
-	"startdescription": "Sometimes it is not enough to simply open a door; sometimes one must bring about its dissolution.",
+	"label": "钥匙与光芒",
+	"startdescription": "有时单纯开启一扇门是不足够的，有时这扇门必须被带去溶解。",
 	"requirements": {
 	    "needsknocklantern": 1,
 	    "knock": "needsknocklantern",
@@ -929,8 +925,8 @@
     },
     {
 	"id": "friendannoattackumiri.forgeheart",
-	"label": "Our Hearts Burn",
-	"startdescription": "Fire alights in the lungs; purpose seizes the soul. Ours is the will to go on.",
+	"label": "火燃于心",
+	"startdescription": "火焰于肺部内点燃，目标占领灵魂。我们即为前进的意志。",
 	"requirements": {
 	    "needsforgeheart": 1,
 	    "forge": "needsforgeheart",
@@ -961,8 +957,8 @@
     },
     {
 	"id": "friendannoattackumiri.edgeknock",
-	"label": "The Edge Opens",
-	"startdescription": "The Chilliarch knew of blood and its exits. And with our weapons, we will shape an exit as he did.",
+	"label": "开启之刃",
+	"startdescription": "千夫长知晓血与血的出口。而我们将用武器制造出那出口，像他曾做的那样。",
 	"requirements": {
 	    "needsedgeknock": 1,
 	    "edge": "needsedgeknock",
@@ -993,8 +989,8 @@
     },
     {
 	"id": "friendannoattackumiri.edgeheart",
-	"label": "Joyous Destruction",
-	"startdescription": "The Thunderskin was flayed; the Thunderskin was destroyed. We move now to destroy our enemy in the manner he was.",
+	"label": "愉悦的毁灭",
+	"startdescription": "轰雷之皮曾被剥皮；轰雷之皮曾被毁灭。我们现在将以毁灭轰雷之皮的方式毁灭我们的敌军。",
 	"requirements": {
 	    "needsedgeheart": 1,
 	    "edge": "needsedgeheart",
@@ -1025,8 +1021,8 @@
     },
     {
 	"id": "friendannoattackumiri.winterheart",
-	"label": "The Peace of an End",
-	"startdescription": "With the warmth and solemnity of last rites being read, we move to conclude our adversary.",
+	"label": "平静终局",
+	"startdescription": "与临终仪式上诵读的温暖、庄严的悼词一同，我们终结了我们的敌手。",
 	"requirements": {
 	    "needswinterheart": 1,
 	    "winter": "needswinterheart",
@@ -1057,8 +1053,8 @@
     },
     {
 	"id": "friendannoattackumiri.lanternheart",
-	"label": "Not Yet Defeated",
-	"startdescription": "With enough spirit, I can shield myself from their beckoning whispers; with enough light, I can turn aside their grasping hands.",
+	"label": "仍未败倒",
+	"startdescription": "以足够的意志，我便能抵御它们引诱的低语；以足够的光芒，我便能回避它们紧攫的手。",
 	"requirements": {
 	    "needslanternheart": 1,
 	    "lantern": "needslanternheart",
@@ -1091,8 +1087,8 @@
     {
 	"id": "talktoannosir",
 	"actionid": "communicate",
-	"label": "Meeting the Allied Officer",
-	"startdescription": "'Pleased to meet you, Man-Killer.' She approaches me without any of the typical officer's airs. 'I've heard about you. Thank you for your assistance.'",
+	"label": "与盟军军官结识",
+	"startdescription": "“很高兴见到你，人之杀手。”对方向我走来，身上没有什么军官的架子。“我听说了你的事情，感谢你的协助。”",
 	"warmup": 10,
 	"extantreqs": {
 		"foe.umiri.dead.withanno": 1,
@@ -1109,7 +1105,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Claim Ticket",
+		"label": "“邀功券”",
 		"required": {
 			"foe.umiri.dead.withanno": 1,
 		},
@@ -1130,8 +1126,8 @@
     {
 	"id": "talktoannosir.approval",
 	"actionid": "communicate",
-	"label": "Meeting the Allied Officer",
-	"startdescription": "'Pleased to meet you, Man-Killer.' She approaches me without any of the typical officer's airs. 'I've heard about you. Thank you for your assistance.'",
+	"label": "与盟军军官结识",
+	"startdescription": "“很高兴见到你，人之杀手。”对方向我走来，身上没有什么军官的架子。“我听说了你的事情，感谢你的协助。”",
 	"warmup": 10,
 	"requirements": {
 		"foe.umiri.dead.withanno": 1,
@@ -1151,9 +1147,9 @@
     {
 	"id": "talktoannosir.router",
 	"actionid": "communicate",
-	"label": "Speaking with the Allied Officer",
-	"startdescription": "'What do you want from me, Man-Killer?'",
-	"description": "Nothing to say.",
+	"label": "与盟军军官交谈",
+	"startdescription": "“你想从我这里得到些什么？人之杀手。”",
+	"description": "无话可谈。",
 	"warmup": 30,
 	"aspects": {
 	},
@@ -1165,7 +1161,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "What to Speak Of?",
+		"label": "交谈何物？",
 		"required": {
 			"forge": 1,
 			"contemplation": 1
@@ -1189,9 +1185,9 @@
     {
 	"id": "talktoannosir.shape",
 	"actionid": "communicate",
-	"label": "Speaking with the Allied Officer",
-	"startdescription": "'The Namehood. His Highness has no intention of interfering with your trial. But I believe we share a common enemy—one who stands in both our paths. Perhaps we could tear her apart together. Even lions don't hunt alone, do they?'",
-	"description": "'Take this. A small gift.'",
+	"label": "与盟军军官交谈",
+	"startdescription": "“具名之位，殿下无意干涉你的试炼，但是我想我们有一名共同的敌人，她挡在了我们两个的路上，也许我们可以一起把她撕碎。狮子也从不独自狩猎，不是吗”",
+	"description": "“收下它，一份小小的礼物。”",
 	"warmup": 0,
 	"extantreqs": {
 	},
@@ -1213,13 +1209,12 @@
     {
 	"id": "talktoannosir.end",
 	"actionid": "communicate",
-	"label": "Speaking with the Allied Officer?",
-	"startdescription": "Resentment is gathering...",
+	"label": "与盟军军官交谈？",
+	"startdescription": "怨念正在汇聚……",
 	"warmup": 10,
 	"requirements": {
 		"forge": 13,
 	},
-	"maxexecutions": 1,
 	"achievements": [
 		"ending.tool.king"
 	],
@@ -1229,8 +1224,8 @@
     },
         {
             "id": "talktoannosir0",
-            "label": "Meeting the Allied Officer?",
-            "previewdescription": "You have nothing yet to discuss. An officer is not so easily met.",
+            "label": "与盟军军官结识？",
+            "previewdescription": "你尚未拥有谈资，一位军官可不是随便就能见面的",
             "actionid": "communicate",
             "requirements": {
                 "anno.mark": 1,
@@ -1247,9 +1242,9 @@
     {
 	"id": "operate.getdream",
 	"actionid": "operate",
-	"label": "A Walk with Wolves",
-	"startdescription": "In their greys and blacks they lope cautiously through the snow, watching me. I shouldn't get too close.",
-	"description": "The wolves are there, and then they are not.",
+	"label": "与狼同行",
+	"startdescription": "身披灰色或黑色的毛皮，这些狼在雪地上谨慎地跑动，注视着我。我不应靠得太近。",
+	"description": "狼群在那，而后又不在那。",
 	"requirements": {
 	    "op.wolves": 1,
 	    "side": -1,
@@ -1260,8 +1255,8 @@
 	"slots": [
 	    {
 		"id": "needssomething",
-		"label": "Something?",
-		"description": "Throw something to the wolves?",
+		"label": "某物？",
+		"description": "把某物丢给狼群？",
 		"required": {
 		    "friend": 1,
 		    "edge": 1

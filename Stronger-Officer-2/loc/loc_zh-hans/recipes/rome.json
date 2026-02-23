@@ -2,9 +2,9 @@
 "recipes": [
         {
             "id": "friend.anno.attack.stun.umiri",
-            "label": "Final Advance",
-            "startdescription": "The Allied forces are ready. Now, they begin their advance.",
-            "description": "The Allied forces are ready. Now, they begin their advance.",
+            "label": "最后进军",
+            "startdescription": "盟军准备就绪，现在他们开始进军。",
+            "description": "盟军准备就绪，现在他们开始进军。",
             "actionId": "annoumiri",
             "warmup": 10,
 			"playAudioTrack": "bgm.annostun.mp3",
@@ -26,14 +26,14 @@
         },
     {
 	"id": "friend.anno.attack.umiri.first",
-	"label": "Final Advance",
-	"startdescription": "The Allied forces are ready. Now, they begin their advance.",
+	"label": "最后进军",
+	"startdescription": "盟军准备就绪，现在他们开始进军。",
 	"requirements": {
 	},
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Intercept",
+		"label": "准备",
 		"required": {
 			"faction.anno": 1,
 			"local": 1,
@@ -51,7 +51,7 @@
 		},
 		{
 		"id": "defend2",
-		"label": "Intercept",
+		"label": "准备",
 		"required": {
 			"faction.anno": 1,
 			"local": 1,
@@ -77,8 +77,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.a",
-	"label": "Final Advance",
-	"startdescription": "An enemy task force emerges from the flank, attempting to block the advance.",
+	"label": "最后进军",
+	"startdescription": "敌军特遣队从侧翼出现，他们在试图拦截进攻。",
 	"requirements": {
 	},
 	"aspects": {
@@ -106,8 +106,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail",
-	"label": "Final Advance",
-	"startdescription": "An enemy task force emerges from the flank, attempting to block the advance.",
+	"label": "最后进军",
+	"startdescription": "敌军特遣队从侧翼出现，他们在试图拦截进攻。",
 	"requirements": {
 	},
 	"aspects": {
@@ -116,7 +116,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Enemy Task Force",
+		"label": "敌军特遣队",
 		"required": {
 			"foe.officerdetail": 1,
 		},
@@ -153,7 +153,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.none",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 	},
 	"warmup": 0,
@@ -168,7 +168,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.threeanno",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"success_anno": 3
 	},
@@ -184,8 +184,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.pass",
-	"label": "Final Advance",
-	"startdescription": "Allied forces have crushed the enemy's defenses and are pressing the attack!",
+	"label": "最后进军",
+	"startdescription": "盟军踏平了敌军的防线，继续进攻！",
 	"requirements": {
 	},
 	"effects": {
@@ -206,8 +206,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.2.first",
-	"label": "Final Advance",
-	"startdescription": "Closing in...",
+	"label": "最后进军",
+	"startdescription": "接近了……",
 	"requirements": {
 		"progression": 2
 	},
@@ -223,7 +223,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.1.first",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"progression": 1
 	},
@@ -239,7 +239,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.1.fir",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"progression": 1
 	},
@@ -268,7 +268,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.0.first",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 	},
 	"effects": {
@@ -283,18 +283,12 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.0.fir",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 	},
 	"effects": {
 	},
 	"mutations": [
-		{
-			"filter": "foe.tanks",
-			"mutate": "foe.armoured",
-			"level": -1,
-			"additive": true
-		},
 		{
 			"filter": "foe.tanks",
 			"mutate": "needsedge",
@@ -317,7 +311,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.2",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"progression": 2
 	},
@@ -326,7 +320,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Aid",
+		"label": "援助",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -366,7 +360,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.1",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"progression": 1
 	},
@@ -375,7 +369,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Aid",
+		"label": "援助",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -412,13 +406,13 @@
     },
     {
 	"id": "friend.anno.attack.umiri.obstacle.0",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"effects": {
 	},
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Aid",
+		"label": "援助",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -455,8 +449,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.edge",
-	"label": "Force Prevails",
-	"startdescription": "This will be our strategy: we will break them, and grind them to nothing under our bootheels.",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
 	"requirements": {
 	    "needsedge": 1,
 	    "edge": "needsedge"
@@ -477,8 +471,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.forge",
-	"label": "Ingenuity Prevails",
-	"startdescription": "This is sufficient. Fire and machinery and all their clever applications have won us this bout.",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
 	"requirements": {
 	    "needsforge": 1,
 	    "forge": "needsforge"
@@ -512,8 +506,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.forgemoth",
-	"label": "Deception and Destruction",
-	"startdescription": "First, shadow. Then, fire.",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
 	"requirements": {
 	    "needsforgemoth": 1,
 	    "forge": "needsforgemoth",
@@ -535,8 +529,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.edgelantern",
-	"label": "The Bright Edge",
-	"startdescription": "When we strike, we ought to strike with clarity and without mercy. The Colonel knew this, as did the Watchman, as did the Sun.",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
 	"requirements": {
 	    "needsedgelantern": 1,
 	    "edge": "needsedgelantern",
@@ -558,8 +552,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.edgewinter",
-	"label": "The Anguished Edge",
-	"startdescription": "All battles resolve in death, and until the battle resolves, there is agony. We bring agony, now.",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
 	"requirements": {
 	    "needsedgewinter": 1,
 	    "edge": "needsedgewinter",
@@ -581,8 +575,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.edgeforge",
-	"label": "The Shattered Edge",
-	"startdescription": "The shattering of the Lionsmith's sword is a great mystery of both Forge and Edge. We evoke that mystery now, even if we do not know it.",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
 	"requirements": {
 	    "needsedgeforge": 1,
 	    "edge": "needsedgeforge",
@@ -605,7 +599,7 @@
 
     {
 	"id": "friend.anno.attack.umiri.officerdetail.have",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"foe": 1
 	},
@@ -621,7 +615,7 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.have1",
-	"label": "Final Advance",
+	"label": "最后进军",
 	"requirements": {
 		"foe": 1
 	},
@@ -630,7 +624,7 @@
 	"slots": [
 		{
 		"id": "defend",
-		"label": "Allied Forces",
+		"label": "盟军",
 		"required": {
 			"faction.anno": 1,
 			"local": 1,
@@ -688,8 +682,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.aerial",
-	"label": "Death from Above",
-	"startdescription": "Fire and smoke in the clouds. Burning remnants descend from on high like a cluster of comets. For the moment, the skies are ours.",
+	"label": "死亡从天而降",
+	"startdescription": "火与烟在云中产生。燃烧的残骸如流星雨般从高空落下。这一刻，天空属于我们。",
 	"requirements": {
 	    "foe.aerial": 1,
 	    "friend.aerial": "foe.aerial"
@@ -710,8 +704,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.ap",
-	"label": "Breaking Through",
-	"startdescription": "Like smashing open an egg. This enemy's armour might have protected them for a time, but no more.",
+	"label": "突破装甲",
+	"startdescription": "就像砸开蛋壳一样简单。这些敌军的装甲或许保护了他们一时，但那装甲已不复存在。",
 	"requirements": {
 	    "foe.armoured": 1,
 	    "ap": "foe.armoured"
@@ -732,8 +726,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.edge",
-	"label": "Force Prevails",
-	"startdescription": "This will be our strategy: we will break them, and grind them to nothing under our bootheels.",
+	"label": "以力量得胜",
+	"startdescription": "我们的战术如下：我们将击碎他们，并用靴跟将他们碾为齑粉。",
 	"requirements": {
 	    "needsedge": 1,
 	    "edge": "needsedge"
@@ -754,8 +748,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.winter",
-	"label": "Patience Prevails",
-	"startdescription": "Under silence and snow we will come for them. And then it will be too late for anyone.",
+	"label": "以耐心得胜",
+	"startdescription": "我们将在寂静与雪中接近他们。而后对任何人而言都为时已晚。",
 	"requirements": {
 	    "needswinter": 1,
 	    "winter": "needswinter"
@@ -776,8 +770,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.moth",
-	"label": "Deception Prevails",
-	"startdescription": "Ordered chaos, I would like to think. Sometimes we must rely on the unpredictable and unorthodox.",
+	"label": "以欺诈得胜",
+	"startdescription": "安排好的混乱，我想如此认为。有时我们必须依靠无法预料与非正统的手段。",
 	"requirements": {
 	    "needsmoth": 1,
 	    "moth": "needsmoth"
@@ -798,8 +792,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.forge",
-	"label": "Ingenuity Prevails",
-	"startdescription": "This is sufficient. Fire and machinery and all their clever applications have won us this bout.",
+	"label": "以机敏得胜",
+	"startdescription": "这些就足够了。火与机械与所有其巧妙的应用让我们获胜。",
 	"requirements": {
 	    "needsforge": 1,
 	    "forge": "needsforge"
@@ -820,8 +814,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.forgemoth",
-	"label": "Deception and Destruction",
-	"startdescription": "First, shadow. Then, fire.",
+	"label": "欺骗与破坏",
+	"startdescription": "先是阴影，再是火焰。",
 	"requirements": {
 	    "needsforgemoth": 1,
 	    "forge": "needsforgemoth",
@@ -843,8 +837,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.edgelantern",
-	"label": "The Bright Edge",
-	"startdescription": "When we strike, we ought to strike with clarity and without mercy. The Colonel knew this, as did the Watchman, as did the Sun.",
+	"label": "明耀之刃",
+	"startdescription": "当我们攻击时，我们应带着明晰与无情攻击。上校知晓此法，守夜人亦然，太阳亦然。",
 	"requirements": {
 	    "needsedgelantern": 1,
 	    "edge": "needsedgelantern",
@@ -866,8 +860,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.edgewinter",
-	"label": "The Anguished Edge",
-	"startdescription": "All battles resolve in death, and until the battle resolves, there is agony. We bring agony, now.",
+	"label": "苦痛之刃",
+	"startdescription": "一切战斗以死亡告终，而直到战斗告终之前，都存在痛苦。现在，我们带来痛苦。",
 	"requirements": {
 	    "needsedgewinter": 1,
 	    "edge": "needsedgewinter",
@@ -889,8 +883,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.edgeforge",
-	"label": "The Shattered Edge",
-	"startdescription": "The shattering of the Lionsmith's sword is a great mystery of both Forge and Edge. We evoke that mystery now, even if we do not know it.",
+	"label": "破碎之刃",
+	"startdescription": "狮子匠佩剑的破碎是一个铸与刃的巨大秘密。我们现在唤起那秘密，即便我们并不了解它。",
 	"requirements": {
 	    "needsedgeforge": 1,
 	    "edge": "needsedgeforge",
@@ -913,8 +907,8 @@
 	
     {
 	"id": "friend.anno.attack.umiri.officerdetail.fall",
-	"label": "Final Advance",
-	"startdescription": "The enemy has blocked the assault, damn it!",
+	"label": "最后进军",
+	"startdescription": "敌军挡住了进攻，该死！",
 	"aspects": {
 	},
 	"warmup": 10,
@@ -933,8 +927,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.cycle",
-	"label": "Awaiting Reinforcements...",
-	"startdescription": "The Allied vanguard has been halted!",
+	"label": "等待支援……",
+	"startdescription": "盟军的先锋部队受阻！",
 	"requirements": {
 	},
 	"aspects": {
@@ -942,7 +936,7 @@
 	"slots": [
 	    {
 		"id": "needsking",
-		"label": "Outcome",
+		"label": "结果",
 		"required": {
 		    "reinforcement.success": 1,
 		    "reinforcement.fall": 1,
@@ -968,8 +962,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.successend",
-	"label": "Awaiting Reinforcements...",
-	"startdescription": "Reinforcements are ready. They can resume their march now.",
+	"label": "等待支援……",
+	"startdescription": "支援就绪，现在他们可以继续行军了。",
 	"requirements": {
 		"reinforcement.success": 1,
 	},
@@ -984,8 +978,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.officerdetail.fallend",
-	"label": "Awaiting Reinforcements...",
-	"startdescription": "Frontline support failed to take effect. The situation at the front is growing worse.",
+	"label": "等待支援……",
+	"startdescription": "前线支援未能起效，前线的情况开始越来越糟。",
 	"requirements": {
 		"reinforcement.fall": 1,
 	},
@@ -999,8 +993,8 @@
 
     {
 	"id": "friend.anno.attack.umiri.successfully",
-	"label": "Clearing the Fortification",
-	"startdescription": "The enemy's fortifications are within sight. Take this position, and they will be one step closer to the command post.",
+	"label": "拔除堡垒",
+	"startdescription": "敌军的堡垒近在眼前，拿下这里，他们就能向着指挥所更进一步。",
 	"requirements": {
 		"progression": 3
 	},
@@ -1018,8 +1012,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.successfully.end",
-	"label": "Final Reckoning",
-	"startdescription": "The enemy's defensive line has collapsed; their positions have been taken. Artillery and machines will sweep clean every last straggler in sight.",
+	"label": "了却终局",
+	"startdescription": "敌军防线已经溃退，阵地被我们拔除。火炮和机械会将眼前的每一个溃兵清扫殆尽。",
 	"warmup": 30,
 	"alt": [
 		{
@@ -1033,7 +1027,7 @@
 	
     {
 	"id": "friend.anno.attack.umiri.obstaclefall",
-	"label": "Frustrated Assault",
+	"label": "进攻受挫",
 	"requirements": {
 	},
 	"effects": {
@@ -1048,8 +1042,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.fallallend",
-	"label": "Frustrated Assault",
-	"startdescription": "The attack has failed. The enemy's line held firm. We have lost this opportunity.",
+	"label": "进攻受挫",
+	"startdescription": "进攻失败了，敌军的防线格外的稳固，我们失去了这次机会。",
 	"requirements": {
 	},
 	"aspects": {
@@ -1068,8 +1062,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.fallallend.0",
-	"label": "Frustrated Assault",
-	"startdescription": "The Allied forces are withdrawing from the line. They will seek another opportunity.",
+	"label": "进攻受挫",
+	"startdescription": "盟军正在撤离阵线，他们会试图寻找下一次机会。",
 	"aspects": {
 		"dissolution": 1,
 		"fatiguing": 1
@@ -1080,8 +1074,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.fallallend.1",
-	"label": "Frustrated Assault",
-	"startdescription": "The Allies are evacuating the wounded. This assault has failed after all.",
+	"label": "进攻受挫",
+	"startdescription": "盟军正在带走伤者，这次进攻还是失败了。",
 	"requirements": {
 		"progression": 1
 	},
@@ -1098,8 +1092,8 @@
     },
     {
 	"id": "friend.anno.attack.umiri.fallallend.2",
-	"label": "Frustrated Assault",
-	"startdescription": "Allied casualties are severe; the line is beginning to crumble. They must retreat!",
+	"label": "进攻受挫",
+	"startdescription": "盟军伤亡惨重，阵线已经开始溃败，他们需要撤退！",
 	"requirements": {
 		"progression": 2
 	},

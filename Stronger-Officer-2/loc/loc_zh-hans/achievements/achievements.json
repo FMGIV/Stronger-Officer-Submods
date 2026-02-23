@@ -1,0 +1,67 @@
+{
+"achievements": [
+    { 
+        "id": "ending.sergei_anno",
+        "iconLocked": "achievement.sergei_anno", 
+        "iconUnlocked": "achievement.sergei_anno", 
+        "label": "王从天降",
+        "descriptionLocked": "“以不灭灯芯的名义，我将会击退你。野狼。”",
+        "unlockMessage": "<i>“以不灭灯芯的名义，我将会击退你。野狼。”<i>\n\n[<i>克莱里昂</i>军官威慑食铁者。]",
+        "isHidden": true, 
+        "category": "CATEGORY_PROTERANT"
+    },
+    { 
+        "id": "ending.camilla_anno",
+        "iconLocked": "achievement.camilla_anno", 
+        "iconUnlocked": "achievement.camilla_anno", 
+        "label": "百年友谊",
+        "descriptionLocked": "历史的小小纠纷在这片战场上继续延续，愿他们友谊长存。",
+        "unlockMessage": "<i>历史的小小纠纷在这片战场上继续延续，愿他们友谊长存。<i>\n\n[<i>克莱里昂</i>军官与大陆之敌缠斗。]",
+        "isHidden": true, 
+        "category": "CATEGORY_PROTERANT"
+    },
+    { 
+        "id": "ending.findout_anno",
+        "iconLocked": "tool.shape", 
+        "iconUnlocked": "tool.shape", 
+        "label": "纷争延续",
+        "descriptionLocked": "我没能取得那个位子，但是我的朋友，和那个新王许诺我了会填补我的欲望，那么让战斗继续吧。",
+        "descriptionUnlocked": "我没能取得那个位子，但是我的朋友，和那个新王许诺我了会填补我的欲望，那么让战斗继续吧。",
+        "unlockMessage": "<i>我没能取得那个位子，但是我的朋友，和那个新王许诺我了会填补我的欲望，那么让战斗继续吧。<i>\n\n[跟随<i>克莱里昂</i>军官。]",
+        "isHidden": false, 
+        "category": "CATEGORY_PROTERANT"
+    },
+    { 
+        "id": "ending.anno_kill_umiri",
+        "iconLocked": "achievement.anno_kill_umiri", 
+        "iconUnlocked": "achievement.anno_kill_umiri", 
+        "label": "重铸残局",
+        "descriptionLocked": "我们同新军一起解放了罗马！这是一个历史性的时刻！",
+        "descriptionUnlocked": "我们同新军一起解放了罗马！这是一个历史性的时刻！",
+        "unlockMessage": "<i>我们同新军一起解放了罗马！这是一个历史性的时刻！<i>\n\n[在罗马，你协助<i>克莱里昂</i>军官战胜了<i>伊尔莎</i>上校]",
+        "isHidden": false, 
+        "category": "CATEGORY_PROTERANT"
+    },
+    { 
+        "id": "ending.know_anno",
+        "iconLocked": "achievement.know_anno", 
+        "iconUnlocked": "achievement.know_anno", 
+        "label": "宿命相逢",
+        "descriptionLocked": "在这一重历史之中，你结识了一份友谊。",
+        "descriptionUnlocked": "在这一重历史之中，你结识了一份友谊。",
+        "unlockMessage": "<i>在这一重历史之中，你结识了一份友谊。<i>\n\n[你与<i>克莱里昂</i>军官结识]",
+        "isHidden": false, 
+        "category": "CATEGORY_PROTERANT"
+    },
+    { 
+        "id": "ending.tool.king",
+        "iconLocked": "tool.king", 
+        "iconUnlocked": "tool.king", 
+        "label": "吊人之证",
+        "descriptionUnlocked": "“新王万岁！”",
+        "unlockMessage": "<i>“新王万岁！”<i>\n\n[曾有一位作家尝试描述新王的伟大，在经历了四次修改，三个月漫长写作之后，“新王万岁！”成了她唯一会说的话语。]",
+        "isHidden": true, 
+        "category": "CATEGORY_PROTERANT"
+    },
+]
+}

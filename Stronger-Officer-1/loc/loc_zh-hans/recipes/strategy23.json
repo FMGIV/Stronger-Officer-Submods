@@ -2,7 +2,7 @@
     "recipes": [
         {
             "id": "foe.umiri.attack.tactics2.first",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
             "description": "命令已然下达，敌人的引擎在嘶吼。",
             "actionId": "foetactics2",
@@ -20,7 +20,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
             "description": "命令已然下达，敌人的引擎在嘶吼。",
             "actionId": "foetactics2",
@@ -80,7 +80,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_one",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "actionId": "foetactics2",
@@ -144,7 +144,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics2_one.attack",
-        "label": "敌军正在发动战术进攻！",
+        "label": "敌军正调集装甲发动进攻！",
         "startdescription": "拔除铁轨，拆毁住房。这些法西斯强盗！",
         "requirements": {
         },
@@ -485,7 +485,7 @@
         
         {
             "id": "foe.umiri.attack.tactics2_two.pre",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
             "description": "命令已然下达，敌人的引擎在嘶吼。",
             "actionId": "foetactics2",
@@ -556,7 +556,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_two",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "description": "德国人将用装甲碾碎我们的防线，我们作何应对？",
             "actionId": "foetactics2",
@@ -908,7 +908,7 @@
 
         {
             "id": "foe.umiri.attack.tactics2_three.pre",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
             "description": "命令已然下达，敌人的引擎在嘶吼。",
             "actionId": "foetactics2",
@@ -985,7 +985,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_three.edgeforge",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "命令已然下达，敌人的引擎在嘶吼。",
             "description": "命令已然下达，敌人的引擎在嘶吼。",
             "actionId": "foetactics2",
@@ -1016,7 +1016,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_three",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正调集装甲发动进攻！",
             "startdescription": "德国人将用装甲碾碎我们的防线，我们作何应对？\n\n[此战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
             "description": "德国人将用装甲碾碎我们的防线，我们作何应对？\n\n[此战术触发后将会吸收三个非特有次要目标摧毁，并使全场的目标枯竭]",
             "actionId": "foetactics2",
@@ -1630,7 +1630,7 @@
         
         {
             "id": "foe.umiri.attack.tactics3.first",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "actionId": "foetactics3",
@@ -1649,7 +1649,7 @@
 
         {
             "id": "foe.umiri.attack.tactics3",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "actionId": "foetactics3",
@@ -1677,7 +1677,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3a",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "description": "炮火掀起的泥土夹杂着火药的气息，他们最好仍在校准弹道......",
             "actionId": "foetactics3",
@@ -1751,7 +1751,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3_one",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？\n\n[此战术触发后将会导致你的部队大量伤亡，损失设施，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "description": "大地在颤抖，泥土簌簌落下，五脏六腑在随着炮火共振，我们作何应对？\n\n[此战术触发后将会导致你的部队大量伤亡，损失设施，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "actionId": "foetactics3",
@@ -2158,7 +2158,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics3_one.attack",
-        "label": "敌军正在发动战术进攻！",
+        "label": "敌军正在进行一次压倒性的战术轰炸！",
         "startdescription": "烟雾与尘埃慢慢沉降，此处已不存在什么完整的东西了，瓦砾与扭曲的金属四处可见。",
         "requirements": {
         },
@@ -2473,7 +2473,7 @@
 
         {
             "id": "foe.umiri.attack.tactics3b",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "尖啸声正由远及近，地狱将自空中降临......",
             "description": "尖啸声正由远及近，地狱将自空中降临......",
             "actionId": "foetactics3",
@@ -2544,7 +2544,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3b_one_ex",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "尖啸声正由远及近，地狱将自空中降临......",
             "description": "尖啸声正由远及近，地狱将自空中降临......",
             "warmup": 0,
@@ -2563,7 +2563,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3b_one",
-            "label": "敌军正在发动战术进攻！",
+            "label": "敌军正在进行一次压倒性的战术轰炸！",
             "startdescription": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[此战术触发后将会导致你的部队大量受创，损失设施和补给品，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "description": "尖啸声正盘旋于头顶，爆炸声震耳欲聋，我们作何应对？[此战术触发后将会导致你的部队大量受创，损失设施和补给品，并使全场的目标动词<b>终止</b>并使其枯竭]",
             "actionId": "foetactics3",
@@ -2969,7 +2969,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics3b_one.attack",
-        "label": "敌军正在发动战术进攻！",
+        "label": "敌军正在进行一次压倒性的战术轰炸！",
         "startdescription": "烟雾与尘埃慢慢沉降，此处已不存在什么完整的东西了，瓦砾与扭曲的金属四处可见。",
         "requirements": {
         },

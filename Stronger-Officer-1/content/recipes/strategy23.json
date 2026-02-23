@@ -2,7 +2,7 @@
     "recipes": [
         {
             "id": "foe.umiri.attack.tactics2.first",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "Orders have been issued. The enemy engines roar.",
             "description": "Orders have been issued. The enemy engines roar.",
             "actionId": "foetactics2",
@@ -19,7 +19,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "Orders have been issued. The enemy engines roar.",
             "description": "Orders have been issued. The enemy engines roar.",
             "actionId": "foetactics2",
@@ -95,7 +95,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_one",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
             "description": "The Germans will crush our defenses with their armor. How shall we respond?",
             "actionId": "foetactics2",
@@ -160,7 +160,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics2_one.attack",
-        "label": "Enemy Launching Tactical Assault!",
+        "label": "Enemy armored forces are massing for an assault!",
         "startdescription": "Tearing up railroad tracks, demolishing houses. These fascist bandits!",
         "requirements": {
         },
@@ -501,7 +501,7 @@
         
         {
             "id": "foe.umiri.attack.tactics2_two.pre",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "Orders have been issued. The enemy engines roar.",
             "description": "Orders have been issued. The enemy engines roar.",
             "actionId": "foetactics2",
@@ -576,7 +576,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_two",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?",
             "description": "The Germans will crush our defenses with their armor. How shall we respond?",
             "actionId": "foetactics2",
@@ -929,7 +929,7 @@
 
         {
             "id": "foe.umiri.attack.tactics2_three.pre",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "Orders have been issued. The enemy engines roar.",
             "description": "Orders have been issued. The enemy engines roar.",
             "actionId": "foetactics2",
@@ -1006,7 +1006,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_three.edgeforge",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "Orders have been issued. The enemy engines roar.",
             "description": "Orders have been issued. The enemy engines roar.",
             "actionId": "foetactics2",
@@ -1041,7 +1041,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics2_three",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "Enemy armored forces are massing for an assault!",
             "startdescription": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
             "description": "The Germans will crush our defenses with their armor. How shall we respond?\n\n[When this tactic triggers, it will absorb and destroy three non-unique Secondary Objectives and exhaust all objectives on the field.]",
             "actionId": "foetactics2",
@@ -1656,7 +1656,7 @@
         
         {
             "id": "foe.umiri.attack.tactics3.first",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "actionId": "foetactics3",
@@ -1674,7 +1674,7 @@
 
         {
             "id": "foe.umiri.attack.tactics3",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "actionId": "foetactics3",
@@ -1714,7 +1714,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3a",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "description": "Soil thrown up by shelling mingles with the smell of gunpowder. They had better still be calibrating their trajectories...",
             "actionId": "foetactics3",
@@ -1792,9 +1792,9 @@
         },
         {
             "id": "foe.umiri.attack.tactics3_one",
-            "label": "Enemy Launching Tactical Assault!",
-            "startdescription": "The earth trembles, soil showers down, viscera resonate with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
-            "description": "The earth trembles, soil showers down, viscera resonate with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
+            "startdescription": "The earth trembles, soil showers down, viscera resonates with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
+            "description": "The earth trembles, soil showers down, viscera resonates with the bombardment. How shall we respond?\n\n[When this tactic triggers, it will cause heavy casualties to your forces, destroy installations, and <b>terminate</b> all objectives on the field, exhausting them.]",
             "actionId": "foetactics3",
             "warmup": 30,
             "requirements": {
@@ -2202,7 +2202,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics3_one.attack",
-        "label": "Enemy Launching Tactical Assault!",
+        "label": "The enemy is launching an overwhelming tactical bombing!",
         "startdescription": "Smoke and dust slowly settle. Nothing intact remains here—only rubble and twisted metal as far as the eye can see.",
         "requirements": {
         },
@@ -2517,7 +2517,7 @@
 
         {
             "id": "foe.umiri.attack.tactics3b",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
             "description": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
             "actionId": "foetactics3",
@@ -2592,7 +2592,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3b_one_ex",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
             "description": "A shrieking sound approaches from afar. Hell is about to descend from the skies...",
             "warmup": 0,
@@ -2615,7 +2615,7 @@
         },
         {
             "id": "foe.umiri.attack.tactics3b_one",
-            "label": "Enemy Launching Tactical Assault!",
+            "label": "The enemy is launching an overwhelming tactical bombing!",
             "startdescription": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
             "description": "Shrieks circle overhead. Explosions deafen us. How shall we respond? [When this tactic triggers, your forces will suffer heavy casualties, lose installations and supplies, and <b>terminate</b> all objectives on the field, exhausting them.]",
             "actionId": "foetactics3",
@@ -3024,7 +3024,7 @@
         },
         {
         "id": "foe.umiri.attack.tactics3b_one.attack",
-        "label": "Enemy Launching Tactical Assault!",
+        "label": "The enemy is launching an overwhelming tactical bombing!",
         "startdescription": "Smoke and dust slowly settle. Nothing intact remains here—only rubble and twisted metal as far as the eye can see.",
         "requirements": {
         },

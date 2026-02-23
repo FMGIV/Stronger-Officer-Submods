@@ -654,7 +654,7 @@
         },
         {
             "id": "strategy.tactics1.had",
-            "label": "战术：步坦协同——标记",
+            "label": "Tactic: Steel Flood — Mark 1",
             "description": "3",
             "isAspect": true,
             "isHidden": true
@@ -669,14 +669,14 @@
         },
         {
             "id": "strategy.tactics2.had1",
-            "label": "战术：钢铁洪流——标记1",
+            "label": "Tactic: Infantry-Tank Coordination — Mark",
             "description": "3",
             "isAspect": true,
             "isHidden": true,
         },
         {
             "id": "strategy.tactics2.had2",
-            "label": "战术：钢铁洪流——标记2",
+            "label": "Tactic: Infantry-Tank Coordination — Mark2",
             "description": "3",
             "isAspect": true,
             "isHidden": true
@@ -2168,8 +2168,8 @@
     
     {
 	"id": "main.exhausted",
-	"label": "主要目标枯竭模板",
-	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"label": "Primary Objective Depleted",
+	"description": "The enemy's recent offensive is fierce; you cannot afford to focus on anything else.",
 	"aspects": {
 	    "main": 1,
 	    "exhausted": 1,
@@ -2178,8 +2178,8 @@
 	},
     {
 	"id": "side.exhausted",
-	"label": "次要目标枯竭模板",
-	"description": "敌军近期的攻势十分猛烈，你无法分心在其他事物上",
+	"label": "Secondary Objective Depleted",
+	"description": "The enemy's recent offensive is fierce; you cannot afford to focus on anything else.",
 	"aspects": {
 	    "side": 1,
 	    "exhausted": 1,

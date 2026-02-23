@@ -713,7 +713,6 @@
             "description": "The battle here is already lost...",
             "actionId": "foeactionumiri",
             "tablereqs": {
-                "foe": -10
             },
             "effects": {
             },
@@ -1097,6 +1096,18 @@
                     "chance": 40
                 },
                 {
+                    "id": "foe.umiri.attack.hig",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack.med",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack.pri",
+                    "chance": 20
+                },
+                {
                     "id": "foe.umiri.attack0",
                     "chance": 50
                 },
@@ -1289,6 +1300,94 @@
                 }
             ]
         },
+        {
+            "id": "foe.umiri.attack.hig",
+            "label": "Enemy Officer Planning",
+            "startdescription": "She launched a surprise attack on us!",
+            "description": "She launched a surprise attack on us!",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 8
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.med",
+            "label": "Enemy Officer Planning",
+            "startdescription": "She launched a surprise attack on us!",
+            "description": "She launched a surprise attack on us!",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 5
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.pri",
+            "label": "Enemy Officer Planning",
+            "startdescription": "She launched a surprise attack on us!",
+            "description": "She launched a surprise attack on us!",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 2
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+
         {
             "id": "foe.umiri.attack3",
             "label": "Enemy Officer Planning",
@@ -3432,7 +3531,6 @@
 	"label": "A Victory!",
 	"startdescription": "The enemy lies broken at our feet, and before this war is over more enemies will follow. This is a good day; this is merely a drop in the ocean.",
 	"aspects": {
-	    "killfoe": 1,
 	    "fatiguing": 1
 	},
 	"mutations": [
@@ -3441,6 +3539,10 @@
 	    {
 		"id": "produce.wounds.defiance_dead",
 		"additional": true,
+		"chance": 30
+	    },
+	    {
+		"id": "resilient.survived",
 		"chance": 30
 	    },
 	],
@@ -3455,6 +3557,7 @@
 	"label": "A Victory!",
 	"startdescription": "The enemy lies broken at our feet, and before this war is over more enemies will follow. This is a good day; this is merely a drop in the ocean.",
 	"aspects": {
+	    "killfoe": 1,
 	},
 	"mutations": [
 	    {
@@ -3499,10 +3602,6 @@
 		"id": "produce.escape.bloodonhands",
 		"additional": true,
 		"chance": 100
-	    },
-	    {
-		"id": "resilient.survived",
-		"chance": 30
 	    },
 	    {
 		"id": "braced.survived"

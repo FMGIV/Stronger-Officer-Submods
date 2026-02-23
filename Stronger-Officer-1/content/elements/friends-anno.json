@@ -2,20 +2,20 @@
 "elements": [
     {
 	"id": "friend.resilient",
-	"label": "适应力强",
-	"description": "难以彻底除尽。[这一友军受伤后不会直接死亡，而是进入受伤状态，此状态能够自然恢复。]",
+	"label": "Resilient",
+	"description": "Difficult to eliminate completely. [When this friendly unit is wounded, it does not die outright but instead enters a wounded state from which it can naturally recover.]",
 	"isAspect": true,
     },
     {
 	"id": "friend.stronger",
-	"label": "强化",
-	"description": "这些士兵已经被重塑，拥有远超他人的力量。[当友军获得此性相时将清除此前获得的弱化效果，并增强性相。但会在离开当前区域后失去这一性相和额外性相。]",
+	"label": "Reinforced",
+	"description": "These soldiers have been reforged, possessing strength far exceeding others. [When a friendly unit gains this aspect, it clears any previously applied weakening effects and enhances its aspects. However, this aspect and its additional aspects will be lost upon departing the current region.]",
 	"isAspect": true,
     },
     {
 	"id": "friend.lethal",
-	"label": "致命",
-	"description": "此人不留活口。[这一友军必定消灭任何第一个成为其目标的敌军。]",
+	"label": "Lethal",
+	"description": "This one does not leave survivors. [This friendly unit will definitively eliminate any enemy that becomes its first target.]",
 	"isAspect": true,
     },
     {
@@ -28,8 +28,8 @@
 
     {
 	"id": "friend.infantryanno",
-	"label": "盟军步枪兵",
-	"description": "与我的手下并没有什么不同，除了更加老练一些，装备先进一些。",
+	"label": "Allied Rifleman",
+	"description": "Not so different from my own men—just a bit more seasoned, and a bit better equipped.",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -81,8 +81,8 @@
 
     {
 	"id": "friend.scoutsanno",
-	"label": "盟军侦察兵",
-	"description": "英国盟军的耳目，帮助他们的军队掌握战场的动向。",
+	"label": "Allied Scout",
+	"description": "The eyes and ears of the British Allied forces, helping their army keep track of the battlefield situation.",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -136,8 +136,8 @@
     },
     {
 	"id": "friend.scoutsanno.exhausted",
-	"label": "盟军侦察兵（枯竭）",
-	"description": "英国盟军的耳目，帮助他们的军队掌握战场的动向。",
+	"label": "Allied Scout (Exhausted)",
+	"description": "The eyes and ears of the British Allied forces, helping their army keep track of the battlefield situation.",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -194,8 +194,8 @@
     },
     {
 	"id": "friend.scoutsanno.wounded",
-	"label": "盟军侦察兵（负伤）",
-	"description": "[这一友军会随着时间自己修复。]",
+	"label": "Allied Scout (Wounded)",
+	"description": "[This friendly unit will repair itself over time.]",
 	"aspects": {
 	    "friend": 1,
 	    "mortal": 1,
@@ -250,8 +250,8 @@
 
     {
 	"id": "friend.phlogisticant",
-	"label": "盟军燃素灵",
-	"description": "自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。",
+	"label": "Allied Phlogiston-Wraith",
+	"description": "Released from its prison of glass and steel, this malignant spark now devours greedily all that it can touch. Such fierce burning cannot last long—but I do not think it cares.",
 	"aspects": {
 	    "friend": 1,
 	    "otherworldly": 1,
@@ -303,8 +303,8 @@
     },
     {
 	"id": "friend.phlogisticant.dead",
-	"label": "盟军燃素灵（死亡）",
-	"description": "自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。",
+	"label": "Allied Phlogiston-Wraith (Dead)",
+	"description": "Released from its prison of glass and steel, this malignant spark now devours greedily all that it can touch. Such fierce burning cannot last long—but I do not think it cares.",
 	"lifetime": 1,
 	"aspects": {
 		"remnant": 1,
@@ -319,8 +319,8 @@
 
     {
 	"id": "friend.tanksanno",
-	"label": "盟军双足自动步行机",
-	"description": "狰狞的管道热力送到核心。坚实的金属将力量束缚于其中。他们给效忠新王的灵体套了层壳子，便称其为科技的造物。不过他们的力量确实恐怖。",
+	"label": "Allied Bipedal Walker",
+	"description": "Menacing pipes deliver heat to the core. Sturdy metal binds the power within. They put a shell on a spirit loyal to the New King and call it a creation of technology. But their strength is indeed terrifying.",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -373,8 +373,8 @@
     },
     {
 	"id": "friend.tanksanno.damaged",
-	"label": "盟军双足自动步行机（受损）",
-	"description": "[这一友军会随着时间自己修复。]",
+	"label": "Allied Bipedal Walker (Damaged)",
+	"description": "[This friendly unit will repair itself over time.]",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -429,8 +429,8 @@
     },
     {
 	"id": "friend.tanksanno.dead",
-	"label": "盟军双足自动步行机（死亡）",
-	"description": "自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。",
+	"label": "Allied Bipedal Walker (Destroyed)",
+	"description": "Menacing pipes deliver heat to the core. Sturdy metal binds the power within. They put a shell on a spirit loyal to the New King and call it a creation of technology. But their strength is indeed terrifying.",
 	"lifetime": 1,
 	"aspects": {
 		"remnant": 1,
@@ -445,8 +445,8 @@
 
     {
 	"id": "friend.artilleryanno",
-	"label": "盟军光辉引擎",
-	"description": "它看上去像某种固定炮台，尽管它的部分结构似乎过于复杂：玻璃圆筒，卷曲钢条，运输火焰的颤动管道。但那火力何等强大！每当这台机械开火命中其目标，大地将变作玻璃，血肉将化为光辉。别的不谈，新王的玩具至少令人印象深刻。",
+	"label": "Allied Engine of Lights",
+	"description": "It looks like some kind of artillery fixture, though parts of its construction seem too complicated for its own good: cylinders of glass, coils of steel, tubes trembling with fire. But what firepower! Where this machine hits the mark, earth becomes glass and flesh becomes light. The King's toys are impressive, if nothing else.",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -498,8 +498,8 @@
     },
     {
 	"id": "friend.artilleryanno.damaged",
-	"label": "盟军光辉引擎（受损）",
-	"description": "[这一友军会随着时间自己修复。]",
+	"label": "Allied Radiance Engine (Damaged)",
+	"description": "[This friendly unit will repair itself over time.]",
 	"comments": "变成废案了",
 	"aspects": {
 	    "friend": 1,
@@ -553,8 +553,8 @@
     },
     {
 	"id": "friend.artilleryanno.dead",
-	"label": "盟军光辉引擎（死亡）",
-	"description": "自从其被从玻璃与钢铁制成的牢笼中释放后，这团恶意的火花便贪婪地吞噬着一切其所能触碰之物。如此猛烈的燃烧无法持续太久——但我不认为它会在乎。",
+	"label": "Allied Engine of Lights (Dead)",
+	"description": "It looks like some kind of artillery fixture, though parts of its construction seem too complicated for its own good: cylinders of glass, coils of steel, tubes trembling with fire. But what firepower! Where this machine hits the mark, earth becomes glass and flesh becomes light. The King's toys are impressive, if nothing else.",
 	"lifetime": 1,
 	"aspects": {
 		"remnant": 1,
@@ -569,8 +569,8 @@
 
     {
 	"id": "friend.valkyrie3",
-	"label": "“女武神”轰炸机",
-	"description": "如狻猊般翱翔与天，如剑齿兽般撕裂大地，如厄客德纳衍体般坚不可摧。那岛上的不祥之人到底是怎么制造出此种造物，又是怎么掌控如此强大的力量的？！",
+	"label": "'Valkyrie' Bomber",
+	"description": "Soaring through the heavens like a suanni, tearing the earth asunder like a saber-toothed beast, as indestructible as the spawn of Echidna. How does that ill-omened figure on the island manufacture such creations, and how does he command such terrible power?!",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -594,8 +594,8 @@
     },
     {
 	"id": "friend.valkyrie2.exhausted",
-	"label": "“女武神”战斗机（枯竭）",
-	"description": "如狻猊般翱翔与天，如剑齿兽般撕裂大地，如厄客德纳衍体般坚不可摧。那岛上的不祥之人到底是怎么制造出此种造物，又是怎么掌控如此强大的力量的？！",
+	"label": "'Valkyrie' Bomber (Exhausted)",
+	"description": "Soaring through the heavens like a suanni, tearing the earth asunder like a saber-toothed beast, as indestructible as the spawn of Echidna. How does that ill-omened figure on the island manufacture such creations, and how does he command such terrible power?!",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -618,8 +618,8 @@
     },
 	{
 	"id": "friend.valkyrie2",
-	"label": "“女武神”战斗机",
-	"description": "如狻猊般翱翔与天，如剑齿兽般撕裂大地，如厄客德纳衍体般坚不可摧。那岛上的不祥之人到底是怎么制造出此种造物，又是怎么掌控如此强大的力量的？！",
+	"label": "'Valkyrie' Bomber",
+	"description": "Soaring through the heavens like a suanni, tearing the earth asunder like a saber-toothed beast, as indestructible as the spawn of Echidna. How does that ill-omened figure on the island manufacture such creations, and how does he command such terrible power?!",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -643,8 +643,8 @@
     },
     {
 	"id": "friend.valkyrie1.exhausted",
-	"label": "“女武神”战斗机（枯竭）",
-	"description": "如狻猊般翱翔与天，如剑齿兽般撕裂大地，如厄客德纳衍体般坚不可摧。那岛上的不祥之人到底是怎么制造出此种造物，又是怎么掌控如此强大的力量的？！",
+	"label": "'Valkyrie' Bomber (Exhausted)",
+	"description": "Soaring through the heavens like a suanni, tearing the earth asunder like a saber-toothed beast, as indestructible as the spawn of Echidna. How does that ill-omened figure on the island manufacture such creations, and how does he command such terrible power?!",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -667,8 +667,8 @@
     },
 	{
 	"id": "friend.valkyrie1",
-	"label": "“女武神”战斗机",
-	"description": "如狻猊般翱翔与天，如剑齿兽般撕裂大地，如厄客德纳衍体般坚不可摧。那岛上的不祥之人到底是怎么制造出此种造物，又是怎么掌控如此强大的力量的？！",
+	"label": "'Valkyrie' Bomber",
+	"description": "Soaring through the heavens like a suanni, tearing the earth asunder like a saber-toothed beast, as indestructible as the spawn of Echidna. How does that ill-omened figure on the island manufacture such creations, and how does he command such terrible power?!",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -692,8 +692,8 @@
     },
     {
 	"id": "friend.valkyrie.damaged",
-	"label": "“女武神”战斗机（修整中）",
-	"description": "[这一友军会随着时间自己修复。]",
+	"label": "'Valkyrie' Bomber (In Maintenance)",
+	"description": "[This friendly unit will repair itself over time.]",
 	"aspects": {
 	    "friend": 1,
 		"faction.anno": 1,
@@ -800,6 +800,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.scouts.wounded",
 	    "refresh": "friend.scouts",
+	    "refreshally": "friend.scouts",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -971,6 +972,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.infantry.wounded",
 	    "refresh": "friend.infantry",
+	    "refreshally": "friend.infantry",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -1123,6 +1125,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.medics.wounded",
 	    "refresh": "friend.medics",
+	    "refreshally": "friend.medics",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -1294,6 +1297,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.engineers.wounded",
 	    "refresh": "friend.engineers",
+	    "refreshally": "friend.engineers",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -1882,6 +1886,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.militia.wounded",
 	    "refresh": "friend.militia",
+	    "refreshally": "friend.militia",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -2022,6 +2027,7 @@
 	    "killfriend": "friend.corpses",
 	    "makecasualty": "friend.sniper.wounded",
 	    "refresh": "friend.sniper",
+	    "refreshally": "friend.sniper",
 	    "bestronger": [
 		{
 		    "id": "friend.stronger",
@@ -2136,8 +2142,8 @@
 
     {
 	"id": "friend.lion",
-	"label": "狮子",
-	"description": "<i>Panthera leo</i> 在世界各地，这种动物都被视作力量、荣誉、勇气的象征；并被尊为百兽之王与丛林之主——即使狮子并不生活在丛林中！这足以说明狮子的威名正是<i>如此</i>显赫。",
+	"label": "Lion",
+	"description": "<i>Panthera leo.</i> Recognized everywhere as a symbol of strength, honour, and courage; lord of the beasts and king of the jungle - and lions do not even live in jungles! A lion's reputation is just <i>that</i> eminent.",
 	"aspects": {
 	    "mortal": 1,
 	    "friend": 1,
@@ -2154,8 +2160,8 @@
     },
     {
 	"id": "friend.lion.exhausted",
-	"label": "狮子（枯竭）",
-	"description": "<i>Panthera leo</i> 在世界各地，这种动物都被视作力量、荣誉、勇气的象征；并被尊为百兽之王与丛林之主——即使狮子并不生活在丛林中！这足以说明狮子的威名正是<i>如此</i>显赫。",
+	"label": "Lion (Exhausted)",
+	"description": "<i>Panthera leo.</i> Recognized everywhere as a symbol of strength, honour, and courage; lord of the beasts and king of the jungle - and lions do not even live in jungles! A lion's reputation is just <i>that</i> eminent.",
 	"aspects": {
 	    "mortal": 1,
 	    "friend": 1,
@@ -2176,8 +2182,8 @@
     },
     {
 	"id": "friend.tiger",
-	"label": "老虎",
-	"description": "<i>Panthera tigris</i> 平均而言，老虎实际上比狮子更加巨大，也更加强力——但据传说所述，狮子比老虎要先被创造。要是反过来，那狮子匠或许就会被称作“老虎匠”。这名字可没“狮子匠”好听。",
+	"label": "Tiger",
+	"description": "<i>Panthera tigris.</i> Tigers, on average, are actually both bigger and stronger than lions - but lions, legend relates, were made first. If it were the other way around, perhaps he'd be the 'Tigersmith' instead. Hardly as charming.",
 	"aspects": {
 	    "mortal": 1,
 	    "friend": 1,
@@ -2194,8 +2200,8 @@
     },
     {
 	"id": "friend.tiger.exhausted",
-	"label": "老虎（枯竭）",
-	"description": "<i>Panthera tigris</i> 平均而言，老虎实际上比狮子更加巨大，也更加强力——但据传说所述，狮子比老虎要先被创造。要是反过来，那狮子匠或许就会被称作“老虎匠”。这名字可没“狮子匠”好听。",
+	"label": "Tiger (Exhausted)",
+	"description": "<i>Panthera tigris.</i> Tigers, on average, are actually both bigger and stronger than lions - but lions, legend relates, were made first. If it were the other way around, perhaps he'd be the 'Tigersmith' instead. Hardly as charming.",
 	"aspects": {
 	    "mortal": 1,
 	    "friend": 1,

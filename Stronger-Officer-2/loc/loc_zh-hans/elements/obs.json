@@ -2,8 +2,8 @@
 "elements": [
     {
 	"id": "side.umiri.withanno",
-	"label": "Secondary Objective: Raid the Enemy Command Post",
-	"description": "The war between the Remaker and Hailing will not simply cease; without outside interference, they would likely never stop. Perhaps an attack from the flank can give my ally an opening. Then, when the battle ends, she might be willing to have a proper conversation with me. [You can obtain this card again by dreaming on <i>Intent: The Remaker and the Iron Rose</i>.]",
+	"label": "次要目标：突袭敌军指挥部",
+	"description": "重塑者与海铃的战争不过轻易的终止，如果没有外人的干涉，他们大概不会轻易结束。也许一次从侧翼的进攻可以帮助我的盟友找到机会。这样，也许战斗结束之后，她会有兴趣和我好好聊聊。[你可以通过将<i>意图：重塑者与铁玫瑰</i>入梦来重复获得这张卡牌]",
 	"inherits": "side.template",
 	"lifetime": 0,
 	"unique": true,
@@ -42,8 +42,8 @@
     },
     {
 	"id": "side.umiri.withanno.exhausted",
-	"label": "Secondary Objective: Raid the Enemy Command Post",
-	"description": "The war between the Remaker and Hailing will not simply cease; without outside interference, they would likely never stop. Perhaps an attack from the flank can give my ally an opening. Then, when the battle ends, she might be willing to have a proper conversation with me. [You can obtain this card again by dreaming on <i>Intent: The Remaker and the Iron Rose</i>.]",
+	"label": "次要目标：突袭敌军指挥部",
+	"description": "重塑者与海铃的战争不过轻易的终止，如果没有外人的干涉，他们大概不会轻易结束。也许一次从侧翼的进攻可以帮助我的盟友找到机会。这样，也许战斗结束之后，她会有兴趣和我好好聊聊。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -57,8 +57,8 @@
     },
     {
 	"id": "main.rout",
-	"label": "Main Objective: Rout",
-	"description": "Our aim is simple: utter annihilation of the enemy. Kill them all.",
+	"label": "主要目标：击溃",
+	"description": "我们的目标非常简单：将敌人完全歼灭。杀光他们。",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -89,8 +89,8 @@
     },
     {
 	"id": "main.capture",
-	"label": "Main Objective: Capture",
-	"description": "The enemy has taken up position here - here, in our homes and our streets. Drive them out and reclaim this city.",
+	"label": "主要目标：占领",
+	"description": "敌军已在此就位——在我们的家与我们的街上就位。将他们驱赶出去，夺回这座城市。",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -121,8 +121,8 @@
     },
     {
 	"id": "main.star",
-	"label": "Main Objective: A Fallen Star",
-	"description": "Two armies scatter to the wind, and now we may pursue my true target. I have never fought a star before. It might kill me. But I have also never been killed before, either, so who is to say how it might go?",
+	"label": "主要目标：坠落之星",
+	"description": "两支军队现已化为乌有，现在我们便能够追寻真正的目标。我从未与星战斗过。它或许会杀死我。但我也从未被杀死过，所以接下来的走向又有谁说得准呢？",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -154,8 +154,8 @@
     },
     {
 	"id": "side.rescuepartisans",
-	"label": "Side Objective: Rescue Partisans",
-	"description": "A group of our comrades is pinned down by the enemy! They'll be lost to us if we do not intervene - up, and to arms! [A chance to obtain new Allies.]",
+	"label": "次要目标：救援游击队",
+	"description": "一批我们的同伴被敌军锁定了！若我们不加以介入我们就会失去这些友军——都起来，拿好武器！[一个获得新的友军的机会。]",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -187,8 +187,8 @@
     },
    {
 	"id": "side.spacemaze",
-	"label": "Cleft Reality",
-	"description": "Space folds and ruptures. One step could carry you farther than the eye might see; coordinated movement becomes impossible. We are hemmed in by an invisible labyrinth - but all labyrinths have a heart. If we find the heart of this one, will we be free? [While this card exists, scouting at the Current Warzone will usually fail.]",
+	"label": "现实分裂",
+	"description": "空间在此处折叠，在彼处开裂。仅是向前一步，就可能使你前进到目所能及的范围外；协调一致的行进已变为不可能。我们被一座隐形的迷宫所包围——但任何迷宫都有其心脏。若我们寻得这一迷宫的心脏，我们会被从中解放吗？[只要此卡牌存在，侦查当前战区的行动就大概率会失败。]",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -220,8 +220,8 @@
     },
     {
 	"id": "side.wilhelm",
-	"label": "A Skirmish on the Outskirts?",
-	"description": "A tremendous clamour echoes in the distance, metal and stone crying out like the collapse of a hundred churches. Smoke billows on the horizon. A battle, perhaps - but it would take at least a small army to produce destruction of such an extent. What waits over there?",
+	"label": "城郊的冲突？",
+	"description": "一声巨大的喧嚣在远处回响，金属与石头发出如数百座教堂崩塌般的巨响。烟雾在地平线翻腾。或许是一场战斗——但这破坏至少需要一小支军队才能做到。究竟有什么在那里等着？",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -254,8 +254,8 @@
     },
     {
 	"id": "main.rome.west",
-	"label": "Main Objective: Western Rome",
-	"description": "German barricades loom in Trastevere; German tanks prowl the perimeter of the Vatican. There are too many <i>fascisti</i> west of the Tiber for my liking - but they do not yet know they have come here to die. I will enlighten them.",
+	"label": "主要目标：罗马西部",
+	"description": "台伯河岸区遍布德军的封锁；德军坦克在梵蒂冈周边逡巡。对我来说，在台伯河西岸的<i>法西斯分子</i>太多了——但他们尚不知晓他们是来此处送死的。我将教导他们。",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -288,8 +288,8 @@
     },
     {
 	"id": "main.rome.central",
-	"label": "Main Objective: Central Rome",
-	"description": "Here the ghosts of empire are most visible, but the freshest hauntings are those of the <i>fascisti.</i> The emperor's soldiers once marched these paths - <i>I</i> once marched these paths, and I wore chains when I did. But today, I am free and I am mighty, and no soldier with whip or rifle will make me yield again. Today, I am the only strength worthy of fear.",
+	"label": "主要目标：罗马中部",
+	"description": "在此处，帝国的幽灵最为可见；但最新出现的鬼魅是那些<i>法西斯分子</i>。皇帝的士兵曾在这些道路上行军——<i>我</i>曾在这些道路上行军，而那时，当我这么做的时候，我还身缠锁链。但现在，我自由，且我强大，已没有持鞭或持枪的士兵能使我动摇。今天，我就是这个地方唯一值得被畏惧的力量。",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -322,8 +322,8 @@
     },
     {
 	"id": "main.rome.east",
-	"label": "Main Objective: Eastern Rome",
-	"description": "The hills on the eastern stretches of Rome teem with fascist guns: <i>Esquilino, Viminale, Quirinale.</i> Buildings rise and fall with the slope of the land - a difficult battlefield; a maze, fighting street-to-street here. But this is our home, and we know the ways through this maze better than those who came as invaders. Yes - these <i>fascisti</i> will die far from home.",
+	"label": "主要目标：罗马东部",
+	"description": "蔓延在罗马东侧的山丘上充满了法西斯分子的武器：<i>埃斯基林山</i>如此；<i>维米纳莱山</i>亦如此；<i>奎里纳莱山</i>也不例外。建筑依山坡地势而起伏——一个难对付的战场，或者说，一座迷宫。我们需要一条街接一条街地战斗。但这里是我们的家，而我们比那些入侵者更加熟悉这迷宫的每一条道路。是的——这些<i>法西斯分子</i>将会远死他乡。",
 	"inherits": "main.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -356,8 +356,8 @@
     },
     {
 	"id": "side.velletri",
-	"label": "Università Velletri",
-	"description": "The university's mycology department was frequented by travelling scholars: Germans; Japanese; sometimes Peruvians and sometimes Chinese. Now with the war on, most of the campus has become a barracks for occupying fascist soldiers - but they avoid the mycology building like plague. Someone must be in there, though, for there are always faces in the windows at night.",
+	"label": "韦莱特里大学",
+	"description": "这所大学的真菌学学部常有外来学者出入：有德国人；有日本人；有时还有秘鲁人和中国人。现在，因为战争，这所大学的大部分建筑都已变为法西斯士兵的营房——但他们视真菌学学部如瘟疫。那里必定有着什么人，因为那里的窗户在夜里总是有脸出现。",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -394,8 +394,8 @@
     },
     {
 	"id": "side.ortucchio",
-	"label": "Palazzo Duffari",
-	"description": "Forty years ago, a troupe of foreign agents tried to exercise their jurisdiction over the Duffoures of Ortucchio - it didn't go well. A third of them died in the shootout that transpired when the family's most infamous son decided to resort to force; another third died in the aftermath, when a compromised agent infected his comrades with a sinister disease. In the end, the <i>palazzo</i> was left in no state for anyone to inhabit. Those who still live in Ortucchio dare not set foot there - only ghosts walk those grounds, they say. I suspect worse things have settled in those ruins.",
+	"label": "杜法里宫",
+	"description": "四十年前，一群外国代理人试图向奥尔图基奥的杜弗尔家族行使其管辖权——这并不顺利。他们中三分之一在这家族最为恶名昭彰的末子决定诉诸武力时死于发出的枪弹；另外三分之一在余波中死去，因一个缺乏抵抗力的代理人将一种不详的恶疾传染给了他的同伴。最终，这座<i>宫殿</i>已变得不适合任何人居住。那些仍居住在奥尔图基奥的人不敢踏足那里——他们说只有幽灵在那里行走、我怀疑在那废墟里定居的是更加糟糕之物。",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -436,8 +436,8 @@
     },
     {
 	"id": "side.benevento",
-	"label": "Witching Tree",
-	"description": "The <i>janare</i> of Benevento would gather on the banks of the Sabato under an ancient walnut tree, riding frenzied on horseback and devouring grisly offerings. Their power was wild; their appetites strange. So it was that the villagers blamed them for the misshapen newborns, and so it was that St. Barbatus tore the tree out by its roots in the name of the Church. Still, on mornings after the Sabbath, the locals sometimes find their horses with plaited manes, frothing from exhaustion.",
+	"label": "巫术之树",
+	"description": "贝内文托的<i>嘉娜拉女巫</i>会聚集在萨巴多河岸边一棵古老的胡桃树下，肆意纵马狂奔并吞食可怕的供品。她们拥有狂野的力量与奇怪的食欲。所以村民们将畸形儿的出生怪罪于她们，也正是因此，圣巴巴托斯以教会之名将这棵树连根拔起。即便如此，在安息日的早晨，当地人有时仍会发现他们的马的鬃毛被编织成辫，并因疲惫而吐沫。",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -474,8 +474,8 @@
     },
     {
 	"id": "side.campobasso",
-	"label": "Castello Monforte",
-	"description": "It's not as large as the word 'castello' might imply, but this hilltop fort has proved devilishly defensible all the same. Any attackers who try to come up the slope of the hill are soundly repelled - which is why for this attack, we will be coming up from under it. 'I could have dug this all by myself when I was younger,' Orsolina says. 'I could have <i>taken this fort</i> all by myself when I was younger. We all age, eh?'",
+	"label": "蒙福特城堡",
+	"description": "它并不像“城堡”一词所象征的那么庞大，但这座山顶上的要塞已被证明同样极其易守难攻——这也是我们这一次进攻选择从下方进入的原因。“如果我年轻些，我可以独自一人挖开这条隧道，”欧索丽娜说。“如果我再年轻些，我可以独自一人<i>攻下这座要塞</i>。人人都会变老，不是吗？”",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -521,8 +521,8 @@
     },
     {
 	"id": "side.termoli",
-	"label": "Giudetti & Sons Ltd.",
-	"description": "Giorgiou's burglar - some night-winged, blood-beaked Crow-thing - has made a nest in this ruined dockside warehouse. Its pilfered treasures are no doubt nestled away within, too. 'My associates won't go near - they're superstitous, or cowardly. Me? I'm... <i>nominally courageous</i>, but courage is a thin shield between death and oneself. You're the true fighter here, ergo I think you should be first through the door.'",
+	"label": "朱代特父子有限公司",
+	"description": "乔吉奥的窃贼——长有如夜色般的双翼与如鲜血般的喙的鸦状生物——在这间码头仓库的废墟里筑巢。被其窃来的宝物毫无疑问也都被安置在那里。“我的同僚不敢靠近那里——他们有的过于迷信，有的过于胆怯。至于我？我…… <i>名义上是勇敢的</i>，但勇气只能在你与死亡间撑起一道薄弱的屏障。你才是这里真正的战士，因此我想你应该第一个跨进那扇门。”",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -559,8 +559,8 @@
     },
     {
 	"id": "side.ortona",
-	"label": "Unseen Encampment",
-	"description": "Soldiers of the Unseen Legion are making exodus out of Rome, carrying something precious away from the destruction about to befall the city. I don't know what it is, but when I sleep, I can see it in the darkness of my dreams: blinding, searing, shattered.",
+	"label": "不可见营地",
+	"description": "不可见军团的士兵正大批离开罗马，以护送某件珍贵之物远离即将降临那座城市的破坏。我不知道那具体是什么，但当我入眠时，我能够在我梦境的黑暗中看见它：炫目、灼热、且早已破碎。",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -593,8 +593,8 @@
     },
     {
 	"id": "side.lorenzo",
-	"label": "Side Objective: Lorenzo",
-	"description": "Parts of the <i>Ospedale di Santa Marta</i> have been rendered unsafe thanks to the bombing and gunfighting. Still, behind the wreckage are facilities we are in need of, and could still use. Clearing the debris will be work, but Lorenzo attests that the true danger lies in the bowels of the hospital, where something large and unfriendly has decided to make its nest.",
+	"label": "次要目标：洛伦佐",
+	"description": "<i>圣玛利亚医院</i>的一部分因轰炸与交火变得不再安全。不过在那残骸之后是我们仍能使用且急需的设施。清理残骸是一件费事的工作，但洛伦佐表明真正危险的是医院深处，一个巨大且不友善的生物将那里作为巢穴。",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -626,8 +626,8 @@
     },
     {
 	"id": "side.fiorenza",
-	"label": "Side Objective: Fiorenza",
-	"description": "A band of partisan fighters had attempted to rescue some the locals caught in the zone of engagement. The attempt went badly, and now only twleve partisans remain to protect dozens of civilians: students, children, the old. Holed up in <i>Duomo di San Geraldo</i>, they will only last so long. Fiorenza knows almost every one of those souls. She has begged for assistance in staging her own rescue. Will we be the first ear to listen?",
+	"label": "次要目标：菲奥伦扎",
+	"description": "一队游击队战士曾尝试救援一些被困在交战区的当地平民。那次行动很糟糕，现在只有十二名游击队战士在那里，保护比他们多得多的平民，其中不乏学生、孩童与老人。躲藏在<i>圣杰拉尔多大教堂</i>内的这些人坚持不了多久。菲奥伦扎认识他们中几乎每个人。她请求我协助她展开救援。我们会是首个听她请求的人吗？",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -659,8 +659,8 @@
     },
     {
 	"id": "side.padre",
-	"label": "Side Objective: Padre Ruggiero",
-	"description": "Napoli was bombed mercilessly by Allied planes in an attempt to smoke the occupiers out. Too many innocents have perished in the barrages, and it is not uncommon for those wrongfully slain to walk again where the bombing was worst. Enraged? Confused? Unaware? 'It does not matter,' the priest explains. 'God charges us to ease their suffering and permit their passing.'",
+	"label": "次要目标：鲁杰罗神父",
+	"description": "为将占领者赶出城市，同盟国空军对那不勒斯进行了无慈悲的轰炸。太多无辜者因此而死，而被错杀之人重新行于世上的案例并不罕见。在轰炸最为集中且猛烈的地点，这样的亡魂最多。愤怒？困惑？毫无察觉？“这些都不重要，”教士解释道、“神赋予了我们职责。平息其痛苦，许可其离开的职责。”",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -692,8 +692,8 @@
     },
     {
 	"id": "side.daria",
-	"label": "Side Objective: Daria",
-	"description": "For a long time, Daria has been working hard on scrubbing every trace of herself from official record. She had thought the war finished the job for her, but apparently a reserve of government paperwork has been moved to this building by withdrawing fascist elements. 'That part of the city is still under enemy control,' Daria says. 'And the building itself is a good perch for any <i>cecchino</i> worth his salt. But if we move quietly, we should all be able to leave with our heads.'",
+	"label": "次要目标：达莉亚",
+	"description": "很长一段时间内，达莉亚致力于从官方记录中抹消有关她的一切痕迹。她曾认为这项工作已经完成，但显然一份政府文件的备份被撤退中的法西斯军队移动到了这栋建筑内。“那片城区仍处于敌军控制之下，”达莉亚说。“并且那栋建筑本身对任何足够熟练的<i>狙击手</i>而言都是绝佳的狙击位置。但倘若我们安静地前进，我们应该都能保住脑袋。”",
 	"inherits": "side.template",
 	"xtriggers": {
 	    "careeradvancement": [
@@ -726,8 +726,8 @@
 	
     {
 	"id": "main.rout.exhausted",
-	"label": "Main Objective: Rout",
-	"description": "Our aim is simple: utter annihilation of the enemy. Kill them all.",
+	"label": "主要目标：击溃",
+	"description": "我们的目标非常简单：将敌人完全歼灭。杀光他们。",
 	"inherits": "main.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -739,8 +739,8 @@
     },
     {
 	"id": "main.capture.exhausted",
-	"label": "Main Objective: Capture",
-	"description": "The enemy has taken up position here - here, in our homes and our streets. Drive them out and reclaim this city.",
+	"label": "主要目标：占领",
+	"description": "敌军已在此就位——在我们的家与我们的街上就位。将他们驱赶出去，夺回这座城市。",
 	"inherits": "main.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -752,8 +752,8 @@
     },
     {
 	"id": "main.star.exhausted",
-	"label": "Main Objective: A Fallen Star",
-	"description": "Two armies scatter to the wind, and now we may pursue my true target. I have never fought a star before. It might kill me. But I have also never been killed before, either, so who is to say how it might go?",
+	"label": "主要目标：坠落之星",
+	"description": "两支军队现已化为乌有，现在我们便能够追寻真正的目标。我从未与星战斗过。它或许会杀死我。但我也从未被杀死过，所以接下来的走向又有谁说得准呢？",
 	"inherits": "main.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -765,8 +765,8 @@
     },
     {
 	"id": "side.rescuepartisans.exhausted",
-	"label": "Side Objective: Rescue Partisans",
-	"description": "A group of our comrades is pinned down by the enemy! They'll be lost to us if we do not intervene - up, and to arms! [A chance to obtain new Allies.]",
+	"label": "次要目标：救援游击队",
+	"description": "一批我们的同伴被敌军锁定了！若我们不加以介入我们就会失去这些友军——都起来，拿好武器！[一个获得新的友军的机会。]",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -778,8 +778,8 @@
     },
    {
 	"id": "side.spacemaze.exhausted",
-	"label": "Cleft Reality",
-	"description": "Space folds and ruptures. One step could carry you farther than the eye might see; coordinated movement becomes impossible. We are hemmed in by an invisible labyrinth - but all labyrinths have a heart. If we find the heart of this one, will we be free? [While this card exists, scouting at the Current Warzone will usually fail.]",
+	"label": "现实分裂",
+	"description": "空间在此处折叠，在彼处开裂。仅是向前一步，就可能使你前进到目所能及的范围外；协调一致的行进已变为不可能。我们被一座隐形的迷宫所包围——但任何迷宫都有其心脏。若我们寻得这一迷宫的心脏，我们会被从中解放吗？[只要此卡牌存在，侦查当前战区的行动就大概率会失败。]",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -792,8 +792,8 @@
     },
     {
 	"id": "side.wilhelm.exhausted",
-	"label": "A Skirmish on the Outskirts?",
-	"description": "A tremendous clamour echoes in the distance, metal and stone crying out like the collapse of a hundred churches. Smoke billows on the horizon. A battle, perhaps - but it would take at least a small army to produce destruction of such an extent. What waits over there?",
+	"label": "城郊的冲突？",
+	"description": "一声巨大的喧嚣在远处回响，金属与石头发出如数百座教堂崩塌般的巨响。烟雾在地平线翻腾。或许是一场战斗——但这破坏至少需要一小支军队才能做到。究竟有什么在那里等着？",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -806,8 +806,8 @@
     },
     {
 	"id": "main.rome.west.exhausted",
-	"label": "Main Objective: Western Rome",
-	"description": "German barricades loom in Trastevere; German tanks prowl the perimeter of the Vatican. There are too many <i>fascisti</i> west of the Tiber for my liking - but they do not yet know they have come here to die. I will enlighten them.",
+	"label": "主要目标：罗马西部",
+	"description": "台伯河岸区遍布德军的封锁；德军坦克在梵蒂冈周边逡巡。对我来说，在台伯河西岸的<i>法西斯分子</i>太多了——但他们尚不知晓他们是来此处送死的。我将教导他们。",
 	"inherits": "main.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -820,8 +820,8 @@
     },
     {
 	"id": "main.rome.central.exhausted",
-	"label": "Main Objective: Central Rome",
-	"description": "Here the ghosts of empire are most visible, but the freshest hauntings are those of the <i>fascisti.</i> The emperor's soldiers once marched these paths - <i>I</i> once marched these paths, and I wore chains when I did. But today, I am free and I am mighty, and no soldier with whip or rifle will make me yield again. Today, I am the only strength worthy of fear.",
+	"label": "主要目标：罗马中部",
+	"description": "在此处，帝国的幽灵最为可见；但最新出现的鬼魅是那些<i>法西斯分子</i>。皇帝的士兵曾在这些道路上行军——<i>我</i>曾在这些道路上行军，而那时，当我这么做的时候，我还身缠锁链。但现在，我自由，且我强大，已没有持鞭或持枪的士兵能使我动摇。今天，我就是这个地方唯一值得被畏惧的力量。",
 	"inherits": "main.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -834,8 +834,8 @@
     },
     {
 	"id": "main.rome.east.exhausted",
-	"label": "Main Objective: Eastern Rome",
-	"description": "The hills on the eastern stretches of Rome teem with fascist guns: <i>Esquilino, Viminale, Quirinale.</i> Buildings rise and fall with the slope of the land - a difficult battlefield; a maze, fighting street-to-street here. But this is our home, and we know the ways through this maze better than those who came as invaders. Yes - these <i>fascisti</i> will die far from home.",
+	"label": "主要目标：罗马东部",
+	"description": "蔓延在罗马东侧的山丘上充满了法西斯分子的武器：<i>埃斯基林山</i>如此；<i>维米纳莱山</i>亦如此；<i>奎里纳莱山</i>也不例外。建筑依山坡地势而起伏——一个难对付的战场，或者说，一座迷宫。我们需要一条街接一条街地战斗。但这里是我们的家，而我们比那些入侵者更加熟悉这迷宫的每一条道路。是的——这些<i>法西斯分子</i>将会远死他乡。",
 	"inherits": "main.rome.east",
     "lifetime": 120,
     "resaturate": true,
@@ -848,8 +848,8 @@
     },
     {
 	"id": "side.velletri.exhausted",
-	"label": "Università Velletri",
-	"description": "The university's mycology department was frequented by travelling scholars: Germans; Japanese; sometimes Peruvians and sometimes Chinese. Now with the war on, most of the campus has become a barracks for occupying fascist soldiers - but they avoid the mycology building like plague. Someone must be in there, though, for there are always faces in the windows at night.",
+	"label": "韦莱特里大学",
+	"description": "这所大学的真菌学学部常有外来学者出入：有德国人；有日本人；有时还有秘鲁人和中国人。现在，因为战争，这所大学的大部分建筑都已变为法西斯士兵的营房——但他们视真菌学学部如瘟疫。那里必定有着什么人，因为那里的窗户在夜里总是有脸出现。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -862,8 +862,8 @@
     },
     {
 	"id": "side.ortucchio.exhausted",
-	"label": "Palazzo Duffari",
-	"description": "Forty years ago, a troupe of foreign agents tried to exercise their jurisdiction over the Duffoures of Ortucchio - it didn't go well. A third of them died in the shootout that transpired when the family's most infamous son decided to resort to force; another third died in the aftermath, when a compromised agent infected his comrades with a sinister disease. In the end, the <i>palazzo</i> was left in no state for anyone to inhabit. Those who still live in Ortucchio dare not set foot there - only ghosts walk those grounds, they say. I suspect worse things have settled in those ruins.",
+	"label": "杜法里宫",
+	"description": "四十年前，一群外国代理人试图向奥尔图基奥的杜弗尔家族行使其管辖权——这并不顺利。他们中三分之一在这家族最为恶名昭彰的末子决定诉诸武力时死于发出的枪弹；另外三分之一在余波中死去，因一个缺乏抵抗力的代理人将一种不详的恶疾传染给了他的同伴。最终，这座<i>宫殿</i>已变得不适合任何人居住。那些仍居住在奥尔图基奥的人不敢踏足那里——他们说只有幽灵在那里行走、我怀疑在那废墟里定居的是更加糟糕之物。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -876,8 +876,8 @@
     },
     {
 	"id": "side.benevento.exhausted",
-	"label": "Witching Tree",
-	"description": "The <i>janare</i> of Benevento would gather on the banks of the Sabato under an ancient walnut tree, riding frenzied on horseback and devouring grisly offerings. Their power was wild; their appetites strange. So it was that the villagers blamed them for the misshapen newborns, and so it was that St. Barbatus tore the tree out by its roots in the name of the Church. Still, on mornings after the Sabbath, the locals sometimes find their horses with plaited manes, frothing from exhaustion.",
+	"label": "巫术之树",
+	"description": "贝内文托的<i>嘉娜拉女巫</i>会聚集在萨巴多河岸边一棵古老的胡桃树下，肆意纵马狂奔并吞食可怕的供品。她们拥有狂野的力量与奇怪的食欲。所以村民们将畸形儿的出生怪罪于她们，也正是因此，圣巴巴托斯以教会之名将这棵树连根拔起。即便如此，在安息日的早晨，当地人有时仍会发现他们的马的鬃毛被编织成辫，并因疲惫而吐沫。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -890,8 +890,8 @@
     },
     {
 	"id": "side.campobasso.exhausted",
-	"label": "Castello Monforte",
-	"description": "It's not as large as the word 'castello' might imply, but this hilltop fort has proved devilishly defensible all the same. Any attackers who try to come up the slope of the hill are soundly repelled - which is why for this attack, we will be coming up from under it. 'I could have dug this all by myself when I was younger,' Orsolina says. 'I could have <i>taken this fort</i> all by myself when I was younger. We all age, eh?'",
+	"label": "蒙福特城堡",
+	"description": "它并不像“城堡”一词所象征的那么庞大，但这座山顶上的要塞已被证明同样极其易守难攻——这也是我们这一次进攻选择从下方进入的原因。“如果我年轻些，我可以独自一人挖开这条隧道，”欧索丽娜说。“如果我再年轻些，我可以独自一人<i>攻下这座要塞</i>。人人都会变老，不是吗？”",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -904,8 +904,8 @@
     },
     {
 	"id": "side.termoli.exhausted",
-	"label": "Giudetti & Sons Ltd.",
-	"description": "Giorgiou's burglar - some night-winged, blood-beaked Crow-thing - has made a nest in this ruined dockside warehouse. Its pilfered treasures are no doubt nestled away within, too. 'My associates won't go near - they're superstitous, or cowardly. Me? I'm... <i>nominally courageous</i>, but courage is a thin shield between death and oneself. You're the true fighter here, ergo I think you should be first through the door.'",
+	"label": "朱代特父子有限公司",
+	"description": "乔吉奥的窃贼——长有如夜色般的双翼与如鲜血般的喙的鸦状生物——在这间码头仓库的废墟里筑巢。被其窃来的宝物毫无疑问也都被安置在那里。“我的同僚不敢靠近那里——他们有的过于迷信，有的过于胆怯。至于我？我…… <i>名义上是勇敢的</i>，但勇气只能在你与死亡间撑起一道薄弱的屏障。你才是这里真正的战士，因此我想你应该第一个跨进那扇门。”",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -918,8 +918,8 @@
     },
     {
 	"id": "side.ortona.exhausted",
-	"label": "Unseen Encampment",
-	"description": "Soldiers of the Unseen Legion are making exodus out of Rome, carrying something precious away from the destruction about to befall the city. I don't know what it is, but when I sleep, I can see it in the darkness of my dreams: blinding, searing, shattered.",
+	"label": "不可见营地",
+	"description": "不可见军团的士兵正大批离开罗马，以护送某件珍贵之物远离即将降临那座城市的破坏。我不知道那具体是什么，但当我入眠时，我能够在我梦境的黑暗中看见它：炫目、灼热、且早已破碎。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -932,8 +932,8 @@
     },
     {
 	"id": "side.lorenzo.exhausted",
-	"label": "Side Objective: Lorenzo",
-	"description": "Parts of the <i>Ospedale di Santa Marta</i> have been rendered unsafe thanks to the bombing and gunfighting. Still, behind the wreckage are facilities we are in need of, and could still use. Clearing the debris will be work, but Lorenzo attests that the true danger lies in the bowels of the hospital, where something large and unfriendly has decided to make its nest.",
+	"label": "次要目标：洛伦佐",
+	"description": "<i>圣玛利亚医院</i>的一部分因轰炸与交火变得不再安全。不过在那残骸之后是我们仍能使用且急需的设施。清理残骸是一件费事的工作，但洛伦佐表明真正危险的是医院深处，一个巨大且不友善的生物将那里作为巢穴。",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -946,8 +946,8 @@
     },
     {
 	"id": "side.fiorenza.exhausted",
-	"label": "Side Objective: Fiorenza",
-	"description": "A band of partisan fighters had attempted to rescue some the locals caught in the zone of engagement. The attempt went badly, and now only twleve partisans remain to protect dozens of civilians: students, children, the old. Holed up in <i>Duomo di San Geraldo</i>, they will only last so long. Fiorenza knows almost every one of those souls. She has begged for assistance in staging her own rescue. Will we be the first ear to listen?",
+	"label": "次要目标：菲奥伦扎",
+	"description": "一队游击队战士曾尝试救援一些被困在交战区的当地平民。那次行动很糟糕，现在只有十二名游击队战士在那里，保护比他们多得多的平民，其中不乏学生、孩童与老人。躲藏在<i>圣杰拉尔多大教堂</i>内的这些人坚持不了多久。菲奥伦扎认识他们中几乎每个人。她请求我协助她展开救援。我们会是首个听她请求的人吗？",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -960,8 +960,8 @@
     },
     {
 	"id": "side.padre.exhausted",
-	"label": "Side Objective: Padre Ruggiero",
-	"description": "Napoli was bombed mercilessly by Allied planes in an attempt to smoke the occupiers out. Too many innocents have perished in the barrages, and it is not uncommon for those wrongfully slain to walk again where the bombing was worst. Enraged? Confused? Unaware? 'It does not matter,' the priest explains. 'God charges us to ease their suffering and permit their passing.'",
+	"label": "次要目标：鲁杰罗神父",
+	"description": "为将占领者赶出城市，同盟国空军对那不勒斯进行了无慈悲的轰炸。太多无辜者因此而死，而被错杀之人重新行于世上的案例并不罕见。在轰炸最为集中且猛烈的地点，这样的亡魂最多。愤怒？困惑？毫无察觉？“这些都不重要，”教士解释道、“神赋予了我们职责。平息其痛苦，许可其离开的职责。”",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,
@@ -974,8 +974,8 @@
     },
     {
 	"id": "side.daria.exhausted",
-	"label": "Side Objective: Daria",
-	"description": "For a long time, Daria has been working hard on scrubbing every trace of herself from official record. She had thought the war finished the job for her, but apparently a reserve of government paperwork has been moved to this building by withdrawing fascist elements. 'That part of the city is still under enemy control,' Daria says. 'And the building itself is a good perch for any <i>cecchino</i> worth his salt. But if we move quietly, we should all be able to leave with our heads.'",
+	"label": "次要目标：达莉亚",
+	"description": "很长一段时间内，达莉亚致力于从官方记录中抹消有关她的一切痕迹。她曾认为这项工作已经完成，但显然一份政府文件的备份被撤退中的法西斯军队移动到了这栋建筑内。“那片城区仍处于敌军控制之下，”达莉亚说。“并且那栋建筑本身对任何足够熟练的<i>狙击手</i>而言都是绝佳的狙击位置。但倘若我们安静地前进，我们应该都能保住脑袋。”",
 	"inherits": "side.exhausted",
     "lifetime": 120,
     "resaturate": true,

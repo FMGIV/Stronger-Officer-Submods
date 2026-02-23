@@ -2,7 +2,7 @@
     "decks": [
         {
             "id": "comeanno.tanks",
-            "label": "Phlogiston-Wraith and Walker Unit",
+            "label": "燃灵加自动机部队",
             "description": ".",
             "spec": [
                 "husk",
@@ -17,7 +17,7 @@
         },
         {
             "id": "comeanno.infantryanno",
-            "label": "Infantry and Scout Unit",
+            "label": "步兵加侦查部队",
             "description": ".",
             "spec": [
                 "husk",
@@ -34,7 +34,7 @@
         },
         {
             "id": "comeanno.infantry",
-            "label": "Infantry and Scout Unit Coming",
+            "label": "步兵加侦查部队",
             "description": ".",
             "spec": [
                 "husk",
@@ -51,7 +51,7 @@
         },
         {
             "id": "comeanno.bombers",
-            "label": "Artillery, Aircraft, and Tanks",
+            "label": "火炮和飞机和坦克",
             "description": ".",
             "spec": [
                 "husk",
@@ -66,6 +66,40 @@
                 "friend.tanks",
                 "friend.tanks",
                 "friend.tanks",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+
+        {
+            "id": "comeanno.manhunters",
+            "label": "人类猎手部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.manhunters.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.artillery",
+            "label": "火炮",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.artillery.hidden",
+            ],
+            "defaultcard": "husk",
+            "shuffleAfterDraw": true
+        },
+        {
+            "id": "comeanno.kommando",
+            "label": "突击部队",
+            "description": ".",
+            "spec": [
+                "husk",
+                "foe.kommando.hidden",
             ],
             "defaultcard": "husk",
             "shuffleAfterDraw": true

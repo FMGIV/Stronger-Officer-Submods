@@ -3,8 +3,8 @@
     {
 	"id": "ss.coming.first",
 	"actionid": "reinforcements.ss",
-	"label": "New Disruptor!",
-	"startdescription": "A falling star tears the sky asunder, trailing a blazing ribbon of light down to earth. Its searing path draws the Black Eagle's attention. Now, the Eagle's talons swarm forth, eager and hungry, pouring into this fated battlefield.",
+	"label": "新的搅局者！",
+	"startdescription": "坠落的星辰撕裂天穹，曳着炽烈的光带坠向大地。灼目的轨迹引来黑鹰的注目。而今，鹰之爪牙蜂拥而至，急切而饥渴地涌入这命定的战场。",
 	"extantreqs": {
 	    "strife.tracker": 3,
 		"craterfield.here": 1
@@ -32,8 +32,8 @@
     {
 	"id": "ss.coming",
 	"actionid": "reinforcements.ss",
-	"label": "New Disruptor!",
-	"startdescription": "A falling star tears the sky asunder, trailing a blazing ribbon of light down to earth. Its searing path draws the Black Eagle's attention. Now, the Eagle's talons swarm forth, eager and hungry, pouring into this fated battlefield.",
+	"label": "新的搅局者！",
+	"startdescription": "坠落的星辰撕裂天穹，曳着炽烈的光带坠向大地。灼目的轨迹引来黑鹰的注目。而今，鹰之爪牙蜂拥而至，急切而饥渴地涌入这命定的战场。",
 	"effects": {
 	},
 	"internaldeck": {
@@ -83,8 +83,8 @@
     {
 	"id": "ss.circle.first",
 	"actionid": "action.ss",
-	"label": "Index-Arcana Awaits Action",
-	"startdescription": "The forces of the Index-Arcana are calibrating their devices. They await an order, a signal, an opportunity that will bring them victory.",
+	"label": "索隐会等待行动",
+	"startdescription": "索隐会的部队们正在校准他们的装置，他们在等待一个命令，一个信号，一个能为他们带来胜利的契机。",
 	"extantreqs": {
 	    "clockwork.mark": 1
 	},
@@ -98,8 +98,8 @@
     {
 	"id": "ss.cycle",
 	"actionid": "action.ss",
-	"label": "Index-Arcana Awaits Action",
-	"startdescription": "The forces of the Index-Arcana are calibrating their devices. They await an order, a signal, an opportunity that will bring them victory.",
+	"label": "索隐会等待行动",
+	"startdescription": "索隐会的部队们正在校准他们的装置，他们在等待一个命令，一个信号，一个能为他们带来胜利的契机。",
 	"effects": {
 	    "readiness.token": 1
 	},
@@ -127,8 +127,8 @@
     {
 	"id": "ss.reinforcements",
 	"actionid": "reinforcements.ss",
-	"label": "Wings of the Black Eagle",
-	"startdescription": "As night falls, we find more of the Black Eagle's talons have been dispatched here. This is... troublesome.",
+	"label": "黑鹰的羽翼",
+	"startdescription": "当夜幕降临，我们发现更多黑鹰的爪牙已被遣至此地。真是麻烦。",
 	"extantreqs": {
 	    "faction.karotechia": -12,
 	    "corpse.clockwork": -1
@@ -157,8 +157,8 @@
     },
     {
 	"id": "ss.cycle.afraid_create",
-	"label": "Terror Becomes Me",
-	"startdescription": "When the lion roars, all other creatures lie low in fear, for they know the king of beasts has taken the field. And so I am a lion, and these souls my prey. [No Enemies will attack you or interfere with Objectives.]",
+	"label": "恐惧即我",
+	"startdescription": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。[敌人不会攻击你或是干涉你完成目标的尝试。]",
 	"extantreqs": {
 	    "skill.intimidate.active": 1
 	},
@@ -176,8 +176,8 @@
     },
     {
 	"id": "ss.cycle.afraid_continue",
-	"label": "Terror Becomes Me",
-	"startdescription": "When the lion roars, all other creatures lie low in fear, for they know the king of beasts has taken the field. And so I am a lion, and these souls my prey. [No Enemies will attack you or interfere with Objectives.]",
+	"label": "恐惧即我",
+	"startdescription": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。[敌人不会攻击你或是干涉你完成目标的尝试。]",
 	"warmup": 30,
 	"extantreqs": {
 	    "skill.intimidate.active": 1
@@ -193,8 +193,8 @@
     },
     {
 	"id": "ss.cycle.afraid_end",
-	"label": "Terror Becomes Me",
-	"startdescription": "When the lion roars, all other creatures lie low in fear, for they know the king of beasts has taken the field. And so I am a lion, and these souls my prey. [No Enemies will attack you or interfere with Objectives.]",
+	"label": "恐惧即我",
+	"startdescription": "当雄狮怒吼时，其它一切生物均在恐惧中低伏，只因它们理解了百兽之王已君临于此。于此，我即为雄狮，他们的灵魂则为我的猎物。[敌人不会攻击你或是干涉你完成目标的尝试。]",
 	"effects": {
 	    "signaller_afraid_ss": -99
 	},
@@ -206,8 +206,8 @@
     },
     {
 	"id": "ss.pickaction.router",
-	"label": "The Index-Arcana Is Moving!",
-	"startdescription": "The Index-Arcana's commando unit has crossed the line. They carry unfamiliar equipment, murmur ominous litanies, and move stealthily through the distorted light.",
+	"label": "索隐会正在行动！",
+	"startdescription": "索隐会的突击队越过了界线，他们携带着怪异的装备，低声吟诵不详的祷文，在扭曲的光线中悄然潜行。",
 	"extantreqs": {
 	    "skill.intimidate.active": -1
 	},
@@ -234,7 +234,7 @@
     },
     {
 	"id": "ss.clear",
-	"label": "The Index-Arcana's Forces Are on the Move!",
+	"label": "索隐会的军队行动了！",
 	"effects": {
 	    "decision": -99,
 	    "readiness.token": -99
@@ -248,8 +248,8 @@
     {
 	"id": "ss.singleattack.startup",
 	"actionid": "attack.ss",
-	"label": "A Hostile Offensive!",
-	"startdescription": "One of our enemies seeks to strike at us -",
+	"label": "一次敌袭！",
+	"startdescription": "我们的敌人之一寻求对我们的袭击——",
 	"effects": {
 	    "decision.enemy.attack": 1
 	},
@@ -259,7 +259,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -286,8 +286,8 @@
     {
 	"id": "ss.found.simultaneous",
 	"actionid": "attack.ss",
-	"label": "A Hostile Offensive!",
-	"startdescription": "This enemy unit moves in lockstep with its comrades -",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴协同地发起进攻——",
 	"requirements": {
 	    "simultaneous": 1
 	},
@@ -297,7 +297,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -344,8 +344,8 @@
     {
 	"id": "found.simultaneous2",
 	"actionid": "attack.ss.2",
-	"label": "A Hostile Offensive!",
-	"startdescription": "This enemy unit moves in lockstep with its comrades -",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴协同地发起进攻——",
 	"requirements": {
 	},
 	"effects": {
@@ -360,7 +360,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 	    	"simultaneous": 1,
 	    	"foe.disaster.hidden": 1,
@@ -412,8 +412,8 @@
     {
 	"id": "found.simultaneous3",
 	"actionid": "attack.ss.3",
-	"label": "A Hostile Offensive!",
-	"startdescription": "This enemy unit moves in lockstep with its comrades -",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴协同地发起进攻——",
 	"requirements": {
 	},
 	"effects": {
@@ -425,7 +425,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 	    	"simultaneous": 1,
 	    	"foe.disaster.hidden": 1,
@@ -473,8 +473,8 @@
     },
     {
 	"id": "ss.found.otherssenemy",
-	"label": "A Hostile Offensive!",
-	"startdescription": "One of our enemies seeks to strike at us -",
+	"label": "一次敌袭！",
+	"startdescription": "我们的敌人之一寻求对我们的袭击——",
 	"requirements": {
 	    "faction.karotechia": 1
 	},
@@ -506,8 +506,8 @@
     },
     {
 	"id": "ss.target.legion",
-	"label": "Against the Légion du Seuil?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana intends to tear apart the shadows from the ancient gate.",
+	"label": "针对门关军团？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会打算去撕裂那些来自古老门扉的幽影。",
 	"tablereqs": {
 	    "faction.legion": 1
 	},
@@ -517,7 +517,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.legion": 1
 		},
@@ -543,13 +543,13 @@
     },
     {
 	"id": "ss.target.legion.defeat",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The Index-Arcana's ranks were dragged into the mist one by one, falling in rows before the dim gleam of bayonets and daggers. The Black Eagle's broken wings vanished into the depths of the fog, returning with their purpose unfulfilled.",
+	"label": "索隐会的军队并未获胜",
+	"startdescription": "索隐会的队伍被一支支拖入迷雾，在刺刀与匕首的幽光前成排倒下。黑鹰的残翼消失在迷雾深处，铩羽而归。",
     },
     {
 	"id": "ss.target.legion.victory",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "The phantoms of the moonlight were pinned to the mortal world by searing beams. The corpses of the legionaries piled into grotesque mounds. The Black Eagle's banner snaps in the wind over the land where those shadows have retreated.",
+	"label": "索隐会的军队获胜了！",
+	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
 	},
@@ -563,8 +563,8 @@
     },
     {
 	"id": "target.legion2",
-	"label": "Against the Légion du Seuil?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana intends to tear apart the shadows from the ancient gate.",
+	"label": "针对门关军团？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会打算去撕裂那些来自古老门扉的幽影。",
 	"tablereqs": {
 	    "faction.legion": 1
 	},
@@ -574,7 +574,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.legion": 1
 		},
@@ -600,13 +600,13 @@
     },
     {
 	"id": "target.legion.defeat2",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The Index-Arcana's ranks were dragged into the mist one by one, falling in rows before the dim gleam of bayonets and daggers. The Black Eagle's broken wings vanished into the depths of the fog, returning with their purpose unfulfilled.",
+	"label": "索隐会的军队并未获胜",
+	"startdescription": "索隐会的队伍被一支支拖入迷雾，在刺刀与匕首的幽光前成排倒下。黑鹰的残翼消失在迷雾深处，铩羽而归。",
     },
     {
 	"id": "target.legion.victory2",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "The phantoms of the moonlight were pinned to the mortal world by searing beams. The corpses of the legionaries piled into grotesque mounds. The Black Eagle's banner snaps in the wind over the land where those shadows have retreated.",
+	"label": "索隐会的军队获胜了！",
+	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
 	},
@@ -620,8 +620,8 @@
     },
     {
 	"id": "target.legion3",
-	"label": "Against the Légion du Seuil?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana intends to tear apart the shadows from the ancient gate.",
+	"label": "针对门关军团？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会打算去撕裂那些来自古老门扉的幽影。",
 	"tablereqs": {
 	    "faction.legion": 1
 	},
@@ -631,7 +631,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.legion": 1
 		},
@@ -657,13 +657,13 @@
     },
     {
 	"id": "target.legion.defeat3",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The Index-Arcana's ranks were dragged into the mist one by one, falling in rows before the dim gleam of bayonets and daggers. The Black Eagle's broken wings vanished into the depths of the fog, returning with their purpose unfulfilled.",
+	"label": "索隐会的军队并未获胜",
+	"startdescription": "索隐会的队伍被一支支拖入迷雾，在刺刀与匕首的幽光前成排倒下。黑鹰的残翼消失在迷雾深处，铩羽而归。",
     },
     {
 	"id": "target.legion.victory3",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "The phantoms of the moonlight were pinned to the mortal world by searing beams. The corpses of the legionaries piled into grotesque mounds. The Black Eagle's banner snaps in the wind over the land where those shadows have retreated.",
+	"label": "索隐会的军队获胜了！",
+	"startdescription": "月光下的幽魂被刺目的光束钉死在现世，军团士兵的尸身垒成怪诞的小丘。黑鹰的旗帜在那片幽影退却的土地上猎猎作响。",
 	"aspects": {
 	    "killlegion": 1
 	},
@@ -678,8 +678,8 @@
 
     {
 	"id": "ss.target.king",
-	"label": "Against King Henry's Rifles?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana has chosen to pour their heretical technology upon the New King's forces.",
+	"label": "针对新王亨利的私兵队？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会选择将他们的异端科技倾泻在新王的军队头上。",
 	"tablereqs": {
 	    "faction.king": 1
 	},
@@ -689,7 +689,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -713,13 +713,13 @@
     },
     {
 	"id": "ss.target.king.defeat",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The New King's forces have shown astonishing resilience. The Index-Arcana's troops retreat in disarray, leaving behind a battlefield soaked in blood and mud.",
+	"label": "索隐会并未获胜",
+	"startdescription": "新王的军队展现出了惊人的韧性，索隐会的部队仓皇溃退，留下一片浸满鲜血的泥泞战场。",
     },
     {
 	"id": "ss.target.king.victory",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "Gleaming boots sink into liquefied flesh. Pristine rifles dissolve into dust in the beams of light. The ranks of the Index-Arcana march indifferently over the still-smoking scorched earth.",
+	"label": "索隐会获胜了！",
+	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
 	},
@@ -733,8 +733,8 @@
     },
     {
 	"id": "target.king2",
-	"label": "Against King Henry's Rifles?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana has chosen to pour their heretical technology upon the New King's forces.",
+	"label": "针对新王亨利的私兵队？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会选择将他们的异端科技倾泻在新王的军队头上。",
 	"tablereqs": {
 	    "faction.king": 1
 	},
@@ -744,7 +744,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -768,13 +768,13 @@
     },
     {
 	"id": "target.king.defeat2",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The New King's forces have shown astonishing resilience. The Index-Arcana's troops retreat in disarray, leaving behind a battlefield soaked in blood and mud.",
+	"label": "索隐会并未获胜",
+	"startdescription": "新王的军队展现出了惊人的韧性，索隐会的部队仓皇溃退，留下一片浸满鲜血的泥泞战场。",
     },
     {
 	"id": "target.king.victory2",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "Gleaming boots sink into liquefied flesh. Pristine rifles dissolve into dust in the beams of light. The ranks of the Index-Arcana march indifferently over the still-smoking scorched earth.",
+	"label": "索隐会获胜了！",
+	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
 	},
@@ -788,8 +788,8 @@
     },
     {
 	"id": "target.king3",
-	"label": "Against King Henry's Rifles?",
-	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana has chosen to pour their heretical technology upon the New King's forces.",
+	"label": "针对新王亨利的私兵队？",
+	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会选择将他们的异端科技倾泻在新王的军队头上。",
 	"tablereqs": {
 	    "faction.king": 1
 	},
@@ -799,7 +799,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1
 		},
@@ -823,13 +823,13 @@
     },
     {
 	"id": "target.king.defeat3",
-	"label": "The Index-Arcana's Forces Did Not Prevail",
-	"startdescription": "The New King's forces have shown astonishing resilience. The Index-Arcana's troops retreat in disarray, leaving behind a battlefield soaked in blood and mud.",
+	"label": "索隐会并未获胜",
+	"startdescription": "新王的军队展现出了惊人的韧性，索隐会的部队仓皇溃退，留下一片浸满鲜血的泥泞战场。",
     },
     {
 	"id": "target.king.victory3",
-	"label": "The Index-Arcana's Forces Have Won!",
-	"startdescription": "Gleaming boots sink into liquefied flesh. Pristine rifles dissolve into dust in the beams of light. The ranks of the Index-Arcana march indifferently over the still-smoking scorched earth.",
+	"label": "索隐会获胜了！",
+	"startdescription": "光洁的军靴陷入融化的血肉，无瑕的步枪在光束中化为尘埃。索隐会的队列冷漠地踏过仍在冒烟的焦土。",
 	"aspects": {
 	    "killking": 1
 	},
@@ -844,7 +844,7 @@
 	
     {
 	"id": "defend.fire.3",
-	"label": "A Hostile Offensive!",
+	"label": "一次敌袭！",
 	"startdescription": "",
 	"extantreqs": {
 	    "enemy_fire": 3
@@ -857,7 +857,7 @@
     },
     {
 	"id": "defend.fire.2",
-	"label": "A Hostile Offensive!",
+	"label": "一次敌袭！",
 	"startdescription": "",
 	"extantreqs": {
 	    "enemy_fire": 2
@@ -870,7 +870,7 @@
     },
     {
 	"id": "defend.fire.1",
-	"label": "A Hostile Offensive!",
+	"label": "一次敌袭！",
 	"startdescription": "",
 	"extantreqs": {
 	    "enemy_fire": 1
@@ -884,7 +884,7 @@
     {
 	"id": "clockwork.attack.startup",
 	"actionid": "attack.clockwork",
-	"label": "A Commander Takes Action!",
+	"label": "指挥官行动了！",
 	"startdescription": "“小卒，不要觊觎你不该染指之物。”",
 	"tablereqs": {
 	    "clockwork": 1
@@ -895,7 +895,7 @@
 	"slots": [
 	    {
 		"id": "needsjerome",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "clockwork": 1
 		},
@@ -912,7 +912,7 @@
     {
 	"id": "clockwork.attack.startup0",
 	"actionid": "attack.clockwork",
-	"label": "A Commander Takes Action!",
+	"label": "指挥官行动了！",
 	"startdescription": "“小卒，不要觊觎你不该染指之物。”",
 	"aspects": {
 	    "takeadditional": 1
@@ -929,7 +929,8 @@
     },
     {
 	"id": "clockwork.physicalattack",
-	"label": "Lethal Assault!",
+	"label": "致命突袭！",
+	"startdescription": "“我最近并不需要劳烦自己上战场。但偶尔一名士兵会认为有必要亲自动手杀敌。而我仍<i>十分</i>擅长此事。”\n\n[杰罗姆尝试对你和你的友军造成物理伤害。放入一张卡牌并达到他的任一阈值以成功防御。]",
 	"requirements": {
 	    "decision.enemy.attack": 1
 	},
@@ -953,15 +954,15 @@
     },
     {
 	"id": "clockwork.physicalattack.trigger",
-	"label": "Lethal Assault!",
-	"startdescription": "'The pain will pass quickly—I will teach you myself.'\n\n[The Clockwork Lord is attempting to inflict physical harm on you and your allies. Place a card and meet one of his thresholds to successfully defend.]",
+	"label": "致命突袭！",
+	"startdescription": "“痛苦转瞬即逝——我会亲自教导你。”\n\n[发条爵士尝试对你和你的友军造成物理伤害。放入一张卡牌并达到他的任一阈值以成功防御。]",
 	"requirements": {
 	    "decision.enemy.attack": 1
 	},
 	"slots": [
 	    {
 		"id": "needsresponse",
-		"label": "Defense",
+		"label": "防御",
 		"required": {
 		    "edge": 1,
 		    "winter": 1,
@@ -994,9 +995,9 @@
     },
     {
 	"id": "clockwork.orderguard",
+	"label": "齿轮啮合",
 	"actionId": "karotechia.rankofficer",
-	"label": "Gears Engage",
-	"startdescription": "The clockwork continues to turn, though the body lies broken. Gears mesh, pistons thrust—precision-crafted artificial joints ignore the limits of mortal flesh. His eyes hold no pain, only cold, relentless calculation. The Clockwork Lord slowly retreats into shadow, as soldiers to either side advance to block my path.\n\n[The Clockwork Lord can order other enemy forces to protect him. He cannot be attacked until these guardians are eliminated.]",
+	"startdescription": "发条仍在运作，尽管那具躯体已经残破。齿轮咬合，活塞推动，精密的人造关节无视了血肉之躯应有的极限。他的眼中没有痛楚，只有冰冷而固执的算计。发条爵士缓缓退入阴影，左右军士齐齐迎上，截住我的去路。\n\n[发条爵士能够指示其他敌军保护他，在这些护卫被击杀前他无法被攻击。]",
 	"requirements": {
 	    "monster.wound": -2,
 		"clockwork.mark": 1
@@ -1006,7 +1007,7 @@
 	"slots": [
 	    {
 		"id": "needsss",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -1017,7 +1018,7 @@
 	    },
 	    {
 		"id": "needsss2",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -1044,8 +1045,8 @@
 	
     {
 	"id": "clockwork.slain",
-	"label": "Drawing Fire Upon Oneself",
-	"startdescription": "'Power must come from somewhere. Elevation always demands a price.' The Clockwork Lord's voice rasps like rusted gears grinding together. His cogs and components lie scattered across the ground, but his eyes remain fixed on me—fixed on the great work he could not complete, or perhaps on the void where that work should have been. 'I have paid. Have you?'",
+	"label": "引火烧身",
+	"startdescription": "“力量必有来源，擢升总有代价。”发条爵士的声音如同生锈的齿轮彼此碾磨，他的齿轮与零件散落一地，但那双眼睛仍盯着我，盯着他未能完成的大业——或是本该由那大业占据的虚空。“我已清偿。你呢？”",
 	"requirements": {
 	    "monster.wound": 3,
 		"clockwork.mark": 1
@@ -1062,8 +1063,8 @@
     {
 	"id": "hint.onlyjerome",
 	"actionid": "abandon",
-	"label": "To Scatter Two Armies?",
-	"startdescription": "I've broken one of the New King's sharpest swords, and even now his forces here are in disarray - but the contingent from the Légion du Seuil still has its commander. He'll have to die, too. Then the way to the star will be open.",
+	"label": "使两支军队溃散？",
+	"startdescription": "我已折断新王最为锋利的剑刃之一，现在他的军队正处于混乱中——但门关军团的分队仍有其指挥官。他也必须死。而后通往星的道路才会开启。",
 	"requirements": {
 	    "corpse.jerome": 1
 	},
@@ -1076,8 +1077,8 @@
     {
 	"id": "hint.onlylionel",
 	"actionid": "abandon",
-	"label": "To Scatter Two Armies?",
-	"startdescription": "For all his fight and nerve, the Lieutenant-Ostiary is dead at last - but the King's Rifles are still making trouble on their commander's orders. He'll have to die, too. Then the way to the star will be open.",
+	"label": "使两支军队溃散？",
+	"startdescription": "在英勇奋战之后，守门中尉最终还是死去了——但新王的私兵仍在遵循他们指挥官的命令阻碍我们。他也必须死。而后通往星的道路才会开启。",
 	"requirements": {
 	    "corpse.lionel": 1
 	},
@@ -1090,9 +1091,9 @@
     {
 	"id": "get.main.star",
 	"actionid": "abandon",
-	"label": "The Path to the Star Lies Open",
-	"startdescription": "The forces of my adversaries scatter to the wind. Pockets of resistance remain, but without their commanders, they have ceased to be any true threat. Now, nothing stands between me and my heaven-sent prize.",
-	"description": "There - onwards.",
+	"label": "通往星之道路开启",
+	"startdescription": "与我为敌的两支军队都已随风溃散。还有零星的部队在抵抗，但没有指挥官的他们无法构成真正的威胁。现在，没什么阻挡在我与我那从天而降的目标之间了。",
+	"description": "在那——前进。",
 	"requirements": {
 	    "corpse.jerome": 1,
 	    "corpse.lionel": 1
@@ -1110,8 +1111,8 @@
     {
 	"id": "hint.two.ex",
 	"actionid": "abandon",
-	"label": "To Scatter Three Armies?",
-	"startdescription": "I have shattered two of my enemies. One last obstacle remains to be cleared before the path to the star will open.",
+	"label": "使三支军队溃散？",
+	"startdescription": "我已击溃我的敌人之二，现在还有最后一个需要扫清的阻碍，而后通往星的道路才会开启。",
 	"requirements": {
 	    "corpse": 2
 	},
@@ -1124,8 +1125,8 @@
     {
 	"id": "hint.onlyjerome.ex",
 	"actionid": "abandon",
-	"label": "To Scatter Three Armies?",
-	"startdescription": "I've broken one of the New King's sharpest swords, and even now his forces here are in disarray - but the contingent from the Légion du Seuil still has its commander. He'll have to die, too. Then the way to the star will be open.",
+	"label": "使三支军队溃散？",
+	"startdescription": "我已折断新王最为锋利的剑刃之一，现在他的军队正处于混乱中——但门关军团的分队仍有其指挥官。他也必须死。而后通往星的道路才会开启。",
 	"requirements": {
 	    "corpse.jerome": 1
 	},
@@ -1138,8 +1139,8 @@
     {
 	"id": "hint.onlylionel.ex",
 	"actionid": "abandon",
-	"label": "To Scatter Three Armies?",
-	"startdescription": "For all his fight and nerve, the Lieutenant-Ostiary is dead at last - but the King's Rifles are still making trouble on their commander's orders. He'll have to die, too. Then the way to the star will be open.",
+	"label": "使三支军队溃散？",
+	"startdescription": "在英勇奋战之后，守门中尉最终还是死去了——但新王的私兵仍在遵循他们指挥官的命令阻碍我们。他也必须死。而后通往星的道路才会开启。",
 	"requirements": {
 	    "corpse.lionel": 1
 	},
@@ -1152,8 +1153,8 @@
     {
 	"id": "hint.onlyclockwork.ex",
 	"actionid": "abandon",
-	"label": "To Scatter Three Armies?",
-	"startdescription": "The Nazi war machine lies broken, but that is not enough—two obstacles still stand in my way—",
+	"label": "使三支军队溃散？",
+	"startdescription": "纳粹帝国的战争机器已被我摧毁，但还不够，我的阻碍还有两个——",
 	"requirements": {
 	    "corpse.clockwork": 1
 	},
@@ -1166,9 +1167,9 @@
     {
 	"id": "get.main.star.ex",
 	"actionid": "abandon",
-	"label": "The Path to the Star Lies Open",
-	"startdescription": "The three armies that stood against me have scattered to the wind. Pockets of resistance remain, but without their commanders, they pose no true threat. Now, nothing stands between me and my heaven-sent prize.",
-	"description": "There - onwards.",
+	"label": "通往星之道路开启",
+	"startdescription": "与我为敌的三支军队都已随风溃散。还有零星的部队在抵抗，但没有指挥官的他们无法构成真正的威胁。现在，没什么阻挡在我与我那从天而降的目标之间了。",
+	"description": "在那——前进。",
 	"requirements": {
 	    "corpse.jerome": 1,
 	    "corpse.lionel": 1,
@@ -1187,8 +1188,8 @@
     {
 	"id": "foe.unknown.star",
 	"actionid": "star.hide",
-	"label": "Reposition",
-	"startdescription": "The enemy forces are overwhelming. Soon, another unit is lost from our sight.",
+	"label": "变换位置",
+	"startdescription": "敌军数量过多，很快，又一支部队消失在我们的视野中了。",
 	"aspects": {
 	    "concealidentity": 1
 	},
@@ -1200,7 +1201,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.king": 1,
 			"faction.legion": 1,
@@ -1220,8 +1221,8 @@
     {
 	"id": "attackenemy.guardclockwork.hint",
 	"actionid": "operate",
-	"label": "Stage an attack against an enemy?",
-	"startdescription": "This target is still protected.\n\n[Until all Enemies possessing the Guarding: Jerome aspect are slain, you cannot attack Jerome Alexander.]",
+	"label": "筹划一次对敌军的袭击？",
+	"startdescription": "我们的目标仍受到保护。\n\n[在杀死所有具有护卫：发条爵士性相的敌军之前，你无法攻击发条爵士。]",
 	"requirements": {
 	    "clockwork.mark": 1
 	},
@@ -1234,8 +1235,8 @@
     {
 	"id": "attackenemy.edge.clockwork.overwhelm",
 	"actionid": "operate",
-	"label": "Stage an overwhelming attack using a violent strategy",
-	"startdescription": "The convergence of opposed forces demands a resolution, and we are the stronger. Let's see them withstand this.",
+	"label": "筹划一次采用暴力战术的压倒性袭击",
+	"startdescription": "两虎相争必有一伤，而我们更加强大。看他们该如何抵挡。",
 	"requirements": {
 	    "foe": 1,
 	    "provisions": 1,
@@ -1260,8 +1261,8 @@
     {
 	"id": "attackenemy.edge.clockwork",
 	"actionid": "operate",
-	"label": "Stage an attack using a violent strategy",
-	"startdescription": "Words end. Now is the time in which force will make its determinations.",
+	"label": "筹划一次采用暴力战术的袭击",
+	"startdescription": "谈话到此为止。现在是时候让力量决定胜负了。",
 	"requirements": {
 	    "foe": 1,
 	    "provisions": 1,
@@ -1287,9 +1288,9 @@
     {
 	"id": "activate.skill.intimidate",
 	"actionid": "abandon",
-	"label": "Loose a petrifying roar",
-	"startdescription": "I double over, every muscle in my body taut with rage. I cannot see anything but red. My lungs fill with air, but when I open my mouth, the sound that comes - the <i>sound</i> -",
-	"description": "The ground cracks. Birds tumble dead from the sky. Trees twist and fall. The echo of my voice carries forth a challenge none will dare answer: face me, and die.",
+	"label": "释放令人石化的战吼",
+	"startdescription": "我身体前屈，身上的每一寸肌肉都因狂怒而紧绷。我的眼前仅有赤红。我的肺中满是空气，但当我张开口时，传出的声音——那<i>声音</i>——",
+	"description": "大地开裂。飞鸟在空中死亡并落下。树木弯曲并倒下。我声音的回响带着无人胆敢回应的挑战：直面我，然后死。",
 	"requirements": {
 	    "skill.intimidate.dormant": 1
 	},
@@ -1313,9 +1314,9 @@
     {
 	"id": "activate.skill.intimidate.ex",
 	"actionid": "abandon",
-	"label": "The Nazi war machine lies broken, but that is not enough—two obstacles still stand in my way—",
-	"startdescription": "I double over, every muscle taut with rage. I see nothing but red. My lungs fill with air, but when I open my mouth, the sound that comes—the <i>sound</i>— [Using this skill in the Cradle of the Falling Star makes the user more vulnerable to enemy attacks.]",
-	"description": "The ground cracks. Birds tumble dead from the sky. Trees twist and fall. The echo of my voice carries forth a challenge none will dare answer: face me, and die.",
+	"label": "释放令人石化的战吼",
+	"startdescription": "我身体前屈，身上的每一寸肌肉都因狂怒而紧绷。我的眼前仅有赤红。我的肺中满是空气，但当我张开口时，传出的声音——那<i>声音</i>——[在坠星摇篮中使用此技能将会使自身更容易受到敌军的攻击。]",
+	"description": "大地开裂。飞鸟在空中死亡并落下。树木弯曲并倒下。我声音的回响带着无人胆敢回应的挑战：直面我，然后死。",
 	"requirements": {
 	    "skill.intimidate.dormant": 1
 	},
@@ -1335,9 +1336,9 @@
     {
 	"id": "activate.skill.intimidate.ex2",
 	"actionid": "abandon",
-	"label": "The Nazi war machine lies broken, but that is not enough—two obstacles still stand in my way—",
-	"startdescription": "I double over, every muscle taut with rage. I see nothing but red. My lungs fill with air, but when I open my mouth, the sound that comes—the <i>sound</i>— [Using this skill in the Cradle of the Falling Star makes the user more vulnerable to enemy attacks.]",
-	"description": "The ground cracks. Birds tumble dead from the sky. Trees twist and fall. The echo of my voice carries forth a challenge none will dare answer: face me, and die.",
+	"label": "释放令人石化的战吼",
+	"startdescription": "我身体前屈，身上的每一寸肌肉都因狂怒而紧绷。我的眼前仅有赤红。我的肺中满是空气，但当我张开口时，传出的声音——那<i>声音</i>——[在坠星摇篮中使用此技能将会使自身更容易受到敌军的攻击。]",
+	"description": "大地开裂。飞鸟在空中死亡并落下。树木弯曲并倒下。我声音的回响带着无人胆敢回应的挑战：直面我，然后死。",
 	"requirements": {
 	    "skill.intimidate.dormant": 1
 	},
@@ -1357,8 +1358,8 @@
     {
 	"id": "produce.monsterlesson",
 	"actionid": "monsterdrop",
-	"label": "An Understanding in Blood",
-	"startdescription": "Today I have defeated an enemy of inhuman quality - what some might call 'a monster.' The Lionsmith shapes monsters, and through battle, through the rigor of the field, I have learned a little of his craft.",
+	"label": "自鲜血中获得理解",
+	"startdescription": "今天我击败了一个具有非人特质的敌军——有些人称这些东西为“怪物”。狮子匠塑造怪物，而通过战斗，通过严酷的战场，我习得了他这技艺的一鳞半爪。",
 	"requirements": {
 	    "foe.corpse.unnatural": 1
 	},
@@ -1380,10 +1381,14 @@
 	"warmup": 10
     },   
     {
-	"id": "duel.countdown.success.purgecards.proterant",
-	"label": "Combatants, Assembling",
-	"startdescription": "The countryside sprawls yawning before me. I have come according to the rules of the old sacrament, armed and armoured with nothing but my weapons and my skills. Here, I await the arrival of my opponent.",
-	"description": "From the north, an approaching pair of silhouettes becomes visible in the distance. From the south, a lone figure marches steadily closer.",
+	"id": "duel.countdown.success.purgecards",
+	"label": "战斗双方正在集合",
+	"startdescription": "困倦的荒野在我面前扩张。我已遵循那古老圣礼的规则来此，除了我之技术与我之武器之外再无携带他物。我现在正于此处等待我的对手到来，",
+	"description": "在西侧，两个正在接近的人影逐渐变得可见。在北侧，另外两个人影正在接近。",
+	"extantreqs": {
+	    "friend": -1,
+	    "wasteland": 1
+	},
 	"purge": {
 	    "foe.bombers.refuel": 99,
 	    "objective": 99,
@@ -1397,27 +1402,28 @@
 	    "letter.fromexile": 99
 	},
 	"effects": {
-	    "duel.wilhelm.proterant": 1,
-	    "duel.camilla.proterant": 1,
-	    "duel.maccabee": 1
+	    "duel.wilhelm": 1,
+	    "duel.camilla": 1,
+	    "duel.exile": 1,
+	    "duel.foe": 1
 	},
+	"linked": [
+		{
+			"id": "duel.countdown.success.ex"
+		}
+	],
 	"alt": [
 	    {
 		"id": "holdwarzone.duel",
 		"additional": true
 	    }
-	],
-    "linked": [
-		{
-			"id": "duel.countdown.success.ex"
-		}
-	],
+	]
     },   
     {
 	"id": "duel.countdown.success.ex",
-	"label": "Combatants, Assembling",
-	"startdescription": "The countryside sprawls yawning before me. I have come according to the rules of the old sacrament, armed and armoured with nothing but my weapons and my skills. Here, I await the arrival of my opponent.",
-	"description": "From the north, an approaching pair of silhouettes becomes visible in the distance. From the south, a lone figure marches steadily closer.",
+	"label": "战斗双方正在集合",
+	"startdescription": "困倦的荒野在我面前扩张。我已遵循那古老圣礼的规则来此，除了我之技术与我之武器之外再无携带他物。我现在正于此处等待我的对手到来，",
+	"description": "在西侧，两个正在接近的人影逐渐变得可见。在北侧，另外两个人影正在接近。",
 	"extantreqs": {
 	    "tool.shape": 1
 	},
@@ -1428,9 +1434,9 @@
     {
 	"id": "communicate.duel.anno",
 	"actionid": "communicate",
-	"label": "Ally's Advice",
-	"startdescription": "'I must admit, I underestimated your assistance and resolve.' She glances at my adjutant, surprise in her eyes—but no fear. 'My own support, by comparison, seems so... unremarkable. But as His Highness's envoy, I must fulfill my duty.'",
-	"description": "'Keep your eyes clear and your focus sharp. Remember how the Lion-Smith once faced Antaeus. I'm not one for teaching, but... good luck.' With these words, she returns to her post.",
+	"label": "盟友的建议",
+	"startdescription": "“我必须得承认，我低估了你的助力和决心。”对方侧目看向我的副手，心怀惊诧，但是不胆怯。“相比之下，我的助力就显得那么的平淡无奇了。不过作为殿下的使者，我需要完成我的职责。”",
+	"description": "“心明眼亮，保持专注。想想曾经的狮子匠如何战安泰俄斯。我不擅长教诲，但是祝你好运。”——言毕，对方回到了自己的位置上。",
 	"warmup": 10,
 	"requirements": {
 	    "duel.anno": 1
@@ -1443,8 +1449,8 @@
     },
     {
 	"id": "attackenemy.failure",
-	"label": "A Defeat!",
-	"startdescription": "@#foe.nightmare|The weapons of my spirit could not overcome this adversary. I am still mastered by my fears, and not the other way around.#|The offensive is foiled! The wounded make hasty retreat; the dead remain where they lie - the enemy put up a better defence than I had anticipated.@",
+	"label": "失败！",
+	"startdescription": "@#foe.nightmare|我精神的武装无法击败这一敌人。我仍是恐惧的奴仆，而非恐惧的主人。#|攻势被挫败了！伤者匆忙撤退，死者则被留在原地——敌人的防御比我预测的更加完善。@",
 	"aspects": {
 	    "fatiguing": 1,
 	    "revealidentity": 1,

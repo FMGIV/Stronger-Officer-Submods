@@ -24,8 +24,8 @@
 	},
 	{
 		"id": "duel.anno",
-		"label": "Major <i>Clarion</i>",
-		"description": "A British officer with a youthful appearance, her eyes bearing a captivating light. She wears the ornate and exquisite uniform of the New Forces. She comes as my friend.",
+		"label": "克莱里昂<b>少校</b>",
+		"description": "一位样貌年轻的英国军官，眉目中带着引人注目的光辉，穿着华丽的而又精致的新军的制服。她作为我的朋友前来。",
 		"lifetime": 0,
 		"icon": "friend.anno",
 		"aspects": {
@@ -37,55 +37,55 @@
 	},
     {
 	"id": "wound.camilla.foranno",
-	"label": "Century of Strife",
-	"description": "The Allied officer is locked in combat with the Blade Eternal! [While this card is in play, the Allied officer and the Blade Eternal will not arrive.]",
+	"label": "百年纷争",
 	"lifetime": 3000,
 	"aspects": {
 		"long.blocker": 1
 	},
 	"decayTo": "wound.camilla.foranno.ex",
+	"description": "盟军军官正和刃长生者缠斗！[此卡牌在场时，盟军军官和刃之长生者将不会赶到。]",
 	"isAspect": false,
     },
     {
 	"id": "wound.camilla.foranno.ex",
-	"label": "Century of Strife",
-	"description": "A memory of their struggle.",
+	"label": "百年纷争",
 	"aspects": {
 		"edge": 2,
 		"lantern": 2
 	},
+	"description": "一份关于她们斗争的回忆。",
 	"isAspect": false,
     },
     {
 	"id": "wound.sergei.foranno",
-	"label": "'Radiance'",
-	"description": "That wolf has been taught a lesson. [The Iron Eater will no longer absorb New Forces units.]",
+	"label": "“辉光”",
+	"description": "那只野狼受到了教训。[现在食铁者不会再吸收新军了。]",
 	"isAspect": false,
     },
     {
 	"id": "reinforcement.fall",
-	"label": "Failure",
-	"description": "A failed aid attempt.",
+	"label": "失败",
+	"description": "一次失败的援助",
 	"isAspect": false,
     },
     {
 	"id": "reinforcement.success",
-	"label": "Success",
-	"description": "A successful aid attempt.",
+	"label": "成功",
+	"description": "一次成功的援助",
 	"isAspect": false,
     },
     {
 	"id": "success_anno",
-	"label": "Success",
-	"description": "A successful Allied advance.",
+	"label": "成功",
+	"description": "盟军一次成功的推进",
 	"isAspect": true,
 	"lifetime": 1
     },
 
     {
 	"id": "foe.malkin",
-	"label": "Great Malkin",
-	"description": "The cat and the owl are both holy to the Horned Axe. When the cat attains the wisdom of the owl - when its fur turns grey and its claws grow long and its life longer still - it is said to become one of these. It is only barely in our world, and as such we cannot touch it. But it can most certainly touch us. [This Enemy cannot be defended against, nor targeted by attacks from any source. However, killing all Légion Clavigers on the board will banish it completely.]",
+	"label": "巨型灵猫",
+	"description": "猫与枭均是双角斧的圣兽。当猫得到了枭的智慧——当它的毛皮发灰，利爪变长，寿命则变得更长——据说那只猫就变成了一只灵猫。这只巨型灵猫仅仅勉强存在于我们的世界，因此我们无法触及它。但它必定能够触及我们。[这一敌军的攻击无法被防御，且无法被任何来源攻击。不过，杀死场上所有军团持钥者将完全遣返它。]",
 	"inherits": "foe.template",
 	"aspects": {
 	    "otherworldly": 1,
@@ -106,8 +106,8 @@
     },
         {
             "id": "foe.umiri.2.withanno",
-            "label": "Colonel <i>Von Heiling</i>",
-            "description": "War has left her scars, but it has also left her strength.",
+            "label": "冯海铃<b>上校</b>",
+            "description": "战争为她留下了伤疤，也同样为她留下了力量。",
             "lifetime": 0,
             "aspects": {
                 "mortal": 1,
@@ -130,9 +130,9 @@
         },
         {
             "id": "foe.umiri.2.withanno.hidden",
-            "label": "Unknown Enemy",
-			"description": "The most dangerous enemy is one that goes unanticipated.",
-			"inherits": "foe.template",
+            "label": "未知敌军",
+            "description": "最为危险的敌军永远是那些我们未预料其行动的那些",
+            "inherits": "foe.template",
             "aspects": {
                 "foe.hidden": 1,
                 "german": 1,
@@ -147,8 +147,8 @@
         },
         {
             "id": "foe.umiriinbattalion",
-            "label": "Colonel <i>Von Heiling</i>",
-            "description": "Under the pincer attack, she revealed a weakness. This is a unique opportunity. We must use all our strength.",
+            "label": "<i>冯海铃<b>上校</b></i>",
+            "description": "夹击之中她露出了破绽，这是绝无仅有的机会，我们需要使用全部的力量。",
             "lifetime": 0,
             "aspects": {
                 "mortal": 1,
@@ -164,8 +164,8 @@
         },
         {
             "id": "foe.umiriinrome",
-            "label": "Colonel <i>Von Heiling</i>",
-            "description": "Under the pincer attack, she revealed a weakness. This is a unique opportunity. We must use all our strength, once more.",
+            "label": "<i>冯海铃<b>上校</b></i>",
+            "description": "夹击之中她露出了破绽，这是绝无仅有的机会，我们需要使用全部的力量，再一次。",
             "lifetime": 0,
             "aspects": {
                 "mortal": 1,
@@ -188,7 +188,7 @@
 	"slots": [
 	    {
 		"id": "needsresources1",
-		"label": "Resources",
+		"label": "资源",
 		"required": {
 		    "moth": 1,
 		    "lantern": 1,
@@ -208,7 +208,7 @@
 	    },
 	    {
 		"id": "needsresources2",
-		"label": "Resources",
+		"label": "资源",
 		"required": {
 		    "moth": 1,
 		    "lantern": 1,
@@ -228,8 +228,8 @@
 	    },
 	    {
 		"id": "needsresources3",
-		"label": "Something More?",
-		"description": "A knot of power? A confluence? A sign of the earth, or the sky?",
+		"label": "更多？",
+		"description": "一份力量？一个聚点？一个来自地面或天空的征兆？",
 		"required": {
 		    "moth": 1,
 		    "lantern": 1,
@@ -250,7 +250,7 @@
 	    },
 	    {
 		"id": "needsprovisions",
-		"label": "Provisions",
+		"label": "补给品",
 		"required": {
 		    "provisions": 1
 		},
@@ -274,14 +274,14 @@
     },
     {
 	"id": "faction.karotechia",
-	"label": "Index-Arcana",
-	"description": "This unit's designation never appeared in any official records of the Third Reich, but the hidden world is no stranger to these relic thieves. They rarely appear outside of ruins and sanctuaries. Why now, of all times? Why here, of all places? Perhaps our objectives align. [Enemy forces of this faction may sometimes attack other enemies as well.]",
+	"label": "“索隐会”",
+	"description": "这支部队的番号从未在第三帝国的官方记录中出现过，但隐秘世界对这群遗珍窃贼从不陌生。他们极少在遗迹与圣所之外的地方现身，为何偏偏是此时？为何偏偏是此地？或许我们此行有着共同的目标。[这一势力的敌人有时也会攻击其他敌人。]",
 	"isAspect": true
     },
     {
 	"id": "simultaneous",
-	"label": "Coordinated Assault",
-	"description": "Hunting in tandem. [When an enemy bearing this aspect attacks, it may trigger one additional attack from another enemy also bearing this aspect. Can trigger up to twice.]",
+	"label": "协同进攻",
+	"description": "结伴而行。[拥有该性相的敌军进攻时有可能再触发一个拥有此性相的敌军的攻击，最多触发两次]",
 	"isAspect": true
     },
     {
@@ -293,35 +293,34 @@
     },
     {
 	"id": "karotechia.officerdetail",
-	"label": "Bodyguard: Clockwork Lord",
-	"description": "This enemy unit has been commanded to protect the safety of a certain important individual. [This enemy unit protects the Clockwork Lord.]",
+	"label": "护卫：发条爵士",
+	"description": "这一敌军被命令保护某位重要人士的安全。[这一敌军保护发条爵士。]",
 	"isAspect": true
     },
     {
     "id": "lethal.debilitation",
-    "label": "Precision Strike",
-    "description": "Every strike finds its mark. [When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
+    "label": "精准",
+    "description": "每一击都正中要害。[这一敌军直接攻击你将会产生残疾，而非伤口。]",
     "isAspect": true
     },
     {
     "id": "refreshonlyclockwork",
     "label": "恢复发条爵士",
-    "description": "每一击都正中要害。[When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
-    "isAspect": true,
-	"isHidden": true
+    "description": "每一击都正中要害。[这一敌军直接攻击你将会产生残疾，而非伤口。]",
+    "isAspect": true
     },
     {
     "id": "lethal_debilitation_trigger",
-    "label": "Precision Strike Card Generation",
-    "description": "[When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
+    "label": "精准的生成卡牌",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
     "isAspect": false,
 	"lifetime": 1,
 	"isHidden": true
     },
     {
     "id": "clockwork.attack1",
-    "label": "Clockwork Threshold",
-    "description": "[When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
     "isAspect": false,
 	"aspects": {
 		"needsedge": 12
@@ -331,8 +330,8 @@
     },
     {
     "id": "clockwork.attack2",
-    "label": "Clockwork Threshold",
-    "description": "[When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
     "isAspect": false,
 	"aspects": {
 		"needsedgeforge": 6
@@ -342,8 +341,8 @@
     },
     {
     "id": "clockwork.attack3",
-    "label": "Clockwork Threshold",
-    "description": "[When this enemy directly attacks you, it inflicts a crippling injury rather than a simple wound.]",
+    "label": "发条的阈值",
+    "description": "[这一敌军直接攻击你将会产生残疾，而非伤口。]",
     "isAspect": false,
 	"aspects": {
 		"needsedgewinter": 6
@@ -354,8 +353,8 @@
 
     {
 	"id": "foe.clockwork",
-	"label": "Clockwork Lord",
-	"description": "'Descent is the beginning of another ascent. That star will illuminate a path you cannot tread—a narrow road to transcendence. I hope you possess the self-awareness to recognize how shallow your desires are compared to the journey we are about to undertake.' [The Clockwork Lord must be wounded three times before dying. While in this state, the Clockwork Lord cannot be targeted.]",
+	"label": "发条爵士",
+	"description": "“坠落是另一种上升的开端，那颗星将照亮一条你们无从涉足的道路——那是通往超越的狭窄小径。我希望你能有自知之明：与我等将踏上的征程相比，你所怀有的那点欲望是何其浅薄。”[发条爵士需要被击伤三次才会死去，此状态下的发条爵士不可被攻击。]",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.lethal": 1,
@@ -419,8 +418,8 @@
     },
     {
 	"id": "foe.clockwork.exhausted",
-	"label": "Clockwork Lord (Adjusting)",
-	"description": "The gears turn a little sluggishly, but this will not last long. The moment is fleeting. [While in this state, the Clockwork Lord ceases to attack. Once this ends, return to <i>Clockwork Lord</i>.]",
+	"label": "发条爵士（修整中）",
+	"description": "齿轮的转动略显滞涩，但这不会持续太久，时机稍纵即逝。[此状态下的发条爵士不再发动攻击，消逝后变为<i>发条爵士</i>。",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.lethal": 1,
@@ -484,8 +483,8 @@
     },
     {
 	"id": "foe.clockwork.hidden",
-	"label": "Unknown Enemy",
-	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
 	"inherits": "foe.template",
 	"aspects": {
 	    "clockwork": 1,
@@ -543,8 +542,8 @@
     },
     {
 	"id": "foe.clockwork.exhausted.hidden",
-	"label": "Unknown Enemy",
-	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.hidden": 1,
@@ -610,8 +609,8 @@
 
     {
 	"id": "corpse.jerome",
-	"label": "Jerome Alexander, Slain",
-	"description": "A ruthless man, who in the end received as much mercy as he gave. He sacrificed every principle he had at the altar of his own ambitions - even the affection of one who loved him.",
+	"label": "杰罗姆·亚历山大已被杀死",
+	"description": "无情的男人，他在最后得到的仁慈和他给出的仁慈一样多。他在名为“野心”的祭坛上牺牲了一切原则——连爱着他的人的感情也不例外。",
 	"aspects": {
 	    "remnant": 1,
 	    "legacyplotitem": 1
@@ -620,7 +619,7 @@
 	    {
 		"id": "needslionel",
 		"actionid": "abandon",
-		"label": "Lionel",
+		"label": "莱昂内尔",
 		"required": {
 		    "corpse.lionel": 1
 		}
@@ -628,7 +627,7 @@
 	    {
 		"id": "needsclockwork",
 		"actionid": "abandon",
-		"label": "Clockwork",
+		"label": "发条爵士",
 		"required": {
 		    "corpse.clockwork": 1
 		}
@@ -637,8 +636,8 @@
     },
     {
 	"id": "corpse.lionel",
-	"label": "Lionel Saxon, Slain",
-	"description": "An honourable man, who I was privileged to face in battle and at last defeat. His greatest mistake was to avert his eyes from the evils of one he loved - but he made sure he fell atoning for that mistake.",
+	"label": "莱昂内尔·撒克逊已被杀死",
+	"description": "可敬的男人，我有幸在战场上面对并击败他。他最大的错误是从他所爱之人的恶行上移开目光——但他保证了自己因弥补这一错误倒下。",
 	"aspects": {
 	    "remnant": 1,
 	    "legacyplotitem": 1
@@ -647,7 +646,7 @@
 	    {
 		"id": "needsclockwork",
 		"actionid": "abandon",
-		"label": "Clockwork",
+		"label": "发条爵士",
 		"required": {
 		    "corpse.clockwork": 1
 		}
@@ -655,7 +654,7 @@
 	    {
 		"id": "needsjerome",
 		"actionid": "abandon",
-		"label": "Jerome",
+		"label": "杰罗姆",
 		"required": {
 		    "corpse.jerome": 1
 		}
@@ -664,8 +663,8 @@
     },
     {
 	"id": "corpse.clockwork",
-	"label": "The Clockwork Lord Has Been Killed",
-	"description": "The madman—his delusions of grandeur have crumbled to dust along with the winding-down of his gears. The body that once so fervently preached now lies sprawled upon the ground, more a heap of twisted scrap than the 'pure one' he spent his life pursuing.",
+	"label": "发条爵士已被杀死",
+	"description": "疯癫的男人，他罪恶的狂想已随着身上发条的停转一同灰飞烟灭。那具曾经狂热布道的躯体如今横陈于地，更像一堆扭曲的废铁，而非他毕身追求的“纯净之人”",
 	"aspects": {
 	    "remnant": 1,
 	    "legacyplotitem": 1,
@@ -675,7 +674,7 @@
 	    {
 		"id": "needsjerome",
 		"actionid": "abandon",
-		"label": "Jerome",
+		"label": "杰罗姆",
 		"required": {
 		    "corpse.jerome": 1
 		}
@@ -683,7 +682,7 @@
 	    {
 		"id": "needslionel",
 		"actionid": "abandon",
-		"label": "Lionel",
+		"label": "莱昂内尔",
 		"required": {
 		    "corpse.lionel": 1
 		}
@@ -693,8 +692,8 @@
 
     {
 	"id": "foe.task",
-	"label": "Index-Arcana Task Force",
-	"description": "An elite company of the Index-Arcana. Wounds do not slow them, nor does death lie within their fears. Their strangely shaped weapons are always understood too little and used too much.",
+	"label": "索隐会特遣队",
+	"description": "索隐会的精锐连队。伤痛不能使他们迟缓，死亡亦不在他们的恐惧之列。他们手中形制古怪的武器总是被理解得太少，被使用得太多。",
 	"inherits": "foe.template",
 	"aspects": {
 	    "mortal": 1,
@@ -754,8 +753,8 @@
     },
     {
 	"id": "foe.task.hidden",
-	"label": "Unknown Enemy",
-	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.hidden": 1,
@@ -790,8 +789,8 @@
     },
     {
 	"id": "foe.disaster",
-	"label": "Behemoth of Calamity",
-	"description": "Massive yet swift, this armored beast roams the battlefield, tracking the scent of smoke and blood. Even through its metallic shell, I can feel the palpable malevolence emanating from it.",
+	"label": "灾厄兽",
+	"description": "身形庞大却动作迅捷，这头披着装甲的恶兽游走在战场上，追逐着硝烟与血的气息。哪怕隔着那层金属外衣，我也能感受到扑面而来的恶意。",
 	"inherits": "foe.template",
 	"aspects": {
 	    "mortal": 1,
@@ -852,8 +851,8 @@
     },
     {
 	"id": "foe.disaster.hidden",
-	"label": "Unknown Enemy",
-	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.hidden": 1,
@@ -888,8 +887,8 @@
     },
     {
 	"id": "foe.goliath",
-	"label": "Goliath",
-	"description": "A towering warrior outfitted with heavy firepower, possessing inhuman strength capable of wrestling monsters, and a hide tough enough to withstand a hail of bullets.",
+	"label": "“歌利亚”",
+	"description": "配备着重型火力的高大战士，非人的蛮力足以与怪物角力，坚韧的皮肤甚至能抵挡枪弹的倾泻。",
 	"inherits": "foe.template",
 	"aspects": {
 	    "mortal": 1,
@@ -949,8 +948,8 @@
     },
     {
 	"id": "foe.goliath.hidden",
-	"label": "Unknown Enemy",
-	"description": "The most dangerous enemy is one that goes unanticipated.",
+	"label": "未知敌军",
+	"description": "最为危险的敌军永远是那些我们未预料其行动的那些",
 	"inherits": "foe.template",
 	"aspects": {
 	    "foe.hidden": 1,
@@ -985,8 +984,8 @@
     },
     {
 	"id": "faction.king",
-	"label": "The 9th King Henry's Own Rifles",
-	"description": "On paper, this regiment fights for Great Britain and her Allies. But why has this column diverted from the main force? Why are they pursuing my prize? The King on the Isle is a ill-omened figure - perhaps he sees opportunity in seizing what I seek for his own ends. [Enemies of this faction will also sometimes target Enemies from the Légion du Seuil.]",
+	"label": "亨利九世的私兵队",
+	"description": "在纸面上，这支部队为大不列颠与她的盟友而战。但为何这个纵队脱离了主力部队独自行动？为何他们也在追寻我的目标？那座岛上的国王是个不详之人——或许他正觊觎着我正寻求之物，试图寻找一个机会将其攫于手中。[这一势力的敌人有时也会攻击其他敌人。]",
 	"isaspect": true,
 	"induces": [
 	    {
@@ -996,8 +995,8 @@
     },
     {
 	"id": "faction.legion",
-	"label": "The Légion du Seuil",
-	"description": "A brutal army that keeps a brutal peace in the Bounds. They rarely fight their wars on this side of the dream - so why have they come? Perhaps this particular contingent has received orders to send my prize back to the sky. Perhaps something more personal is at play. [Enemies of this faction will also sometimes target Enemies from the 9th Rifles.]",
+	"label": "门关军团",
+	"description": "一支在边界之内维护着某种野蛮和平的野蛮军队。他们极少在梦境的这一侧作战——那他们因何来此？或许这一支分遣队接到命令，要将我的目标送回天上。亦或是这次行动背后有一些更加个人的原因。[这一势力的敌人有时也会攻击其他敌人。]",
 	"isaspect": true,
 	"induces": [
 	    {

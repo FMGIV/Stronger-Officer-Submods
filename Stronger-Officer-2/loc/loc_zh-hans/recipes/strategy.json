@@ -2,9 +2,9 @@
     "recipes": [
         {
             "id": "foe.umiri.attack.tactics1_prep_friend",
-            "label": "Enemy Launching Tactical Assault!",
-            "startdescription": "The Germans are about to launch a fierce assault on our defensive line. How shall we respond?\n\n[Resources committed during this phase will not be consumed. If the assault is not interrupted, the enemy will launch a tactical offensive on two or even multiple fronts. <i>Inviolate Defence</i> or <i>Aid from the Eternal</i> cannot repel this attack from the entire line.]",
-            "description": "The Germans are about to launch a fierce assault on our defensive line. How shall we respond?\n\n[Resources committed during this phase will not be consumed. If the assault is not interrupted, the enemy will launch a tactical offensive on two or even multiple fronts. <i>Inviolate Defence</i> or <i>Aid from the Eternal</i> cannot repel this attack from the entire line.]",
+            "label": "敌军正在发动战术进攻！",
+            "startdescription": "德国人即将向我们的防线发动猛攻，我们作何应对？[现在敌军尚未发动进攻，我们可主动出击打断敌人的计划吗，又或者投入资源以备战]",
+            "description": "德国人即将向我们的防线发动猛攻，我们作何应对？[现在敌军尚未发动进攻，我们可主动出击打断敌人的计划吗，又或者投入资源以备战]",
             "actionId": "foetactics1",
             "warmup": 30,
             "requirements": {
@@ -20,7 +20,7 @@
             "slots": [
                 {
                 "id": "defend",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -57,8 +57,9 @@
         },
         {
             "id": "foe.umiri.attack.tactics1_tanks_friend",
-            "label": "Enemy Forces on the March!",
-            "startdescription": "Steel extends firepower, flesh scours the field—they advance methodically!\n\n[When this tactic triggers, it will absorb and destroy one non-unique Secondary Objective and exhaust all objectives on the field.]",
+            "label": "敌军正在行军！",
+            "startdescription": "步坦协同[这个战术触发后将会吸收一个非特有次要目标摧毁，并使全场的目标枯竭]",
+            "description": "步坦协同[这个战术触发后将会吸收一个非特有次要目标摧毁，并使全场的目标枯竭]",
             "actionId": "foetactics1",
             "warmup": 30,
             "requirements": {
@@ -75,7 +76,7 @@
             "slots": [
                 {
                 "id": "defend",
-                "label": "Defense",
+                "label": "防御",
                 "required": {
                     "faction.anno": 1,
                     "local": 1,
@@ -115,8 +116,8 @@
         },
     {
 	"id": "foe.umiri.attack.tactics1_tanks_attack_friend",
-	"label": "Lost Resources!",
-	"startdescription": "The defensive line has been completely overrun. Supplies lie scattered everywhere. This carefully constructed defensive line has been destroyed in an instant.",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
 	"requirements": {
 	},
 	"slots": [
@@ -149,8 +150,8 @@
     },
     {
 	"id": "foe.umiri.attack.tactics1_tanks_attack_end_friend",
-	"label": "Lost Resources!",
-	"startdescription": "The defensive line has been completely overrun. Supplies lie scattered everywhere. This carefully constructed defensive line has been destroyed in an instant.",
+	"label": "失去资源！",
+	"startdescription": "防线已然被彻底冲垮，四散的物资随处可见，这条苦心经营的防线已然毁于一旦。",
 	"requirements": {
 	},
 	"aspects": {

@@ -2,8 +2,8 @@
 "recipes": [
     {
 	"id": "target.king.victory",
-	"label": "The Légion Has Prevailed!",
-	"startdescription": "The King's men are taken in the night. Gutted bodies are thrown down into the mud. The glint of the Légion's bayonets and knives brightens the shadows for a moment, and then they are gone.",
+	"label": "门关军团获胜了！",
+	"startdescription": "新王的军队在夜间被击败。内脏外流的尸体被丢到泥地上。军团士兵的刺刀与匕首照亮阴影，但仅有一瞬，而后便消失。",
 	"aspects": {
 	    "killking": 1
 	},
@@ -18,8 +18,8 @@
     {
 	"id": "legion.reinforcements",
 	"actionid": "reinforcements.legion",
-	"label": "The Watchmen at the Threshold",
-	"startdescription": "When the moon finds us, the doors between the waking world and the dream swing wide, and the soldiers of the Légion spill forth. Troublesome.",
+	"label": "门关的看守",
+	"startdescription": "当明月高悬于空时，醒时世界与梦境之间的门完全敞开，门关军团的士兵涌出。真是麻烦。",
 	"extantreqs": {
 	    "faction.legion": -12,
 	    "corpse.lionel": -1
@@ -42,8 +42,8 @@
     },
     {
 	"id": "found.boundsmen",
-	"label": "A Hostile Offensive!",
-	"startdescription": "This enemy unit moves in lockstep with its comrades -",
+	"label": "一次敌袭！",
+	"startdescription": "这一敌军与其同伴步调一致地移动——",
 	"requirements": {
 	    "foe.coordinated": 1,
 	    "foe.boundsmen": 1
@@ -51,7 +51,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "foe.boundsmen": 1
 		},
@@ -91,7 +91,8 @@
     },
     {
 	"id": "found.otherlegionenemy",
-	"label": "A Hostile Offensive!",
+	"label": "一次敌袭！",
+	"startdescription": "",
 	"requirements": {
 	    "faction.legion": 1
 	},
@@ -123,8 +124,8 @@
     },
     {
 	"id": "target.legion.ss",
-	"label": "Targeting the Index-Arcana?",
-	"startdescription": "We all vie for that star—which means multiple factions are hostile to one another. This time, the Legion of the Sealed Gate has chosen a different target.",
+	"label": "针对索隐会？",
+	"startdescription": "我们全部都在争夺那颗星——这意味着我们多方势力相互之间均为敌对。而这一次，门关军团选择了另一方作为目标。",
 	"tablereqs": {
 	    "faction.king": 1
 	},
@@ -137,7 +138,7 @@
 	"slots": [
 	    {
 		"id": "needsenemy",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "faction.karotechia": 1
 		},
@@ -161,13 +162,13 @@
     },
     {
 	"id": "target.legion.ss.defeat",
-	"label": "The Légion Has Not Prevailed",
-	"startdescription": "Tonight, the key failed to unlock that sealed door. The legionnaires lingered long in the night and mist, gazing silently, before retreating without a sound behind the curtain.",
+	"label": "门关军团并未获胜",
+	"startdescription": "今夜，钥匙未能叩开那扇紧闭的门扉。军团士兵隐于夜色与迷雾间久久凝望，终究无声地退回帘幕之后。",
     },
     {
 	"id": "target.legion.ss.victory",
-	"label": "The Légion Has Prevailed!",
-	"startdescription": "The Index-Arcana's stronghold was dissolved before dawn. Everywhere, pierced and torn corpses; blood not yet congealed gleams faintly in the morning mist.",
+	"label": "门关军团获胜了！",
+	"startdescription": "索隐会的据点在黎明前便被抹去，遍地皆是被刺穿与撕裂的尸骸，尚未凝固的血液在晨霭中泛着幽暗的微光。",
 	"aspects": {
 	    "killkarotechia": 1
 	},
@@ -183,8 +184,8 @@
     {
 	"id": "lionel.attack.startup",
 	"actionid": "attack.lionel",
-	"label": "A Commander Takes Action!",
-	"startdescription": "'I gave you the opportunity to walk away - but your kind never does. Anything to whet your reckless appetite for power.'",
+	"label": "指挥官行动了！",
+	"startdescription": "“我给了你机会离开——但你们这种人从不会照做。为刺激那对力量鲁莽的渴望，你们会做出任何事。”",
 	"tablereqs": {
 	    "uqlionel": 1
 	},
@@ -194,7 +195,7 @@
 	"slots": [
 	    {
 		"id": "needslionel",
-		"label": "Enemy",
+		"label": "敌军",
 		"required": {
 		    "uqlionel": 1
 		},
@@ -223,9 +224,9 @@
     },
     {
 	"id": "lionel.makemaze",
-	"label": "A Hawthorn Snare",
-	"startdescription": "The Lieutenant-Ostiary of the Légion du Seuil is permitted special privileges by the Hour who watches the thresholds. One of those is that the lieutenant may - with the proper etiquette - petition waking space itself to heed his commands.",
-	"description": "For a moment, I lose all sense of balance and direction. Something has changed. Now the latitudes and longitudes of the waking world have new orders, and their orders are to sabotage our war effort.",
+	"label": "山楂的陷阱",
+	"startdescription": "看守门关的司辰授予了这位门关军团的守门中尉特殊的权柄。而其中之一则是允许这位中尉——只要遵循正确的礼节——请求空间本身醒转并听从他的指令。",
+	"description": "那一瞬间，我失去了一切平衡感与方向感。有什么变化了。现在醒时世界的经纬接到了一项新的命令，那就是妨碍我们的一切战争努力。",
 	"requirements": {
 	    "decision.enemy.doubleattack": 1
 	},

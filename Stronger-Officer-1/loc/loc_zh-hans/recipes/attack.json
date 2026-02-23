@@ -1039,6 +1039,18 @@
                     "chance": 40
                 },
                 {
+                    "id": "foe.umiri.attack.hig",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack.med",
+                    "chance": 20
+                },
+                {
+                    "id": "foe.umiri.attack.pri",
+                    "chance": 20
+                },
+                {
                     "id": "foe.umiri.attack0",
                     "chance": 50
                 },
@@ -1193,6 +1205,96 @@
                     "strategy.tactics1",
                     "strategy.tactics1",
                     "strategy.defense",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.hig",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 8
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.med",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 5
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
+                    "strategy.tactics3",
+                    "strategy.defense",
+                    "strategy.defense",
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+            "linked": [
+                {
+                    "id": "foe.umiri.attack"
+                }
+            ]
+        },
+        {
+            "id": "foe.umiri.attack.pri",
+            "label": "敌军军官正在谋划",
+            "startdescription": "她对我们发起了突然袭击！",
+            "description": "她对我们发起了突然袭击！",
+            "actionId": "foeactionumiri",
+            "actionId": "foeactionumiri",
+            "warmup": 0,
+            "extantreqs": {
+                "resolution": 2
+            },
+            "internaldeck": {
+                "spec": [
+                    "strategy.rally",
+                    "strategy.tactics1",
+                    "strategy.tactics1",
+                    "strategy.tactics2",
+                    "strategy.tactics2",
                     "strategy.defense",
                     "strategy.defense",
                 ],

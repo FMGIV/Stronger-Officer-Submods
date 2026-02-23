@@ -2,7 +2,7 @@
     "recipes": [
         {
             "id": "friend.anno.coming.forumiri.first00",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "maxexecutions": 1,
@@ -23,7 +23,7 @@
         },
         {
             "id": "friend.anno.coming.forumiri.first0",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "maxexecutions": 5,
@@ -44,7 +44,7 @@
         },
         {
             "id": "friend.anno.coming.forumiri.rome",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "maxexecutions": 1,
@@ -65,7 +65,7 @@
         },
         {
             "id": "friend.anno.coming.forumiri.first",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "maxexecutions": 1,
@@ -81,8 +81,8 @@
         },
         {
             "id": "friend.anno.coming.forumiri",
-            "label": "The Solar New Forces Are Entering the Battlefield",
-            "startdescription": "The roar of machinery echoes from the skies, and the figures of creations walk the earth—it seems our Allied forces have arrived!",
+            "label": "太阳新军正在进入战场",
+            "startdescription": "天空传来机械的轰鸣，大地之上行走着造物的身影，看样子我们的盟军赶到了！",
             "actionId": "annocoming",
             "warmup": 10,
             "effects": {
@@ -100,7 +100,7 @@
         },
         {
             "id": "friend.anno.coming.meet",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "extantreqs": {
@@ -117,8 +117,8 @@
         },
         {
             "id": "friend.anno.coming",
-            "label": "The Solar New Forces Are Entering the Battlefield",
-            "startdescription": "More soldiers and machines loyal to the New King are arriving on this battlefield.",
+            "label": "太阳新军正在进入战场",
+            "startdescription": "更多的效忠新王的士兵和机械正在赶来这片战场。",
             "actionId": "annocoming",
             "warmup": 45,
             "effects": {
@@ -147,7 +147,7 @@
         },
         {
             "id": "friend.anno.cominglocal",
-            "label": "The Solar New Forces Are Entering the Battlefield",
+            "label": "太阳新军正在进入战场",
             "actionId": "annocoming",
             "warmup": 0,
             "mutations": [
@@ -169,7 +169,7 @@
         
         {
             "id": "friend.anno.circle.first",
-            "label": "The Solar New Forces Are Adjusting Their Deployment",
+            "label": "太阳新军正在调整他们的部署",
             "actionId": "annoaction",
             "warmup": 0,
             "extantreqs": {
@@ -185,8 +185,8 @@
         },
         {
             "id": "friend.anno.circle_stun0",
-            "label": "New Forces Deployment Stalled",
-            "startdescription": "Perhaps due to logistical issues, or something else—the deployment of the New Forces has stalled for now.",
+            "label": "新军的部署陷入了停滞",
+            "startdescription": "也许是缺乏补给，亦或者其他什么。新军的部署此刻陷入了停滞",
             "actionId": "annoaction",
             "warmup": 0,
             "extantreqs": {
@@ -205,8 +205,8 @@
         },
         {
             "id": "friend.anno.circle_stun",
-            "label": "New Forces Deployment Stalled",
-            "startdescription": "Perhaps due to logistical issues, or something else—the deployment of the New Forces has stalled for now.",
+            "label": "新军的部署陷入了停滞",
+            "startdescription": "也许是缺乏补给，亦或者其他什么。新军的部署此刻陷入了停滞",
             "actionId": "annoaction",
             "warmup": 30,
             "extantreqs": {
@@ -271,8 +271,8 @@
         },
         {
             "id": "friend.anno.circle",
-            "label": "The Solar New Forces Are Adjusting Their Deployment",
-            "startdescription": "The scent of steam and sulfur thickens. The automatons stand idle. Their commander contemplates her next move.",
+            "label": "太阳新军正在调整他们的部署",
+            "startdescription": "蒸汽和硫磺的气息又浓重的几分，自动机位于原地待命。那位指挥官在思考自己的下一步行动。",
             "actionId": "annoaction",
             "warmup": 60,
             "requirements": {
@@ -329,8 +329,8 @@
         },
         {
             "id": "friend.anno.reinforcements",
-            "label": "The Solar New Forces Are Calling for Reinforcements",
-            "startdescription": "More soldiers and machines loyal to the New King are arriving on this battlefield.",
+            "label": "太阳新军正在呼叫支援",
+            "startdescription": "更多的效忠新王的士兵和机械正在赶来这片战场",
             "actionId": "reinforcements.king",
             "warmup": 30,
             "extantreqs": {
@@ -351,7 +351,7 @@
         },
         {
             "id": "friend.anno.reinforcements.local",
-            "label": "The Solar New Forces Are Calling for Reinforcements",
+            "label": "太阳新军正在呼叫支援",
             "actionId": "reinforcements.king",
             "warmup": 0,
             "mutations": [
@@ -368,8 +368,8 @@
 
         {
             "id": "friend.anno.valkyriepre",
-            "label": "Valkyrie is Ready",
-            "startdescription": "The Valkyrie is ready. Now it's time to deploy her.",
+            "label": "女武神已经就绪",
+            "startdescription": "女武神准备就绪，现在该让她出动了。",
             "actionId": "friendvalkyrie",
             "warmup": 10,
             "extantreqs": {
@@ -381,7 +381,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Preparations",
+                "label": "准备工作",
                 "required": {
 					"friend.scoutsanno": 1,
 					"friend.scouts": 1,
@@ -402,9 +402,9 @@
         },
         {
             "id": "friend.anno.valkyrieready",
-            "label": "Valkyrie is Ready",
-            "startdescription": "The Valkyrie is ready. Now it's time to deploy her.",
-            "description": "Aborted unexpectedly.",
+            "label": "女武神已经就绪",
+            "startdescription": "女武神准备就绪，现在该让她出动了。",
+            "description": "意外的终止。",
             "actionId": "friendvalkyrie",
             "warmup": 10,
             "extantreqs": {
@@ -416,7 +416,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"valkyrie.mark": 1
                 },
@@ -439,8 +439,8 @@
         },
         {
             "id": "friend.anno.valkyrie.player",
-            "label": "Valkyrie Awaiting Orders",
-            "startdescription": "Our monster needs us to find her some prey.",
+            "label": "女武神正在等待指令",
+            "startdescription": "我们的怪物需要我们给她找个猎物了。",
             "actionId": "friendvalkyrie",
             "warmup": 30,
             "extantreqs": {
@@ -452,7 +452,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe": 1
                 },
@@ -470,8 +470,8 @@
         },
         {
             "id": "friend.anno.valkyrie.annowithscouts",
-            "label": "Valkyrie Has Locked Target",
-            "startdescription": "Prey locked. Time to tear them apart!",
+            "label": "女武神已经锁定目标",
+            "startdescription": "猎物已经锁定，现在该撕碎他们了！",
             "actionId": "friendvalkyrie",
             "warmup": 30,
             "requirements": {
@@ -482,7 +482,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe.tanks": 1,
 					"foe.tanks.hidden": 1,
@@ -505,8 +505,8 @@
         },
         {
             "id": "friend.anno.valkyrie.anno",
-            "label": "Valkyrie Entering the Battlefield",
-            "startdescription": "The Valkyrie dives from high altitude, seeking her prey!",
+            "label": "女武神进入战场",
+            "startdescription": "女武神自高空俯冲，寻找她的猎物！！",
             "actionId": "friendvalkyrie",
             "warmup": 30,
             "requirements": {
@@ -516,7 +516,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe": 1
                 },
@@ -534,8 +534,8 @@
         },
         {
             "id": "friend.anno.valkyrie.kill",
-            "label": "Valkyrie Has Locked Target",
-            "startdescription": "The enemy is locked. Now we wait.",
+            "label": "女武神已经锁定目标",
+            "startdescription": "敌军已经锁定，现在只需要等待",
             "actionId": "friendvalkyrie",
             "warmup": 10,
             "extantreqs": {
@@ -551,9 +551,9 @@
         },
         {
             "id": "friend.anno.valkyrie.debuff",
-            "label": "Valkyrie Sweeps the Battlefield",
-            "startdescription": "The Valkyrie streaks across the battlefield, searching for a target!",
-            "description": "The Valkyrie streaks across the battlefield, searching for a target!",
+            "label": "女武神掠过战场",
+            "startdescription": "女武神掠过战场，她正在搜寻目标！",
+            "description": "女武神掠过战场，她正在搜寻目标！",
             "actionId": "friendvalkyrie",
             "warmup": 10,
             "extantreqs": {
@@ -563,7 +563,7 @@
             "slots": [
                 {
                 "id": "needssupplies",
-                "label": "Ready!",
+                "label": "准备就绪！",
                 "required": {
 					"foe": 1
                 },
@@ -586,9 +586,9 @@
         },
         {
             "id": "friend.anno.valkyrie.end",
-            "label": "Valkyrie Sweeps the Battlefield",
-            "startdescription": "The field is clear. Those pathetic fools won't stand a chance.",
-            "description": "The field is clear. Those pathetic fools won't stand a chance.",
+            "label": "女武神掠过战场",
+            "startdescription": "战场已经明晰，那些可笑的家伙没有机会反抗了。",
+            "description": "战场已经明晰，那些可笑的家伙没有机会反抗了。",
             "actionId": "friendvalkyrie",
             "warmup": 10,
             "extantreqs": {
@@ -615,7 +615,7 @@
 
         {
             "id": "friend.anno.attack0",
-            "label": "The Solar New Forces Are on the Move",
+            "label": "太阳新军开始行动了",
             "actionId": "annoaction",
             "warmup": 0,
             "internaldeck": {
@@ -639,7 +639,7 @@
         },
         {
             "id": "friend.anno.attack3",
-            "label": "The Solar New Forces Are on the Move",
+            "label": "太阳新军开始行动了",
             "actionId": "annoaction",
             "warmup": 0,
             "extantreqs": {
@@ -668,7 +668,7 @@
         },
         {
             "id": "friend.anno.attack5",
-            "label": "The Solar New Forces Are on the Move",
+            "label": "太阳新军开始行动了",
             "actionId": "annoaction",
             "warmup": 0,
             "extantreqs": {
@@ -697,7 +697,7 @@
         },
         {
             "id": "friend.anno.attack7",
-            "label": "The Solar New Forces Are on the Move",
+            "label": "太阳新军开始行动了",
             "actionId": "annoaction",
             "warmup": 0,
             "extantreqs": {
@@ -724,8 +724,8 @@
         },
         {
             "id": "friend.anno.attack",
-            "label": "The Solar New Forces Are on the Move",
-            "startdescription": "Soldiers and machines march beneath the sun. Their advance has begun.",
+            "label": "太阳新军开始行动了",
+            "startdescription": "士兵与机械于太阳下行走，他们开始行军了。",
             "actionId": "annoaction",
             "warmup": 10,
             "requirements": {
@@ -809,13 +809,13 @@
 		},
     {
 	"id": "edgelong.attack.you",
-	"label": "The Edge-Long Strikes!",
-	"startdescription": "@#foe.exile|'What will this dog do, then? Bow, bolt, or bite?'#foe.duffoure|'I will make it clean - if you allow me to.'#foe.camilla|'Killing you could be a novel little exercise. Maybe.'#foe.wilhelm|'You - cracking your bones will make a fine warmup for the <i>real</i> battle.'#foe.sergei|'I'll rip you apart, little soldier.'@\n\n[To defend, provide an Ally to put between you and and Edge-Long's attack. This will kill the Ally.]",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“那么，这只小狗狗会怎么做呢？低头求饶？拔腿逃跑？还是张口咬下？”#foe.duffoure|“我会解决的干净利落——只要你让我解决。”#foe.camilla|“或许，杀死你会是一次新颖的锻炼。”#foe.wilhelm|“你——粉碎你的骨头将会是<i>真正</i>战斗之前一次不错的热身。”#foe.sergei|“我将把你撕碎，小兵。”@\n\n[若你想要防御，你需要提供友军以替你阻挡刃之长生者的攻击。这会杀死你的友军。]",
 	"warmup": 30,
 	"slots": [
 	    {
 		"id": "needsallies",
-		"label": "Fodder?",
+		"label": "炮灰？",
 		"required": {
 		    "friend": 1,
 		    "legacyplotitem": 1,
@@ -859,10 +859,57 @@
 	]
     },
     {
+	"id": "edgelong.attack.allies",
+	"label": "刃之长生者攻击了！",
+	"startdescription": "@#foe.exile|“你什么都不是。“#foe.duffoure|“从我面前滚开。”#foe.camilla|“你因履行职责牺牲。这一结局已好过大批人所期望的那些。”#foe.wilhelm|“哈！再来几个！在死尸堆齐腰高之前都不算完！”#foe.sergei|“哼。更多死人。”@",
+	"warmup": 10,
+	"actionId": "long.camilla",
+	"tablereqs": {
+	    "friend": 1
+	},
+	"extantreqs": {
+	    "contemnant.story": -1
+	},
+	"slots": [
+	    {
+		"id": "needsallies",
+		"label": "友军",
+		"required": {
+		    "friend": 1
+		},
+		"forbidden": {
+			"anno.mark": 1,
+			"valkyrie": 1,
+		},
+		"greedy": true
+	    }
+	],
+	"aspects": {
+	    "killmortal": 1
+	},
+	"linked": [
+	    {
+		"id": "edgelong.expel"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "produce.strife",
+		"additional": true,
+		"chance": 70
+	    },
+	    {
+		"id": "produce.strife.contemnant",
+		"additional": true,
+		"chance": 50
+	    },
+	]
+    },
+    {
 	"id": "abandon.ally",
 	"actionid": "abandon",
-	"label": "Reassign an Ally",
-	"startdescription": "I could cut down on the size of my contingent by assigning this Ally elsewhere. Perhaps we must travel lighter. Perhaps we must run.",
+	"label": "重新委派友军",
+	"startdescription": "我可以通过将这一友军委派至别处以减小我分队的规模。或许我们必须轻装行军。或许我们必须逃离。",
 	"description": "Done.",
 	"extantreqs": {
 	    "lake.here": -1
@@ -882,9 +929,9 @@
     {
 	"id": "travelling.cycle.complete.exit",
 	"actionid": "ticktock",
-	"label": "Out from the Ruined Country",
-	"startdescription": "Egress. Out of the frying pan -",
-	"description": "- and once more into the fire.\n\n@#kaunas.here|The Exile told me they had a friend in Kaunas with the Iron Wolf, years ago when they still reckoned with the Tally. 'An eater of corpses,' they told me. 'And a maker of passable pastries. I hope he is dead.'#brest.here|Old Brest lies uneasily at the banks of the Bug River. This is where Germans turned on the Soviet Union, and bloodshed here is laced with a venom that seems undeniably personal.#konigsberg.here|News of the slaughter at Nemmersdorf has caused many in Konigsberg to flee the coming of the Red Army. They're right to run.#gdansk.here|A three-sided battle erupts at Gdansk. There, the Germans, the Russians, and the Polish partisans fight one another, street to street and rooftop to rooftop. I am unsure who I'll fight once I arrive there, but I'm sure the right decision will make itself clear once I get some fresh blood on my hands.#grudziadz.here|A playground for the <i>Einsatzkommandos</i> sent in to facilitate Germanization of seized Polish lands. It would be a shame to leave their blood unspilled.#lodz.here|The officials of the Reich say the that city's new, noble German name is 'Litzmannstadt,' but when I spill an enemy's blood here, they will say he died in Lodz.#warsaw.here|A campaign of total annihilation in Warsaw: punishment for the uprising in the ghetto. The Germans endeavour not merely to kill and expel the people, but to pull the city down to its very last stone. Could they do it? Strike an entire city and her people from the face of the earth? The Wolf walks on the horizon, expecting an answer.#lublin.here|I remember I had relatives in Lublin, before the war. A wind tugs at my coat, and I wonder where those relatives are now. I wonder if they escaped, or were imprisoned, or were shot. I wonder if they became ashes, and if those ashes had already blown past me on a westward wind.#katowice.here|The fighting in the south outskirts has not reached Katowice proper yet, but Soviet tanks gather on the hills. By the time we get to the city, I suspect the downtown suburbs will have already been reduced to a forest of rubble and detritus.#krakow.here|The Exile once reminisced to me about a man they knew in Krakow: 'Yitzchok was a smart one, and a good customer. I wonder if he was able to leave Poland before things became... <i>untenable</i> for his people.' He spoke of this Yitzchok with sympathy - but the kind of sympathy one offers a sick pet, and not a human being.#vienna.here|The White City. 'There's a Ligeian there, and she's lived there a very long time,' the Exile told me. 'The grumpiest of the seven, I always thought. But you'll want to see her, regardless. Tell her I said hello.'#brno.here|Artillery pounds along the city's eastern approach. Soviets and Germans do battle in and around this jewel of Moravia, two starving dogs fighting over a shred of meat.#prague.here|Chamberlain vainly offered Czechoslovakia up to the Reich, hoping to pacify the monster by feeding it morsels. His plan failed, as we all now know. But simmerings of resentment still burn across the country, and in Prague, especially. A man with a match could turn this uneasy balance into a conflagration all too easily.#liberec.here|Wretched Henlein plays governor for the Reichsgau in ailing Liberec - his reward for supporting the annexation even before Chamberlain and Daladier handed Czechoslovakia to the Austrian. Someone should have rewarded him with a bullet, instead. Better late than never.#dresden.here|Not so long ago, the British and American air fleet came through here, and bombed the city to nothing. What was left was consumed in the firestorm left by the Allied air raids. The stench of sulphur, smoke, and ozone drifts off Dresden's corpse for miles.#wroclaw.here|Caught between the advance of the Red Army and the hand of winter, many of Wroclaw's civilians decided to take their chances running - and lost. The road to the city proper is littered with the bodies of the fleeing, snow gradually burying each gaunt, spiritless face.#poznan.here|That contemptuous Austrian declared Poznan to be <i>Festung:</i> a stronghold city, and not to be lost. As if his declaration could hold back the Red Army's coming - or mine.#szczecin|The city lies ahead, and bodies drift down the Oder River. I'll put many more in the water before I'm done in Szczecin.#berlin.here|The Reich's last death spasms wrack Berlin. All of us know it is over. But like starving dogs, the nations will pull and bite and gnash over who gets to devour the carcass. And I? I will have my day in Berlin, because I want to rip out the Reich's foetid heart and feel it crumple in my fist.#paestum.here|The earliest Allied landings occurred here. American infantrymen rushed up the beachheads in the first day, but the Germans have been quick to set up a defence. Fighting has spread in and around the small town. Let us help these <i>Americani</i> find their footing in Italy.#potenza.here|War in high-perched Potenza, along the spine of the Appenine mountains. The fresh mountain air should do us some good as we go about our bloody work.#salerno.here|Bloody beach landings by the British and Americans near the port of Salerno. German machine gun nests carve up the coast. The Allies are here to help us, but who's going to help them? Let's see what we can do.#benevento.here|St. Bartholomew's city has been thoroughly tenderised by a generous Allied bombing run, but enough Germans remain that the city will still be an effort to liberate. Go among the stones, the fires, and strike down the occupiers.#napoli.here|The <i>Napolitani</i> have heard the call to arms! Radio reports confirm that the people have thrown the city into glorious chaos, rising up against the German occupiers ahead of any Allied arrival. Haste is what we need now. I will not let such a flame die out.#campobasso.here|Canadian troops carved out a small foothold here, purchased painstakingly with blood and steel. Thanks to them, more allies trickle into Campobasso day by day - but a hefty garrison of Germans retains control of the city centre and the northern outskirts. Dislodging them will be a strenous, but noble work.#termoli.here|A storm of steel amasses - the British send forth their tanks against the entrenched Germans, whose thundering panzers froth and smoke like the hounds of hell. The combat will be a mess of gore and fire. Not being there this instant makes my fists ache longingly.#minturno.here|Minturno is one of several stronghold-towns on the Gustav Line. Allied air support thrums in the skies above and behind. How much will the bombs bleed the town's defenders? How many lives will we have to end on the ground, by hand? The bombs are falling, now. If we go to Minturno, we will find out.#gaeta.here|The German occupiers, realizing the strategic importance of the port city, have declared an exclusion zone over Gaeta. Hundreds of <i>gaetani</i>, expelled from their homes, beg intervention and liberation. Something as paltry as an exclusory declaration won't stop me from obliging them.#montecassino.here|The broad face of the Gustav Line glowers at the soldiers and partisans come to liberate the valley. On the rocky hills, the Germans have almost every advantage: elevation, visibility, protection. To advance within the range of their artillery is death. But Montecassino is the gateway to Rome - the death of its defenders is thus non-negotiable.#pontecorvo.here|That wretched Austrian initially named the defensive line passing through this town after himself. Fearing for his image should it be breached (and it will), it was renamed after one of his sorry generals only a few short weeks ago. Soon he'll have to withdraw more than just his name from Italy.#ortucchio.here|In the region of Abruzzo, southeast of <i>il Lago Fucino</i>, Ortucchio lies as quiet as a corpse. No battle rages here. Yet, a small force of Germans is en route to the small town. Nothing good could have drawn them here, because there is nothing good in Ortucchio. Not after the Incident.#ortona.here|Wave after wave of Allied soldiers crashes and breaks upon a determined German defence here - 'Little Stalingrad', they're calling it on the radio. Lets see for ourselves how determined these <i>fascisti</i> really are.#valmontone.here|An important stop, the Allies say, on the warpath to Rome - so important, in fact, that they rained bombs upon it for nearly a week. That still wasn't enough to uproot the fascist defenders. We will move in to clean up.#velletri.here|Anothing bracing point on the Caesar Line, crumbling now as our comrades converge on Rome. German desperation is palpable in the air. They might do something drastic to delay liberation's furious approach.#anzio.here|Between the marshes and the mountains, the Allies struggle to drag themselves north, to Anzio, then to Rome. The Wehrmacht's Winter Line has made it a painful process. There will be more pain before it's finally over, but with our help, we can ensure most of it will be the enemy's.#rome.here|All roads, it is said, lead to Rome. Well, here is the road.#vilna.here|We have not held Vilna for more than two years, and now the Germans come to seize our partition of Lithuania. There will be consequences to face if we let them do it.#bialystok.here|The speartip of the German invasion fell here. Defence is increasingly tenuous; the Wehrmacht pushes forward relentlessly; the Polish despise both us and them. Let's make a smooth exit while that is still a possibility.#minsk.here|We stole the bones of Lithuanian-Polish industry and shipped them here to do their work: foundries, factories, diggers and rail-layers. They have done such admirable work for us - let us not allow them to be shamed by having to work in the employ of the Germans.#vitebsk.here|Vitebsk - we will have to give up this playing-piece in time. But even if we cannot hold the city against the Wehrmacht indefinitely, there are other victories we can seek among the stones and the streets.#orsha.here|On the fork of the Dneiper and the Arshytsa, there is Orsha. The two waterways have made it important enough to fight over; on that, both we and the Germans agree.#smolensk.here|Another fine jewel of Soviet industry: food, textiles, manufacturing, even the processing of actual jewels. If we cannot abscond with this jewel, then neither will the Germans. We must go to work with decisive swiftness and a generous number of demolition charges.#vyazma.here|Long has Vyazma been a brute deterrent against invaders striving towards Moscow. An encirclement by the Wehrmacht has broken apart the defences here, and we'll have to make do with the pieces.#rzhev.here|Another mean encirclement by the enemy has already resulted in the decimation and dissolution of a large part of our force here. Now those who remain thrash against the tightening jaws of the German war machine, and against the coming of the pitiless snows.#bryansk.here|Bryansk will be in the hands of the Germans soon, but they won't hold it for long if we have anything to say about it. After Stalingrad, we'll return here for what belongs to us.#kyiv.here|The long soul of the Rus, now under inexorable threat. The wolves close in on all sides. Stem the bleeding long enough so that we may draw our industry east.#kursk.here|The fields outside the city crawl with German tanks and mean, armoured things. This battlefield is meant only for mean, armoured things, I think. But we have our orders. No shirking.#livny.here|Another small buffer between east and west. This small town is characteristically Russian: it bears its pain quietly, no matter how many years of tribulation pass.#voronezh.here|This is the centre point of the Black Earth region, where the rich soil holds now the bones of forced industrialization like sudden, new muscles; where railway-arteries stretch to Moscow upon land that was once darkest forest.#kharkov.here|Kharkiv is the product of Stalin's hardline for industrial strength in the Soviet Union. Even when people starved in the streets during the Holodomor, Kharkiv's factories churned with dutiful fire and smoke. The arrival of the Wehrmacht may upset the routine of work. It may.#uman.here|The Luftwaffe have harried and bombed the troops passing through Uman into despair and exhaustion. Mechanised infantry have been reduced to mere footsoldiers carrying rifles. We had best withdraw from the city with those servicemen who can still fight.#odessa.here|The city's seat upon the Black Sea has made it desirable to the Germans as an object of conquest, and desirable to us as a position we must hold onto for as long as possible. It won't last forever - but we do not need forever.#perekop.here|After the Revolution, the Bolsheviks built farming towns here, and trade ensued. The Germans come to take the place, now; to sever the bridge between Crimea and Ukraine. They will likely have it, but that does not mean we need to leave the place in a condition fit for having.#izyum.here|The Germans destroyed a large salient of our troops on the outskirts of the city - a disastrous miscalculation by the luminaries of the Red Army. Days are numbered in Izium. Blood flows plentifully.@",
+	"label": "离开战火摧残的地区",
+	"startdescription": "离开，从这个油锅般的地方离开——",
+	"description": "——并再一次投身于战火\n\n@#vilna.here|我们已有两年没有占领维尔纳，但现在德军前来，意图夺走其与联盟之间名为立陶宛的隔墙。若我们放任他们这么做，后果会很严重。#bialystok.here|德国入侵的矛尖落于此处。防卫线正变得愈发薄弱；德国国防军的推进毫不停歇；而波兰人同等的厌恶我们与德军。让我们在仍有可能时进行一次顺利的撤退。#minsk.here|我们窃取了波兰与立陶宛的工业骨干：铸造厂、工厂、挖掘机与铺轨机，并将其送到此处为我们工作。它们为我们做出了如此令人敬佩的贡献——我们决不能让它们因在德军手下工作而蒙羞。#vitebsk.here|维特伯斯克——我们总有一天要放弃这枚棋子。但即便我们无法在德国国防军的猛攻下长久守住这座城市，在砖石与街道中我们仍能够寻求另一种胜利。#orsha.here|在第聂伯河与亚契斯塔河的分岔处，有一座城市名为奥尔沙。这两条水路赋予了其被争夺的价值，德军和我们都认可这一点。#smolensk.here|苏联工业的另一颗宝石：食物工业，纺织业，制造业，甚至还有宝石加工业。若我们无法带着这颗宝石逃离，那德军也不能。我们将开始作业，这项作业需要果断的迅捷，以及大量的爆破炸药。#vyazma.here|很久以前维亚济马就是对于向莫斯科进军的敌军的一个赤裸的威慑。德国国防军的包围已将此处的防卫线撕成碎片，我们只能用防卫线的碎片凑合。#rzhev.here|敌人的又一处卑鄙的包围以瓦解并歼灭了我军于此处的很大一部分部队告终。现在剩余部队正承受德国战争机器迫近的双颚，还有即将来临的无情大雪。#bryansk.here|布良斯克不久后就会落到德军手中，但你要我说的话，他们将无法长久占有这里。在解决斯大林格勒的问题之后，我们将返回这里，取回属于我们的城市。#kyiv.here|罗斯古老的起源之地，但现在正受到难以阻挡的威胁。狼群正从四面八方逼近。我们需要抵挡侵攻足够久，以让此地的工业有时间向东转移。#kursk.here|城外的空地布满了德军坦克和卑劣且覆有装甲之物。我想，这片战场只应该属于卑劣且覆有装甲之物。但我们有命令在身，不可退缩。#livny.here|另一块东西之间的小缓冲地。这座小城十分的俄罗斯：它安静地承受其痛苦，无论历经多少年的苦难。#voronezh.here|此地是黑土地区的中心，此地富饶的土地正如肌肉一般支撑着名为强行工业化的骨骼；正是从此地开始，名为铁路的动脉穿过曾为最为漆黑的森林，向莫斯科延伸。#kharkov.here|哈尔科夫是斯大林强硬的追求苏联工业实力的产物。甚至在乌克兰大饥荒时，人们在街上成批饿死，哈尔科夫的工厂仍随着火与烟忠实地运转。德国国防军的到来或许会打乱工厂的日程。或许。#uman.here|德国空军骚扰并轰炸途径乌曼的士兵，已使他们绝且疲惫。原本的机械化步兵现在仅剩带着枪的步兵。我们最好与仍能战斗的士兵们一同从这座城市撤退。#odessa.here|这座城市因位于黑海海岸而被德军作为一个征服的目的地而觊觎，同时对于我们而言，这是一个需要尽可能久坚守的地点。我们无法永远坚守——但我们也无需如此。#perekop.here|在革命之后，布尔什维克在此地建造农业城镇，贸易进而产生。现在德军前来占领此地，以切断连接克里米亚与乌克兰的桥梁。他们会得到它，但这不意味着我们会留给他们一片适合占领的土地。#izyum.here|德军在这座城市的城郊歼灭了我军一个大突出部——红军高层的一次灾难性的误算。伊久姆时日无多，于此地流的血已经够多的了。@",
 	"effects": {
 	    "wasteland.a": -1,
 	    "wasteland.b": -1
@@ -935,8 +982,8 @@
     {
 	"id": "travelling.frienddestronger",
 	"actionid": "frienddestronger",
-	"label": "Reinforcement Expires",
-	"startdescription": "I see the flames receding from the troops and armor. [Reinforcement effects expire upon entering a new region.]",
+	"label": "强化失效",
+	"startdescription": "我看到烈焰正从部队和装甲上褪去。[当到达一个新地区时，强化效果会失效。]",
 	"requirements": {
 	    "friend.stronger": 1
 	},
@@ -947,9 +994,9 @@
     },
     {
 	"id": "foe.begin.exhaust",
-	"label": "Fatigue and Failure",
-	"startdescription": "The Foe's strength waxes, and ours wanes in turn. Men slow down and lose spirit; weapons jam and fail; even I might feel the press of some great burden on my bones, and falter.",
-	"description": "No-one ever said war would be easy.",
+	"label": "疲惫与失效",
+	"startdescription": "大敌之力高涨，是故我们的力量低落。人们的脚步变慢，士气下降，武器卡壳并失效，甚至我也可能感到某种强大负担的压力施加于我的身上，并因此退缩。",
+	"description": "无人曾言战争简单。",
 	"requirements": {
 	    "draw.foe.exhaust": 1
 	},
@@ -979,8 +1026,8 @@
     {
 	"id": "hint.getreinforcements.noroom",
 	"actionid": "communicate",
-	"label": "No More?",
-	"startdescription": "It would be unwise - and untenable - to summon more allies to our position, and have no place prepared to quarter them.\n\n[When your Force Size equals or exceeds total Space, you will be unable to call for ally reinforcements.]",
+	"label": "人数已经够多？",
+	"startdescription": "呼叫更多友军前来我们的阵地是不明智的——且我们难以维持更多部队，因我们已没有更多住所能够分给他们。\n\n[当你的部队规模大于等于空间总数，你将无法呼叫友军支援。]",
 	"grandreqs": { "[~/extant:forcesize] >= [~/extant:room]": 1 },
 	"requirements": {
 	    "friend": 1,
@@ -993,8 +1040,8 @@
     {
 	"id": "getreinforcements.withcomms",
 	"actionid": "communicate",
-	"label": "Request ally reinforcements",
-	"startdescription": "Send word over wire and wave. If we need more manpower, this is the way to ask for it.",
+	"label": "请求友军支援",
+	"startdescription": "自电缆与电磁波中传递言语。若我们需要更多人力，这就是我们请求的方式。",
 	"grandreqs": { "[~/extant:forcesize] < [~/extant:room]": 1 },
 	"extantreqs": {
 	    "loc.commtower": 1,
@@ -1020,8 +1067,8 @@
     {
 	"id": "getreinforcements.nocomms",
 	"actionid": "communicate",
-	"label": "Send an ally to procure reinforcements",
-	"startdescription": "With our communications non-operational, radio and telegram are no longer viable options for us. If we need reinforcements, someone must make the long trek to the next allied position, and then return again.\n\n[Without a Communications Tower, asking for reinforcements will take much longer.]",
+	"label": "派遣友军确保援军",
+	"startdescription": "我们的通信站现已不可用，故广播与电报已不再是可选项。若我们需要援军，某人需要长途跋涉前往下一个友军阵地，并带着援军返回。\n\n[当没有通信站时，请求援军需要的时间要长得多。]",
 	"grandreqs": { "[~/extant:forcesize] < [~/extant:room]": 1 },
 	"extantreqs": {
 	    "loc.commtower": -1,
@@ -1052,8 +1099,8 @@
     },
     {
 	"id": "givewound.fifth",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"extantreqs": {
 	    "damage.body": 4
 	},
@@ -1079,8 +1126,8 @@
     },
     {
 	"id": "givewound.ear",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"extantreqs": {
 	    "wound.ear": -1,
 	    "debilitation.ear": -1,
@@ -1104,8 +1151,8 @@
     },
     {
 	"id": "givewound.eye",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"extantreqs": {
 	    "wound.eye": -1,
 	    "debilitation.eye": -1,
@@ -1129,8 +1176,8 @@
     },
     {
 	"id": "givewound.hand",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"extantreqs": {
 	    "wound.hand": -1,
 	    "debilitation.hand": -1,
@@ -1154,8 +1201,8 @@
     },
     {
 	"id": "givewound.leg",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"extantreqs": {
 	    "wound.leg": -1,
 	    "debilitation.leg": -1,
@@ -1179,8 +1226,8 @@
     },
     {
 	"id": "givewound.clear",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"effects": {
 	    "draw.ear": -1,
 	    "draw.eye": -1,
@@ -1201,8 +1248,8 @@
     },
     {
 	"id": "givewound.drawagain",
-	"label": "I am wounded!",
-	"startdescription": "This body is mortal, and the trials of war will see it destroyed if I am careless -",
+	"label": "我受伤了！",
+	"startdescription": "此身仍为凡人，若我不够谨慎，战争之试炼将乐见此身被毁灭——",
 	"deckeffects": {
 	    "mywounds": 1
 	},
@@ -1232,8 +1279,8 @@
     },
     {
 	"id": "turn.clockworkmalign",
-	"label": "I am wounded!",
-	"startdescription": "The pain arrives slowly. Not until I realize there is only nothingness where something should be—then it clamps down to the bone.",
+	"label": "我受伤了！",
+	"startdescription": "疼痛来得迟缓。直到我发觉某处本该存在的感知，如今只剩虚无。这时，它才一口咬进骨髓。",
 	"requirements": {
 	    "lethal_debilitation_trigger": 1
 	},
@@ -1248,8 +1295,8 @@
     {
 	"id": "operate.startup.shakedown.militia",
 	"actionid": "operate",
-	"label": "Offer relief to the local population",
-	"startdescription": "Times are tough. Perhaps we can spare some time and labour to ease the pains of those who do not fight.\n\n[This can grant you resources like shelter and Local Allies for passing challenges.]",
+	"label": "从本地人处强征补给",
+	"startdescription": "我们会说这都是为了赢得这场战争，实际上也确实如此。但他们不会喜欢的。\n\n[这将会给予你相当数量的补给品，但会永久毁灭你与本地人之间的一切友好关系。你在一个战区只能如此做一次。]",
 	"requirements": {
 	    "friend.militia": 1,
 	    "warzone.current": 1,
@@ -1280,8 +1327,8 @@
     {
 	"id": "operate.startup.shakedown.militia.ex",
 	"actionid": "operate",
-	"label": "Offer relief to the local population",
-	"startdescription": "Times are tough. Perhaps we can spare some time and labour to ease the pains of those who do not fight.\n\n[This can grant you resources like shelter and Local Allies for passing challenges.]",
+	"label": "从本地人处强征补给",
+	"startdescription": "我们会说这都是为了赢得这场战争，实际上也确实如此。但他们不会喜欢的。\n\n[这将会给予你相当数量的补给品，但会永久毁灭你与本地人之间的一切友好关系。你在一个战区只能如此做一次。]",
 	"requirements": {
 	    "friend.militia": 1,
 	    "warzone.current": 1,

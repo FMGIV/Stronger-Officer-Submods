@@ -340,14 +340,14 @@
         },
         {
             "id": "enemy_fire",
-            "label": "怒火",
-            "description": "敌军的怒火[怒火的等级越高，敌军攻击你的概率越高。]",
+            "label": "Fury",
+            "description": "The enemy's fury. [The higher the level of Fury, the greater the probability the enemy will attack you.]",
             "isAspect": true,
         },
         {
             "id": "attract_attention",
-            "label": "敌军的注意",
-            "description": "怨气正在累积……",
+            "label": "Enemy's Attention",
+            "description": "Resentment is building...",
             "lifetime": 0,
 			"aspects": {
 				"enemy_fire": 1
@@ -360,8 +360,8 @@
         },
         {
             "id": "attract_attention.1",
-            "label": "敌军的注意",
-            "description": "怨气正在累积……",
+            "label": "Enemy's Attention",
+            "description": "Resentment is building...",
             "lifetime": 0,
 			"aspects": {
 				"enemy_fire": 2
@@ -374,8 +374,8 @@
         },
         {
             "id": "attract_attention.2",
-            "label": "敌军的注意",
-            "description": "怨气已达顶级",
+            "label": "Enemy's Attention",
+            "description": "Resentment has reached its peak.",
             "lifetime": 0,
 			"aspects": {
 				"enemy_fire": 3
