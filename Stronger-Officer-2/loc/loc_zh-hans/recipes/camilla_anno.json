@@ -97,7 +97,7 @@
 	]
     },
     {
-	"id": "edgelong.sergei.attack.allies.anno",
+	"id": "edgelong.sergei.attack.allies.noanno",
 	"label": "刃之长生者攻击了！",
 	"startdescription": "@#foe.sergei|“哼。更多死人。”@",
 	"warmup": 10,
@@ -244,6 +244,37 @@
             "inductions": []
         },
         {
+            "id": "sergei_attack.anno_haveto_valkyrie",
+            "label": "不朽之争",
+            "startdescription": "那位军官没有避开，而是？正面迎击？！",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.sergei.foranno": -1,
+                "foe.sergei": 1
+            },
+            "requirements": {
+                "valkyrie.mark": 1,
+            },
+            "effects": {
+				"anno_sergei": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
             "id": "sergei_attack.anno_haveto",
             "label": "不朽之争",
             "startdescription": "那位军官没有避开，而是？正面迎击？！",
@@ -254,7 +285,7 @@
                 "foe.sergei": 1
             },
             "requirements": {
-                "foe.umiri.mark": 1,
+                "anno.mark": 1,
             },
             "effects": {
 				"anno_sergei": 1

@@ -505,6 +505,19 @@
 	]
     },
     {
+	"id": "defend.opportunity.pre",
+	"label": "一次敌袭！",
+	"startdescription": "",
+	"aspects": {
+	    "takeadditional": 1
+	},
+	"linked": [
+	    {
+		"id": "defend.opportunity"
+	    }
+	]
+    },
+    {
 	"id": "ss.target.legion",
 	"label": "针对门关军团？",
 	"startdescription": "我们全部都在争夺那颗星，这意味着我们四方势力相互之间均为敌对。而这一次，索隐会打算去撕裂那些来自古老门扉的幽影。",
@@ -1227,7 +1240,7 @@
 	    "clockwork.mark": 1
 	},
 	"extantreqs": {
-	    "foe.guardjerome": 1
+	    "karotechia.officerdetail": 1
 	},
 	"craftable": false,
 	"hintonly": true
@@ -1248,7 +1261,7 @@
 	    "[edge]-[needsedge]": 5,
 	},
 	"extantreqs": {
-	    "foe.guardjerome": -1
+	    "karotechia.officerdetail": -1
 	},
 	"craftable": true,
 	"warmup": 30,
@@ -1271,7 +1284,7 @@
 	    "clockwork.mark": 1
 	},
 	"extantreqs": {
-	    "foe.guardjerome": -1
+	    "karotechia.officerdetail": -1
 	},
 	"craftable": true,
 	"warmup": 30,

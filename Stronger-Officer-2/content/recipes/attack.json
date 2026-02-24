@@ -1248,8 +1248,8 @@
     {
 	"id": "operate.startup.shakedown.militia",
 	"actionid": "operate",
-	"label": "Offer relief to the local population",
-	"startdescription": "Times are tough. Perhaps we can spare some time and labour to ease the pains of those who do not fight.\n\n[This can grant you resources like shelter and Local Allies for passing challenges.]",
+	"label": "Seize supplies from the local population",
+	"startdescription": "We shall say it is for the war effort. And it is. But they won't like it.\n\n[This can grant you a substantial amount of Provisions, but will permanently destroy any beneficial relationships you might have with the locals. You cannot do this more than once per Warzone.]",
 	"requirements": {
 	    "friend.militia": 1,
 	    "warzone.current": 1,
@@ -1280,8 +1280,8 @@
     {
 	"id": "operate.startup.shakedown.militia.ex",
 	"actionid": "operate",
-	"label": "Offer relief to the local population",
-	"startdescription": "Times are tough. Perhaps we can spare some time and labour to ease the pains of those who do not fight.\n\n[This can grant you resources like shelter and Local Allies for passing challenges.]",
+	"label": "Seize supplies from the local population",
+	"startdescription": "We shall say it is for the war effort. And it is. But they won't like it.\n\n[This can grant you a substantial amount of Provisions, but will permanently destroy any beneficial relationships you might have with the locals. You cannot do this more than once per Warzone.]",
 	"requirements": {
 	    "friend.militia": 1,
 	    "warzone.current": 1,

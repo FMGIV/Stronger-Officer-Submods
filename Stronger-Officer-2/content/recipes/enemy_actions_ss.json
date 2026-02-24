@@ -505,6 +505,19 @@
 	]
     },
     {
+	"id": "defend.opportunity.pre",
+	"label": "A Hostile Offensive!",
+	"startdescription": "",
+	"aspects": {
+	    "takeadditional": 1
+	},
+	"linked": [
+	    {
+		"id": "defend.opportunity"
+	    }
+	]
+    },
+    {
 	"id": "ss.target.legion",
 	"label": "Against the Légion du Seuil?",
 	"startdescription": "We're all fighting over that star—which means the four forces are all hostile to one another. And this time, the Index-Arcana intends to tear apart the shadows from the ancient gate.",
@@ -1226,7 +1239,7 @@
 	    "clockwork.mark": 1
 	},
 	"extantreqs": {
-	    "foe.guardjerome": 1
+	    "karotechia.officerdetail": 1
 	},
 	"craftable": false,
 	"hintonly": true
@@ -1247,7 +1260,7 @@
 	    "[edge]-[needsedge]": 5,
 	},
 	"extantreqs": {
-	    "foe.guardjerome": -1
+	    "karotechia.officerdetail": -1
 	},
 	"craftable": true,
 	"warmup": 30,
@@ -1270,7 +1283,7 @@
 	    "clockwork.mark": 1
 	},
 	"extantreqs": {
-	    "foe.guardjerome": -1
+	    "karotechia.officerdetail": -1
 	},
 	"craftable": true,
 	"warmup": 30,

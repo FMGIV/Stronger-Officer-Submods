@@ -97,7 +97,7 @@
 	]
     },
     {
-	"id": "edgelong.sergei.attack.allies.anno",
+	"id": "edgelong.sergei.attack.allies.noanno",
 	"label": "The Edge-Long Strikes!",
 	"startdescription": "@#foe.exile|'You're nothing.'#foe.duffoure|'Get out of my way.'#foe.camilla|'You die doing your duty. That is a better end than most can hope for.'#foe.wilhelm|'Hah! More! The day is not done until the dead pile at our waists!'#foe.sergei|'Hrgh. More dead.'@",
 	"warmup": 10,
@@ -132,6 +132,10 @@
 	    "killmortal": 1
 	},
 	"linked": [
+	    {
+		"id": "sergei_attack.anno_haveto_valkyrie",
+		"chance": 100
+	    },
 	    {
 		"id": "sergei_attack.anno_haveto",
 		"chance": 100
@@ -211,7 +215,8 @@
             },
             "requirements": {
                 "faction.anno": 1,
-                "anno.mark": -1
+                "anno.mark": -1,
+                "valkyrie.mark": -1
             },
             "effects": {
 				"anno_sergei": 1
@@ -245,6 +250,37 @@
             "inductions": []
         },
         {
+            "id": "sergei_attack.anno_haveto_valkyrie",
+            "label": "Clash of Immortals",
+            "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
+            "warmup": 30,
+            "extantreqs": {
+                "anno.mark": 1,
+                "wound.sergei.foranno": -1,
+                "foe.sergei": 1
+            },
+            "requirements": {
+                "valkyrie.mark": 1,
+            },
+            "effects": {
+				"anno_sergei": 1
+			},
+            "aspects": {
+                "follower_scar_edge": 1
+            },
+			"playAudioTrack": "bgm.umiri_sergei.mp3",
+            "mutations": [],
+            "craftable": false,
+            "hintonly": false,
+            "linked": [
+                {
+                    "id": "sergei_attack.anno"
+                },
+            ],
+            "alt": [],
+            "inductions": []
+        },
+        {
             "id": "sergei_attack.anno_haveto",
             "label": "Clash of Immortals",
             "startdescription": "Instead of evading, the officer... meets the attack head-on?!",
@@ -255,7 +291,7 @@
                 "foe.sergei": 1
             },
             "requirements": {
-                "foe.umiri.mark": 1,
+                "anno.mark": 1,
             },
             "effects": {
 				"anno_sergei": 1
